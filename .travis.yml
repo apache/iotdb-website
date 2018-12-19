@@ -2,11 +2,14 @@ sudo: required
 
 language: node_js
 node_js:
-  - "iojs"
+  - "10"
+  - "9"
+  - "8"
   - "7"
 
 before_install:
-  - npm i -g npm@version-numb
+  - npm install
   
 script:
   - npm run build
+  - npm run unit
