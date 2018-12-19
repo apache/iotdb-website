@@ -286,7 +286,7 @@
   }
 
   .backgroundImage {
-    background: url('../assets/img/background.jpg') no-repeat;
+/*    background: url('../assets/img/background.jpg') no-repeat;*/
     /*background-size: 100px auto;*/
   }
 
