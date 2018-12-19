@@ -1,0 +1,12 @@
+sudo: required
+
+language: node_js
+node_js:
+  - "iojs"
+  - "7"
+
+before_install:
+  - npm i -g npm@version-numb
+  
+script:
+  - npm run build
