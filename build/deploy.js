@@ -20,6 +20,6 @@
 var ghpages = require('gh-pages');
 
 ghpages.publish('dist', {
-  branch: 'asf-site-sav',
-  repo: 'https://gitbox.apache.org/repos/asf/incubator-iotdb.git'
-}, callback);
+  branch: 'asf-site',
+  repo: 'https://gitbox.apache.org/repos/asf/incubator-iotdb-website.git'
+});
