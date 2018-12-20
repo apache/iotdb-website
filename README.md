@@ -1,5 +1,7 @@
 # IoTDB website
 
+See https://iotdb.apache.org/
+
 ## Requirements
 
 * Node.js
