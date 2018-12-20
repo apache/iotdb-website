@@ -53,8 +53,7 @@ pipeline {
             steps {
                 echo 'Deploying'
                 // Deploy the artifacts using the wagon-maven-plugin.
-                //Commented out for now ...
-                //sh ''
+                sh 'npm run deploy'
             }
         }
     }
