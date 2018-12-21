@@ -4,14 +4,14 @@
             <div class="sidebar-module">
                 <h4>Latest News</h4>
                 <ol class="list-unstyled">
+                  <!--<li lang="en">-->
+                    <!--1. New version of Apache IoTDB (incubating) is released in June, 2018.-->
+                    <!--This version released 4 new features in Apache IoTDB (incubating) Engine and released-->
+                    <!--a Apache IoTDB (incubating)-Transfer-Tool for transfer files back from edge to data center.-->
+                    <!--Also, it contains 6 bug fixes, improvements and enhancements since 0.6.0.-->
+                  <!--</li>-->
                   <li lang="en">
-                    1. New version of Apache IoTDB (incubating) is released in June, 2018.
-                    This version released 4 new features in Apache IoTDB (incubating) Engine and released
-                    a Apache IoTDB (incubating)-Transfer-Tool for transfer files back from edge to data center.
-                    Also, it contains 6 bug fixes, improvements and enhancements since 0.6.0.
-                  </li>
-                  <li lang="en">
-                    2. Users are encouraged to read the overview of major changes in <router-link to="/Documents">release notes</router-link>,
+                    1. Users are encouraged to read the overview of major changes in <router-link to="/Documents">release notes</router-link>,
                     download this version in <router-link to="/Download">download page</router-link>
                     and view documents in <router-link to="/Documents">documentation page</router-link>.
                   </li>
