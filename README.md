@@ -1,5 +1,7 @@
 # IoTDB website
 
+[![Build Status](https://builds.apache.org/view/I/view/IoTDB/job/IoTDB%20Website/badge/icon)](https://builds.apache.org/view/I/view/IoTDB/job/IoTDB%20Website/)
+
 See https://iotdb.apache.org/
 
 ## Requirements
