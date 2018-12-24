@@ -13,7 +13,7 @@ Please make sure node and npm are latest version.
 
 ## Build Setup
 
-``` bash
+```shell
 # install dependencies
 npm install
 
