@@ -18,24 +18,38 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="../assets/img/home-Slide1.png" alt="First slide">
+                            <img src="https://user-images.githubusercontent.com/1021782/50415807-2ad11300-0858-11e9-938d-e5604de13d66.png" alt="First slide">
                             <div class="Scenarios">
-                                <h1 style="margin-top: 0">Example</h1>
-                                <p>A car company installed sensors on its cars to collect monitoring information such as the driving status of the vehicle. These automotive devices have limited hardware configurations and are difficult to carry complex applications. Cars with sensors can be connected to each other or send data via narrow-band IoT(Example).</p>
+                                <h1 style="margin-top: 0">Single Machine Management</h1>
+                                <p> There are many sensors in an advanced equipment, e.g., a meteorological station, a wind turbine, for collecting the work status data.
+                                If the embedded board supports Java or Go (in developing), then TsFile can be run on the embedded board to store data locally.
+                                In this way, TsFile provides the ability to save data with high throughput, compress data, and time/value query.
+                                Then, generated TsFiles can be transmitted to the data center, which has an IoTDB instance.
+                                The IoTDB instance can ingest external TsFiles directly, without re-inserting data one point by one point.
+                                </p>
+                                <p>
+                                If the embedded board supports Java and requires rich query functions, then an IoTDB instance can be installed on the device.
+                              </p>
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../assets/img/home-Slide2.png" alt="Second slide">
+                            <img src="https://user-images.githubusercontent.com/1021782/50415867-6e2b8180-0858-11e9-9cdc-7729f8c056a6.png" alt="Second slide">
                             <div class="Scenarios">
-                                <h1 style="margin-top: 0">Example</h1>
-                                <p>A car company installed sensors on its cars to collect monitoring information such as the driving status of the vehicle. These automotive devices have limited hardware configurations and are difficult to carry complex applications. Cars with sensors can be connected to each other or send data via narrow-band IoT(Example).</p>
+                                <h1 style="margin-top: 0">Local Controller</h1>
+                                <p> Suppose there is a factory and there are tens of devices in the factory. IoTDB can be installed on a local controller server in the factory to manage the data of tens of devices.
+                                The local controller server can be a normal PC, or a workstation. The IoTDB instance provides the ability to persist data and query data with SQL-like interface.
+                                The generated TsFiles can be transmitted to the IoTDB instance in the cloud, which is similar with the Single Machine Management scenario.
+                                </p>
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../assets/img/home-Slide3.png" alt="Third slide">
+                            <img src="https://user-images.githubusercontent.com/1021782/50415866-6e2b8180-0858-11e9-81a6-4c47d1df25ca.png" alt="Third slide">
                             <div class="Scenarios">
-                                <h1 style="margin-top: 0">Example</h1>
-                                <p>A car company installed sensors on its cars to collect monitoring information such as the driving status of the vehicle. These automotive devices have limited hardware configurations and are difficult to carry complex applications. Cars with sensors can be connected to each other or send data via narrow-band IoT(Example).</p>
+                                <h1 style="margin-top: 0">Cloud Data Management</h1>
+                                <p>A car company installed sensors on its cars to collect monitoring information such as the driving status of the vehicle.
+                                These automotive devices have limited hardware configurations and are difficult to carry complex applications.
+                                Cars with sensors can be connected to each other or send data via narrow-band IoT or 4G.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -108,7 +122,7 @@
         ],
         featureBlock2:[
           {featureSrc:require("../assets/img/home-icon4.png"),featureTitle:"Low cost on hardware",
-          featureContent:"Apache IoTDB (incubating) can reach a high compression ratio of disk storage (For one billion data storage, hard drive cost less than $0.23)"},
+          featureContent:"Apache IoTDB (incubating) can reach a high compression ratio of disk storage "},
           {featureSrc:require("../assets/img/home-icon5.png"),featureTitle:"Flexible deployment",
           featureContent:"Apache IoTDB (incubating) provides users one-click installation tool on the cloud, once-decompressed-used terminal tool and the bridge tool between cloud platform and terminal tool (Data Synchronization Tool)."},
           {featureSrc:require("../assets/img/home-icon6.png"),featureTitle:"Intense integration with Open Source Ecosystem",
