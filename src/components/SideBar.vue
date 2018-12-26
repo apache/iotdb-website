@@ -11,10 +11,13 @@
                     <!--Also, it contains 6 bug fixes, improvements and enhancements since 0.6.0.-->
                   <!--</li>-->
                   <li lang="en">
-                    1. Users are encouraged to read the overview of major changes in <router-link to="/Documents">release notes</router-link>,
-                    download this version in <router-link to="/Download">download page</router-link>
+		    1. After the Apache version is released, users are encouraged to read the overview of major changes in <router-link to="/Documents">release notes</router-link>,
+                    download the version in <router-link to="/Download">download page</router-link>
                     and view documents in <router-link to="/Documents">documentation page</router-link>.
                   </li>
+		  <li lang="en">
+                    2. Currently, we support an unofficial version on <a href="https://github.com/thulab/iotdb/releases">GitHub</a>.
+		  </li>
                 </ol>
             </div>
             <div class="sidebar-module">
