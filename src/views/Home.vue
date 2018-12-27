@@ -18,14 +18,14 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="https://user-images.githubusercontent.com/1021782/50415807-2ad11300-0858-11e9-938d-e5604de13d66.png" alt="First slide">
+                            <img src="https://user-images.githubusercontent.com/1021782/50463652-f67c6480-09c7-11e9-8f65-c8adaff09043.png" alt="First slide">
                             <div class="Scenarios">
-                                <h1 style="margin-top: 0">Single Machine Management</h1>
-                                <p> There are many sensors in an advanced equipment, e.g., a meteorological station, a wind turbine, for collecting the work status data.
-                                If the embedded board supports Java or Go (in developing), then TsFile can be run on the embedded board to store data locally.
-                                In this way, TsFile provides the ability to save data with high throughput, compress data, and time/value query.
-                                Then, generated TsFiles can be transmitted to the data center, which has an IoTDB instance.
-                                The IoTDB instance can ingest external TsFiles directly, without re-inserting data one point by one point.
+                                <h1 style="margin-top: 0">High-end equipment</h1>
+                                <p> In high-end manufacturing, there are many devices equipped with sensors which can collect working status data.
+                                Meteorological stations, wind turbines, etc. are common high-end devices.
+                                These devices, if supports Java or Go (in developing), can run TsFile to store data locally.
+                                In this way, TsFile can provide the ability to save data with high throughput, high compression ratio, and millisecond query.
+                                In addition, with TsFile-Sync tool, TsFiles can be transmitted to the data center equipped with IoTDB instance instead of re-inserting data one point by one point.
                                 </p>
                                 <p>
                                 If the embedded board supports Java and requires rich query functions, then an IoTDB instance can be installed on the device.
@@ -33,22 +33,26 @@
                             </div>
                         </div>
                         <div class="item">
-                            <img src="https://user-images.githubusercontent.com/1021782/50415867-6e2b8180-0858-11e9-9cdc-7729f8c056a6.png" alt="Second slide">
+                            <img src="https://user-images.githubusercontent.com/1021782/50463651-f67c6480-09c7-11e9-9374-3e6c6c540d7b.png" alt="Second slide">
                             <div class="Scenarios">
                                 <h1 style="margin-top: 0">Local Controller</h1>
-                                <p> Suppose there is a factory and there are tens of devices in the factory. IoTDB can be installed on a local controller server in the factory to manage the data of tens of devices.
-                                The local controller server can be a normal PC, or a workstation. The IoTDB instance provides the ability to persist data and query data with SQL-like interface.
-                                The generated TsFiles can be transmitted to the IoTDB instance in the cloud, which is similar with the Single Machine Management scenario.
+                                <p>
+                                In the scene of factories, there are tens of devices under LAN network.
+                                IoTDB can be installed on a local controller server in the factory to receive data from those devices.
+                                The local controller server (normal PC or workstation) with IoTDB can provide the ability to persist data and query data with SQL-like interface.
+                                In addition, with TsFile-Sync tool, TsFiles on the local controller can be transmitted to the data center equipped with IoTDB instance in the cloud.
                                 </p>
                             </div>
                         </div>
                         <div class="item">
-                            <img src="https://user-images.githubusercontent.com/1021782/50415866-6e2b8180-0858-11e9-81a6-4c47d1df25ca.png" alt="Third slide">
+                            <img src="https://user-images.githubusercontent.com/1021782/50463650-f67c6480-09c7-11e9-9b80-bc66aa5dc0ab.png" alt="Third slide">
                             <div class="Scenarios">
                                 <h1 style="margin-top: 0">Cloud Data Management</h1>
-                                <p>A car company installed sensors on its cars to collect monitoring information such as the driving status of the vehicle.
-                                These automotive devices have limited hardware configurations and are difficult to carry complex applications.
-                                Cars with sensors can be connected to each other or send data via narrow-band IoT or 4G.
+                                <p>
+                                In the scene of high-speed network (Internet of Vehicles, etc.), a car installed sensors on it can collect monitoring information(driving status, etc.) of itself at a certain frequency.
+                                Usually, these automotive devices have limited hardware configurations and are difficult to carry complex applications.
+                                Lightweight IoTDB(IoTDB Client) came into being.
+                                With JDBC API, it can make data sent by narrow-band IoT or 4G possible. In this way, devices and cloud are connected together.
                                 </p>
                             </div>
                         </div>
