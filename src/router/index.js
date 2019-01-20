@@ -22,7 +22,7 @@ export default new Router({
     {
       path: '/Download',
       name: 'Download',
-      component: Comming
+      component: Download
     },
     {
       path: '/Documents',
