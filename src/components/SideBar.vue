@@ -24,7 +24,7 @@
                 </ol>
             </div>
         </div>
-        <button type="button" class="btn btn-warning" style="font-size: 2rem" @click="download_btn_clicked">Download</button>
+        <button type="button" class="btn btn-warning" style="font-size: 2rem" @click="downloadBtnClicked">Download</button>
         <button type="button" class="btn btn-default" style="margin-top: 15px;border-color: #fcac45;background: white;font-size: 2rem">Quick Start</button>
     </div>
 </template>
@@ -35,7 +35,7 @@
       props: ["download_url"],
       methods: {
         downloadBtnClicked(){
-          console.log("download_url="+this.download_url)
+          // console.log("download_url="+this.download_url)
           this.$router.push({path:'/Comming'})
         }
       }

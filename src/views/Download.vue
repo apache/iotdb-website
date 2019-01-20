@@ -5,7 +5,7 @@
         <h1 class="download-title" style="color:#fcac45">Release Version</h1>
         <p>Please choose a version:
           <select v-model="selectedVersionUrl">
-            <option v-for="iot_version in downloadVersionList" :value="iot_version.url">{{iot_version.text}}</option>
+            <option v-for="iotdbVersion in downloadVersionList" :value="iotdbVersion.url">{{iotdbVersion.text}}</option>
           </select>
         </p>
         <p>Main features and change list of each version, please check <a :href="releaseNotesUrl" style="color:#fcac45">Release Notes</a>.</p>
@@ -29,18 +29,17 @@
     },
     data() {
       return {
-        iotdbGithubUrl: 'https://github.com/thulab/iotdb.git',
-        releaseNotesUrl: 'https://github.com/thulab/iotdb.git',
+        iotdbGithubUrl: 'https://github.com/apache/incubator-iotdb',
+        releaseNotesUrl: 'https://github.com/apache/incubator-iotdb',
         selectedVersionUrl: '',
         downloadVersionList: [
-          { text: 'iotdb-v7.0', url: 'https://github.com/thulab/iotdb.git7'},
-          { text: 'iotdb-v8.0', url: 'https://github.com/thulab/iotdb.git8' },
-          { text: 'iotdb-v9.0', url: 'https://github.com/thulab/iotdb.git9' }
+          { text: 'iotdb-v7.0', url: 'https://github.com/apache/incubator-iotdb'},
+          { text: 'iotdb-v8.0', url: 'https://github.com/apache/incubator-iotdb' },
+          { text: 'iotdb-v9.0', url: 'https://github.com/apache/incubator-iotdb' }
         ]
       }
     },
     created(){
-      //如果没有这句代码，select中初始化会是空白的，默认选中就无法实现
       this.selectedVersionUrl = this.downloadVersionList[0].url;
     },
     methods: {
@@ -60,7 +59,7 @@
   button{
     width: 100%;font-size: x-large;font-weight: bold;
   }
-  div{
+  .main>div{
     margin-top: 10px;
   }
   .download-title {
