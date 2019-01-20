@@ -34,7 +34,7 @@
       name: "SideBar",
       props: ["download_url"],
       methods: {
-        download_btn_clicked(){
+        downloadBtnClicked(){
           console.log("download_url="+this.download_url)
           this.$router.push({path:'/Comming'})
         }
