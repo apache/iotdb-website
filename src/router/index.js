@@ -32,7 +32,7 @@ export default new Router({
     {
       path: '/Tools',
       name: 'Tools',
-      component: Comming
+      component: Tools
     },
     {
       path: '/Community',
