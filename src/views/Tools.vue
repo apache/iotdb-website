@@ -47,7 +47,7 @@
                 <div class="tool-documentation">
                   <button data-toggle="modal" data-target="#myModal" type="button"
                           class="tool-documentation-button btn btn-default">
-                    <p style="color: white; font-size: medium">Download</p>
+                    <p style="color: white; font-size: medium">Documentation</p>
                   </button>
                   <br>
                   <br>
