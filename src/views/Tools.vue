@@ -2,11 +2,10 @@
   <div class="background-image">
     <div class="container" style="width:95%">
       <br>
-      <div class="row featurette">
+      <div class="row">
         <div class="col-lg-7">
           <div class="scene">
-            <img class="featurette-image img-responsive center-block" src="../assets/img/tools.jpg"
-                 alt="Generic placeholder image">
+            <img src="../assets/img/tools.jpg">
           </div>
         </div>
         <div class="col-lg-5">
