@@ -3,34 +3,29 @@
     <div class="container" style="width:95%">
       <br>
       <div class="row featurette">
-        <div class="col-md-7">
+        <div class="col-lg-7">
           <div class="scene">
             <img class="featurette-image img-responsive center-block" src="../assets/img/tools.jpg"
                  alt="Generic placeholder image">
           </div>
         </div>
-        <div class="col-md-5">
-          <!--<p class="lead">IoTDB is an open-source time series database developed by THULab(link) which is written in JAVA. In order to enable IoTDB to more fully support the application of time series data, we have developed a few tools for IoTDB expansion.-->
-
-            <!--SQL-like client(Cli) is developed for users to interact with IoTDB engine in command line.-->
-            <!--Grafana is developed to visualize time series data in IoTDB using Grafana.-->
-            <!--IoTDB can be also efficiently integrated with other computing frameworks in big data ecosystems, like Hadoop and Spark, for advanced data analytics. That is why we offer you hadoop and spark connector.</p>-->
-          <!--<div class="introduction">-->
-          <!--<p>Introduction of copywriting(coming soon...)</p>-->
-          <!--</div>-->
+        <div class="col-lg-5">
           <div class="introduction">
-            <p>IoTDB is an open-source time series database developed by THULab(link) which is written in JAVA. In order to enable IoTDB to more fully support the application of time series data, we have developed a few tools for IoTDB expansion.
-
-            SQL-like client(Cli) is developed for users to interact with IoTDB engine in command line.
-            Grafana is developed to visualize time series data in IoTDB using Grafana.
-            IoTDB can be also efficiently integrated with other computing frameworks in big data ecosystems, like Hadoop and Spark, for advanced data analytics. That is why we offer you hadoop and spark connector.</p>
-
+            <p><b>IoTDB</b> is an open-source time series database developed by THULab(link) which is written in JAVA. In order
+              to enable IoTDB to more fully support the application of time series data, we have developed a few tools
+              for IoTDB expansion.
+            </p>
+            <ul>
+              <li>SQL-like client(Cli) is developed for users to interact with IoTDB engine in command line.</li>
+              <li>Grafana is developed to visualize time series data in IoTDB using Grafana.</li>
+              <li>IoTDB can be also efficiently integrated with other computing frameworks in big data ecosystems, like
+                Hadoop and Spark, for advanced data analytics. That is why we offer you hadoop and spark connector.
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-
       <hr>
-
       <div class="tools">
         <div class="row">
           <div v-for="tool in Tools">
@@ -132,6 +127,7 @@
     border-radius: 10px;
     padding: 10px;
     background: white;
+    float: left;
   }
 
   .scene > img {
@@ -141,16 +137,20 @@
   }
 
   .introduction {
-    border: 2px solid;
+    border: 0px solid;
     border-radius: 10px;
     margin: 2px 2px 2px 2px;
-    padding: 20px;
-    background: black;
+    float: right;
     height: 100%;
   }
 
   .introduction > p {
-    color: white;
+    color: black;
+    font-size: medium;
+  }
+
+  .introduction > ul {
+    color: black;
     font-size: medium;
   }
 
@@ -211,18 +211,6 @@
     font-size: x-large;
     font-weight: bold;
     border: 2px solid #fcac45;
-  }
-
-  /**/
-  .featurette-divider {
-    margin: 80px 0; /* Space out the Bootstrap <hr> more */
-  }
-
-  /* Thin out the marketing headings */
-  .featurette-heading {
-    font-weight: 300;
-    line-height: 1;
-    letter-spacing: -1px;
   }
 
   .tools .col-lg-3 {
