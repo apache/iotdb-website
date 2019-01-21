@@ -18,24 +18,42 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="../assets/img/home-Slide1.png" alt="First slide">
+                            <img src="https://user-images.githubusercontent.com/1021782/50463652-f67c6480-09c7-11e9-8f65-c8adaff09043.png" alt="First slide">
                             <div class="Scenarios">
-                                <h1 style="margin-top: 0">Example</h1>
-                                <p>A car company installed sensors on its cars to collect monitoring information such as the driving status of the vehicle. These automotive devices have limited hardware configurations and are difficult to carry complex applications. Cars with sensors can be connected to each other or send data via narrow-band IoT(Example).</p>
+                                <h1 style="margin-top: 0">High-end equipment</h1>
+                                <p> In high-end manufacturing, there are many devices equipped with sensors which can collect working status data.
+                                Meteorological stations, wind turbines, etc. are common high-end devices.
+                                These devices, if supports Java or Go (in developing), can run TsFile to store data locally.
+                                In this way, TsFile can provide the ability to save data with high throughput, high compression ratio, and millisecond query.
+                                In addition, with TsFile-Sync tool, TsFiles can be transmitted to the data center equipped with IoTDB instance instead of re-inserting data one point by one point.
+                                </p>
+                                <p>
+                                If the embedded board supports Java and requires rich query functions, then an IoTDB instance can be installed on the device.
+                              </p>
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../assets/img/home-Slide2.png" alt="Second slide">
+                            <img src="https://user-images.githubusercontent.com/1021782/50463651-f67c6480-09c7-11e9-9374-3e6c6c540d7b.png" alt="Second slide">
                             <div class="Scenarios">
-                                <h1 style="margin-top: 0">Example</h1>
-                                <p>A car company installed sensors on its cars to collect monitoring information such as the driving status of the vehicle. These automotive devices have limited hardware configurations and are difficult to carry complex applications. Cars with sensors can be connected to each other or send data via narrow-band IoT(Example).</p>
+                                <h1 style="margin-top: 0">Local Controller</h1>
+                                <p>
+                                In the scene of factories, there are tens of devices under LAN network.
+                                IoTDB can be installed on a local controller server in the factory to receive data from those devices.
+                                The local controller server (normal PC or workstation) with IoTDB can provide the ability to persist data and query data with SQL-like interface.
+                                In addition, with TsFile-Sync tool, TsFiles on the local controller can be transmitted to the data center equipped with IoTDB instance in the cloud.
+                                </p>
                             </div>
                         </div>
                         <div class="item">
-                            <img src="../assets/img/home-Slide3.png" alt="Third slide">
+                            <img src="https://user-images.githubusercontent.com/1021782/50463650-f67c6480-09c7-11e9-9b80-bc66aa5dc0ab.png" alt="Third slide">
                             <div class="Scenarios">
-                                <h1 style="margin-top: 0">Example</h1>
-                                <p>A car company installed sensors on its cars to collect monitoring information such as the driving status of the vehicle. These automotive devices have limited hardware configurations and are difficult to carry complex applications. Cars with sensors can be connected to each other or send data via narrow-band IoT(Example).</p>
+                                <h1 style="margin-top: 0">Cloud Data Management</h1>
+                                <p>
+                                In the scene of high-speed network (Internet of Vehicles, etc.), a car installed sensors on it can collect monitoring information(driving status, etc.) of itself at a certain frequency.
+                                Usually, these automotive devices have limited hardware configurations and are difficult to carry complex applications.
+                                Lightweight IoTDB(IoTDB Client) came into being.
+                                With JDBC API, it can make data sent by narrow-band IoT or 4G possible. In this way, devices and cloud are connected together.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -108,7 +126,7 @@
         ],
         featureBlock2:[
           {featureSrc:require("../assets/img/home-icon4.png"),featureTitle:"Low cost on hardware",
-          featureContent:"Apache IoTDB (incubating) can reach a high compression ratio of disk storage (For one billion data storage, hard drive cost less than $0.23)"},
+          featureContent:"Apache IoTDB (incubating) can reach a high compression ratio of disk storage "},
           {featureSrc:require("../assets/img/home-icon5.png"),featureTitle:"Flexible deployment",
           featureContent:"Apache IoTDB (incubating) provides users one-click installation tool on the cloud, once-decompressed-used terminal tool and the bridge tool between cloud platform and terminal tool (Data Synchronization Tool)."},
           {featureSrc:require("../assets/img/home-icon6.png"),featureTitle:"Intense integration with Open Source Ecosystem",
