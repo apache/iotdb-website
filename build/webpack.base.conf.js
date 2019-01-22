@@ -68,7 +68,7 @@ module.exports = {
       },
       {
         test: /\.md$/,
-        loader: 'text-loader'
+        loaders: 'text-loader'
       }
     ]
   },
