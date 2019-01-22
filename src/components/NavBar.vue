@@ -33,15 +33,8 @@
                 </li>
               </ul>
             </li>
-            <li class="dropdown">
-              <router-link to="/Tools" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                           aria-haspopup="true" aria-expanded="false"><span>Tools<b class="caret"></b></span>
-              </router-link>
-              <ul class="dropdown-menu">
-                <li v-for="item in Tools">
-                  <router-link :to=item.url class="nav-link"><span>{{item.content}}</span></router-link>
-                </li>
-              </ul>
+            <li class="nav-item">
+              <router-link to="/Tools" class="nav-link"><span>Tools</span></router-link>
             </li>
             <li class="dropdown">
               <router-link to="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -63,6 +56,9 @@
                 </li>
               </ul>
             </li>
+            <li class="nav-item">
+              <router-link to="/Example" class="nav-link"><span>Example</span></router-link>
+            </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="nav-item">
@@ -82,35 +78,20 @@
     data() {
       return {
         "Documents": [
-          {"url": "/Comming", "content": "Latest Release"},
-          {"url": "/Comming", "content": "Older Versions and Other resources"},
-          {"url": "/Comming", "content": "Frequently Asked Questions"}
-        ],
-        "Tools": [
-          {"url": "/Comming", "content": "Cli"},
-          {"url": "/Comming", "content": "Grafana"},
-          {"url": "/Comming", "content": "Hadoop"},
-          {"url": "/Comming", "content": "Spark"}
+          {"url": "/Comming", "content": "Quick Start"},
+          {"url": "/Comming", "content": "User Guide"},
+          {"url": "/Comming", "content": "Other Materials"},
+          {"url": "/Comming", "content": "Frequently asked questions"}
         ],
         "Community": [
-          {"url": "/Community/MailingList", "content": "Mailing Lists & Resources"},
-          {"url": "/Community/ContributingToIoTDB", "content": "Contributing to IoTDB"},
-          {"url": "/Community/IssueTracker", "content": "Issue Tracker"},
-          {"url": "/Community/PoweredBy", "content": "Powered By"},
-          {"url": "/Community/ProjectCommitters", "content": "Project Committers"},
-          {"url": "/Community/ProjectHistory", "content": "Project History"}
+          {"url": "/Comming", "content": "Powered By"},
+          {"url": "/Comming", "content": "Project Committers"},
+          {"url": "/Comming", "content": "History & Vision"},
         ],
         "Development": [
-          {"url": "/Development/UsefulDeveloperTools", "content": "Useful Developer Tools"},
-          {"url": "/Development/VersioningPolicy", "content": "Versioning Policy"}
+          {"url": "/Comming", "content": "Have Questions"},
+          {"url": "/Comming", "content": "How to contribute"}
         ]
-//        "Apache" : [
-//          {"url": "https://www.apache.org/", "content": "Apache Homepage"},
-//          {"url": "https://www.apache.org/licenses", "content": "Licenses"},
-//          {"url": "https://www.apache.org/foundation/sponsorship.html", "content": "Sponsorship"},
-//          {"url": "https://www.apache.org/foundation/thanks.html", "content": "Thanks"},
-//          {"url": "https://www.apache.org/security/", "content": "Security"}
-//        ]
 
       }
     },

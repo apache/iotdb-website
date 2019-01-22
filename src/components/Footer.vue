@@ -15,7 +15,7 @@
 
 <style scoped>
 .footer{
-    height:50px;
+    /*height:50px;*/
     padding:10px 0;
     margin-top: 30px;
     text-align:center;
