@@ -41,7 +41,7 @@
             </ul>
           </li>
           <li class="dropdown">
-            <router-link to="/Community" class="dropdown-toggle" data-toggle="dropdown" role="button"
+            <router-link to="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                          aria-haspopup="true" aria-expanded="false"><span>Community<b class="caret"></b></span></router-link>
             <ul class="dropdown-menu">
               <li v-for="item in Community">
@@ -50,7 +50,7 @@
             </ul>
           </li>
           <li class="dropdown">
-            <router-link to="/Development" class="dropdown-toggle" data-toggle="dropdown" role="button"
+            <router-link to="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                          aria-haspopup="true" aria-expanded="false"><span>Development<b class="caret"></b></span></router-link>
             <ul class="dropdown-menu">
               <li v-for="item in Development">
@@ -87,16 +87,16 @@
           {"url": "/Comming", "content": "Spark"}
         ],
         "Community": [
-          {"url": "/Comming", "content": "Mailing Lists & Resources"},
-          {"url": "/Comming", "content": "Contributing to IoTDB"},
-          {"url": "/Comming", "content": "Issue Tracker"},
-          {"url": "/Comming", "content": "Powered By"},
-          {"url": "/Comming", "content": "Project Committers"},
-          {"url": "/Comming", "content": "Project History"}
+          {"url": "/Community/MailingList", "content": "Mailing Lists & Resources"},
+          {"url": "/Community/ContributingToIoTDB", "content": "Contributing to IoTDB"},
+          {"url": "/Community/IssueTracker", "content": "Issue Tracker"},
+          {"url": "/Community/PoweredBy", "content": "Powered By"},
+          {"url": "/Community/ProjectCommitters", "content": "Project Committers"},
+          {"url": "/Community/ProjectHistory", "content": "Project History"}
         ],
         "Development":[
-          {"url": "/Comming", "content": "Useful Developer Tools"},
-          {"url": "/Comming", "content": "Versioning Policy"}
+          {"url": "/Development/UsefulDeveloperTools", "content": "Useful Developer Tools"},
+          {"url": "/Development/VersioningPolicy", "content": "Versioning Policy"}
         ]
 //        "Apache" : [
 //          {"url": "https://www.apache.org/", "content": "Apache Homepage"},

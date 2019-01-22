@@ -1,6 +1,6 @@
 <template>
   <div class="background-image">
-    <div class="container" style="width:95%">
+    <div class="container">
       <br>
       <div class="row">
         <div class="col-lg-7">
@@ -28,7 +28,7 @@
       <div class="tools">
         <div class="row">
           <div v-for="tool in Tools">
-            <div class="col-lg-3">
+            <div class="col-md-6 col-lg-3">
               <div class="tool thumbnail">-->
                 <h3>{{tool.header}}</h3>
                 <div class="content">
@@ -69,12 +69,13 @@
         </div>
       </div>
     </div>
+    <hr>
     <footer-bar/>
   </div>
 </template>
 
 <script>
-  import Footer from "../components/Footer"
+  import Footer from "../components/FooterFixed"
 
   export default {
     name: "Tools",
