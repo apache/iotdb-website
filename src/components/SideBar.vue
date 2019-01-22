@@ -32,11 +32,9 @@
 <script>
     export default {
       name: "SideBar",
-      props: ["download_url"],
       methods: {
         downloadBtnClicked(){
-          // console.log("download_url="+this.download_url)
-          this.$router.push({path:'/Comming'})
+          this.$router.push({path:'/Download'})
         }
       }
     }
