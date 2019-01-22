@@ -14,7 +14,10 @@
   },
   "dependencies": {
     "popper.js": "^1.14.6",
+    "text-loader": "0.0.1",
+    "unit": "^1.0.4",
     "vue": "^2.5.2",
+    "vue-markdown": "^2.2.4",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

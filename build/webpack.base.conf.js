@@ -68,7 +68,7 @@ module.exports = {
       },
       {
         test: /\.md$/,
-        loader: 'vue-loader!vue-md-loader'
+        loader: 'text-loader'
       }
     ]
   },

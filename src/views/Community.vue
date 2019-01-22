@@ -3,56 +3,64 @@
     <div class="container">
       <div class="row markdown-body">
         <div class="col-sm-8" v-if="content() === 'MailingList'">
-          <MailingLists></MailingLists>
+          <vue-markdown :source="community['MailingList']"></vue-markdown>
         </div>
         <div class="col-sm-8" v-else-if="content() === 'ContributingToIoTDB'">
-          <ContributingToIoTDB></ContributingToIoTDB>
+          <vue-markdown :source="community['ContributingToIoTDB']"></vue-markdown>
         </div>
         <div class="col-sm-8" v-else-if="content() === 'IssueTracker'">
-          <IssueTracker></IssueTracker>
+          <vue-markdown :source="community['IssueTracker']"></vue-markdown>
         </div>
         <div class="col-sm-8" v-else-if="content() === 'PowerBy'">
-          <PowerBy></PowerBy>
+          <vue-markdown :source="community['PowerBy']"></vue-markdown>
         </div>
         <div class="col-sm-8" v-else-if="content() === 'ProjectCommitters'">
-          <ProjectCommitters></ProjectCommitters>
+          <vue-markdown :source="community['ProjectCommitters']"></vue-markdown>
         </div>
         <div class="col-sm-8" v-else>
-          <ProjectHistory></ProjectHistory>
+          <vue-markdown :source="community['ProjectHistory']"></vue-markdown>
         </div>
         <my-sidebar/>
       </div>
     </div>
+    <br>
+    <br>
+    <br>
     <footer-bar/>
   </div>
 </template>
 
 <script>
-  import ContributingToIoTDB from '../assets/markdown/Community/Contributing to IoTDB.md'
-  import IssueTracker from '../assets/markdown/Community/Issue Tracker.md'
-  import MailingLists from '../assets/markdown/Community/Mailing Lists & Resources.md'
-  import PowerBy from '../assets/markdown/Community/Powered By.md'
-  import ProjectCommitters from '../assets/markdown/Community/Project Committers.md'
-  import ProjectHistory from '../assets/markdown/Community/Project History.md'
   import 'highlight.js/styles/github.css'
   import Footer from "../components/FooterFixed"
   import SideBar from '../components/SideBar'
+  import markdown from 'vue-markdown'
+
 
   export default {
     name: "Community",
     components: {
       'footer-bar': Footer,
       'my-sidebar': SideBar,
-      ContributingToIoTDB, IssueTracker, MailingLists, PowerBy, ProjectCommitters, ProjectHistory
+      'vue-markdown':markdown,
     },
     data() {
       return {
-        msg: 'Welcome to Community Page'
+        msg: 'Welcome to Community Page',
         // content: this.$route.params.$route
+
+        community: {
+          ContributingToIoTDB: require("../assets/markdown/Community/Contributing to IoTDB.md"),
+          IssueTracker: require("../assets/markdown/Community/Issue Tracker.md"),
+          MailingList: require("../assets/markdown/Community/Mailing Lists & Resources.md"),
+          PowerBy: require("../assets/markdown/Community/Powered By.md"),
+          ProjectCommitters: require("../assets/markdown/Community/Project Committers.md"),
+          ProjectHistory: require("../assets/markdown/Community/Project History.md"),
+        }
       }
     },
 
-    methods :{
+    methods: {
       content: function () {
         return this.$route.params.content
       }

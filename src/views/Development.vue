@@ -3,10 +3,10 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-8" v-if="content() === 'UsefulDeveloperTools'">
-          <UsefulDeveloperTools></UsefulDeveloperTools>
+          <vue-markdown :source="development['UsefulDeveloperTools']"></vue-markdown>
         </div>
         <div class="col-sm-8" v-else="content() === 'VersioningPolicy'">
-          <VersioningPolicy></VersioningPolicy>
+          <vue-markdown :source="development['VersioningPolicy']"></vue-markdown>
         </div>
         <my-sidebar/>
       </div>
@@ -16,25 +16,27 @@
 </template>
 
 <script>
-  import UsefulDeveloperTools from '../assets/markdown/Development/Useful Developer Tools.md'
-  import VersioningPolicy from '../assets/markdown/Development/Versioning Policy.md'
-  import 'highlight.js/styles/github.css'
   import Footer from "../components/FooterFixed"
   import SideBar from '../components/SideBar'
+  import markdown from 'vue-markdown'
 
   export default {
-    name: "CommunityMailingList",
+    name: "Development",
     components: {
       'footer-bar': Footer,
       'my-sidebar': SideBar,
-      UsefulDeveloperTools,VersioningPolicy
+      'vue-markdown':markdown,
     },
     data() {
       return {
-        msg: 'Welcome to Community Page'
+        msg: 'Welcome to Community Page',
+        development: {
+          UsefulDeveloperTools: require("../assets/markdown/Development/Useful Developer Tools.md"),
+          VersioningPolicy: require("../assets/markdown/Development/Versioning Policy.md"),
+        }
       }
     },
-    methods :{
+    methods: {
       content: function () {
         return this.$route.params.content
       }
@@ -50,6 +52,7 @@
     font-family: Georgia, "Times New Roman", Times, serif;
     color: #555;
   }
+
   .pager > li > a {
     width: 140px;
     padding: 10px 20px;
