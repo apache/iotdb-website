@@ -119,7 +119,7 @@
 <style scoped>
 
   .background-image {
-    background: antiquewhite no-repeat;
+    background: antiquewhite repeat;
   }
 
   .scene {
@@ -182,7 +182,7 @@
   .tool > p {
     color: white;
     text-align: center;
-    font-size: x-small;
+    font-size: small;
   }
 
   .tool-download {
