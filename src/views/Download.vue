@@ -1,29 +1,36 @@
 <template>
-  <div class="main container" style="max-width: 1200px; min-width: 900px">
-    <div class="row">
-      <div class="col-md-8 col-sm-12 download-article">
-        <h1 class="download-title">Release Version</h1>
-        <p>Please choose a version:
-          <select class="download-version-select" v-model="selectVersionObj">
-            <option v-for="iotdbVersion in downloadVersionList" :value="iotdbVersion">{{iotdbVersion.text}}</option>
-          </select>
-        </p>
-        <p>Download IoTDB for Linux/MacOS:<a class="link-color" :href="selectVersionObj.linuxUrl"> {{selectVersionObj.text}} Release.tar</a></p>
-        <p>Download IoTDB for Windows:<a class="link-color" :href="selectVersionObj.windowsUrl"> {{selectVersionObj.text}} Release.zip</a></p>
-        <p>Main features and change list of each version, please check <a class="link-color" :href="releaseNotesUrl">Release Notes</a>.</p>
-        <h1 class="download-title">Get Source Code</h1>
-        <p>Go to our <a class="link-color" :href="iotdbGithubUrl">Github</a>, have fun with IoTDB source code!</p>
+  <div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <h2 class="download-title">Release Version</h2>
+          <p>Please choose a version:
+            <select class="download-version-select" v-model="selectVersionObj">
+              <option v-for="iotdbVersion in downloadVersionList" :value="iotdbVersion">{{iotdbVersion.text}}</option>
+            </select>
+          </p>
+          <ul>
+            <li style="margin: 5px">Download IoTDB for Linux/MacOS:<a class="link-color" :href="selectVersionObj.linuxUrl"> {{selectVersionObj.text}} Release.tar</a></li>
+            <li style="margin: 5px">Download IoTDB for Windows:<a class="link-color" :href="selectVersionObj.windowsUrl"> {{selectVersionObj.text}} Release.zip</a></li>
+          </ul>
+          <p>Main features and change list of each version, please check <a class="link-color" :href="releaseNotesUrl">Release Notes</a>.</p>
+          <h2 class="download-title">Get Source Code</h2>
+          <p>Go to our <a class="link-color" :href="iotdbGithubUrl">Github</a>, have fun with IoTDB source code!</p>
+        </div>
+        <my-sidebar/>
       </div>
-      <my-sidebar/>
     </div>
+    <footer-bar/>
   </div>
 </template>
 
 <script>
   import SideBar from '../components/SideBar'
+  import Footer from '../components/FooterFixed'
   export default {
     name: "Download",
     components: {
+      'footer-bar': Footer,
       'my-sidebar': SideBar
     },
     data() {
@@ -49,13 +56,9 @@
     margin-top: 10px;
   }
   .download-title {
-    margin-bottom: 30px;
-    font-size: 60px;
+    margin-bottom: 15px;
+    margin-top: 15px;
     color: #fcac45;
-  }
-  .download-article>p {
-    padding: 14px 12px 10px 12px;
-    font-size: 20px;
   }
   .link-color {
     color: #fcac45;
