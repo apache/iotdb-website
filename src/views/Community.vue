@@ -69,12 +69,6 @@
     color: #555;
   }
 
-  @media (min-width: 1200px) {
-    .container {
-      width: 970px;
-    }
-  }
-
   .pager > li > a {
     width: 140px;
     padding: 10px 20px;
