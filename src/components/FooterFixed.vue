@@ -14,11 +14,16 @@
 
 <style>
 .footer{
-    height:50px;
     padding:10px 0;
     margin-top: 30px;
     text-align:center;
     color:#fff;
     background:#222222;
+}
+
+@media screen and (max-width: 500px) {
+  .footer {
+    position: relative;
+  }
 }
 </style>

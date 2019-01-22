@@ -64,4 +64,10 @@
   .btn-white:hover {
     background-color: rgb(238,163, 69);
   }
+
+  @media screen and (max-width: 750px) {
+    .blog-sidebar {
+      display: none;
+    }
+  }
 </style>
