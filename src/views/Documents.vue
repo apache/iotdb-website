@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="main container" style="width: 100%;height: 100%">
+    <div class="main container-fluid" >
       <div class="row" style="margin: 0 0;height:90%">
         <!--sidebar part-->
         <div class="col-xs-2 sidebar" style="">
@@ -17,13 +17,13 @@
               </ul>
             </div>
           </div>
-          <div id="text-catalogue" class="content center-block" style="width: 14%;overflow: auto">
+          <div id="text-catalogue" class="content center-block" style="width: 15%;overflow: auto">
             <div v-for="item in result">
-              <h5 data-toggle="collapse" :data-target="item[0].replace(/ /g, '').replace(/:/g, '')"
-                  @click="change_chap_navi_content($event)" :class="item[0].slice(1)">{{item[0].slice(1).concat("▼")}}</h5>
-              <ul class="list-group collapse in" :id="item[0].slice(1).replace(/ /g, '').replace(/:/g, '')">
-                <li v-for="chapter in item" :class="item[0].slice(1)" v-if="chapter.startsWith('##')"
-                    @click="change_navi_content($event)">
+              <h5 style="font-size: 16px" data-toggle="collapse" v-if="typeof(item[0]) != 'undefined'" :data-target="item[0].replace(/ /g, '').replace(/:/g, '')" @click="changeChapterNavContent($event)" :class="item[0].slice(1)">
+                {{item[0].slice(1).concat("▼")}}
+              </h5>
+              <ul class="list-group collapse in" v-if="typeof(item[0]) != 'undefined'" :id="item[0].slice(1).replace(/ /g, '').replace(/:/g, '')">
+                <li v-for="chapter in item" :class="item[0].slice(1)" v-if="chapter.startsWith('##')" @click="changeSectionNavContent($event)">
                   {{chapter.slice(2)}}
                 </li>
               </ul>
@@ -32,77 +32,94 @@
         </div>
         <!--content part-->
         <div class="col-xs-10 fixed-middle">
-          <ul class="breadcrumb direct" id="bread_chapter">
-            <li><a style='color:#fcac45;'>IoTDB 0.7</a></li>
-            <li><a style='color:#fcac45;' href="#chapter-1-overview">Chapter 1: Overview</a></li>
-            <li><a style='color:#fcac45;' href="#what-is-iotdb">What is IoTDB</a></li>
+          <ul class="breadcrumb direct" id="bread-chapter">
+            <li><a style='color:#fcac45;'>{{version}}</a></li>
+            <li><a style='color:#fcac45;'>{{chapter}}</a></li>
+            <li><a style='color:#fcac45;'></a></li>
           </ul>
-          <div id="text_content" class="text_field">
-            <vue-markdown class="markdown-area" :source="document_test" :toc="true"
-                          :toc-anchor-link="true" toc-anchor-link-symbol=""></vue-markdown>
+          <div id="text-content" class="text-field">
+            <vue-markdown class="markdown-area" :source="document" :toc="true" :toc-anchor-link="true" toc-anchor-link-symbol=""></vue-markdown>
           </div>
           <div class="find-mistake">
             <p>This documentation is open source. Find mistakes? Want to contribute? Go for it.</p>
           </div>
         </div>
       </div>
-
     </div>
-    <footer_bar/>
+    <footer-bar/>
   </div>
 </template>
 
 <script>
   import Footer from "../components/FooterFixed"
-  // import Chapter from "../components/Chapter"
   import MarkDown from "vue-markdown"
   import axios from 'axios'
+  import Golbal from '../components/Global'
 
   export default {
     name: "Documents",
     data() {
       return {
-        versions: [
-          {text: 'IoTDB v0.7', url: '/Documents/ver7/sec1'},
-          {text: 'IoTDB v0.6', url: '/Documents/ver6/sec1'},
-        ],
-        document_test: "",
+        versions: [],
+        document: "",
         result: [],
+        version: "",
+        chapter: ""
       }
     },
     components: {
-      'footer_bar': Footer,
+      'footer-bar': Footer,
       'vue-markdown': MarkDown,
     },
     created() {
+      this.init();
       this.generateCatalogue();
       this.fetchData();
     },
     watch: {
-      // 如果路由有变化，会再次执行该方法
       '$route': 'fetchData',
       '$route.params.version': 'getButtonVersion',
     },
     methods: {
+      init(){
+        for(let key in Golbal.SUPPORT_VERSION){
+          if(key != Golbal.LATEST_STR){
+            this.versions.push({
+              text: "IoTDB " + Golbal.SUPPORT_VERSION[key]['version'],
+              url: '/Documents/'+ key + '/sec1'
+            })
+          }
+        }
+        let version = this.getVersion();
+        let chapter = Number(this.getSection().substr(3)) - 1;
+        if(version in Golbal.SUPPORT_VERSION){
+          if(version === Golbal.LATEST_STR){
+            this.version = Golbal.LATEST_VERSION;
+          } else {
+            this.version = version;
+          }
+          this.chapter = Golbal.SUPPORT_VERSION[version]['chapters'][chapter].substr(0, Golbal.SUPPORT_VERSION[version]['chapters'][chapter].length - 3);
+        }
+      },
       getButtonVersion() {
         document.getElementById("version-current").innerHTML = this.getVersionString() + "<b class=\"caret right-block\"></b>";
         this.generateCatalogue();
       },
       getVersionString() {
         let version = this.$route.params.version;
-        let versionString = "";
-        if (version == "ver7") {
-          versionString = "IoTDB v0.7";
+        if (version in Golbal.SUPPORT_VERSION){
+          if (version === Golbal.LATEST_STR){
+            return "IoTDB v"+Golbal.LATEST_VERSION;
+          } else{
+            return "IoTDB v"+version;
+          }
         }
-        else if (version == "ver6") {
-          versionString = "IoTDB v0.6"
-        }
-        return versionString;
+        return "";
       },
-      change_chap_navi_content: function (event) {
+      changeChapterNavContent: function (event) {
         let ver = this.getVersionString();
         let chapter = event.currentTarget.innerText.replace(/▼/g, '');
-        var x = document.getElementById("bread_chapter");
+        var x = document.getElementById("bread-chapter");
         x.innerHTML = "<li><a style='color:#fcac45;'>" + ver + "</a></li>" + "<li><a style='color:#fcac45;' href='#" +
           chapter.trim().toLocaleLowerCase().replace(/ /g, '-').replace(/:/g, '') + "'>" +
           chapter + "</a></li>";
@@ -112,12 +129,11 @@
 
         location.href = '#' + chapter.trim().toLocaleLowerCase().replace(/ /g, '-').replace(/:/g, '');
       },
-      change_navi_content: function (event) {
+      changeSectionNavContent: function (event) {
         let version = this.getVersionString();
         var chapter = event.currentTarget.className;
         var section = event.currentTarget.innerText;
-        var x = document.getElementById("bread_chapter");
-        // var y = document.getElementById("markdown-area");
+        var x = document.getElementById("bread-chapter");
         x.innerHTML = "<li><a style='color:#fcac45;'>" + version + "</a></li>" + "<li><a style='color:#fcac45;' href='#" +
           chapter.trim().toLocaleLowerCase().replace(/ /g, '-').replace(/:/g, '') + "'>" +
           chapter + "</a></li>" + "<li><a style='color:#fcac45;' href='#" +
@@ -137,30 +153,20 @@
       },
       // use version and section to render markdown
       fetchData() {
-        const dict = {
-          "ver7sec1": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/1-Overview.md",
-          "ver7sec2": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/2-Concept.md",
-          "ver7sec3": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/3-Operation%20Manual.md",
-          "ver7sec4": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/4-Deployment%20and%20Management.md",
-          "ver7sec5": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/5-SQL%20Documentation.md",
-          "ver7sec6": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/6-JDBC%20Documentation.md",
-          // "ver7sec7": "https://github.com/apache/incubator-iotdb/blob/doc/docs/Documentation/UserGuideV0.7/1-Overview.md",
-          "ver6sec1": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/7-Tools-Cli.md",
-        };
-        const content = this.getVersion() + this.getSection();
+        let version = this.getVersion();
+        let chapter = Number(this.getSection().substr(3)) - 1;
         let url = null;
-        if (content in dict) {
-          url = dict[content];
+        if (version in Golbal.SUPPORT_VERSION) {
+          url = Golbal.SUPPORT_VERSION[version]['doc-prefix'] + Golbal.SUPPORT_VERSION[version]['branch'] +
+            "/docs/Documentation/UserGuide" + Golbal.SUPPORT_VERSION[version]['version'] + "/" +
+            Golbal.SUPPORT_VERSION[version]['chapters'][chapter];
         } else {
           this.$router.push('/404');
         }
-        // console.log(url);
         const pointer = this;
         axios.get(url)
           .then(function (response) {
-            // console.log(response.data);
-            pointer.document_test = response.data;
-            // console.log(pointer);
+            pointer.document = response.data;
           })
           .catch(function (error) {
             console.log(error);
@@ -171,88 +177,55 @@
       //generate the sidebar information when version changes
       generateCatalogue() {
         this.result = [];
-        const dict7 = {
-          "ver7sec1": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/1-Overview.md",
-          "ver7sec2": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/2-Concept.md",
-          "ver7sec3": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/3-Operation%20Manual.md",
-          "ver7sec4": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/4-Deployment%20and%20Management.md",
-          "ver7sec5": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/5-SQL%20Documentation.md",
-          "ver7sec6": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/6-JDBC%20Documentation.md",
-          // "ver7sec7": "https://github.com/apache/incubator-iotdb/blob/doc/docs/Documentation/UserGuideV0.7/1-Overview.md",
-        };
-        const dict6 = {
-          "ver6sec1": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/7-Tools-Cli.md",
-        };
-        if (this.getVersion() == "ver7") {
-          for (let section in dict7) {
+        let version = this.getVersion();
+        if (version in Golbal.SUPPORT_VERSION) {
+          for(let i = 0; i < Golbal.SUPPORT_VERSION[version]['chapters'].length; i++){
             this.result.push([]);
-            let url = dict7[section];
-            let tmp = null;
-            const pointer = this;
-            axios.get(url)
-              .then(function (response) {
-                console.log(section.substr(section.length - 1, 1));
-                tmp = response.data;
-                // console.log(tmp);
-                var rows = new Array();
-                rows = tmp.split("\n");
-                // console.log(typeof(rows[0]));
-                for (let item of rows) {
-                  // console.log(typeof item);
-                  if (item.startsWith("#") && !item.startsWith("###")) {
-                    // console.log(item);
-                    pointer.result[section.substr(section.length - 1, 1) - 1].push(item);
-                  }
-                }
-              })
           }
-        }
-        else if (this.getVersion() == "ver6") {
-          for (let section in dict6) {
-            this.result.push([]);
-            let url = dict6[section];
-            let tmp = null;
+          for(let i = 0; i < Golbal.SUPPORT_VERSION[version]['chapters'].length; i++){
+            let url = Golbal.SUPPORT_VERSION[version]['doc-prefix'] + Golbal.SUPPORT_VERSION[version]['branch'] +
+              "/docs/Documentation/UserGuide" + Golbal.SUPPORT_VERSION[version]['version'] + "/" +
+              Golbal.SUPPORT_VERSION[version]['chapters'][i];
             const pointer = this;
-            axios.get(url)
-              .then(function (response) {
-                console.log(section.substr(section.length - 1, 1));
-                tmp = response.data;
-                // console.log(tmp);
-                var rows = new Array();
-                rows = tmp.split("\n");
-                // console.log(typeof(rows[0]));
-                for (let item of rows) {
-                  // console.log(typeof item);
-                  if (item.startsWith("#") && !item.startsWith("###")) {
-                    // console.log(item);
-                    pointer.result[section.substr(section.length - 1, 1) - 1].push(item);
-                  }
+            axios.get(url).then(function (response) {
+              let rows = response.data.split("\n");
+              for (let item of rows) {
+                if (item.startsWith("#") && !item.startsWith("###")) {
+                  pointer.result[i].push(item);
                 }
-              })
+              }
+            })
           }
+        } else {
+          this.$router.push('/404');
         }
       }
     }
   }
+  
 </script>
 
 <style scoped>
+  #bread-chapter{
+    margin-left: 11%;
+    margin-right: 8%;
+  }
 
-  .text_field {
+  .text-field {
     position: fixed;
     overflow-x: hidden;
     overflow-y: auto;
     top: 120px;
     left: 20%;
-    right: 8%;
     bottom: 100px;
+    margin-left: 8%;
+    margin-right: 8%;
   }
 
   .fixed-middle {
     position: fixed;
     top: 60px;
     left: 17%;
-    /*height: 50px;*/
   }
 
   .fixed-middle > ul {
@@ -313,6 +286,14 @@
     list-style-type: none;
     color: #eff0f8;
     margin-bottom: 5px;
+    padding: 5px;
+    max-width: 80%;
+
+  }
+  .list-group > li:hover{
+    background: grey;
+    border: 5px  grey;
+    border-radius: 5px;
   }
 
   .direct > li > a:link {
@@ -328,32 +309,18 @@
     background: #fcac45;
   }
 
-  #select-version {
-    background: #fcac45;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 6px 12px;
-    height: 35px;
-    width: 80%;
-    text-align: center;
-  }
-
-  .version-message {
-    text-align: center;
-  }
-
   .dropdown-menu {
     text-align: center;
   }
 
   .content.center-block {
     position: fixed;
-    left: 2%;
+    margin-left: 20px;
     top: 120px;
     bottom: 50px;
   }
 
-  .text_field > .markdown-area > p {
+  .text-field > .markdown-area > p {
     width: 50px;
   }
 
@@ -362,4 +329,54 @@
   }
 
 
+  @media (min-width: 768px) {
+    .fixed-middle {
+      top: 207px;
+    }
+    #text-content{
+      top: 253px;
+    }
+    .sidebar{
+      top: 204px;
+    }
+    .content.center-block{
+      top: 272px;
+    }
+  }
+
+  @media (min-width: 990px) {
+    .fixed-middle {
+     top: 110px;
+    }
+    #text-content{
+      top: 160px;
+    }
+    .sidebar{
+      top: 100px;
+    }
+    .content.center-block{
+      top: 180px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .fixed-middle {
+      top: 60px;
+    }
+    #text-content{
+      top: 110px;
+    }
+    .sidebar{
+      top: 50px;
+    }
+    .content.center-block{
+      top: 122px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .footer {
+      display: none;
+    }
+  }
 </style>

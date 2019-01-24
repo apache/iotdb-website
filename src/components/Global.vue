@@ -7,16 +7,33 @@
   const cheerio = require('cheerio');
   const DOC_URL_PREFIX = "https://raw.githubusercontent.com/apache/incubator-iotdb/";
   const LATEST_VERSION = "0.7.0";
+  const LATEST_STR = "latest";
   const SUPPORT_VERSION = {
-    LATEST_VERSION:{
+    "latest": {
       "branch": "doc",
       "doc-prefix": DOC_URL_PREFIX,
-      'version': "V0.7.0"
+      'version': "V0.7.0",
+      'chapters': [
+        '1-Overview.md',
+        '2-Concept.md',
+        '3-Operation%20Manual.md',
+        '4-Deployment%20and%20Management.md',
+        '5-SQL%20Documentation.md',
+        '6-JDBC%20Documentation.md'
+      ]
     },
     "0.7.0": {
       "branch": "doc",
       "doc-prefix": DOC_URL_PREFIX,
-      'version': "V0.7.0"
+      'version': "V0.7.0",
+      'chapters': [
+        '1-Overview.md',
+        '2-Concept.md',
+        '3-Operation%20Manual.md',
+        '4-Deployment%20and%20Management.md',
+        '5-SQL%20Documentation.md',
+        '6-JDBC%20Documentation.md'
+      ]
     }
   };
 
@@ -36,6 +53,7 @@
     downloadSparkConnector,
     LATEST_VERSION,
     SUPPORT_VERSION,
+    LATEST_STR,
     isReadyForPrerender
   }
 </script>
