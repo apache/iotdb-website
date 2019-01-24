@@ -1,5 +1,5 @@
 <template>
-  <div class="background-image">
+  <div>
     <div class="container">
       <br>
       <div class="row">
@@ -10,7 +10,8 @@
         </div>
         <div class="col-lg-5">
           <div class="introduction">
-            <p><b>IoTDB</b> is an open-source time series database developed by THULab(link) which is written in JAVA. In order
+            <p><b>IoTDB</b> is an open-source time series database developed by THULab(link) which is written in JAVA.
+              In order
               to enable IoTDB to more fully support the application of time series data, we have developed a few tools
               for IoTDB expansion.
             </p>
@@ -36,9 +37,11 @@
                 </div>
                 <hr/>
                 <div class="tool-download">
-                  <button data-toggle="modal" data-target="#myModal" type="button"
+                  <button data-toggle="modal" type="button"
                           class="tool-download-button btn btn-default">
-                    <p style="font-size: medium">Download</p>
+                    <a v-bind:href="tool.Download">
+                      <p style="font-size: medium;margin:0px 0px 5px 5px">Download</p>
+                    </a>
                   </button>
                   <br>
                   <br>
@@ -46,7 +49,7 @@
                 <div class="tool-documentation">
                   <button data-toggle="modal" data-target="#myModal" type="button"
                           class="tool-documentation-button btn btn-default">
-                    <p style="color: white; font-size: medium">Documentation</p>
+                    <p style="color: white; font-size: medium;margin:0px 0px 5px 5px">Documentation</p>
                   </button>
                   <br>
                   <br>
@@ -88,25 +91,25 @@
           {
             "header": "IoTDB-Cli",
             "content": "Client tool used to read and <br/>write data from IoTDB",
-            "Download": "",
+            "Download": this.GLOBAL.downloadIotdbCli,
             "Documentation": ""
           },
           {
             "header": "Grafana Connector",
             "content": "Time Series Data<br/>Visualization",
-            "Download": "",
+            "Download": this.GLOBAL.downloadGrafanaConnector,
             "Documentation": ""
           },
           {
             "header": "Hadoop Connector",
             "content": "Connector tool to use Hadoop<br/>to process data from IoTDB",
-            "Download": "",
+            "Download": this.GLOBAL.downloadHadoopConnector,
             "Documentation": ""
           },
           {
             "header": "Spark Connector",
             "content": "Connector tool to use spark<br/>to process data",
-            "Download": "",
+            "Download": this.GLOBAL.downloadSparkConnector,
             "Documentation": ""
           }
         ]
@@ -117,10 +120,6 @@
 </script>
 
 <style scoped>
-
-  .background-image {
-    background: antiquewhite repeat;
-  }
 
   .scene {
     border: 2px solid;
@@ -170,7 +169,7 @@
   .content > p {
     color: white;
     text-align: center;
-    font-size: x-small;
+    font-size: small;
   }
 
   .tool > h3 {

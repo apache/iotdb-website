@@ -13,6 +13,7 @@
     "deploy": "node build/deploy.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "popper.js": "^1.14.6",
     "text-loader": "0.0.1",
     "unit": "^1.0.4",

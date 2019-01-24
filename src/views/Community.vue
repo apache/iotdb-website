@@ -2,25 +2,14 @@
   <div>
     <div class="container">
       <div class="row markdown-body">
-        <div class="col-sm-8" v-if="content() === 'MailingList'">
-          <vue-markdown :source="community['MailingList']"></vue-markdown>
-        </div>
-        <div class="col-sm-8" v-else-if="content() === 'ContributingToIoTDB'">
-          <vue-markdown :source="community['ContributingToIoTDB']"></vue-markdown>
-        </div>
-        <div class="col-sm-8" v-else-if="content() === 'IssueTracker'">
-          <vue-markdown :source="community['IssueTracker']"></vue-markdown>
-        </div>
-        <div class="col-sm-8" v-else-if="content() === 'PowerBy'">
-          <vue-markdown :source="community['PowerBy']"></vue-markdown>
-        </div>
-        <div class="col-sm-8" v-else-if="content() === 'ProjectCommitters'">
-          <vue-markdown :source="community['ProjectCommitters']"></vue-markdown>
-        </div>
-        <div class="col-sm-8" v-else>
-          <vue-markdown :source="community['ProjectHistory']"></vue-markdown>
+        <div class="col-sm-8">
+          <vue-markdown v-bind:source="community"></vue-markdown>
         </div>
         <my-sidebar/>
+      </div>
+      <div class="col-sm-8" v-if="this.content()==='Project Committers'">
+        <router-link :to=development class="nav-link"><span style="font-size: medium">Want to join us? Learn How to Contribute </span>
+        </router-link>
       </div>
     </div>
     <br>
@@ -31,10 +20,10 @@
 </template>
 
 <script>
-  import 'highlight.js/styles/github.css'
   import Footer from "../components/FooterFixed"
   import SideBar from '../components/SideBar'
   import markdown from 'vue-markdown'
+  import axios from 'axios'
 
 
   export default {
@@ -42,27 +31,43 @@
     components: {
       'footer-bar': Footer,
       'my-sidebar': SideBar,
-      'vue-markdown':markdown,
+      'vue-markdown': markdown,
     },
     data() {
       return {
         msg: 'Welcome to Community Page',
-        // content: this.$route.params.$route
-
-        community: {
-          ContributingToIoTDB: require("../assets/markdown/Community/Contributing to IoTDB.md"),
-          IssueTracker: require("../assets/markdown/Community/Issue Tracker.md"),
-          MailingList: require("../assets/markdown/Community/Mailing Lists & Resources.md"),
-          PowerBy: require("../assets/markdown/Community/Powered By.md"),
-          ProjectCommitters: require("../assets/markdown/Community/Project Committers.md"),
-          ProjectHistory: require("../assets/markdown/Community/Project History.md"),
-        }
+        community: "",
+        development: "/Development/How to contribute"
       }
     },
-
+    created() {
+      this.fetchData();
+    },
+    watch: {
+      '$route': 'fetchData'
+    },
     methods: {
       content: function () {
         return this.$route.params.content
+      },
+      fetchData() {
+        const dict = {
+          "Powered By": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Community-Powered%20By.md",
+          "Project Committers": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Community-Project%20Committers.md",
+          "History & Vision": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Community-History%26Vision.md"
+        };
+        const content = this.content();
+        let url = null;
+        if (content in dict) {
+          url = dict[content];
+        } else {
+          this.$router.push('/404');
+        }
+        const pointer = this;
+        axios.get(url)
+          .then(function (response) {
+            pointer.community = response.data;
+          })
       }
     }
   }

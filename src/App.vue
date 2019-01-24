@@ -19,6 +19,7 @@
   #app {
     color: #2c3e50;
   }
+
   body{
     font-family: 'Lato', sans-serif;
   }

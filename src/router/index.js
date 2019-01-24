@@ -3,9 +3,10 @@ import Router from 'vue-router'
 import Home from '@/views/Home'
 import Download from '@/views/Download'
 import Documents from '@/views/Documents'
+import Tools from '@/views/Tools'
 import Community from '@/views/Community'
 import Development from '@/views/Development'
-import Tools from '@/views/Tools'
+import Example from '@/views/Example'
 import Comming from '@/views/Comming'
 import NotFound from "../views/NotFound";
 
@@ -44,6 +45,11 @@ export default new Router({
       name: 'Development',
       component: Development
 
+    },
+    {
+      path: '/Example',
+      name: 'Example',
+      component: Example
     },
     {
       path: '/Comming',
