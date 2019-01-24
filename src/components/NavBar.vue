@@ -79,7 +79,7 @@
       return {
         "Documents": [
           {"url": "/Comming", "content": "Quick Start"},
-          {"url": "/Documents/latest", "content": "User Guide"},
+          {"url": "/Documents/ver7/sec1", "content": "User Guide"},
           {"url": "/Comming", "content": "Other Materials"},
           {"url": "/Comming", "content": "Frequently asked questions"}
         ],

@@ -46,7 +46,7 @@
       }
     },
     created() {
-      this.selectVersionObj = this.downloadVersionList[0];
+      this.selectVersionObj = this.downloadVersionList[1];
     }
   }
 </script>
