@@ -18,22 +18,24 @@
             </div>
           </div>
           <div id="text-catalogue" class="content center-block" style="width: 14%;overflow: auto">
-            <ul class="list-group" v-for="item in result">
-              <h4 v-for="chapter in item" v-if="chapter.startsWith('#')&&!chapter.startsWith('##')"
-                  @click="change_chap_navi_content($event)" :class="chapter.slice(1)">{{chapter.slice(1)}}</h4>
-              <li v-for="chapter in item" :class="item[0].slice(1)" v-if="chapter.startsWith('##')"
-                  @click="change_navi_content($event)">
-                {{chapter.slice(2)}}
-              </li>
-            </ul>
+            <div v-for="item in result">
+              <h5 data-toggle="collapse" :data-target="item[0].replace(/ /g, '').replace(/:/g, '')"
+                  @click="change_chap_navi_content($event)" :class="item[0].slice(1)">{{item[0].slice(1).concat("▼")}}</h5>
+              <ul class="list-group collapse in" :id="item[0].slice(1).replace(/ /g, '').replace(/:/g, '')">
+                <li v-for="chapter in item" :class="item[0].slice(1)" v-if="chapter.startsWith('##')"
+                    @click="change_navi_content($event)">
+                  {{chapter.slice(2)}}
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <!--content part-->
         <div class="col-xs-10 fixed-middle">
           <ul class="breadcrumb direct" id="bread_chapter">
             <li><a style='color:#fcac45;'>IoTDB 0.7</a></li>
-            <li><a style='color:#fcac45;'>Chapter 1: Overview</a></li>
-            <li><a style='color:#fcac45;'>What is IoTDB</a></li>
+            <li><a style='color:#fcac45;' href="#chapter-1-overview">Chapter 1: Overview</a></li>
+            <li><a style='color:#fcac45;' href="#what-is-iotdb">What is IoTDB</a></li>
           </ul>
           <div id="text_content" class="text_field">
             <vue-markdown class="markdown-area" :source="document_test" :toc="true"
@@ -99,14 +101,16 @@
       },
       change_chap_navi_content: function (event) {
         let ver = this.getVersionString();
-        let chapter = event.currentTarget.innerText;
+        let chapter = event.currentTarget.innerText.replace(/▼/g, '');
         var x = document.getElementById("bread_chapter");
         x.innerHTML = "<li><a style='color:#fcac45;'>" + ver + "</a></li>" + "<li><a style='color:#fcac45;' href='#" +
-          chapter.trim().toLocaleLowerCase().replace(/ /g,'-').replace(/:/g,'')+"'>" +
+          chapter.trim().toLocaleLowerCase().replace(/ /g, '-').replace(/:/g, '') + "'>" +
           chapter + "</a></li>";
         let sect = event.currentTarget.className;
         this.$route.params.section = "sec" + sect.replace(/[^0-9]/ig, "");
         this.fetchData();
+
+        location.href = '#' + chapter.trim().toLocaleLowerCase().replace(/ /g, '-').replace(/:/g, '');
       },
       change_navi_content: function (event) {
         let version = this.getVersionString();
@@ -114,14 +118,14 @@
         var section = event.currentTarget.innerText;
         var x = document.getElementById("bread_chapter");
         // var y = document.getElementById("markdown-area");
-        x.innerHTML = "<li><a style='color:#fcac45;'>" + version + "</a></li>" + "<li><a style='color:#fcac45;' href='#"+
-          chapter.trim().toLocaleLowerCase().replace(/ /g,'-').replace(/:/g,'')+"'>" +
+        x.innerHTML = "<li><a style='color:#fcac45;'>" + version + "</a></li>" + "<li><a style='color:#fcac45;' href='#" +
+          chapter.trim().toLocaleLowerCase().replace(/ /g, '-').replace(/:/g, '') + "'>" +
           chapter + "</a></li>" + "<li><a style='color:#fcac45;' href='#" +
           section.toLocaleLowerCase().replace(/ /g, '-') + "'>" + section + "</a></li>";
         this.$route.params.section = "sec" + chapter.replace(/[^0-9]/ig, "");
         this.fetchData();
 
-        location.href="#architecture";
+        location.href = "#" + section.toLocaleLowerCase().replace(/ /g, '-');
       },
       // get the version
       getVersion() {
@@ -134,14 +138,14 @@
       // use version and section to render markdown
       fetchData() {
         const dict = {
-          "ver7sec1": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7/1-Overview.md",
-          "ver7sec2": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7/2-Concept.md",
-          "ver7sec3": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7/3-Operation Manual.md",
-          "ver7sec4": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7/4-Deployment and Management.md",
-          "ver7sec5": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7/5-SQL Documentation.md",
-          "ver7sec6": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7/6-JDBC Documentation.md",
+          "ver7sec1": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/1-Overview.md",
+          "ver7sec2": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/2-Concept.md",
+          "ver7sec3": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/3-Operation%20Manual.md",
+          "ver7sec4": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/4-Deployment%20and%20Management.md",
+          "ver7sec5": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/5-SQL%20Documentation.md",
+          "ver7sec6": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/6-JDBC%20Documentation.md",
           // "ver7sec7": "https://github.com/apache/incubator-iotdb/blob/doc/docs/Documentation/UserGuideV0.7/1-Overview.md",
-          "ver6sec1": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7/7-Tools-Cli.md",
+          "ver6sec1": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/7-Tools-Cli.md",
         };
         const content = this.getVersion() + this.getSection();
         let url = null;
@@ -168,16 +172,16 @@
       generateCatalogue() {
         this.result = [];
         const dict7 = {
-          "ver7sec1": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7/1-Overview.md",
-          "ver7sec2": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7/2-Concept.md",
-          "ver7sec3": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7/3-Operation Manual.md",
-          "ver7sec4": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7/4-Deployment and Management.md",
-          "ver7sec5": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7/5-SQL Documentation.md",
-          "ver7sec6": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7/6-JDBC Documentation.md",
+          "ver7sec1": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/1-Overview.md",
+          "ver7sec2": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/2-Concept.md",
+          "ver7sec3": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/3-Operation%20Manual.md",
+          "ver7sec4": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/4-Deployment%20and%20Management.md",
+          "ver7sec5": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/5-SQL%20Documentation.md",
+          "ver7sec6": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/6-JDBC%20Documentation.md",
           // "ver7sec7": "https://github.com/apache/incubator-iotdb/blob/doc/docs/Documentation/UserGuideV0.7/1-Overview.md",
         };
         const dict6 = {
-          "ver6sec1": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7/7-Tools-Cli.md"
+          "ver6sec1": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/UserGuideV0.7.0/7-Tools-Cli.md",
         };
         if (this.getVersion() == "ver7") {
           for (let section in dict7) {
@@ -238,9 +242,9 @@
     position: fixed;
     overflow-x: hidden;
     overflow-y: auto;
-    top: 100px;
+    top: 120px;
     left: 20%;
-    right: 2%;
+    right: 8%;
     bottom: 100px;
   }
 
@@ -298,9 +302,10 @@
 
   .list-group > li {
     cursor: pointer;
+    margin-left: 10px;
   }
 
-  h4 {
+  h5 {
     color: #fcac45;
   }
 
@@ -315,10 +320,11 @@
   }
 
   .version {
-    border-bottom: 1px solid #eff0f8;
+    border-bottom: 1px solid #666666;
   }
 
   button {
+    height:40px;
     background: #fcac45;
   }
 
