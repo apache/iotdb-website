@@ -1,17 +1,20 @@
 <template>
-  <div class="col-sm-4  blog-sidebar">
+  <div class="col-sm-3  blog-sidebar">
     <div class="sidebar-module sidebar-module-inset">
       <h4>Latest News</h4>
-      <ol class="list-unstyled">
-        <li lang="en">
-          1. After the Apache version is released, users are encouraged to read the overview of major changes in <router-link to="/Materials/Release%20Notes">release notes</router-link>,
-          download the version in <router-link to="/Download">download page</router-link>
-          and view documents in <router-link to="/Documents/Quick%20Start">documentation page</router-link>.
-        </li>
-        <li lang="en">
-          2. Currently, we support an unofficial version on <a href="https://github.com/thulab/iotdb/releases">GitHub</a>.
-        </li>
-      </ol>
+      <article lang="en">
+        <ol class="list-unstyled">
+          <li>
+            1. After the Apache version is released, users are encouraged to read the overview of major changes in <router-link to="/Materials/Release%20Notes">release notes</router-link>,
+            download the version in <router-link to="/Download">download page</router-link>
+            and view documents in <router-link to="/Documents/Quick%20Start">documentation page</router-link>.
+          </li>
+          <li>
+            2. Currently, we support an unofficial version on <a href="https://github.com/thulab/iotdb/releases">GitHub</a>.
+          </li>
+        </ol>
+      </article>
+
       <h4>Github repo</h4>
       <ol class="list-unstyled">
         <li><a href="https://github.com/apache/incubator-iotdb">GitHub</a></li>
@@ -65,9 +68,26 @@
     background-color: rgb(238,163, 69);
   }
 
+  .sidebar-module {
+    font-size: 16px;
+  }
+
   @media screen and (max-width: 750px) {
     .blog-sidebar {
       display: none;
     }
+  }
+
+  article {
+    text-align: justify;
+  }
+
+  article li {
+    font-size: 16px;
+    word-break: break-all;
+    /*-webkit-hyphens: auto;*/
+    /*-moz-hyphens: auto;*/
+    /*-ms-hyphens: auto;*/
+    /*hyphens: auto;*/
   }
 </style>

@@ -2,17 +2,19 @@
   <div>
     <div class="main container">
       <div class="row">
-        <div class="col-md-8 col-sm-8">
+        <div class="col-md-9 col-sm-9">
           <div>
             <p class="home-tittle">Apache IoTDB (incubating) (Database for Internet of Things)</p>
-            <p>Apache IoTDB (incubating) (Database for Internet of Things) is an integrated data management engine
-              designed for timeseries data which was initially developed by Tsinghua University. Now Apache IoTDB
-              (incubating) is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the
-              Incubator.
-              It can provide users specific services for data collection, storage and analysis. Due to its light weight
-              structure, high performance and usable features together with its intense integration with Hadoop and
-              Spark ecology, Apache IoTDB (incubating) can meet the requirements of massive dataset storage, high-speed
-              data input and complex data analysis in the IoT industrial field.</p>
+            <article lang="en">
+              <p>Apache IoTDB (incubating) (Database for Internet of Things) is an integrated data management engine
+                designed for timeseries data which was initially developed by Tsinghua University. Now Apache IoTDB
+                (incubating) is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the
+                Incubator.
+                It can provide users specific services for data collection, storage and analysis. Due to its light weight
+                structure, high performance and usable features together with its intense integration with Hadoop and
+                Spark ecology, Apache IoTDB (incubating) can meet the requirements of massive dataset storage, high-speed
+                data input and complex data analysis in the IoT industrial field.</p>
+            </article>
           </div>
           <div>
             <p class="home-tittle">Scenarios</p>
@@ -28,15 +30,17 @@
                   <br/>
                   <div class="Scenarios">
                     <h1 style="margin-top: 0">High-end equipment</h1>
-                    <p> In high-end manufacturing, there are many devices equipped with sensors which can collect working status data.
-                      Meteorological stations, wind turbines, etc. are common high-end devices.
-                      These devices, if supports Java or Go (in developing), can run TsFile to store data locally.
-                      In this way, TsFile can provide the ability to save data with high throughput, high compression ratio, and millisecond query.
-                      In addition, with TsFile-Sync tool, TsFiles can be transmitted to the data center equipped with IoTDB instance instead of re-inserting data one point by one point.
-                    </p>
-                    <p>
-                      If the embedded board supports Java and requires rich query functions, then an IoTDB instance can be installed on the device.
-                    </p>
+                    <article lang="en">
+                      <p> In high-end manufacturing, there are many devices equipped with sensors which can collect working status data.
+                        Meteorological stations, wind turbines, etc. are common high-end devices.
+                        These devices, if supports Java or Go (in developing), can run TsFile to store data locally.
+                        In this way, TsFile can provide the ability to save data with high throughput, high compression ratio, and millisecond query.
+                        In addition, with TsFile-Sync tool, TsFiles can be transmitted to the data center equipped with IoTDB instance instead of re-inserting data one point by one point.
+                      </p>
+                      <p>
+                        If the embedded board supports Java and requires rich query functions, then an IoTDB instance can be installed on the device.
+                      </p>
+                    </article>
                   </div>
                 </div>
                 <div class="item">
@@ -44,12 +48,14 @@
                   <br/>
                   <div class="Scenarios">
                     <h1 style="margin-top: 0">Local Controller</h1>
-                    <p>
-                      In the scene of factories, there are tens of devices under LAN network.
-                      IoTDB can be installed on a local controller server in the factory to receive data from those devices.
-                      The local controller server (normal PC or workstation) with IoTDB can provide the ability to persist data and query data with SQL-like interface.
-                      In addition, with TsFile-Sync tool, TsFiles on the local controller can be transmitted to the data center equipped with IoTDB instance in the cloud.
-                    </p>
+                    <article lang="en">
+                      <p>
+                        In the scene of factories, there are tens of devices under LAN network.
+                        IoTDB can be installed on a local controller server in the factory to receive data from those devices.
+                        The local controller server (normal PC or workstation) with IoTDB can provide the ability to persist data and query data with SQL-like interface.
+                        In addition, with TsFile-Sync tool, TsFiles on the local controller can be transmitted to the data center equipped with IoTDB instance in the cloud.
+                      </p>
+                    </article>
                   </div>
                 </div>
                 <div class="item">
@@ -57,12 +63,14 @@
                   <br/>
                   <div class="Scenarios">
                     <h1 style="margin-top: 0">Cloud Data Management</h1>
-                    <p>
-                      In the scene of high-speed network (Internet of Vehicles, etc.), a car installed sensors on it can collect monitoring information(driving status, etc.) of itself at a certain frequency.
-                      Usually, these automotive devices have limited hardware configurations and are difficult to carry complex applications.
-                      Lightweight IoTDB(IoTDB Client) came into being.
-                      With JDBC API, it can make data sent by narrow-band IoT or 4G possible. In this way, devices and cloud are connected together.
-                    </p>
+                    <article lang="en">
+                      <p>
+                        In the scene of high-speed network (Internet of Vehicles, etc.), a car installed sensors on it can collect monitoring information(driving status, etc.) of itself at a certain frequency.
+                        Usually, these automotive devices have limited hardware configurations and are difficult to carry complex applications.
+                        Lightweight IoTDB(IoTDB Client) came into being.
+                        With JDBC API, it can make data sent by narrow-band IoT or 4G possible. In this way, devices and cloud are connected together.
+                      </p>
+                    </article>
                   </div>
                 </div>
               </div>
@@ -87,7 +95,7 @@
                   </div>
                   <div class="col-xs-9 col-sm-9 feature-title"><p>{{item.featureTitle}}</p></div>
                 </div>
-                <p class="feature-content">{{item.featureContent}}</p>
+                  <p class="feature-content" style="font-size: 16px; word-break: break-all">{{item.featureContent}}</p>
                 <hr/>
               </div>
             </div>
@@ -162,37 +170,45 @@
   .carousel-indicators{
     bottom: 0px;
   }
-  .Scenarios{
-    min-height: 450px;
+
+  @media (min-width: 200px) {
+    .carousel-inner{
+      min-height: 780px;
+    }
+
   }
 
   @media (min-width: 768px) {
     .feature-item{
-      min-height: 265px;
+      min-height: 270px;
     }
-    .Scenarios{
-      min-height: 300px;
+    .carousel-inner{
+      min-height: 660px;
     }
   }
 
   @media (min-width: 992px) {
     .feature-item{
-      min-height: 327px;
+      min-height: 340px;
     }
-    .Scenarios{
-      min-height: 260px;
+    .carousel-inner{
+      min-height: 700px;
     }
   }
 
   @media (min-width: 1200px){
     .feature-item{
-      min-height: 250px;
+      min-height: 295px;
     }
-    .Scenarios{
-      min-height: 240px;
+    .carousel-inner{
+      min-height: 768px;
     }
   }
 
+  .feature-item{
+    padding: 15px;
+    margin-bottom: 10px;
+  }
   .main > div {
     margin-top: 10px;
   }
@@ -264,6 +280,18 @@
 
   .feature-title > p {
     font-size: medium;
+  }
+
+  article {
+    text-align: justify;
+  }
+
+  article p {
+    font-size: 16px;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
   }
 
 </style>

@@ -8,7 +8,7 @@
           <ul>
             <li v-for="item in items" style="margin: 5px">
               <a :href="item.url" v-if="item.isDownable">{{item.content}}</a>
-              <router-link :to="item.url" v-else>{{item.content}}</router-link>
+              <router-link :to="item.url" v-else style="font-size: 16px">{{item.content}}</router-link>
             </li>
           </ul>
         </div>

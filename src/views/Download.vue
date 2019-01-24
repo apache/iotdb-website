@@ -75,5 +75,9 @@
   select::-ms-expand {
     display: none;
   }
+
+  p, a{
+    font-size: 16px;
+  }
 </style>
 
