@@ -7,10 +7,6 @@
         </div>
         <my-sidebar/>
       </div>
-      <div class="col-sm-8" v-if="this.content()==='Project Committers'">
-        <router-link  to="/Development#" class="nav-link"><span style="font-size: medium">Want to join us? Learn How to Contribute </span>
-        </router-link>
-      </div>
     </div>
     <br>
     <br>
@@ -27,7 +23,7 @@
   import Golbal from '../components/Global'
 
   export default {
-    name: "Community",
+    name: "SingleTool",
     components: {
       'footer-bar': Footer,
       'my-sidebar': SideBar,
@@ -35,7 +31,7 @@
     },
     data() {
       return {
-        msg: 'Welcome to Community Page',
+        msg: 'Welcome to Tool Page',
         md: "",
         toc: "",
       }
@@ -52,17 +48,25 @@
       },
       fetchData() {
         const dict = {
-          "Powered By": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
+          "Cli": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
             Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
-            "/docs/Community-Powered%20By.md",
-          "Project Committers": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
+            "/docs/Documentation/UserGuide" +
+            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['version'] + "/7-Tools-Cli.md",
+          "Grafana": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
             Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
-            "/docs/Community-Project%20Committers.md",
-          "History & Vision": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
+            "/docs/Documentation/UserGuide" +
+            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['version'] + "/7-Tools-Grafana.md",
+          "Hadoop": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
             Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
-            "/docs/Community-History%26Vision.md",
+            "/docs/Documentation/UserGuide" +
+            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['version'] + "/7-Tools-Hadoop.md",
+          "Spark": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
+            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
+            "/docs/Documentation/UserGuide" +
+            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['version'] + "/7-Tools-spark.md",
         };
         const content = this.content();
+        console.log(content);
         let url = null;
         if (content in dict) {
           url = dict[content];

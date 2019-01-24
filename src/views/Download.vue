@@ -13,7 +13,7 @@
             <li style="margin: 5px">Download IoTDB for Linux/MacOS:<a class="link-color" :href="selectVersionObj.linuxUrl"> {{selectVersionObj.text}} Release.tar</a></li>
             <li style="margin: 5px">Download IoTDB for Windows:<a class="link-color" :href="selectVersionObj.windowsUrl"> {{selectVersionObj.text}} Release.zip</a></li>
           </ul>
-          <p>Main features and change list of each version, please check <a class="link-color" :href="releaseNotesUrl">Release Notes</a>.</p>
+          <p>Main features and change list of each version, please check <router-link to="/Materials/Release Notes">release notes</router-link></p>
           <h2 class="download-title">Get Source Code</h2>
           <p>Go to our <a class="link-color" :href="iotdbGithubUrl">Github</a>, have fun with IoTDB source code!</p>
         </div>
@@ -39,14 +39,12 @@
         releaseNotesUrl: 'https://github.com/apache/incubator-iotdb',
         selectVersionObj: {},
         downloadVersionList: [
-          {text: 'IoTDB v0.7', linuxUrl: 'https://github.com/apache/incubator-iotdb', windowsUrl: 'https://github.com/apache/incubator-iotdb'},
-          {text: 'IoTDB v0.8', linuxUrl: 'https://github.com/apache/incubator-iotdb', windowsUrl: 'https://github.com/apache/incubator-iotdb' },
-          {text: 'IoTDB v0.9', linuxUrl: 'https://github.com/apache/incubator-iotdb', windowsUrl: 'https://github.com/apache/incubator-iotdb' }
+          {text: 'IoTDB v0.7.0', linuxUrl: 'https://github.com/apache/incubator-iotdb', windowsUrl: 'https://github.com/apache/incubator-iotdb'},
         ]
       }
     },
     created() {
-      this.selectVersionObj = this.downloadVersionList[1];
+      this.selectVersionObj = this.downloadVersionList[0];
     }
   }
 </script>

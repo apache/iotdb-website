@@ -4,9 +4,9 @@
       <h4>Latest News</h4>
       <ol class="list-unstyled">
         <li lang="en">
-          1. After the Apache version is released, users are encouraged to read the overview of major changes in <router-link to="/Documents">release notes</router-link>,
+          1. After the Apache version is released, users are encouraged to read the overview of major changes in <router-link to="/Materials/Release%20Notes">release notes</router-link>,
           download the version in <router-link to="/Download">download page</router-link>
-          and view documents in <router-link to="/Documents">documentation page</router-link>.
+          and view documents in <router-link to="/Documents/Quick%20Start">documentation page</router-link>.
         </li>
         <li lang="en">
           2. Currently, we support an unofficial version on <a href="https://github.com/thulab/iotdb/releases">GitHub</a>.
@@ -20,7 +20,7 @@
     <router-link to="/Download" class="nav-link btn btn-lg btn-block btn-warning button" style="color: white">
       <span>Download</span>
     </router-link>
-    <router-link to="/Document" class="nav-link btn btn-white btn-lg btn-block button"><span>Quick Start</span></router-link>
+    <router-link to="/Documents/Quick%20Start" class="nav-link btn btn-white btn-lg btn-block button"><span>Quick Start</span></router-link>
   </div><!-- /.blog-sidebar -->
 </template>
 

@@ -1,16 +1,13 @@
 <template>
   <div>
     <div class="container">
-      <div class="row">
+      <div class="row markdown-body">
         <div class="col-sm-8">
           <vue-markdown v-bind:source="md" :toc="true" :toc-anchor-link-symbol="toc" :postrender="parse"></vue-markdown>
         </div>
         <my-sidebar/>
       </div>
     </div>
-    <br>
-    <br>
-    <br>
     <footer-bar/>
   </div>
 </template>
@@ -23,7 +20,7 @@
   import Golbal from '../components/Global'
 
   export default {
-    name: "Example",
+    name: "SingleMaterial",
     components: {
       'footer-bar': Footer,
       'my-sidebar': SideBar,
@@ -31,19 +28,39 @@
     },
     data() {
       return {
-        msg: 'Welcome to Example Page',
+        msg: 'Welcome to Community Page',
         md: "",
-        toc: ""
+        toc: "",
       }
     },
     created() {
       this.fetchData();
     },
+    watch: {
+      '$route': 'fetchData'
+    },
     methods: {
+      content: function () {
+        return this.$route.params.doc
+      },
       fetchData() {
-        let url = Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-          Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
-          "/docs/Documentation/OtherMaterial-Examples.md";
+        const dict = {
+          "Release Notes": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
+            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
+            "/docs/Documentation/OtherMaterial-ReleaseNotes"+
+            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['version']+
+            ".md",
+          "References": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
+            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
+            "/docs/Documentation/OtherMaterial-Reference.md",
+        };
+        const content = this.content();
+        let url = null;
+        if (content in dict) {
+          url = dict[content];
+        } else {
+          this.$router.push('/404');
+        }
         const pointer = this;
         axios.get(url)
           .then(function (response) {
@@ -56,7 +73,6 @@
     }
   }
 </script>
-
 <style scoped>
   h1, h2 {
     font-weight: normal;
@@ -79,4 +95,3 @@
   }
 
 </style>
-

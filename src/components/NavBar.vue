@@ -24,7 +24,7 @@
               <router-link to="/Download" class="nav-link"><span>Download</span></router-link>
             </li>
             <li class="dropdown">
-              <router-link to="/Documents" class="dropdown-toggle" data-toggle="dropdown" role="button"
+              <router-link to="/Documents/Quick%20Start" class="dropdown-toggle" data-toggle="dropdown" role="button"
                            aria-haspopup="true" aria-expanded="false"><span>Documents<b class="caret"></b></span>
               </router-link>
               <ul class="dropdown-menu">
@@ -33,11 +33,21 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item">
-              <router-link to="/Tools" class="nav-link"><span>Tools</span></router-link>
+            <!--<li class="nav-item">-->
+              <!--<router-link to="/Tools" class="nav-link"><span>Tools</span></router-link>-->
+            <!--</li>-->
+            <li class="dropdown">
+              <router-link to="/Tools" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false"><span>Tools<b class="caret"></b></span>
+              </router-link>
+              <ul class="dropdown-menu">
+                <li v-for="item in Tools">
+                  <router-link :to=item.url class="nav-link"><span>{{item.content}}</span></router-link>
+                </li>
+              </ul>
             </li>
             <li class="dropdown">
-              <router-link to="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+              <router-link to="/Community/Project%20Committers" class="dropdown-toggle" data-toggle="dropdown" role="button"
                            aria-haspopup="true" aria-expanded="false"><span>Community<b class="caret"></b></span>
               </router-link>
               <ul class="dropdown-menu">
@@ -46,15 +56,8 @@
                 </li>
               </ul>
             </li>
-            <li class="dropdown">
-              <router-link to="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                           aria-haspopup="true" aria-expanded="false"><span>Development<b class="caret"></b></span>
-              </router-link>
-              <ul class="dropdown-menu">
-                <li v-for="item in Development">
-                  <router-link :to=item.url class="nav-link"><span>{{item.content}}</span></router-link>
-                </li>
-              </ul>
+            <li class="nav-item">
+              <router-link to="/Development" class="nav-link"><span>Development</span></router-link>
             </li>
             <li class="nav-item">
               <router-link to="/Example" class="nav-link"><span>Example</span></router-link>
@@ -78,21 +81,22 @@
     data() {
       return {
         "Documents": [
-          {"url": "/Comming", "content": "Quick Start"},
+          {"url": "/Documents/Quick Start", "content": "Quick Start"},
           {"url": "/Documents/ver7/sec1", "content": "User Guide"},
-          {"url": "/Comming", "content": "Other Materials"},
-          {"url": "/Comming", "content": "Frequently asked questions"}
+          {"url": "/Materials", "content": "Other Materials"},
+          {"url": "/Documents/Frequently asked questions", "content": "Frequently asked questions"}
         ],
         "Community": [
           {"url": "/Community/Powered By", "content": "Powered By"},
           {"url": "/Community/Project Committers", "content": "Project Committers"},
           {"url": "/Community/History & Vision", "content": "History & Vision"}
         ],
-        "Development": [
-          {"url": "/Development/Have Questions", "content": "Have Questions"},
-          {"url": "/Development/How to contribute", "content": "How to contribute"}
-        ]
-
+        "Tools": [
+          {"url": "/Tools/Cli", "content": "IoTDB-Cli"},
+          {"url": "/Tools/Grafana", "content": "Grafana Connector"},
+          {"url": "/Tools/Hadoop", "content": "Hadoop Connector"},
+          {"url": "/Tools/Spark", "content": "Spark Connector"}
+        ],
       }
     },
   }

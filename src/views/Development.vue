@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="container">
-      <div class="row">
-        <div class="col-sm-8" v-if="locate='Have Questions'">
-          <vue-markdown v-bind:source="development" :toc="true" :toc-anchor-link-symbol="toc"></vue-markdown>
+      <div class="row  markdown-body">
+        <div class="col-sm-8">
+          <vue-markdown v-bind:source="md" :toc="true" :toc-anchor-link-symbol="toc" :postrender="parse"></vue-markdown>
         </div>
         <my-sidebar/>
       </div>
@@ -21,6 +21,7 @@
   import SideBar from '../components/SideBar'
   import markdown from 'vue-markdown'
   import axios from 'axios'
+  import Golbal from '../components/Global'
 
   export default {
     name: "Development",
@@ -33,7 +34,7 @@
       return {
         msg: 'Welcome to Community Page',
         toc: "",
-        development: "",
+        md: "",
         locate: ""
       }
     },
@@ -48,28 +49,16 @@
         return this.$route.params.content
       },
       fetchData() {
-        const dict = {
-          "Have Questions": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Development.md",
-          "How to contribute": "https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Development.md"
-        };
-        const locate ={
-          "Have Questions": "#have-questions",
-          "How to contribute": "#how-to-contribute"
-        }
-        const content = this.content();
-        let url = null;
-        if (content in dict) {
-          url = dict[content];
-        } else {
-          this.$router.push('/404');
-        }
-        this.locate = content;
-        const pointer = this;
-        axios.get(url)
-          .then(function (response) {
-            pointer.development = response.data;
+        let url = Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
+          Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
+          "/docs/Development.md";
+        let pointer = this;
+        axios.get(url).then(function (response) {
+            pointer.md = response.data;
           })
-        location.href = locate[content];
+      },
+      parse(html){
+        return Golbal.isReadyForPrerender(html)
       }
     }
   }

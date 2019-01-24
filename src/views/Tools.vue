@@ -30,16 +30,16 @@
         <div class="row">
           <div v-for="tool in Tools">
             <div class="col-md-6 col-lg-3">
-              <div class="tool thumbnail">-->
+              <div class="tool thumbnail">
                 <h3>{{tool.header}}</h3>
                 <div class="content">
                   <p v-html="tool.content"></p>
                 </div>
                 <hr/>
                 <div class="tool-download">
-                  <button data-toggle="modal" type="button"
+                  <button type="button"
                           class="tool-download-button btn btn-default">
-                    <a v-bind:href="tool.Download">
+                    <a v-bind:href="tool.download">
                       <p style="font-size: medium;margin:0px 0px 5px 5px">Download</p>
                     </a>
                   </button>
@@ -47,26 +47,15 @@
                   <br>
                 </div>
                 <div class="tool-documentation">
-                  <button data-toggle="modal" data-target="#myModal" type="button"
-                          class="tool-documentation-button btn btn-default">
-                    <p style="color: white; font-size: medium;margin:0px 0px 5px 5px">Documentation</p>
+                  <button type="button" class="tool-documentation-button btn btn-default">
+                    <router-link :to=tool.documentation>
+                      <p style="color: white; font-size: medium;margin:0px 0px 5px 5px">Documentation</p>
+                    </router-link>
                   </button>
                   <br>
                   <br>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-           aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                aria-hidden="true">&times;</span></button>
-              <h2 class="modal-title">Coming soon...</h2>
             </div>
           </div>
         </div>
@@ -91,26 +80,26 @@
           {
             "header": "IoTDB-Cli",
             "content": "Client tool used to read and <br/>write data from IoTDB",
-            "Download": this.GLOBAL.downloadIotdbCli,
-            "Documentation": ""
+            "download": this.GLOBAL.downloadIotdbCli,
+            "documentation": "/Tools/Cli"
           },
           {
             "header": "Grafana Connector",
             "content": "Time Series Data<br/>Visualization",
-            "Download": this.GLOBAL.downloadGrafanaConnector,
-            "Documentation": ""
+            "download": this.GLOBAL.downloadGrafanaConnector,
+            "documentation": "/Tools/Grafana"
           },
           {
             "header": "Hadoop Connector",
             "content": "Connector tool to use Hadoop<br/>to process data from IoTDB",
-            "Download": this.GLOBAL.downloadHadoopConnector,
-            "Documentation": ""
+            "download": this.GLOBAL.downloadHadoopConnector,
+            "documentation": "/Tools/Hadoop"
           },
           {
             "header": "Spark Connector",
             "content": "Connector tool to use spark<br/>to process data",
-            "Download": this.GLOBAL.downloadSparkConnector,
-            "Documentation": ""
+            "download": this.GLOBAL.downloadSparkConnector,
+            "documentation": "/Tools/Spark"
           }
         ]
       }
