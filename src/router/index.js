@@ -56,6 +56,16 @@ export default new Router({
       component: NotFound
     },
     {
+      path: '/Comming',
+      name: "Comming",
+      component: Comming
+    },
+    {
+      path: "/404",
+      name: "NotFound",
+      component: NotFound
+    },
+    {
       path: "*",
       redirect: "/404"
     }
