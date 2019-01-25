@@ -7,7 +7,7 @@
           <h2>Other Materials</h2>
           <ul>
             <li v-for="item in items" style="margin: 5px">
-              <a :href="item.url" v-if="item.isDownable">{{item.content}}</a>
+              <a :href="item.url" v-if="item.isDownloadable">{{item.content}}</a>
               <router-link :to="item.url" v-else style="font-size: 16px">{{item.content}}</router-link>
             </li>
           </ul>
@@ -38,9 +38,9 @@
               Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
               "/docs/Documentation/OtherMaterial-Sample%20Data.txt",
             "isDownable" : true},
-          {'content': "Release Notes", 'url': "/Materials/Release Notes", "isDownable" : false},
-          {'content': "Examples", 'url': "/Example", "isDownable" : false},
-          {'content': "References", 'url': "/Materials/References","isDownable" : false},
+          {'content': "Release Notes", 'url': "/Materials/Release Notes", "isDownloadable" : false},
+          {'content': "Examples", 'url': "/Example", "isDownloadable" : false},
+          {'content': "References", 'url': "/Materials/References","isDownloadable" : false},
         ]
       }
     },

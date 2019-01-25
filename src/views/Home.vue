@@ -18,7 +18,7 @@
           </div>
           <div>
             <p class="home-tittle">Scenarios</p>
-            <div id="myCarousel" class="carousel slide" data-ride="carousel" style="background: black">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" style="background: rgb(31,31,31)">
               <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -198,7 +198,7 @@
 
   @media (min-width: 1200px){
     .feature-item{
-      min-height: 295px;
+      min-height: 270px;
     }
     .carousel-inner{
       min-height: 768px;
@@ -225,7 +225,6 @@
 
   .Scenarios {
     padding: 5px 10px;
-    background: black;
     color: white;
   }
 

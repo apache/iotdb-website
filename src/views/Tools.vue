@@ -145,8 +145,7 @@
   .tool {
     text-align: center;
     border: 2px solid;
-    border-radius: 10px;
-    background: black;
+    background: rgb(49,49,60);
     padding: 20px 20px;
     width: 98%;
   }
@@ -184,7 +183,7 @@
   }
 
   .tool-download-button {
-    border-radius: 20px;
+    border-radius: 15px;
     width: 80%;
     background: #fcac45;
     font-size: x-large;
@@ -193,9 +192,9 @@
   }
 
   .tool-documentation-button {
-    border-radius: 20px;
+    border-radius: 15px;
     width: 80%;
-    background: black;
+    background: rgb(49,49,60);
     font-size: x-large;
     font-weight: bold;
     border: 2px solid #fcac45;
