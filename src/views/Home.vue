@@ -95,7 +95,7 @@
                   </div>
                   <div class="col-xs-9 col-sm-9 feature-title"><p>{{item.featureTitle}}</p></div>
                 </div>
-                  <p class="feature-content" style="font-size: 16px; word-break: break-all">{{item.featureContent}}</p>
+                  <p class="feature-content" style="font-size: 16px; margin-bottom: 0px;">{{item.featureContent}}</p>
                 <hr/>
               </div>
             </div>
@@ -198,7 +198,7 @@
 
   @media (min-width: 1200px){
     .feature-item{
-      min-height: 270px;
+      min-height: 260px;
     }
     .carousel-inner{
       min-height: 768px;
@@ -206,8 +206,11 @@
   }
 
   .feature-item{
-    padding: 15px;
-    margin-bottom: 10px;
+    /*padding: 15px;*/
+    /*margin-bottom: 10px;*/
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
   }
   .main > div {
     margin-top: 10px;
