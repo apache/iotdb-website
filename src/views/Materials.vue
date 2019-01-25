@@ -6,9 +6,12 @@
 
           <h2>Other Materials</h2>
           <ul>
+            <li>
+              <a style="margin: 5px;font-size: 16px"
+                 href="https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/OtherMaterial-Sample%20Data.txt">Sample Data</a>
+            </li>
             <li v-for="item in items" style="margin: 5px">
-              <a :href="item.url" v-if="item.isDownloadable">{{item.content}}</a>
-              <router-link :to="item.url" v-else style="font-size: 16px">{{item.content}}</router-link>
+              <router-link :to="item.url" style="font-size: 16px">{{item.content}}</router-link>
             </li>
           </ul>
         </div>
@@ -23,7 +26,7 @@
 <script>
   import Footer from "../components/FooterFixed"
   import SideBar from '../components/SideBar'
-  import Golbal from '../components/Global'
+  // import Golbal from '../components/Global'
 
   export default {
     name: "Materials",
@@ -34,10 +37,6 @@
     data() {
       return {
         items: [
-          {'content': "Sample Data", 'url': Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-              Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
-              "/docs/Documentation/OtherMaterial-Sample%20Data.txt",
-            "isDownable" : true},
           {'content': "Release Notes", 'url': "/Materials/Release Notes", "isDownloadable" : false},
           {'content': "Examples", 'url': "/Example", "isDownloadable" : false},
           {'content': "References", 'url': "/Materials/References","isDownloadable" : false},
