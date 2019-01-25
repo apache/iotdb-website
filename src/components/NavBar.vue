@@ -1,16 +1,16 @@
 <template>
   <div class="header">
-    <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgb(34,34,34); min-height:60px" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgb(34,34,34); min-height:50px" role="navigation">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header" style="margin-top: 5px;">
+        <div class="navbar-header">
           <a class="navbar-brand" href="#/">IoTDB</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 5px;">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="nav-item">
+            <li class="nav-item" id="home-page">
               <router-link to="/" class="nav-link"><span>Home</span></router-link>
             </li>
             <li class="nav-item">
@@ -84,7 +84,8 @@
     });
     jQuery(".navbar-brand").click(function () {
       jQuery('.navbar-nav').find('li.active').removeClass('active');
-      jQuery('.dropdown').removeClass( 'active' );
+      jQuery('.dropdown').removeClass('active');
+      document.getElementById('home-page').classList.add('active');
     });
   });
   export default {

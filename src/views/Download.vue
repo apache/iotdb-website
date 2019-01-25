@@ -2,9 +2,9 @@
   <div>
     <div class="container">
       <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-8 download-section">
           <h2 class="download-title">Release Version</h2>
-          <p>Please choose a version:
+          <p>Please choose a version: &nbsp;&nbsp;
             <select class="download-version-select" v-model="selectVersionObj">
               <option v-for="iotdbVersion in downloadVersionList" :value="iotdbVersion">{{iotdbVersion.text}}</option>
             </select>
@@ -69,8 +69,9 @@
     appearance: none;       /* IE */
     border: none;
     outline: none;
-    border-radius:30px;
+    border-radius: 5px;
     width: 150px;
+    height: 30px;
     padding-left: 15px;
     background: #fcac45 url("../assets/img/arrow.png") no-repeat scroll right center;
   }
@@ -79,6 +80,14 @@
   }
 
   p, a{
+    font-size: 16px;
+  }
+  .download-section > ul {
+    padding-left: 20px;
+    font-size: 16px;
+  }
+
+  .download-section > p{
     font-size: 16px;
   }
 </style>

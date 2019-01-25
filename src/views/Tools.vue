@@ -34,7 +34,7 @@
                 <div class="content">
                   <p v-html="tool.content"></p>
                 </div>
-                <hr style="background-color: rgba(255,255,255,0.2)"/>
+                <hr style="border-top: 1px solid rgb(100,100,100)"/>
                 <div class="tool-download">
                   <button type="button"
                           class="tool-download-button btn btn-default">
