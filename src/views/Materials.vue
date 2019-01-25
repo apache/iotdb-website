@@ -26,7 +26,6 @@
 <script>
   import Footer from "../components/FooterFixed"
   import SideBar from '../components/SideBar'
-  // import Golbal from '../components/Global'
 
   export default {
     name: "Materials",
