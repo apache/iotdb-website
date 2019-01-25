@@ -6,8 +6,8 @@
 
           <h2>Other Materials</h2>
           <ul>
-            <li>
-              <a style="margin: 5px;font-size: 16px"
+            <li style="margin: 5px;">
+              <a style="font-size: 16px"
                  href="https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/OtherMaterial-Sample%20Data.txt">Sample Data</a>
             </li>
             <li v-for="item in items" style="margin: 5px">
