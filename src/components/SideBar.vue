@@ -55,7 +55,7 @@
     font-weight: bold;
   }
   .blog-sidebar{
-    top:70px;
+    top: 2px;
   }
 
   .btn-white {

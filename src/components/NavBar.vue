@@ -1,21 +1,14 @@
 <template>
   <div class="header">
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgb(34,34,34); min-height:60px" role="navigation">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                  data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+        <div class="navbar-header" style="margin-top: 5px;">
           <a class="navbar-brand" href="#/">IoTDB</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 5px;">
           <ul class="nav navbar-nav">
             <li class="nav-item">
               <router-link to="/" class="nav-link"><span>Home</span></router-link>
@@ -33,9 +26,6 @@
                 </li>
               </ul>
             </li>
-            <!--<li class="nav-item">-->
-              <!--<router-link to="/Tools" class="nav-link"><span>Tools</span></router-link>-->
-            <!--</li>-->
             <li class="dropdown">
               <router-link to="/Tools" class="dropdown-toggle" data-toggle="dropdown" role="button"
                            aria-haspopup="true" aria-expanded="false"><span>Tools<b class="caret"></b></span>
@@ -76,6 +66,23 @@
 </template>
 
 <script>
+  jQuery(document).ready(function () {
+    jQuery(".nav-item").click(function () {
+      jQuery('.navbar-nav').find( 'li.active' ).removeClass( 'active' );
+      jQuery('.dropdown').removeClass( 'active' );
+      $(this).addClass( 'active' );
+    });
+    jQuery(".dropdown").click(function () {
+      jQuery('.navbar-nav').find( 'li.active' ).removeClass( 'active' );
+      jQuery('.dropdown').removeClass( 'active' );
+      $(this).addClass( 'active' );
+    });
+    jQuery(".dropdown-menu > li").click(function () {
+      jQuery('.navbar-nav').find( 'li.active' ).removeClass( 'active' );
+      jQuery('.dropdown').removeClass( 'active' );
+      $(this).parent("ul").parent("li").addClass( 'active' );
+    });
+  });
   export default {
     name: "NavBar",
     data() {
@@ -117,38 +124,31 @@
     color: orange;
   }
 
-  .container-fluid {
-    margin-left: 15%;
-    margin-right: 10%;
+  #bs-example-navbar-collapse-1 .navbar-nav >.active>a {
+    background-color: rgb(100,100,100);
   }
 
-  @media (min-width: 0px) {
+  @media (min-width: 200px) {
     .header {
-      margin-bottom: 55px;
+      margin-bottom: 90px;
     }
   }
 
-  @media (min-width: 750px) {
+  @media (min-width: 768px) {
     .header {
-      margin-bottom: 200px;
+      margin-bottom: 190px;
     }
   }
 
-  @media (min-width: 890px) {
+  @media (min-width: 992px) {
     .header {
-      margin-bottom: 150px;
+      margin-bottom: 140px;
     }
   }
 
-  @media (min-width: 1018px) {
+  @media (min-width: 1200px) {
     .header {
-      margin-bottom: 100px;
-    }
-  }
-
-  @media (min-width: 1330px) {
-    .header {
-      margin-bottom: 55px;
+      margin-bottom: 90px;
     }
   }
 

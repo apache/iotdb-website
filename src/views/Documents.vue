@@ -20,7 +20,7 @@
           <div id="text-catalogue" class="content center-block" style="width: 15%;overflow: auto">
             <div v-for="item in result">
               <h5 style="font-size: 16px" data-toggle="collapse" v-if="typeof(item[0]) != 'undefined'" :data-target="item[0].replace(/ /g, '').replace(/:/g, '')" @click="changeChapterNavContent($event)" :class="item[0].slice(1)">
-                {{item[0].slice(1).concat(" ▼")}}
+                {{item[0]}}
               </h5>
               <ul class="list-group collapse in" v-if="typeof(item[0]) != 'undefined'" :id="item[0].slice(1).replace(/ /g, '').replace(/:/g, '')">
                 <li v-for="chapter in item" :class="item[0].slice(1)" v-if="chapter.startsWith('##')" @click="changeSectionNavContent($event)">

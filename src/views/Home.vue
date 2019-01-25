@@ -111,7 +111,7 @@
 
 <script>
   import SideBar from "../components/SideBar";
-  import Footer from "../components/Footer"
+  import Footer from "../components/FooterFixed"
   export default {
     name: "Home",
     components: {

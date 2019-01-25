@@ -1,9 +1,9 @@
 <template>
-    <div class="footer navbar-fixed-bottom">
-        <div class="container">
-            <p>Copyright © 2018 The Apache Software Foundation. Apache and the Apache feather logo are trademarks of The Apache Software Foundation.</p>
-        </div>
+  <footer class="footer">
+    <div class="container">
+      <span>Copyright © 2018 The Apache Software Foundation. Apache and the Apache feather logo are trademarks of The Apache Software Foundation.</span>
     </div>
+  </footer>
 </template>
 
 <script>
@@ -13,17 +13,35 @@
 </script>
 
 <style>
-.footer{
-    padding:10px 0;
-    margin-top: 30px;
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align:center;
     color:#fff;
     background:#222222;
-}
-
-@media screen and (max-width: 500px) {
-  .footer {
-    position: relative;
   }
-}
+  @media (min-width: 992px){
+    body {
+      margin-bottom: 40px; /* Margin bottom by footer height */
+    }
+  }
+  @media (min-width: 499px){
+    body {
+      margin-bottom: 60px; /* Margin bottom by footer height */
+    }
+  }
+  @media (min-width: 355px){
+    body {
+      margin-bottom: 80px; /* Margin bottom by footer height */
+    }
+  }
+
+  @media (min-width: 200px){
+    body {
+      margin-bottom: 120px; /* Margin bottom by footer height */
+    }
+  }
 </style>

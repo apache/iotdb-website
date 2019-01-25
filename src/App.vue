@@ -19,7 +19,10 @@
   #app {
     color: #2c3e50;
   }
-
+  html {
+    position: relative;
+    min-height: 100%;
+  }
   body{
     font-family: 'Lato', sans-serif;
   }
