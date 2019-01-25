@@ -3,12 +3,12 @@
     <div class="container">
       <br>
       <div class="row">
-        <div class="col-lg-7">
+        <div class="col-lg-8">
           <div class="scene">
             <img src="../assets/img/tools.jpg">
           </div>
         </div>
-        <div class="col-lg-5">
+        <div class="col-lg-4">
           <div class="introduction">
             <p><b>IoTDB</b> is an open-source time series database developed by THULab(link) which is written in JAVA.
               In order
@@ -16,16 +16,15 @@
               for IoTDB expansion.
             </p>
             <ul>
-              <li>SQL-like client(Cli) is developed for users to interact with IoTDB engine in command line.</li>
-              <li>Grafana is developed to visualize time series data in IoTDB using Grafana.</li>
-              <li>IoTDB can be also efficiently integrated with other computing frameworks in big data ecosystems, like
-                Hadoop and Spark, for advanced data analytics. That is why we offer you hadoop and spark connector.
+              <li><b>SQL-Like Client(Cli).</b> The Client is developed for users to interact with IoTDB engine in command line.</li>
+              <li><b>Spark & Hadoop Connector.</b> IoTDB can be also efficiently integrated with other computing frameworks in big data ecosystems (Hadoop and Spark) for advanced data analytics.
               </li>
+              <li><b>Grafana.</b> Grafana is developed for users to visualize time series data in IoTDB using Grafana.</li>
             </ul>
           </div>
         </div>
       </div>
-      <hr>
+      <div class="blank-row"></div>
       <div class="tools">
         <div class="row">
           <div v-for="tool in Tools">
@@ -35,24 +34,22 @@
                 <div class="content">
                   <p v-html="tool.content"></p>
                 </div>
-                <hr/>
+                <hr style="background-color: rgba(255,255,255,0.2)"/>
                 <div class="tool-download">
                   <button type="button"
                           class="tool-download-button btn btn-default">
                     <a v-bind:href="tool.download">
-                      <p style="font-size: medium;margin:0px 0px 5px 5px">Download</p>
+                      <p style="font-size: medium;margin:0px 5px 0px 5px">Download</p>
                     </a>
                   </button>
-                  <br>
-                  <br>
                 </div>
+                <div class="brank-row"></div>
                 <div class="tool-documentation">
                   <button type="button" class="tool-documentation-button btn btn-default">
                     <router-link :to=tool.documentation>
-                      <p style="color: white; font-size: medium;margin:0px 0px 5px 5px">Documentation</p>
+                      <p style="color: white; font-size: medium;margin:0px 5px 0px 5px">Documentation</p>
                     </router-link>
                   </button>
-                  <br>
                   <br>
                 </div>
               </div>
@@ -61,7 +58,6 @@
         </div>
       </div>
     </div>
-    <hr>
     <footer-bar/>
   </div>
 </template>
@@ -79,7 +75,7 @@
         "Tools": [
           {
             "header": "IoTDB-Cli",
-            "content": "Client tool used to read and <br/>write data from IoTDB",
+            "content": "Client tool used to read and <br/>write data",
             "download": this.GLOBAL.downloadIotdbCli,
             "documentation": "/Tools/Cli"
           },
@@ -91,7 +87,7 @@
           },
           {
             "header": "Hadoop Connector",
-            "content": "Connector tool to use Hadoop<br/>to process data from IoTDB",
+            "content": "Connector tool to use Hadoop to process data from IoTDB",
             "download": this.GLOBAL.downloadHadoopConnector,
             "documentation": "/Tools/Hadoop"
           },
@@ -111,9 +107,9 @@
 <style scoped>
 
   .scene {
-    border: 2px solid;
-    border-radius: 10px;
-    padding: 10px;
+    /*border: 1px solid;*/
+    /*border-radius: 1px;*/
+    /*padding: 10px;*/
     background: white;
     float: left;
   }
@@ -125,21 +121,45 @@
   }
 
   .introduction {
-    border: 0px solid;
-    border-radius: 10px;
-    margin: 2px 2px 2px 2px;
+    border: 1px solid;
+    border-radius: 2px;
+    border-color: rgb(89，93，105);
+    border-style: dashed;
+    /*background-color: rgb(56,56,68);*/
+    /*margin: 2px 2px 2px 2px;*/
     float: right;
     height: 100%;
+    overflow: auto;
+    padding: 15px 15px 25px 15px;
   }
 
   .introduction > p {
+    /*color: white;*/
     color: black;
     font-size: medium;
+    word-break: break-all;
+    font-size: 14px;
+    line-height: 1.6;
+
   }
 
   .introduction > ul {
+    /*color: white;*/
     color: black;
-    font-size: medium;
+    word-break: break-all;
+    font-size: 14px;
+    padding-left: 20px;
+    /*letter-spacing:0.5px;*/
+    line-height: 1.6;
+  }
+
+  .introduction > p > b {
+    color: #fcac45;
+    font-size: 20px;
+  }
+
+  .introduction > ul > li > b {
+    color: #fcac45;
   }
 
   .tool {
@@ -158,6 +178,7 @@
     color: white;
     text-align: center;
     font-size: small;
+    margin-bottom: 0;
   }
 
   .tool > h3 {
@@ -183,21 +204,23 @@
   }
 
   .tool-download-button {
-    border-radius: 15px;
-    width: 80%;
+    border-radius: 6px;
+    width: 90%;
     background: #fcac45;
     font-size: x-large;
-    font-weight: bold;
-    border: 2px solid #fcac45;
+    border: 1px solid #fcac45;
+  }
+
+  .tool-download-button > a:hover, a:visited, a:link, a:active {
+    color: white;
   }
 
   .tool-documentation-button {
-    border-radius: 15px;
-    width: 80%;
-    background: rgb(49,49,60);
+    border-radius: 6px;
+    width: 90%;
+    background: rgb(56,56,68);
     font-size: x-large;
-    font-weight: bold;
-    border: 2px solid #fcac45;
+    border: 1px solid #fcac45;
   }
 
   .tools .col-lg-3 {
@@ -216,6 +239,14 @@
 
   .tools h1 {
     font-weight: normal;
+  }
+
+  .blank-row {
+    height: 25px;
+  }
+
+  .content > p {
+    font-size: 16px;
   }
 
 
