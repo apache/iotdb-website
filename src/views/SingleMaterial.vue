@@ -7,14 +7,7 @@
         </div>
         <my-sidebar/>
       </div>
-      <div class="col-sm-8" v-if="this.content()==='Project Committers'">
-        <router-link  to="/Development" class="nav-link"><span style="font-size: medium">Want to join us? Learn How to Contribute </span>
-        </router-link>
-      </div>
     </div>
-    <br>
-    <br>
-    <br>
     <footer-bar/>
   </div>
 </template>
@@ -27,7 +20,7 @@
   import Golbal from '../components/Global'
 
   export default {
-    name: "Community",
+    name: "SingleMaterial",
     components: {
       'footer-bar': Footer,
       'my-sidebar': SideBar,
@@ -48,19 +41,18 @@
     },
     methods: {
       content: function () {
-        return this.$route.params.content
+        return this.$route.params.doc
       },
       fetchData() {
         const dict = {
-          "Powered By": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
+          "Release Notes": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
             Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
-            "/docs/Community-Powered%20By.md",
-          "Project Committers": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
+            "/docs/Documentation/OtherMaterial-ReleaseNotes"+
+            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['version']+
+            ".md",
+          "References": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
             Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
-            "/docs/Community-Project%20Committers.md",
-          "History & Vision": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
-            "/docs/Community-History%26Vision.md",
+            "/docs/Documentation/OtherMaterial-Reference.md",
         };
         const content = this.content();
         let url = null;

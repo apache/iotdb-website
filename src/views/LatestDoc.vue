@@ -7,10 +7,6 @@
         </div>
         <my-sidebar/>
       </div>
-      <div class="col-sm-8" v-if="this.content()==='Project Committers'">
-        <router-link  to="/Development" class="nav-link"><span style="font-size: medium">Want to join us? Learn How to Contribute </span>
-        </router-link>
-      </div>
     </div>
     <br>
     <br>
@@ -48,19 +44,16 @@
     },
     methods: {
       content: function () {
-        return this.$route.params.content
+        return this.$route.params.doc
       },
       fetchData() {
         const dict = {
-          "Powered By": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
+          "Quick Start": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
             Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
-            "/docs/Community-Powered%20By.md",
-          "Project Committers": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
+            "/docs/Documentation/QuickStart.md",
+          "Frequently asked questions": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
             Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
-            "/docs/Community-Project%20Committers.md",
-          "History & Vision": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
-            "/docs/Community-History%26Vision.md",
+            '/docs/Documentation/Frequently%20asked%20questions.md',
         };
         const content = this.content();
         let url = null;

@@ -1,15 +1,11 @@
 <template>
   <div>
     <div class="container">
-      <div class="row markdown-body">
+      <div class="row">
         <div class="col-sm-8">
           <vue-markdown v-bind:source="md" :toc="true" :toc-anchor-link-symbol="toc" :postrender="parse"></vue-markdown>
         </div>
         <my-sidebar/>
-      </div>
-      <div class="col-sm-8" v-if="this.content()==='Project Committers'">
-        <router-link  to="/Development" class="nav-link"><span style="font-size: medium">Want to join us? Learn How to Contribute </span>
-        </router-link>
       </div>
     </div>
     <br>
@@ -27,7 +23,7 @@
   import Golbal from '../components/Global'
 
   export default {
-    name: "Community",
+    name: "Example",
     components: {
       'footer-bar': Footer,
       'my-sidebar': SideBar,
@@ -35,40 +31,19 @@
     },
     data() {
       return {
-        msg: 'Welcome to Community Page',
+        msg: 'Welcome to Example Page',
         md: "",
-        toc: "",
+        toc: ""
       }
     },
     created() {
       this.fetchData();
     },
-    watch: {
-      '$route': 'fetchData'
-    },
     methods: {
-      content: function () {
-        return this.$route.params.content
-      },
       fetchData() {
-        const dict = {
-          "Powered By": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
-            "/docs/Community-Powered%20By.md",
-          "Project Committers": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
-            "/docs/Community-Project%20Committers.md",
-          "History & Vision": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
-            "/docs/Community-History%26Vision.md",
-        };
-        const content = this.content();
-        let url = null;
-        if (content in dict) {
-          url = dict[content];
-        } else {
-          this.$router.push('/404');
-        }
+        let url = Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
+          Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
+          "/docs/Documentation/OtherMaterial-Examples.md";
         const pointer = this;
         axios.get(url)
           .then(function (response) {
@@ -81,6 +56,7 @@
     }
   }
 </script>
+
 <style scoped>
   h1, h2 {
     font-weight: normal;
@@ -103,3 +79,4 @@
   }
 
 </style>
+
