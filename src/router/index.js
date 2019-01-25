@@ -7,7 +7,6 @@ import Tools from '@/views/Tools'
 import Community from '@/views/Community'
 import Development from '@/views/Development'
 import Example from '@/views/Example'
-import Comming from '@/views/Comming'
 import NotFound from "../views/NotFound"
 import SingleTool from "../views/SingleTool"
 import LatestDoc from "../views/LatestDoc"

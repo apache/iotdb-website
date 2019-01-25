@@ -58,4 +58,8 @@
   body{
     font-family: 'Lato', sans-serif;
   }
+  ::-webkit-scrollbar{
+    width: 0px;
+    background: transparent;
+  }
 </style>

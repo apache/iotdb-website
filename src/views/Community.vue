@@ -8,7 +8,7 @@
         <my-sidebar/>
       </div>
       <div class="col-sm-8" v-if="this.content()==='Project Committers'">
-        <router-link  to="/Development#" class="nav-link"><span style="font-size: medium">Want to join us? Learn How to Contribute </span>
+        <router-link  to="/Development" class="nav-link"><span style="font-size: medium">Want to join us? Learn How to Contribute </span>
         </router-link>
       </div>
     </div>

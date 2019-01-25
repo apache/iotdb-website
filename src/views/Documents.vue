@@ -3,7 +3,7 @@
     <div class="main container-fluid" >
       <div class="row" style="margin: 0 0;height:90%">
         <!--sidebar part-->
-        <div class="col-xs-2 sidebar" style="">
+        <div class="col-xs-3 sidebar">
           <div class="version text-center">
             <div class="dropdown center-block" style="width: 80%;">
               <button id="version-current" class="btn dropdown-toggle" data-toggle="dropdown" style="width: 100%">
@@ -17,7 +17,7 @@
               </ul>
             </div>
           </div>
-          <div id="text-catalogue" class="content center-block" style="width: 15%;overflow: auto">
+          <div id="text-catalogue" class="content center-block" style="overflow: auto">
             <div v-for="item in result">
               <h5 style="font-size: 16px" data-toggle="collapse" v-if="typeof(item[0]) != 'undefined'" :data-target="item[0].replace(/ /g, '').replace(/:/g, '')" @click="changeChapterNavContent($event)" :class="item[0].slice(1)">
                 {{item[0]}}
@@ -31,27 +31,27 @@
           </div>
         </div>
         <!--content part-->
-        <div class="col-xs-10 fixed-middle">
+        <div class="col-xs-9 fixed-middle">
           <ul class="breadcrumb direct" id="bread-chapter">
             <li><a style='color:#fcac45;'>{{version}}</a></li>
             <li><a style='color:#fcac45;'>{{chapter}}</a></li>
             <li><a style='color:#fcac45;'></a></li>
           </ul>
-          <div id="text-content" class="text-field">
+          <div class="text-field" id="text-content">
             <vue-markdown class="markdown-area" :source="document" :toc="true" :toc-anchor-link="true" toc-anchor-link-symbol=""></vue-markdown>
+            <p class="find-mistake">This documentation is open source. Find mistakes? Want to contribute? Go for it.</p>
           </div>
-          <div class="find-mistake">
-            <p>This documentation is open source. Find mistakes? Want to contribute? Go for it.</p>
+          <div class="doc-footer">
+            <span>Copyright © 2018 The Apache Software Foundation. Apache and the Apache feather logo are trademarks of The Apache Software Foundation.</span>
           </div>
         </div>
       </div>
     </div>
-    <footer-bar/>
+
   </div>
 </template>
 
 <script>
-  import Footer from "../components/FooterFixed"
   import MarkDown from "vue-markdown"
   import axios from 'axios'
   import Golbal from '../components/Global'
@@ -68,7 +68,6 @@
       }
     },
     components: {
-      'footer-bar': Footer,
       'vue-markdown': MarkDown,
     },
     created() {
@@ -202,13 +201,15 @@
       }
     }
   }
-  
+
 </script>
 
 <style scoped>
   #bread-chapter{
-    margin-left: 11%;
-    margin-right: 8%;
+    margin-left: 2%;
+    margin-right: 17%;
+    max-width: 900px;
+    left: 25%;
   }
 
   .text-field {
@@ -216,16 +217,17 @@
     overflow-x: hidden;
     overflow-y: auto;
     top: 120px;
-    left: 20%;
-    bottom: 100px;
-    margin-left: 8%;
-    margin-right: 8%;
+    left: 25%;
+    bottom: 50px;
+    margin-left: 2%;
+    margin-right: 15%;
+    max-width: 1000px;
   }
 
   .fixed-middle {
     position: fixed;
-    top: 60px;
-    left: 17%;
+    top: 70px;
+    left: 24%;
   }
 
   .fixed-middle > ul {
@@ -242,31 +244,24 @@
 
   .find-mistake {
     text-align: center;
-    position: fixed;
-    left: 20%;
-    right: 0;
-    bottom: 50px;
-  }
-
-  .col-xs-2 {
-    background: #222222;
-    padding: 0 0;
   }
 
   .sidebar {
     position: fixed;
-    top: 50px;
+    top: 65px;
     bottom: 0;
     left: 0;
     z-index: 1000;
     display: block;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background: #222222;
+    padding: 0 0;
   }
 
   .dropdown {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 
   .dropdown > ul {
@@ -314,7 +309,6 @@
   }
 
   .content.center-block {
-    position: fixed;
     margin-left: 20px;
     top: 120px;
     bottom: 50px;
@@ -328,25 +322,36 @@
     width: 50px;
   }
 
+  .doc-footer{
+    position: fixed;
+    width: 76%;
+    bottom: 0px;
+    right: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align:center;
+    color:#fff;
+    background:#222222;
+  }
 
   @media (min-width: 768px) {
     .fixed-middle {
-      top: 207px;
+      top: 170px;
     }
     #text-content{
-      top: 253px;
+      top: 210px;
     }
     .sidebar{
-      top: 204px;
+      top: 150px;
     }
     .content.center-block{
-      top: 272px;
+      top: 222px;
     }
   }
 
   @media (min-width: 990px) {
     .fixed-middle {
-     top: 110px;
+     top: 120px;
     }
     #text-content{
       top: 160px;
@@ -361,7 +366,7 @@
 
   @media (min-width: 1200px) {
     .fixed-middle {
-      top: 60px;
+      top: 70px;
     }
     #text-content{
       top: 110px;
@@ -374,9 +379,5 @@
     }
   }
 
-  @media screen and (max-width: 400px) {
-    .footer {
-      display: none;
-    }
-  }
+
 </style>

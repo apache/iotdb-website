@@ -6,7 +6,7 @@
         <h1 style="font-weight: bolder">PAGE NOT FOUND</h1>
         <p>The page you are looking for was moved, removed,<br />
           renamed or might never existed.</p>
-        <a href="/" class="link-color btn">Go Home</a>
+        <a href="#/" class="link-color btn">Go Home</a>
       </div>
     </div>
     <footer-bar/>

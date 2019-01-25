@@ -68,19 +68,23 @@
 <script>
   jQuery(document).ready(function () {
     jQuery(".nav-item").click(function () {
-      jQuery('.navbar-nav').find( 'li.active' ).removeClass( 'active' );
-      jQuery('.dropdown').removeClass( 'active' );
+      jQuery('.navbar-nav').find('li.active').removeClass('active');
+      jQuery('.dropdown').removeClass('active');
       $(this).addClass( 'active' );
     });
     jQuery(".dropdown").click(function () {
-      jQuery('.navbar-nav').find( 'li.active' ).removeClass( 'active' );
-      jQuery('.dropdown').removeClass( 'active' );
+      jQuery('.navbar-nav').find('li.active').removeClass('active');
+      jQuery('.dropdown').removeClass('active');
       $(this).addClass( 'active' );
     });
     jQuery(".dropdown-menu > li").click(function () {
-      jQuery('.navbar-nav').find( 'li.active' ).removeClass( 'active' );
+      jQuery('.navbar-nav').find('li.active').removeClass('active');
       jQuery('.dropdown').removeClass( 'active' );
       $(this).parent("ul").parent("li").addClass( 'active' );
+    });
+    jQuery(".navbar-brand").click(function () {
+      jQuery('.navbar-nav').find('li.active').removeClass('active');
+      jQuery('.dropdown').removeClass( 'active' );
     });
   });
   export default {
