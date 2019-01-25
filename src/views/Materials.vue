@@ -51,4 +51,8 @@
   .main>div {
     margin-top: 10px;
   }
+
+  li {
+    font-size: 16px;
+  }
 </style>
