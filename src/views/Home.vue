@@ -29,16 +29,13 @@
                   <img src="https://user-images.githubusercontent.com/1021782/50463652-f67c6480-09c7-11e9-8f65-c8adaff09043.png" alt="First slide">
                   <br/>
                   <div class="Scenarios">
-                    <h1 style="margin-top: 0">High-end equipment</h1>
+                    <h1>High-end equipment</h1>
                     <article lang="en">
-                      <p> In high-end manufacturing, there are many devices equipped with sensors which can collect working status data.
-                        Meteorological stations, wind turbines, etc. are common high-end devices.
+                      <p> In high-end manufacturing, there are many devices equipped with sensors collecting working status data.
+                        Meteorological stations, wind turbines are common high-end devices.
                         These devices, if supports Java or Go (in developing), can run TsFile to store data locally.
                         In this way, TsFile can provide the ability to save data with high throughput, high compression ratio, and millisecond query.
-                        In addition, with TsFile-Sync tool, TsFiles can be transmitted to the data center equipped with IoTDB instance instead of re-inserting data one point by one point.
-                      </p>
-                      <p>
-                        If the embedded board supports Java and requires rich query functions, then an IoTDB instance can be installed on the device.
+                        Together with TsFile-Sync tool, TsFiles can be transmitted to the data center.
                       </p>
                     </article>
                   </div>
@@ -47,7 +44,7 @@
                   <img src="https://user-images.githubusercontent.com/1021782/50463651-f67c6480-09c7-11e9-9374-3e6c6c540d7b.png" alt="Second slide">
                   <br/>
                   <div class="Scenarios">
-                    <h1 style="margin-top: 0">Local Controller</h1>
+                    <h1>Local Controller</h1>
                     <article lang="en">
                       <p>
                         In the scene of factories, there are tens of devices under LAN network.
@@ -62,7 +59,7 @@
                   <img src="https://user-images.githubusercontent.com/1021782/50463650-f67c6480-09c7-11e9-9b80-bc66aa5dc0ab.png" alt="Third slide">
                   <br/>
                   <div class="Scenarios">
-                    <h1 style="margin-top: 0">Cloud Data Management</h1>
+                    <h1>Cloud Data Management</h1>
                     <article lang="en">
                       <p>
                         In the scene of high-speed network (Internet of Vehicles, etc.), a car installed sensors on it can collect monitoring information(driving status, etc.) of itself at a certain frequency.
@@ -74,14 +71,6 @@
                   </div>
                 </div>
               </div>
-              <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
             </div>
           </div>
           <div>
@@ -90,12 +79,12 @@
               <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 feature-item" v-for="item in featureBlock1" @mouseover="hover($event)"
                    @mouseleave="unhover($event)">
                 <div class="row feature-title-row">
-                  <div class="col-xs-2 col-sm-3">
+                  <div class="col-xs-2 col-sm-2">
                     <img :src=item.featureSrc style="vertical-align:middle">
                   </div>
-                  <div class="col-xs-9 col-sm-9 feature-title"><p>{{item.featureTitle}}</p></div>
+                  <div class="col-xs-10 col-sm-10 feature-title"><p>{{item.featureTitle}}</p></div>
                 </div>
-                  <p class="feature-content" style="font-size: 16px; word-break: break-all">{{item.featureContent}}</p>
+                  <p class="feature-content" style="word-break: break-all">{{item.featureContent}}</p>
                 <hr/>
               </div>
             </div>
@@ -128,11 +117,11 @@
           },
           {
             featureSrc: require("../assets/img/home-icon2.png"), featureTitle: "Efficient directory structure",
-            featureContent: "Apache IoTDB (incubating) supports efficient oganization for complex timeseries data structure from intelligent networking devices, oganization for timeseries data from devices of the same type, fuzzy searching strategy for massive and complex directory of timeseries data."
+            featureContent: "Apache IoTDB (incubating) supports efficient oganization for complex data structure from IoT devices, oganization for large size of timeseries data, fuzzy searching strategy for complex directory of timeseries data."
           },
           {
             featureSrc: require("../assets/img/home-icon3.png"), featureTitle: "Rich query semantics",
-            featureContent: "Apache IoTDB (incubating) supports time alignment for timeseries data accross devices and sensors, computation in timeseries field (frequency domain transformation) and rich aggregation function support in time dimension."
+            featureContent: "Apache IoTDB (incubating) supports time alignment for timeseries data accross devices and sensors, computation in timeseries field (frequency domain) and rich aggregation function support in time dimension."
           },
           {
             featureSrc: require("../assets/img/home-icon4.png"), featureTitle: "Low cost on hardware",
@@ -167,46 +156,53 @@
   .item{
     margin-bottom: 10px;
   }
+
+  .item > img {
+    margin-left: auto;
+    margin-top: 5px;
+    margin-right: auto;
+    width: 95%;
+  }
   .carousel-indicators{
     bottom: 0px;
   }
 
   @media (min-width: 200px) {
     .carousel-inner{
-      min-height: 780px;
+      min-height: 500px;
     }
 
   }
 
   @media (min-width: 768px) {
     .feature-item{
-      min-height: 270px;
+      min-height: 200px;
     }
     .carousel-inner{
-      min-height: 660px;
+      min-height: 520px;
     }
   }
 
   @media (min-width: 992px) {
     .feature-item{
-      min-height: 340px;
+      min-height: 220px;
     }
     .carousel-inner{
-      min-height: 700px;
+      min-height: 580px;
     }
   }
 
   @media (min-width: 1200px){
     .feature-item{
-      min-height: 270px;
+      min-height: 180px;
     }
     .carousel-inner{
-      min-height: 768px;
+      min-height: 650px;
     }
   }
 
   .feature-item{
-    padding: 15px;
+    padding-top: 15px;
     margin-bottom: 10px;
   }
   .main > div {
@@ -226,20 +222,8 @@
   .Scenarios {
     padding: 5px 10px;
     color: white;
-  }
-
-  .carousel-control.left {
-    background-image: none;
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
-  }
-
-  .carousel-control.right {
-    left: auto;
-    right: 0;
-    background-image: none;
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .carousel-indicators > li, .carousel-indicators > .active {
@@ -273,12 +257,19 @@
   }
 
   .row > div > img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    margin-left: 3px;
   }
 
   .feature-title > p {
     font-size: medium;
+    margin-left: 5px;
+    margin-bottom: 0;
+  }
+
+  .feature-content {
+    margin-top: 5px;
   }
 
   article {
@@ -291,6 +282,20 @@
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
+  }
+
+  .feature-item p {
+    font-size: 14px;
+  }
+
+  .Scenarios > article > p {
+    font-size: 14px;
+  }
+
+  .Scenarios > h1 {
+    margin-top: 0;
+    font-size: 30px;
+    color: #fcac45;
   }
 
 </style>
