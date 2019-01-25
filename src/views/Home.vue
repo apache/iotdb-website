@@ -117,7 +117,7 @@
           },
           {
             featureSrc: require("../assets/img/home-icon2.png"), featureTitle: "Efficient directory structure",
-            featureContent: "Apache IoTDB (incubating) supports efficient oganization for complex data structure from IoT devices, oganization for large size of timeseries data, fuzzy searching strategy for complex directory of timeseries data."
+            featureContent: "Apache IoTDB (incubating) supports efficient organization for complex data structure from IoT devices, organization for large size of timeseries data, fuzzy searching strategy for complex directory of timeseries data."
           },
           {
             featureSrc: require("../assets/img/home-icon3.png"), featureTitle: "Rich query semantics",
