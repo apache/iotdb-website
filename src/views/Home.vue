@@ -169,7 +169,7 @@
 
   @media (min-width: 200px) {
     .carousel-inner{
-      min-height: 500px;
+      min-height: 530px;
     }
 
   }
