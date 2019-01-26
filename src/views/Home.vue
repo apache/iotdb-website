@@ -194,7 +194,7 @@
 
   @media (min-width: 1200px){
     .feature-item{
-      min-height: 180px;
+      min-height: 195px;
     }
     .carousel-inner{
       min-height: 650px;
