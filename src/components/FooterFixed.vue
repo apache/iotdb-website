@@ -1,14 +1,19 @@
 <template>
   <footer class="footer">
     <div class="container">
-      <span>Copyright © 2018 The Apache Software Foundation. Apache and the Apache feather logo are trademarks of The Apache Software Foundation.</span>
+      <span>Copyright © {{year}} The Apache Software Foundation. Apache and the Apache feather logo are trademarks of The Apache Software Foundation.</span>
     </div>
   </footer>
 </template>
 
 <script>
   export default {
-      name:'FooterFixed'
+    name: 'FooterFixed',
+    year: "",
+    created() {
+      let dt = new Date();
+      this.year = dt.getFullYear();
+    }
   }
 </script>
 
