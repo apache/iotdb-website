@@ -42,7 +42,7 @@
             <p class="find-mistake">This documentation is open source. Find mistakes? Want to contribute? Go for it.</p>
           </div>
           <div class="doc-footer">
-            <span>Copyright © {{year}} The Apache Software Foundation. Apache and the Apache feather logo are trademarks of The Apache Software Foundation.</span>
+            <span>Copyright © 2019 The Apache Software Foundation. Apache and the Apache feather logo are trademarks of The Apache Software Foundation.</span>
           </div>
         </div>
       </div>
@@ -65,7 +65,6 @@
         result: [],
         version: "",
         chapter: "",
-        year: "",
       }
     },
     components: {
@@ -82,8 +81,6 @@
     },
     methods: {
       init(){
-        let dt = new Date();
-        this.year = dt.getFullYear();
         for(let key in Golbal.SUPPORT_VERSION){
           if(key != Golbal.LATEST_STR){
             this.versions.push({

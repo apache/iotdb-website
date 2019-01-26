@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="container">
-      <span>Copyright © {{year}} The Apache Software Foundation. Apache and the Apache feather logo are trademarks of The Apache Software Foundation.</span>
+      <span>Copyright © 2019 The Apache Software Foundation. Apache and the Apache feather logo are trademarks of The Apache Software Foundation.</span>
     </div>
   </footer>
 </template>
@@ -11,8 +11,6 @@
     name: 'FooterFixed',
     year: "",
     created() {
-      let dt = new Date();
-      this.year = dt.getFullYear();
     }
   }
 </script>
