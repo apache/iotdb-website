@@ -10,7 +10,7 @@
   const LATEST_STR = "latest";
   const SUPPORT_VERSION = {
     "latest": {
-      "branch": "doc",
+      "branch": "0.7.0-doc",
       "doc-prefix": DOC_URL_PREFIX,
       'version': "V0.7.0",
       'chapters': [
@@ -23,7 +23,7 @@
       ]
     },
     "0.7.0": {
-      "branch": "doc",
+      "branch": "0.7.0-doc",
       "doc-prefix": DOC_URL_PREFIX,
       'version': "V0.7.0",
       'chapters': [
