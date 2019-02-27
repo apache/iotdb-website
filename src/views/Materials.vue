@@ -8,7 +8,7 @@
           <ul>
             <li style="margin: 5px;">
               <a style="font-size: 16px"
-                 href="https://raw.githubusercontent.com/apache/incubator-iotdb/doc/docs/Documentation/OtherMaterial-Sample%20Data.txt">Sample Data</a>
+                 href="https://github.com/apache/incubator-iotdb/blob/master/docs/Documentation/OtherMaterial-Sample%20Data.txt">Sample Data</a>
             </li>
             <li v-for="item in items" style="margin: 5px">
               <router-link :to="item.url" style="font-size: 16px">{{item.content}}</router-link>

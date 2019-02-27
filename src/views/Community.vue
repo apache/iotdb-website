@@ -53,13 +53,13 @@
       fetchData() {
         const dict = {
           "Powered By": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
+            "master" +
             "/docs/Community-Powered%20By.md",
           "Project Committers": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
+            "master" +
             "/docs/Community-Project%20Committers.md",
           "History & Vision": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
+            "master" +
             "/docs/Community-History%26Vision.md",
         };
         const content = this.content();

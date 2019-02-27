@@ -84,10 +84,10 @@
 
   article li {
     font-size: 16px;
-    word-break: break-all;
-    /*-webkit-hyphens: auto;*/
-    /*-moz-hyphens: auto;*/
-    /*-ms-hyphens: auto;*/
-    /*hyphens: auto;*/
+    /*word-break: break-all;*/
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
   }
 </style>
