@@ -77,7 +77,8 @@
     },
     watch: {
       '$route': 'fetchData',
-      '$route.params.version': 'getButtonVersion',
+      '$route.params.version': 'updateDocument',
+      '$route.params.section': 'updateDocument',
     },
     methods: {
       init(){
@@ -90,19 +91,14 @@
           }
         }
         let version = this.getVersion();
-        let chapter = Number(this.getSection().substr(3)) - 1;
         if(version in Golbal.SUPPORT_VERSION){
           if(version === Golbal.LATEST_STR){
             this.version = Golbal.LATEST_VERSION;
           } else {
             this.version = version;
           }
-          this.chapter = Golbal.SUPPORT_VERSION[version]['chapters'][chapter].substr(0, Golbal.SUPPORT_VERSION[version]['chapters'][chapter].length - 3);
+          this.updateSection();
         }
-      },
-      getButtonVersion() {
-        document.getElementById("version-current").innerHTML = this.getVersionString() + "<b class=\"caret right-block\"></b>";
-        this.generateCatalogue();
       },
       getVersionString() {
         let version = this.$route.params.version;
@@ -116,17 +112,10 @@
         return "";
       },
       changeChapterNavContent: function (event) {
-        let ver = this.getVersionString();
-        let chapter = event.currentTarget.innerText.replace(/▼/g, '');
-        var x = document.getElementById("bread-chapter");
-        x.innerHTML = "<li><a style='color:#fcac45;'>" + ver + "</a></li>" + "<li><a style='color:#fcac45;' href='#" +
-          chapter.trim().toLocaleLowerCase().replace(/ /g, '-').replace(/:/g, '') + "'>" +
-          chapter + "</a></li>";
-        let sect = event.currentTarget.className;
-        this.$route.params.section = "sec" + sect.replace(/[^0-9]/ig, "");
-        this.fetchData();
+        let ver = this.getVersion();
+        let url = "/Documents/"+ver+"/sec"+event.currentTarget.className.replace(/[^0-9]/ig, "");
+        this.$router.push(url);
 
-        location.href = '#' + chapter.trim().toLocaleLowerCase().replace(/ /g, '-').replace(/:/g, '');
       },
       changeSectionNavContent: function (event) {
         let version = this.getVersionString();
@@ -149,6 +138,23 @@
       // get the section
       getSection() {
         return this.$route.params.section;
+      },
+      updateDocument(){
+        this.updateVersion();
+        this.updateSection();
+      },
+      updateVersion() {
+        document.getElementById("version-current").innerHTML = this.getVersionString() + "<b class=\"caret right-block\"></b>";
+        this.generateCatalogue();
+      },
+      updateSection() {
+        let version = this.getVersion();
+        let chapter = Number(this.getSection().substr(3)) - 1;
+        if(chapter >= 0 && chapter <  Golbal.SUPPORT_VERSION[version]['chapters'].length){
+          this.chapter = Golbal.SUPPORT_VERSION[version]['chapters'][chapter].substr(0, Golbal.SUPPORT_VERSION[version]['chapters'][chapter].length - 3);
+        } else {
+          this.$router.push('/404');
+        }
       },
       // use version and section to render markdown
       fetchData() {
