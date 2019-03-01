@@ -7,7 +7,7 @@
           <div class="version text-center">
             <div class="dropdown center-block" style="width: 80%;">
               <button id="version-current" class="btn dropdown-toggle" data-toggle="dropdown" style="width: 100%">
-                IoTDB v0.7
+                IoTDB {{text}}
                 <b class="caret right-block"></b>
               </button>
               <ul class="dropdown-menu">
@@ -33,9 +33,9 @@
         <!--content part-->
         <div class="col-xs-9 fixed-middle">
           <ul class="breadcrumb direct" id="bread-chapter">
-            <li><a style='color:#fcac45;'>{{version}}</a></li>
+            <li><a style='color:#fcac45;'>{{text}}</a></li>
             <li><a style='color:#fcac45;'>{{chapter}}</a></li>
-            <li><a style='color:#fcac45;'></a></li>
+            <li><a style='color:#fcac45;'>{{content}}</a></li>
           </ul>
           <div class="text-field" id="text-content">
             <vue-markdown class="markdown-area" :source="document" :toc="true" :toc-anchor-link="true" toc-anchor-link-symbol=""></vue-markdown>
@@ -65,6 +65,8 @@
         result: [],
         version: "",
         chapter: "",
+        content: "",
+        text: "",
       }
     },
     components: {
@@ -83,12 +85,10 @@
     methods: {
       init(){
         for(let key in Golbal.SUPPORT_VERSION){
-          if(key != Golbal.LATEST_STR){
-            this.versions.push({
-              text: "IoTDB " + Golbal.SUPPORT_VERSION[key]['version'],
-              url: '/Documents/'+ key + '/sec1'
-            })
-          }
+          this.versions.push({
+            text: Golbal.SUPPORT_VERSION[key]['text'],
+            url: '/Documents/'+ key + '/sec1'
+          })
         }
         let version = this.getVersion();
         if(version in Golbal.SUPPORT_VERSION){
@@ -99,15 +99,12 @@
           }
           this.updateSection();
         }
+        this.text = this.getVersionString();
       },
       getVersionString() {
         let version = this.$route.params.version;
         if (version in Golbal.SUPPORT_VERSION){
-          if (version === Golbal.LATEST_STR){
-            return "IoTDB v"+Golbal.LATEST_VERSION;
-          } else{
-            return "IoTDB v"+version;
-          }
+          return Golbal.SUPPORT_VERSION[version]['text']
         }
         return "";
       },
@@ -115,17 +112,13 @@
         let ver = this.getVersion();
         let url = "/Documents/"+ver+"/sec"+event.currentTarget.className.replace(/[^0-9]/ig, "");
         this.$router.push(url);
-
       },
       changeSectionNavContent: function (event) {
         let version = this.getVersionString();
         var chapter = event.currentTarget.className;
         var section = event.currentTarget.innerText;
-        var x = document.getElementById("bread-chapter");
-        x.innerHTML = "<li><a style='color:#fcac45;'>" + version + "</a></li>" + "<li><a style='color:#fcac45;' href='#" +
-          chapter.trim().toLocaleLowerCase().replace(/ /g, '-').replace(/:/g, '') + "'>" +
-          chapter + "</a></li>" + "<li><a style='color:#fcac45;' href='#" +
-          section.toLocaleLowerCase().replace(/ /g, '-') + "'>" + section + "</a></li>";
+        console.log(chapter);
+        this.updateHeader(version, chapter.trim(), section);
         this.$route.params.section = "sec" + chapter.replace(/[^0-9]/ig, "");
         this.fetchData();
 
@@ -144,7 +137,7 @@
         this.updateSection();
       },
       updateVersion() {
-        document.getElementById("version-current").innerHTML = this.getVersionString() + "<b class=\"caret right-block\"></b>";
+        this.text = this.getVersionString();
         this.generateCatalogue();
       },
       updateSection() {
@@ -155,6 +148,10 @@
         } else {
           this.$router.push('/404');
         }
+      },
+      updateHeader(chapter, section, content){
+        this.chapter = section;
+        this.content = content;
       },
       // use version and section to render markdown
       fetchData() {
