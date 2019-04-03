@@ -11,7 +11,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#/">IoTDB</a>
+          <!--<a class="navbar-brand" href="#/">IoTDB</a>-->
+          <router-link to="/" class="nav-link">
+            <img src="../assets/img/logo.png" class="logo-class">
+          </router-link>
+
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -89,7 +93,7 @@
       jQuery('.dropdown').removeClass( 'active' );
       $(this).parent("ul").parent("li").addClass( 'active' );
     });
-    jQuery(".navbar-brand").click(function () {
+    jQuery(".logo-class").click(function () {
       jQuery('.navbar-nav').find('li.active').removeClass('active');
       jQuery('.dropdown').removeClass('active');
       document.getElementById('home-page').classList.add('active');
@@ -140,9 +144,17 @@
     background-color: rgb(100,100,100);
   }
 
+  .logo-class{
+    max-width: 100px;
+    padding-top: 2px;
+  }
+
   @media (min-width: 200px) {
     .header {
       margin-bottom: 90px;
+    }
+    .logo-class{
+      margin-left: 0px;
     }
   }
 
@@ -150,17 +162,26 @@
     .header {
       margin-bottom: 190px;
     }
+    .logo-class{
+      margin-left: -8px;
+    }
   }
 
   @media (min-width: 992px) {
     .header {
       margin-bottom: 140px;
     }
+    .logo-class{
+      margin-left: -8px;
+    }
   }
 
   @media (min-width: 1200px) {
     .header {
       margin-bottom: 90px;
+    }
+    .logo-class{
+      margin-left: -11px;
     }
   }
 
