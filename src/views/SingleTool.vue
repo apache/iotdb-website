@@ -48,22 +48,22 @@
       },
       fetchData() {
         const dict = {
-          "Cli": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
+          "Cli": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
+            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
             "/docs/Documentation/UserGuide" +
-            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['version'] + "/7-Tools-Cli.md",
-          "Grafana": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
+            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['version'] + "/7-Tools-Cli.md",
+          "Grafana": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
+            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
             "/docs/Documentation/UserGuide" +
-            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['version'] + "/7-Tools-Grafana.md",
-          "Hadoop": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
+            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['version'] + "/7-Tools-Grafana.md",
+          "Hadoop": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
+            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
             "/docs/Documentation/UserGuide" +
-            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['version'] + "/7-Tools-Hadoop.md",
-          "Spark": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
+            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['version'] + "/7-Tools-Hadoop.md",
+          "Spark": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
+            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
             "/docs/Documentation/UserGuide" +
-            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['version'] + "/7-Tools-spark.md",
+            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['version'] + "/7-Tools-spark.md",
         };
         const content = this.content();
         console.log(content);

@@ -93,7 +93,7 @@
         let version = this.getVersion();
         if(version in Golbal.SUPPORT_VERSION){
           if(version === Golbal.LATEST_STR){
-            this.version = Golbal.LATEST_VERSION;
+            this.version = Golbal.DEFAULT_VERSION;
           } else {
             this.version = version;
           }

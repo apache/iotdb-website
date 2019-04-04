@@ -6,7 +6,7 @@
 
   const cheerio = require('cheerio');
   const DOC_URL_PREFIX = "https://raw.githubusercontent.com/apache/incubator-iotdb/";
-  const LATEST_VERSION = "0.7.0";
+  const DEFAULT_VERSION = "latest";
   const LATEST_STR = "latest";
   const SUPPORT_VERSION = {
     "latest": {
@@ -53,7 +53,7 @@
     downloadGrafanaConnector,
     downloadHadoopConnector,
     downloadSparkConnector,
-    LATEST_VERSION,
+    DEFAULT_VERSION,
     SUPPORT_VERSION,
     LATEST_STR,
     isReadyForPrerender

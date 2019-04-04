@@ -48,11 +48,11 @@
       },
       fetchData() {
         const dict = {
-          "Quick Start": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
+          "Quick Start": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
+            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
             "/docs/Documentation/QuickStart.md",
-          "Frequently asked questions": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
+          "Frequently asked questions": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
+            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
             '/docs/Documentation/Frequently%20asked%20questions.md',
         };
         const content = this.content();

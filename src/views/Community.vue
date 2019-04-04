@@ -52,14 +52,14 @@
       },
       fetchData() {
         const dict = {
-          "Powered By": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-            "master" +
+          "Powered By": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
+          Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
             "/docs/Community-Powered%20By.md",
-          "Project Committers": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-            "master" +
+          "Project Committers": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
+          Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
             "/docs/Community-Project%20Committers.md",
-          "History & Vision": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-            "master" +
+          "History & Vision": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
+          Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
             "/docs/Community-History%26Vision.md",
         };
         const content = this.content();

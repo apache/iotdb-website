@@ -49,8 +49,8 @@
         return this.$route.params.content
       },
       fetchData() {
-        let url = Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-          Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
+        let url = Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
+          Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
           "/docs/Development.md";
         let pointer = this;
         axios.get(url).then(function (response) {

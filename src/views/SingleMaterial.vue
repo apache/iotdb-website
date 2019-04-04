@@ -45,13 +45,13 @@
       },
       fetchData() {
         const dict = {
-          "Release Notes": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
+          "Release Notes": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
+            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
             "/docs/Documentation/OtherMaterial-ReleaseNotes"+
-            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['version']+
+            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['version']+
             ".md",
-          "References": Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
+          "References": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
+            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
             "/docs/Documentation/OtherMaterial-Reference.md",
         };
         const content = this.content();

@@ -41,8 +41,8 @@
     },
     methods: {
       fetchData() {
-        let url = Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['doc-prefix'] +
-          Golbal.SUPPORT_VERSION[Golbal.LATEST_VERSION]['branch'] +
+        let url = Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
+          Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
           "/docs/Documentation/OtherMaterial-Examples.md";
         const pointer = this;
         axios.get(url)
