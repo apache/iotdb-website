@@ -13,7 +13,7 @@
           </button>
           <!--<a class="navbar-brand" href="#/">IoTDB</a>-->
           <router-link to="/" class="nav-link">
-            <img src="../assets/img/logo.png" class="logo-class">
+            <img src="../assets/img/logo-orange.png" class="logo-class">
           </router-link>
 
         </div>
@@ -146,7 +146,8 @@
 
   .logo-class{
     max-width: 100px;
-    padding-top: 2px;
+    padding-top: 5px;
+    margin-right: 15px;
   }
 
   @media (min-width: 200px) {
@@ -154,7 +155,7 @@
       margin-bottom: 90px;
     }
     .logo-class{
-      margin-left: 0px;
+      margin-left: 10px;
     }
   }
 
@@ -162,8 +163,11 @@
     .header {
       margin-bottom: 190px;
     }
+    #home-page{
+      margin-left: -15px;
+    }
     .logo-class{
-      margin-left: -8px;
+      margin-left: -2px;
     }
   }
 
@@ -171,8 +175,11 @@
     .header {
       margin-bottom: 140px;
     }
+  }
+
+  @media (min-width: 1170px) {
     .logo-class{
-      margin-left: -8px;
+      margin-left: -110px;
     }
   }
 
@@ -181,9 +188,13 @@
       margin-bottom: 90px;
     }
     .logo-class{
-      margin-left: -11px;
+      margin-left: 0px;
     }
   }
 
-
+  @media (min-width: 1360px) {
+    .logo-class{
+      margin-left: -110px;
+    }
+  }
 </style>
