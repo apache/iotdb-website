@@ -12,7 +12,7 @@
                 integration with Hadoop and Spark ecology, Apache IoTDB (incubating) can meet the requirements of
                 massive dataset storage, high-speed data input and complex data analysis in the IoT industrial field.</p>
               <p>
-                Apache IoTDB (incubating) was initially developed by Prof. Wang's team, which comes from School of Software at
+                Apache IoTDB (incubating) was initially developed by Prof. Wang's Team of School of Software at
                 Tsinghua University. Now Apache IoTDB (incubating) is an effort undergoing incubation at The Apache
                 Software Foundation (ASF), sponsored by the Incubator.
               </p>
