@@ -3,7 +3,8 @@
     <div class="container">
       <div class="row markdown-body">
         <div class="col-sm-8">
-          <vue-markdown v-bind:source="md" :toc="true" :toc-anchor-link-symbol="toc" :postrender="parse"></vue-markdown>
+          <loading v-if="seen"></loading>
+          <vue-markdown v-if="seen==false" v-bind:source="md" :toc="true" :toc-anchor-link-symbol="toc" :postrender="parse"></vue-markdown>
         </div>
         <my-sidebar/>
       </div>
@@ -25,6 +26,7 @@
   import markdown from 'vue-markdown'
   import axios from 'axios'
   import Golbal from '../components/Global'
+  import LoadingBar from '../components/Loading'
 
   export default {
     name: "Community",
@@ -32,12 +34,14 @@
       'footer-bar': Footer,
       'my-sidebar': SideBar,
       'vue-markdown': markdown,
+      'loading': LoadingBar,
     },
     data() {
       return {
         msg: 'Welcome to Community Page',
         md: "",
         toc: "",
+        seen: true
       }
     },
     created() {
@@ -70,9 +74,11 @@
           this.$router.push('/404');
         }
         const pointer = this;
+        this.seen = true;
         axios.get(url)
           .then(function (response) {
             pointer.md = response.data;
+            pointer.seen = false;
           })
       },
       parse(html){
