@@ -7,13 +7,15 @@
             <p class="home-tittle">Apache IoTDB (incubating) (Database for Internet of Things)</p>
             <article lang="en">
               <p>Apache IoTDB (incubating) (Database for Internet of Things) is an integrated data management engine
-                designed for timeseries data which was initially developed by Tsinghua University. Now Apache IoTDB
-                (incubating) is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the
-                Incubator.
-                It can provide users specific services for data collection, storage and analysis. Due to its light weight
-                structure, high performance and usable features together with its intense integration with Hadoop and
-                Spark ecology, Apache IoTDB (incubating) can meet the requirements of massive dataset storage, high-speed
-                data input and complex data analysis in the IoT industrial field.</p>
+                designed for timeseries data. It can provide users specific services for data collection, storage and analysis.
+                Due to its light weight structure, high performance and usable features together with its intense
+                integration with Hadoop and Spark ecology, Apache IoTDB (incubating) can meet the requirements of
+                massive dataset storage, high-speed data input and complex data analysis in the IoT industrial field.</p>
+              <p>
+                Apache IoTDB (incubating) was initially developed by Prof. Wang's Team of School of Software at
+                Tsinghua University. Now Apache IoTDB (incubating) is an effort undergoing incubation at The Apache
+                Software Foundation (ASF), sponsored by the Incubator.
+              </p>
             </article>
           </div>
           <div>
@@ -210,7 +212,7 @@
   }
 
   .home-tittle {
-    color: #fcac45;
+    color: #ffa500;
     font-size: x-large;
     font-weight: 600;
   }
