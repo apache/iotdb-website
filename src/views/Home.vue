@@ -6,15 +6,18 @@
           <div>
             <p class="home-tittle">Apache IoTDB (incubating) (Database for Internet of Things)</p>
             <article lang="en">
-              <p>Apache IoTDB (incubating) (Database for Internet of Things) is an integrated data management engine
-                designed for timeseries data. It can provide users specific services for data collection, storage and analysis.
-                Due to its light weight structure, high performance and usable features together with its intense
-                integration with Hadoop and Spark ecology, Apache IoTDB (incubating) can meet the requirements of
-                massive dataset storage, high-speed data input and complex data analysis in the IoT industrial field.</p>
+              <p>Apache IoTDB (incubating) (Database for Internet of Things) is an integrated data
+                management engine designed for timeseries data. It provides users with services for
+                data collection, storage and analysis. Due to its light-weight architecture, high
+                performance and rich feature set together with its deep integration with Apache
+                Hadoop and Spark, Apache IoTDB (incubating) can meet the requirements of massive
+                data storage, high-speed data ingestion and complex data analysis in the IoT
+                industrial fields.
+              </p>
               <p>
-                Apache IoTDB (incubating) was initially developed by Prof. Wang's Team of School of Software at
-                Tsinghua University. Now Apache IoTDB (incubating) is an effort undergoing incubation at The Apache
-                Software Foundation (ASF), sponsored by the Incubator.
+                Apache IoTDB (incubating) was initially developed by Prof. Wang's Team of School of
+                Software at Tsinghua University. Now it is an effort undergoing incubation at The
+                Apache Software Foundation (ASF), sponsored by the Incubator.
               </p>
             </article>
           </div>
@@ -115,28 +118,27 @@
         featureBlock1: [
           {
             featureSrc: require("../assets/img/home-icon1.png"), featureTitle: "High-throughput read and write",
-            featureContent: "Apache IoTDB (incubating) supports millions of low-power devices' strong connection data access, high-speed data read and write for intelligent networking devices and mixed devices mentioned above."
+            featureContent: "Apache IoTDB (incubating) supports high-speed write access for millions of low-power and intelligently networked devices. It also provides lightning read access for retrieving data."
           },
           {
             featureSrc: require("../assets/img/home-icon2.png"), featureTitle: "Efficient directory structure",
-            featureContent: "Apache IoTDB (incubating) supports efficient organization for complex data structure from IoT devices, organization for large size of timeseries data, fuzzy searching strategy for complex directory of timeseries data."
+            featureContent: "Apache IoTDB (incubating) efficiently organizes complex data structure from IoT devices and large size of timeseries data with fuzzy searching strategy for complex directory of timeseries data."
           },
           {
             featureSrc: require("../assets/img/home-icon3.png"), featureTitle: "Rich query semantics",
-            featureContent: "Apache IoTDB (incubating) supports time alignment for timeseries data accross devices and sensors, computation in timeseries field (frequency domain) and rich aggregation function support in time dimension."
+            featureContent: "Apache IoTDB (incubating) supports time alignment for timeseries data across devices and sensors, computation in timeseries field and abundant aggregation functions in time dimension."
           },
           {
             featureSrc: require("../assets/img/home-icon4.png"), featureTitle: "Low cost on hardware",
-            featureContent: "Apache IoTDB (incubating) can reach a high compression ratio of disk storage (For one billion data storage, hard drive cost less than $0.23)"
+            featureContent: "Apache IoTDB (incubating) can reach a high compression ratio of disk storage (it costs less than $0.23 to store 1GB of data on hard disk)."
           },
           {
             featureSrc: require("../assets/img/home-icon5.png"), featureTitle: "Flexible deployment",
-            featureContent: "Apache IoTDB (incubating) provides users one-click installation tool on the cloud, once-decompressed-used terminal tool and the bridge tool between cloud platform and terminal tool (Data Synchronization Tool)."
+            featureContent: "Apache IoTDB (incubating) provides users one-click installation tool on the cloud, terminal tool on desktop and the bridge tool between cloud platform and on premise machine (Data Synchronization Tool)."
           },
           {
-            featureSrc: require("../assets/img/home-icon6.png"),
-            featureTitle: "Intense integration with Open Source Ecosystem",
-            featureContent: "Apache IoTDB (incubating) supports Hadoop, Spark, etc. analysis ecosystems and Grafana visualization tool."
+            featureSrc: require("../assets/img/home-icon6.png"), featureTitle: "Intense integration with Open Source Ecosystem",
+            featureContent: "Apache IoTDB (incubating) supports analysis ecosystems, for example, Hadoop, Spark, and Grafana as visualization tool."
           },
         ],
       }
