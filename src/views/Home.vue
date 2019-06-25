@@ -89,7 +89,7 @@
                   </div>
                   <div class="col-xs-10 col-sm-10 feature-title"><p>{{item.featureTitle}}</p></div>
                 </div>
-                  <p class="feature-content" style="word-break: break-all">{{item.featureContent}}</p>
+                  <p class="feature-content" style="text-align: justify">{{item.featureContent}}</p>
                 <hr/>
               </div>
             </div>
@@ -118,15 +118,15 @@
         featureBlock1: [
           {
             featureSrc: require("../assets/img/home-icon1.png"), featureTitle: "High-throughput read and write",
-            featureContent: "Apache IoTDB (incubating) supports high-speed write access for millions of low-power and intelligently networked devices. It also provides lightning read access for retrieving data."
+            featureContent: "Apache IoTDB (incubating) can support high-speed write access for millions of low-power and intelligently networked devices. It also provides lightning read access for retrieving data."
           },
           {
             featureSrc: require("../assets/img/home-icon2.png"), featureTitle: "Efficient directory structure",
-            featureContent: "Apache IoTDB (incubating) efficiently organizes complex data structure from IoT devices and large size of timeseries data with fuzzy searching strategy for complex directory of timeseries data."
+            featureContent: "Apache IoTDB (incubating) can efficiently organize complex data structure from IoT devices and large size of timeseries data with fuzzy searching strategy for complex directory of timeseries data."
           },
           {
             featureSrc: require("../assets/img/home-icon3.png"), featureTitle: "Rich query semantics",
-            featureContent: "Apache IoTDB (incubating) supports time alignment for timeseries data across devices and sensors, computation in timeseries field and abundant aggregation functions in time dimension."
+            featureContent: "Apache IoTDB (incubating) can support time alignment for timeseries data across devices and sensors, computation in timeseries field and abundant aggregation functions in time dimension."
           },
           {
             featureSrc: require("../assets/img/home-icon4.png"), featureTitle: "Low cost on hardware",
@@ -134,11 +134,11 @@
           },
           {
             featureSrc: require("../assets/img/home-icon5.png"), featureTitle: "Flexible deployment",
-            featureContent: "Apache IoTDB (incubating) provides users one-click installation tool on the cloud, terminal tool on desktop and the bridge tool between cloud platform and on premise machine (Data Synchronization Tool)."
+            featureContent: "Apache IoTDB (incubating) can provide users one-click installation tool on the cloud, terminal tool on desktop and the bridge tool between cloud platform and on premise machine (Data Synchronization Tool)."
           },
           {
             featureSrc: require("../assets/img/home-icon6.png"), featureTitle: "Intense integration with Open Source Ecosystem",
-            featureContent: "Apache IoTDB (incubating) supports analysis ecosystems, for example, Hadoop, Spark, and Grafana as visualization tool."
+            featureContent: "Apache IoTDB (incubating) can support analysis ecosystems, for example, Hadoop, Spark, and Grafana as visualization tool."
           },
         ],
       }
