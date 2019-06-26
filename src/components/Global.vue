@@ -1,4 +1,6 @@
 <script>
+  import axios from 'axios'
+
   const downloadIotdbCli='https://github.com/apache/incubator-iotdb';
   const downloadGrafanaConnector='https://github.com/apache/incubator-iotdb';
   const downloadHadoopConnector='https://github.com/apache/incubator-iotdb';
@@ -14,28 +16,14 @@
       "doc-prefix": DOC_URL_PREFIX,
       'version': "V0.7.0",
       'text': "Latest",
-      'chapters': [
-        '1-Overview.md',
-        '2-Concept.md',
-        '3-Operation%20Manual.md',
-        '4-Deployment%20and%20Management.md',
-        '5-SQL%20Documentation.md',
-        '6-JDBC%20Documentation.md'
-      ]
+      'content': '0-Content.md'
     },
     "0.7.0": {
       "branch": "0.7.0-doc",
       "doc-prefix": DOC_URL_PREFIX,
       'version': "V0.7.0",
       'text': "V0.7.0",
-      'chapters': [
-        '1-Overview.md',
-        '2-Concept.md',
-        '3-Operation%20Manual.md',
-        '4-Deployment%20and%20Management.md',
-        '5-SQL%20Documentation.md',
-        '6-JDBC%20Documentation.md'
-      ]
+      'content': '0-Content.md'
     }
   };
 
