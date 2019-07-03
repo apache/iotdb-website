@@ -33,7 +33,7 @@ export default new Router({
       component: LatestDoc
     },
     {
-      path: '/Documents/:version/:chapter?/:section?',
+      path: '/Documents/:version/:section?',
       name: 'Documents',
       component: Documents
     },
