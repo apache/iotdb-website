@@ -105,7 +105,7 @@
       return {
         "Documents": [
           {"url": "/Documents/Quick Start", "content": "Quick Start"},
-          {"url": "/Documents/latest/chap1/sec1", "content": "User Guide"},
+          {"url": "/Documents/latest/sec1", "content": "User Guide"},
           {"url": "/Materials", "content": "Other Materials"},
           {"url": "/Documents/Frequently asked questions", "content": "Frequently asked questions"}
         ],
