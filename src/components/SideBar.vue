@@ -1,5 +1,9 @@
 <template>
   <div class="col-sm-3  blog-sidebar">
+    <div class="github-button-group">
+      <github-button class="github-button" href="https://github.com/apache/incubator-iotdb/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork apache/incubator-iotdb on GitHub">Fork</github-button>
+      <github-button class="github-button" href="https://github.com/apache/incubator-iotdb" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star apache/incubator-iotdb on GitHub">Star</github-button>
+    </div>
     <div class="sidebar-module sidebar-module-inset">
       <h4>Latest News</h4>
       <article lang="en">
@@ -28,9 +32,14 @@
 </template>
 
 <script>
-    export default {
-        name: "SideBar",
+  import GithubButton from 'vue-github-button'
+
+  export default {
+    name: "SideBar",
+    components: {
+      GithubButton
     }
+  }
 </script>
 
 <style scoped>
@@ -89,5 +98,13 @@
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
+  }
+
+  .github-button-group {
+    margin-bottom: 20px;
+  }
+
+  .github-button {
+    margin: 10px;
   }
 </style>
