@@ -8,6 +8,8 @@
 
   const cheerio = require('cheerio');
   const DOC_URL_PREFIX = "https://raw.githubusercontent.com/apache/incubator-iotdb/";
+  const DOC_ENG_PREFIX = "/docs/Documentation";
+  const DOC_CHN_PREFIX = "/docs/Documentation-CHN";
   const DEFAULT_VERSION = "latest";
   const LATEST_STR = "latest";
   const SUPPORT_VERSION = {
@@ -44,6 +46,8 @@
     DEFAULT_VERSION,
     SUPPORT_VERSION,
     LATEST_STR,
+    DOC_ENG_PREFIX,
+    DOC_CHN_PREFIX,
     isReadyForPrerender
   }
 </script>

@@ -4,6 +4,7 @@
       <div class="row">
         <div class="col-sm-8">
           <loading v-if="seen"></loading>
+          <language-button v-if="seen==false" :eng="eng" @click.native="switchLanguage()" />
           <vue-markdown v-if="seen==false" v-bind:source="md" :toc="true" :toc-anchor-link-symbol="toc" :postrender="parse"></vue-markdown>
         </div>
         <my-sidebar/>
@@ -21,8 +22,9 @@
   import SideBar from '../components/SideBar'
   import markdown from 'vue-markdown'
   import axios from 'axios'
-  import Golbal from '../components/Global'
+  import Global from '../components/Global'
   import LoadingBar from '../components/Loading'
+  import LanguageButton from '../components/LanguageButton'
 
   export default {
     name: "Example",
@@ -31,6 +33,7 @@
       'my-sidebar': SideBar,
       'vue-markdown': markdown,
       'loading': LoadingBar,
+      'language-button': LanguageButton
     },
     data() {
       return {
@@ -38,16 +41,22 @@
         md: "",
         toc: "",
         seen: true,
+        eng: true
       }
     },
     created() {
       this.fetchData();
     },
     methods: {
+      switchLanguage()  {
+        this.eng = this.eng !== true;
+        this.fetchData();
+      },
       fetchData() {
-        let url = Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
-          Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
-          "/docs/Documentation/OtherMaterial-Examples.md";
+        const docLanguageUrl = this.eng ? Global.DOC_ENG_PREFIX : Global.DOC_CHN_PREFIX;
+        let url = Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['doc-prefix'] +
+          Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['branch'] + docLanguageUrl +
+          "/OtherMaterial-Examples.md";
         const pointer = this;
         this.seen = true;
         axios.get(url)
@@ -57,7 +66,7 @@
           })
       },
       parse(html){
-        return Golbal.isReadyForPrerender(html)
+        return Global.isReadyForPrerender(html)
       }
     }
   }

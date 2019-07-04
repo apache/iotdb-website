@@ -4,6 +4,7 @@
       <div class="row markdown-body">
         <div class="col-sm-8">
           <loading v-if="seen"></loading>
+          <language-button v-if="seen==false" :eng="eng" @click.native="switchLanguage()" />
           <vue-markdown v-if="seen==false" v-bind:source="md" :toc="true" :toc-anchor-link-symbol="toc" :postrender="parse"></vue-markdown>
         </div>
         <my-sidebar/>
@@ -21,8 +22,9 @@
   import SideBar from '../components/SideBar'
   import markdown from 'vue-markdown'
   import axios from 'axios'
-  import Golbal from '../components/Global'
+  import Global from '../components/Global'
   import LoadingBar from '../components/Loading'
+  import LanguageButton from '../components/LanguageButton'
 
   export default {
     name: "Community",
@@ -31,13 +33,15 @@
       'my-sidebar': SideBar,
       'vue-markdown': markdown,
       'loading': LoadingBar,
+      'language-button': LanguageButton
     },
     data() {
       return {
         msg: 'Welcome to Community Page',
         md: "",
         toc: "",
-        seen: true
+        seen: true,
+        eng: true
       }
     },
     created() {
@@ -50,14 +54,19 @@
       content: function () {
         return this.$route.params.doc
       },
+      switchLanguage()  {
+        this.eng = this.eng !== true;
+        this.fetchData();
+      },
       fetchData() {
+        const docLanguageUrl = this.eng ? Global.DOC_ENG_PREFIX : Global.DOC_CHN_PREFIX;
         const dict = {
-          "Quick Start": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
-            "/docs/Documentation/QuickStart.md",
-          "Frequently asked questions": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
-            '/docs/Documentation/Frequently%20asked%20questions.md',
+          "Quick Start": Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['doc-prefix'] +
+            Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['branch'] + docLanguageUrl +
+            "/QuickStart.md",
+          "Frequently asked questions": Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['doc-prefix'] +
+            Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['branch'] + docLanguageUrl +
+            '/Frequently%20asked%20questions.md',
         };
         const content = this.content();
         let url = null;
@@ -75,7 +84,7 @@
           })
       },
       parse(html){
-        return Golbal.isReadyForPrerender(html)
+        return Global.isReadyForPrerender(html)
       }
     }
   }

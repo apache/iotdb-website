@@ -4,6 +4,7 @@
       <div class="row markdown-body">
         <div class="col-sm-8">
           <loading v-if="seen"></loading>
+          <language-button v-if="seen==false" :eng="eng" @click.native="switchLanguage()" />
           <vue-markdown  v-if="seen==false" v-bind:source="md" :toc="true" :toc-anchor-link-symbol="toc" :postrender="parse"></vue-markdown>
         </div>
         <my-sidebar/>
@@ -18,8 +19,9 @@
   import SideBar from '../components/SideBar'
   import markdown from 'vue-markdown'
   import axios from 'axios'
-  import Golbal from '../components/Global'
+  import Global from '../components/Global'
   import LoadingBar from '../components/Loading'
+  import LanguageButton from '../components/LanguageButton'
 
   export default {
     name: "SingleMaterial",
@@ -28,6 +30,7 @@
       'my-sidebar': SideBar,
       'vue-markdown': markdown,
       'loading': LoadingBar,
+      'language-button': LanguageButton
     },
     data() {
       return {
@@ -35,6 +38,7 @@
         md: "",
         toc: "",
         seen: true,
+        eng: true
       }
     },
     created() {
@@ -47,16 +51,21 @@
       content: function () {
         return this.$route.params.doc
       },
+      switchLanguage()  {
+        this.eng = this.eng !== true;
+        this.fetchData();
+      },
       fetchData() {
+        const docLanguageUrl = this.eng ? Global.DOC_ENG_PREFIX : Global.DOC_CHN_PREFIX;
         const dict = {
-          "Release Notes": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
-            "/docs/Documentation/OtherMaterial-ReleaseNotes"+
-            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['version']+
+          "Release Notes": Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['doc-prefix'] +
+            Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['branch'] + docLanguageUrl  +
+            "/OtherMaterial-ReleaseNotes"+
+            Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['version']+
             ".md",
-          "References": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
-            "/docs/Documentation/OtherMaterial-Reference.md",
+          "References": Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['doc-prefix'] +
+            Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['branch'] +docLanguageUrl +
+            "/OtherMaterial-Reference.md",
         };
         const content = this.content();
         let url = null;
@@ -74,7 +83,7 @@
           })
       },
       parse(html){
-        return Golbal.isReadyForPrerender(html)
+        return Global.isReadyForPrerender(html)
       }
     }
   }
