@@ -19,7 +19,7 @@
           </div>
           <div id="text-catalogue" class="content center-block" style="overflow: auto">
             <div v-for="item in result">
-              <h5 style="font-size: 16px" data-toggle="collapse" v-if="typeof(item[0]) != 'undefined'" :data-target="item[0].replace(/ /g, '').replace(/:/g, '')" @click="changeChapterNavContent($event)" :class="item[0].slice(1)">
+              <h5 style="font-size: 16px" data-toggle="collapse" v-if="typeof(item[0]) != 'undefined'" :data-target="item[0].replace(/ /g, '').replace(/:/g, '')" :class="item[0].slice(1)">
                 {{item[0]}}
               </h5>
               <ul class="list-group collapse in" v-if="typeof(item[0]) != 'undefined'" :id="item[0].slice(1).replace(/ /g, '').replace(/:/g, '')">
@@ -35,7 +35,6 @@
           <ul class="breadcrumb direct" id="bread-chapter">
             <li><a style='color:#fcac45;'>{{text}}</a></li>
             <li><a style='color:#fcac45;'>{{chapter}}</a></li>
-            <li><a style='color:#fcac45;'>{{content}}</a></li>
           </ul>
           <div class="text-field" id="text-content">
             <vue-markdown class="markdown-area" :source="document" :toc="true" :toc-anchor-link="true" toc-anchor-link-symbol=""></vue-markdown>
@@ -54,7 +53,7 @@
 <script>
   import MarkDown from "vue-markdown"
   import axios from 'axios'
-  import Golbal from '../components/Global'
+  import Global from '../components/Global'
 
   export default {
     name: "Documents",
@@ -65,7 +64,7 @@
         result: [],
         version: "",
         chapter: "",
-        content: "",
+        section: "",
         text: "",
       }
     },
@@ -80,124 +79,105 @@
     watch: {
       '$route': 'fetchData',
       '$route.params.version': 'updateDocument',
+      '$route.params.chapter': 'updateDocument',
       '$route.params.section': 'updateDocument',
     },
     methods: {
       init(){
-        for(let key in Golbal.SUPPORT_VERSION){
+        for(let key in Global.SUPPORT_VERSION){
           this.versions.push({
-            text: Golbal.SUPPORT_VERSION[key]['text'],
-            url: '/Documents/'+ key + '/sec1'
+            text: Global.SUPPORT_VERSION[key]['text'],
+            url: '/Documents/'+ key + '/chap1/sec1'
           })
         }
         let version = this.getVersion();
-        if(version in Golbal.SUPPORT_VERSION){
-          if(version === Golbal.LATEST_STR){
-            this.version = Golbal.DEFAULT_VERSION;
+        if(version in Global.SUPPORT_VERSION){
+          if(version === Global.LATEST_STR){
+            this.version = Global.DEFAULT_VERSION;
           } else {
             this.version = version;
           }
-          this.updateSection();
         }
         this.text = this.getVersionString();
       },
       getVersionString() {
         let version = this.$route.params.version;
-        if (version in Golbal.SUPPORT_VERSION){
-          return Golbal.SUPPORT_VERSION[version]['text']
+        if (version in Global.SUPPORT_VERSION){
+          return Global.SUPPORT_VERSION[version]['text']
         }
         return "";
       },
-      changeChapterNavContent: function (event) {
-        let ver = this.getVersion();
-        let url = "/Documents/"+ver+"/sec"+event.currentTarget.className.replace(/[^0-9]/ig, "");
-        this.$router.push(url);
-      },
       changeSectionNavContent: function (event) {
-        let version = this.getVersionString();
-        var chapter = event.currentTarget.className;
-        var section = event.currentTarget.innerText;
-        console.log(chapter);
-        this.updateHeader(version, chapter.trim(), section);
-        this.$route.params.section = "sec" + chapter.replace(/[^0-9]/ig, "");
-        this.fetchData();
-
-        location.href = "#" + section.toLocaleLowerCase().replace(/ /g, '-');
+        let chapter = event.currentTarget.className;
+        let section = event.currentTarget.innerText;
+        this.$route.params.chapter = "chap" + chapter.replace(/[^0-9]/ig, "");
+        this.$route.params.section = "sec" + section.replace(/[^0-9]/ig, "");
+        let url = "/Documents/" + this.getVersion() + "/" + this.getChapter() + "/" + this.getSection();
+        this.$router.push(url);
       },
       // get the version
       getVersion() {
         return this.$route.params.version;
+      },
+      // get the chapter
+      getChapter() {
+        return this.$route.params.chapter;
       },
       // get the section
       getSection() {
         return this.$route.params.section;
       },
       updateDocument(){
-        this.updateVersion();
-        this.updateSection();
-      },
-      updateVersion() {
         this.text = this.getVersionString();
-        this.generateCatalogue();
-      },
-      updateSection() {
-        let version = this.getVersion();
-        let chapter = Number(this.getSection().substr(3)) - 1;
-        if(chapter >= 0 && chapter <  Golbal.SUPPORT_VERSION[version]['chapters'].length){
-          this.chapter = Golbal.SUPPORT_VERSION[version]['chapters'][chapter].substr(0, Golbal.SUPPORT_VERSION[version]['chapters'][chapter].length - 3);
-        } else {
-          this.$router.push('/404');
-        }
-      },
-      updateHeader(chapter, section, content){
-        this.chapter = section;
-        this.content = content;
       },
       // use version and section to render markdown
       fetchData() {
         let version = this.getVersion();
-        let chapter = Number(this.getSection().substr(3)) - 1;
-        let url = null;
-        if (version in Golbal.SUPPORT_VERSION) {
-          url = Golbal.SUPPORT_VERSION[version]['doc-prefix'] + Golbal.SUPPORT_VERSION[version]['branch'] +
-            "/docs/Documentation/UserGuide" + Golbal.SUPPORT_VERSION[version]['version'] + "/" +
-            Golbal.SUPPORT_VERSION[version]['chapters'][chapter];
+        if (version in Global.SUPPORT_VERSION) {
+          let chapter = Number(this.getChapter().substr(4)) - 1;
+          let section = Number(this.getSection().substr(3));
+          let url = Global.SUPPORT_VERSION[version]['doc-prefix']+ Global.SUPPORT_VERSION[version]['branch'] +
+            "/docs/Documentation/UserGuide" + Global.SUPPORT_VERSION[version]['version'] + "/" +
+            Global.SUPPORT_VERSION[version]['content'];
+          axios.get(url).then(() => {
+            this.chapter = this.result[chapter][0].substr(2);
+            this.section = this.result[chapter][section].trim().substr(3);
+            url = Global.SUPPORT_VERSION[version]['doc-prefix'] + Global.SUPPORT_VERSION[version]['branch'] +
+              "/docs/Documentation/UserGuide" + Global.SUPPORT_VERSION[version]['version'] + "/" +
+              this.chapter.substr(8).replace(': ', '-') + "/" + this.section + ".md";
+            axios.get(url)
+              .then((response) => {
+                this.document = response.data;
+                document.getElementById("text-content").scrollTop = 0;
+              })
+              .catch(function (error) {
+                console.log(error);
+              });
+          });
         } else {
           this.$router.push('/404');
         }
-        const pointer = this;
-        axios.get(url)
-          .then(function (response) {
-            pointer.document = response.data;
-          })
-          .catch(function (error) {
-            console.log(error);
-          })
-          .then(function () {
-          });
       },
       //generate the sidebar information when version changes
       generateCatalogue() {
         this.result = [];
         let version = this.getVersion();
-        if (version in Golbal.SUPPORT_VERSION) {
-          for(let i = 0; i < Golbal.SUPPORT_VERSION[version]['chapters'].length; i++){
-            this.result.push([]);
-          }
-          for(let i = 0; i < Golbal.SUPPORT_VERSION[version]['chapters'].length; i++){
-            let url = Golbal.SUPPORT_VERSION[version]['doc-prefix'] + Golbal.SUPPORT_VERSION[version]['branch'] +
-              "/docs/Documentation/UserGuide" + Golbal.SUPPORT_VERSION[version]['version'] + "/" +
-              Golbal.SUPPORT_VERSION[version]['chapters'][i];
-            const pointer = this;
-            axios.get(url).then(function (response) {
-              let rows = response.data.split("\n");
-              for (let item of rows) {
-                if (item.startsWith("#") && !item.startsWith("###")) {
-                  pointer.result[i].push(item);
-                }
+        if (version in Global.SUPPORT_VERSION) {
+          let url = Global.SUPPORT_VERSION[version]['doc-prefix'] + Global.SUPPORT_VERSION[version]['branch'] +
+            "/docs/Documentation/UserGuide" + Global.SUPPORT_VERSION[version]['version'] + "/" +
+            Global.SUPPORT_VERSION[version]['content'];
+          axios.get(url).then((response) => {
+            let rows = response.data.split("\n");
+            let i = -1;
+            for (let item of rows) {
+              if (item.startsWith("#")) {
+                this.result.push([item]);
+                i++;
+              } else if (item.startsWith("*")) {
+                this.result[i].push("##" + item.substr(1));
               }
-            })
-          }
+            }
+          });
         } else {
           this.$router.push('/404');
         }
@@ -356,7 +336,7 @@
 
   @media (min-width: 990px) {
     .fixed-middle {
-     top: 120px;
+      top: 120px;
     }
     #text-content{
       top: 160px;
