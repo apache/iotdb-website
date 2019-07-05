@@ -37,8 +37,9 @@
             <li><a style='color:#fcac45;'>{{chapter}}</a></li>
           </ul>
           <div class="text-field" id="text-content">
+            <language-button :eng="eng" @click.native="switchLanguage()" />
             <vue-markdown class="markdown-area" :source="document" :toc="true" :toc-anchor-link="true" toc-anchor-link-symbol=""></vue-markdown>
-            <p class="find-mistake">This documentation is open source. Find mistakes? Want to contribute? Go for it.</p>
+            <p class="find-mistake">This documentation is open source. Find mistakes? Want to contribute? <span class="go-to-development" @click="goToDevelopment()">Go for it.</span></p>
           </div>
           <div class="doc-footer">
             <span>Copyright © 2019 The Apache Software Foundation. Apache and the Apache feather logo are trademarks of The Apache Software Foundation.</span>
@@ -54,6 +55,7 @@
   import MarkDown from "vue-markdown"
   import axios from 'axios'
   import Global from '../components/Global'
+  import LanguageButton from '../components/LanguageButton'
 
   export default {
     name: "Documents",
@@ -66,10 +68,12 @@
         chapter: "",
         section: "",
         text: "",
+        eng: true
       }
     },
     components: {
       'vue-markdown': MarkDown,
+      'language-button': LanguageButton
     },
     created() {
       this.init();
@@ -130,20 +134,25 @@
       updateDocument(){
         this.text = this.getVersionString();
       },
+      switchLanguage()  {
+        this.eng = this.eng !== true;
+        this.fetchData();
+      },
       // use version and section to render markdown
       fetchData() {
+        const docLanguageUrl = this.eng ? Global.DOC_ENG_PREFIX : Global.DOC_CHN_PREFIX;
         let version = this.getVersion();
         if (version in Global.SUPPORT_VERSION) {
           let chapter = Number(this.getChapter().substr(4)) - 1;
           let section = Number(this.getSection().substr(3));
           let url = Global.SUPPORT_VERSION[version]['doc-prefix']+ Global.SUPPORT_VERSION[version]['branch'] +
-            "/docs/Documentation/UserGuide" + Global.SUPPORT_VERSION[version]['version'] + "/" +
+            Global.DOC_ENG_PREFIX + "/UserGuide" + Global.SUPPORT_VERSION[version]['version'] + "/" +
             Global.SUPPORT_VERSION[version]['content'];
           axios.get(url).then(() => {
             this.chapter = this.result[chapter][0].substr(2);
             this.section = this.result[chapter][section].trim().substr(3);
             url = Global.SUPPORT_VERSION[version]['doc-prefix'] + Global.SUPPORT_VERSION[version]['branch'] +
-              "/docs/Documentation/UserGuide" + Global.SUPPORT_VERSION[version]['version'] + "/" +
+              docLanguageUrl + "/UserGuide" + Global.SUPPORT_VERSION[version]['version'] + "/" +
               this.chapter.substr(8).replace(': ', '-') + "/" + this.section + ".md";
             axios.get(url)
               .then((response) => {
@@ -164,7 +173,7 @@
         let version = this.getVersion();
         if (version in Global.SUPPORT_VERSION) {
           let url = Global.SUPPORT_VERSION[version]['doc-prefix'] + Global.SUPPORT_VERSION[version]['branch'] +
-            "/docs/Documentation/UserGuide" + Global.SUPPORT_VERSION[version]['version'] + "/" +
+            Global.DOC_ENG_PREFIX + "/UserGuide" + Global.SUPPORT_VERSION[version]['version'] + "/" +
             Global.SUPPORT_VERSION[version]['content'];
           axios.get(url).then((response) => {
             let rows = response.data.split("\n");
@@ -181,6 +190,9 @@
         } else {
           this.$router.push('/404');
         }
+      },
+      goToDevelopment() {
+        this.$router.push('/Development');
       }
     }
   }
@@ -226,7 +238,14 @@
   }
 
   .find-mistake {
+    margin-top: 50px;
     text-align: center;
+    color: #fcac45;
+  }
+
+  .go-to-development {
+    text-decoration: underline;
+    cursor: pointer;
   }
 
   .sidebar {

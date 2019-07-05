@@ -4,6 +4,7 @@
       <div class="row markdown-body">
         <div class="col-sm-8">
           <loading v-if="seen"></loading>
+          <language-button v-if="seen==false" :eng="eng" @click.native="switchLanguage()" />
           <vue-markdown  v-if="seen==false" v-bind:source="md" :toc="true" :toc-anchor-link-symbol="toc" :postrender="parse"></vue-markdown>
         </div>
         <my-sidebar/>
@@ -21,8 +22,9 @@
   import SideBar from '../components/SideBar'
   import markdown from 'vue-markdown'
   import axios from 'axios'
-  import Golbal from '../components/Global'
+  import Global from '../components/Global'
   import LoadingBar from '../components/Loading'
+  import LanguageButton from '../components/LanguageButton'
 
   export default {
     name: "SingleTool",
@@ -31,6 +33,7 @@
       'my-sidebar': SideBar,
       'vue-markdown': markdown,
       'loading': LoadingBar,
+      'language-button': LanguageButton
     },
     data() {
       return {
@@ -38,6 +41,7 @@
         md: "",
         toc: "",
         seen: true,
+        eng: true
       }
     },
     created() {
@@ -50,27 +54,27 @@
       content: function () {
         return this.$route.params.content
       },
+      switchLanguage()  {
+        this.eng = this.eng !== true;
+        this.fetchData();
+      },
       fetchData() {
+        const docLanguageUrl = this.eng ? Global.DOC_ENG_PREFIX : Global.DOC_CHN_PREFIX;
         const dict = {
-          "Cli": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
-            "/docs/Documentation/UserGuide" +
-            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['version'] + "/7-Tools-Cli.md",
-          "Grafana": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
-            "/docs/Documentation/UserGuide" +
-            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['version'] + "/7-Tools-Grafana.md",
-          "Hadoop": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
-            "/docs/Documentation/UserGuide" +
-            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['version'] + "/7-Tools-Hadoop.md",
-          "Spark": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
-            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
-            "/docs/Documentation/UserGuide" +
-            Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['version'] + "/7-Tools-spark.md",
+          "Cli": Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['doc-prefix'] +
+          Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['branch'] + docLanguageUrl +
+          "/UserGuide" + Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['version'] + "/7-Tools-Cli.md",
+          "Grafana": Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['doc-prefix'] +
+          Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['branch'] + docLanguageUrl +
+          "/UserGuide" + Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['version'] + "/7-Tools-Grafana.md",
+          "Hadoop": Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['doc-prefix'] +
+          Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['branch'] + docLanguageUrl +
+          "/UserGuide" + Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['version'] + "/7-Tools-Hadoop.md",
+          "Spark": Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['doc-prefix'] +
+          Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['branch'] + docLanguageUrl +
+          "/UserGuide" + Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['version'] + "/7-Tools-spark.md",
         };
         const content = this.content();
-        console.log(content);
         let url = null;
         if (content in dict) {
           url = dict[content];
@@ -86,7 +90,7 @@
           })
       },
       parse(html){
-        return Golbal.isReadyForPrerender(html)
+        return Global.isReadyForPrerender(html)
       }
     }
   }
