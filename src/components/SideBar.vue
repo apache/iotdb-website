@@ -105,6 +105,6 @@
   }
 
   .github-button {
-    margin: 10px;
+    margin: 7px;
   }
 </style>
