@@ -63,16 +63,16 @@
         const dict = {
           "Cli": Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['doc-prefix'] +
           Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['branch'] + docLanguageUrl +
-          "/UserGuide" + Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['version'] + "/8-Tools-Cli.md",
+          "/UserGuide/8-Tools-Cli.md",
           "Grafana": Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['doc-prefix'] +
           Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['branch'] + docLanguageUrl +
-          "/UserGuide" + Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['version'] + "/8-Tools-Grafana.md",
+          "/UserGuide/8-Tools-Grafana.md",
           "Hadoop": Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['doc-prefix'] +
           Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['branch'] + docLanguageUrl +
-          "/UserGuide" + Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['version'] + "/8-Tools-Hadoop.md",
+          "/UserGuide/8-Tools-Hadoop.md",
           "Spark": Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['doc-prefix'] +
           Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['branch'] + docLanguageUrl +
-          "/UserGuide" + Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['version'] + "/8-Tools-Spark.md",
+          "/UserGuide/8-Tools-spark.md",
         };
         const content = this.content();
         let url = null;

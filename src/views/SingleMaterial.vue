@@ -59,12 +59,9 @@
         const docLanguageUrl = this.eng ? Global.DOC_ENG_PREFIX : Global.DOC_CHN_PREFIX;
         const dict = {
           "Release Notes": Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['doc-prefix'] +
-            Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['branch'] + docLanguageUrl  +
-            "/OtherMaterial-ReleaseNotes"+
-            Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['version']+
-            ".md",
+            Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['branch'] + "/RELEASE_NOTES.md",
           "References": Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['doc-prefix'] +
-            Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['branch'] +docLanguageUrl +
+            Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['branch'] + docLanguageUrl +
             "/OtherMaterial-Reference.md",
         };
         const content = this.content();
