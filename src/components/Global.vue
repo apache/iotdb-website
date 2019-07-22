@@ -13,18 +13,10 @@
   const DEFAULT_VERSION = "latest";
   const LATEST_STR = "latest";
   const SUPPORT_VERSION = {
-    "latest": {
-      "branch": "master",
+    "0.8.0": {
+      "branch": "rel/0.8",
       "doc-prefix": DOC_URL_PREFIX,
-      'version': "V0.7.0",
-      'text': "Latest",
-      'content': '0-Content.md'
-    },
-    "0.7.0": {
-      "branch": "0.7.0-doc",
-      "doc-prefix": DOC_URL_PREFIX,
-      'version': "V0.7.0",
-      'text': "V0.7.0",
+      'text': "V0.8.0",
       'content': '0-Content.md'
     }
   };

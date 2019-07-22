@@ -146,14 +146,12 @@
           let chapter = Number(this.getChapter().substr(4)) - 1;
           let section = Number(this.getSection().substr(3));
           let url = Global.SUPPORT_VERSION[version]['doc-prefix']+ Global.SUPPORT_VERSION[version]['branch'] +
-            Global.DOC_ENG_PREFIX + "/UserGuide" + Global.SUPPORT_VERSION[version]['version'] + "/" +
-            Global.SUPPORT_VERSION[version]['content'];
+            Global.DOC_ENG_PREFIX + "/UserGuide/" + Global.SUPPORT_VERSION[version]['content'];
           axios.get(url).then(() => {
             this.chapter = this.result[chapter][0].substr(2);
             this.section = this.result[chapter][section].trim().substr(3);
             url = Global.SUPPORT_VERSION[version]['doc-prefix'] + Global.SUPPORT_VERSION[version]['branch'] +
-              docLanguageUrl + "/UserGuide" + Global.SUPPORT_VERSION[version]['version'] + "/" +
-              this.chapter.substr(8).replace(': ', '-') + "/" + this.section + ".md";
+              docLanguageUrl + "/UserGuide/" + this.chapter.substr(8).replace(': ', '-') + "/" + this.section + ".md";
             axios.get(url)
               .then((response) => {
                 this.document = response.data;
@@ -173,8 +171,7 @@
         let version = this.getVersion();
         if (version in Global.SUPPORT_VERSION) {
           let url = Global.SUPPORT_VERSION[version]['doc-prefix'] + Global.SUPPORT_VERSION[version]['branch'] +
-            Global.DOC_ENG_PREFIX + "/UserGuide" + Global.SUPPORT_VERSION[version]['version'] + "/" +
-            Global.SUPPORT_VERSION[version]['content'];
+            Global.DOC_ENG_PREFIX + "/UserGuide/" + Global.SUPPORT_VERSION[version]['content'];
           axios.get(url).then((response) => {
             let rows = response.data.split("\n");
             let i = -1;
