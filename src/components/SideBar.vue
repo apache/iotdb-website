@@ -9,12 +9,8 @@
       <article lang="en">
         <ol class="list-unstyled">
           <li>
-            1. After the Apache version is released, users are encouraged to read the overview of major changes in <router-link to="/Materials/Release%20Notes">release notes</router-link>,
-            download the version in <router-link to="/Download">download page</router-link>
-            and view documents in <router-link to="/Documents/Quick%20Start">documentation page</router-link>.
-          </li>
-          <li>
-            2. Currently, we support an unofficial version on <a href="https://github.com/thulab/iotdb/releases">GitHub</a>.
+            Apache IoTDB (Incubating) V0.8.0 is released. Users are encouraged to read the overview of major changes in <router-link to="/Materials/Release%20Notes">release notes</router-link>,
+            download the version in <router-link to="/Download">download page</router-link> and view documents in <router-link to="/Documents/Quick%20Start">documentation page</router-link>.
           </li>
         </ol>
       </article>
