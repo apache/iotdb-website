@@ -46,12 +46,12 @@
         selectVersionObj: {},
         downloadVersionList: [
           {text: 'IoTDB v0.8.0',
-            binariesUrl: 'https://archive.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-bin.zip',
-            binariesSHA512Url: 'https://archive.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-bin.zip.sha512',
-            binariesASCUrl: 'https://archive.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-bin.zip.asc',
-            sourcesUrl: 'https://archive.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip',
-            sourcesSHA512Url: 'https://archive.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip.sha512',
-            sourcesASCUrl: 'https://archive.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip.asc'
+            binariesUrl: 'https://www.apache.org/dyn/closer.cgi/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-bin.zip',
+            binariesSHA512Url: 'https://www.apache.org/dyn/closer.cgi/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-bin.zip.sha512',
+            binariesASCUrl: 'https://www.apache.org/dyn/closer.cgi/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-bin.zip.asc',
+            sourcesUrl: 'https://www.apache.org/dyn/closer.cgi/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip',
+            sourcesSHA512Url: 'https://www.apache.org/dyn/closer.cgi/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip.sha512',
+            sourcesASCUrl: 'https://www.apache.org/dyn/closer.cgi/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip.asc'
           },
           {
             text: 'IoTDB v0.7.0',
@@ -111,4 +111,3 @@
     font-size: 16px;
   }
 </style>
-
