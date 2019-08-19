@@ -10,9 +10,16 @@
             </select>
           </p>
           <ul>
-            <li style="margin: 5px">Download IoTDB Binaries:<a class="link-color" :href="selectVersionObj.binariesUrl"> {{selectVersionObj.text}} Release</a></li>
-            <li style="margin: 5px">Download IoTDB Sources:<a class="link-color" :href="selectVersionObj.sourcesUrl"> {{selectVersionObj.text}} Sources</a></li>
-          </ul>
+            <li style="margin: 5px">Download IoTDB Binaries:<a class="link-color" :href="selectVersionObj.binariesUrl"> {{selectVersionObj.text}} Release</a>
+              <span v-if="selectVersionObj.binariesSHA512Url!==''">[<a class="link-color" :href="selectVersionObj.binariesSHA512Url"> SHA512</a>]</span>
+              <span v-if="selectVersionObj.binariesASCUrl!==''">[<a class="link-color" :href="selectVersionObj.binariesASCUrl"> ASC</a>]</span>
+            </li>
+            <li style="margin: 5px" v-if="selectVersionObj.sourcesUrl!==''">
+              Download IoTDB Sources:<a class="link-color" :href="selectVersionObj.sourcesUrl"> {{selectVersionObj.text}} Sources</a>
+              <span v-if="selectVersionObj.sourcesSHA512Url!==''">[<a class="link-color" :href="selectVersionObj.sourcesSHA512Url"> SHA512</a>]</span>
+              <span v-if="selectVersionObj.sourcesASCUrl!==''">[<a class="link-color" :href="selectVersionObj.sourcesASCUrl"> ASC</a>]</span>
+            </li>
+            </ul>
           <p>Main features and change list of each version, please check <router-link to="/Materials/Release Notes">release notes</router-link>.</p>
           <h2 class="download-title">Get Source Code</h2>
           <p>Go to our <a class="link-color" :href="iotdbGithubUrl">Github</a>, have fun with IoTDB source code!</p>
@@ -39,13 +46,21 @@
         selectVersionObj: {},
         downloadVersionList: [
           {text: 'IoTDB v0.8.0',
-            binariesUrl: 'https://dist.apache.org/repos/dist/dev/incubator/iotdb/0.8.0/rc3/',
-            sourcesUrl: 'https://dist.apache.org/repos/dist/dev/incubator/iotdb/0.8.0/rc3/'
+            binariesUrl: 'https://archive.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-bin.zip',
+            binariesSHA512Url: 'https://archive.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-bin.zip.sha512',
+            binariesASCUrl: 'https://archive.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-bin.zip.asc',
+            sourcesUrl: 'https://archive.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip',
+            sourcesSHA512Url: 'https://archive.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip.sha512',
+            sourcesASCUrl: 'https://archive.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip.asc'
           },
           {
             text: 'IoTDB v0.7.0',
             binariesUrl: 'https://github.com/thulab/iotdb/releases/tag/v0.7.0',
-            sourcesUrl: 'https://dist.apache.org/repos/dist/dev/incubator/iotdb/0.8.0/rc3/'
+            binariesSHA512Url: '',
+            binariesASCUrl: '',
+            sourcesUrl: '',
+            sourcesSHA512Url: '',
+            sourcesASCUrl: ''
           },
         ]
       }
