@@ -13,9 +13,7 @@
             <li style="margin: 5px">Download IoTDB for Linux/MacOS:<a class="link-color" :href="selectVersionObj.linuxUrl"> {{selectVersionObj.text}} Release.tar</a></li>
             <li style="margin: 5px">Download IoTDB for Windows:<a class="link-color" :href="selectVersionObj.windowsUrl"> {{selectVersionObj.text}} Release.zip</a></li>
           </ul>
-          <p>(Note that before v0.7.0 (included), IoTDB had not yet become an incubator project in Apache. Above is an unofficial release
-            since our first official release is still in progress.)</p>
-          <p>Main features and change list of each version, please check <router-link to="/Materials/Release Notes">release notes</router-link></p>
+          <p>Main features and change list of each version, please check <router-link to="/Materials/Release Notes">release notes</router-link>.</p>
           <h2 class="download-title">Get Source Code</h2>
           <p>Go to our <a class="link-color" :href="iotdbGithubUrl">Github</a>, have fun with IoTDB source code!</p>
         </div>
@@ -40,7 +38,7 @@
         iotdbGithubUrl: 'https://github.com/apache/incubator-iotdb',
         selectVersionObj: {},
         downloadVersionList: [
-          {text: 'IoTDB v0.7.0', linuxUrl: 'https://github.com/thulab/iotdb/releases/tag/v0.7.0', windowsUrl: 'https://github.com/thulab/iotdb/releases/tag/v0.7.0'},
+          {text: 'IoTDB v0.8.0', linuxUrl: 'https://dist.apache.org/repos/dist/dev/incubator/iotdb/0.8.0/rc3/', windowsUrl: 'https://dist.apache.org/repos/dist/dev/incubator/iotdb/0.8.0/rc3/'},
         ]
       }
     },
