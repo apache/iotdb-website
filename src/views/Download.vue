@@ -13,11 +13,13 @@
             <li style="margin: 5px">Download IoTDB Binaries:<a class="link-color" :href="selectVersionObj.binariesUrl"> {{selectVersionObj.text}} Release</a>
               <span v-if="selectVersionObj.binariesSHA512Url!==''">[<a class="link-color" :href="selectVersionObj.binariesSHA512Url"> SHA512</a>]</span>
               <span v-if="selectVersionObj.binariesASCUrl!==''">[<a class="link-color" :href="selectVersionObj.binariesASCUrl"> ASC</a>]</span>
+              <span v-if="selectVersionObj.binariesMirrorUrl!==''">[<a class="link-color" :href="selectVersionObj.binariesMirrorUrl"> Mirrors</a>]</span>
             </li>
             <li style="margin: 5px" v-if="selectVersionObj.sourcesUrl!==''">
               Download IoTDB Sources:<a class="link-color" :href="selectVersionObj.sourcesUrl"> {{selectVersionObj.text}} Sources</a>
               <span v-if="selectVersionObj.sourcesSHA512Url!==''">[<a class="link-color" :href="selectVersionObj.sourcesSHA512Url"> SHA512</a>]</span>
               <span v-if="selectVersionObj.sourcesASCUrl!==''">[<a class="link-color" :href="selectVersionObj.sourcesASCUrl"> ASC</a>]</span>
+              <span v-if="selectVersionObj.sourcesMirrorUrl!==''">[<a class="link-color" :href="selectVersionObj.sourcesMirrorUrl"> Mirrors</a>]</span>
             </li>
             </ul>
           <p>Main features and change list of each version, please check <router-link to="/Materials/Release Notes">release notes</router-link>.</p>
@@ -46,12 +48,14 @@
         selectVersionObj: {},
         downloadVersionList: [
           {text: 'IoTDB v0.8.0',
-            binariesUrl: 'https://www.apache.org/dyn/closer.cgi/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-bin.zip',
-            binariesSHA512Url: 'https://www.apache.org/dyn/closer.cgi/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-bin.zip.sha512',
-            binariesASCUrl: 'https://www.apache.org/dyn/closer.cgi/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-bin.zip.asc',
-            sourcesUrl: 'https://www.apache.org/dyn/closer.cgi/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip',
-            sourcesSHA512Url: 'https://www.apache.org/dyn/closer.cgi/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip.sha512',
-            sourcesASCUrl: 'https://www.apache.org/dyn/closer.cgi/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip.asc'
+            binariesUrl: 'https://www.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-bin.zip',
+            binariesSHA512Url: 'https://www.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-bin.zip.sha512',
+            binariesASCUrl: 'https://www.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-bin.zip.asc',
+            binariesMirrorUrl: 'https://www.apache.org/dyn/closer.cgi/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-bin.zip',
+            sourcesUrl: 'https://www.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip',
+            sourcesSHA512Url: 'https://www.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip.sha512',
+            sourcesASCUrl: 'https://www.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip.asc',
+            sourcesMirrorUrl: 'https://www.apache.org/dyn/closer.cgi/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip'
           },
           {
             text: 'IoTDB v0.7.0',
