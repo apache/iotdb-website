@@ -15,10 +15,6 @@
         </ol>
       </article>
 
-      <h4>Github repo</h4>
-      <ol class="list-unstyled">
-        <li><a href="https://github.com/apache/incubator-iotdb">GitHub</a></li>
-      </ol>
     </div>
     <router-link to="/Download" class="nav-link btn btn-lg btn-block btn-warning button" style="color: white">
       <span>Download</span>
