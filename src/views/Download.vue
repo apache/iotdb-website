@@ -13,18 +13,26 @@
             <li style="margin: 5px">Download IoTDB Binaries:<a class="link-color" :href="selectVersionObj.binariesUrl"> {{selectVersionObj.text}} Release</a>
               <span v-if="selectVersionObj.binariesSHA512Url!==''">[<a class="link-color" :href="selectVersionObj.binariesSHA512Url"> SHA512</a>]</span>
               <span v-if="selectVersionObj.binariesASCUrl!==''">[<a class="link-color" :href="selectVersionObj.binariesASCUrl"> ASC</a>]</span>
-              <span v-if="selectVersionObj.binariesMirrorUrl!==''">[<a class="link-color" :href="selectVersionObj.binariesMirrorUrl"> Mirrors</a>]</span>
             </li>
             <li style="margin: 5px" v-if="selectVersionObj.sourcesUrl!==''">
               Download IoTDB Sources:<a class="link-color" :href="selectVersionObj.sourcesUrl"> {{selectVersionObj.text}} Sources</a>
               <span v-if="selectVersionObj.sourcesSHA512Url!==''">[<a class="link-color" :href="selectVersionObj.sourcesSHA512Url"> SHA512</a>]</span>
               <span v-if="selectVersionObj.sourcesASCUrl!==''">[<a class="link-color" :href="selectVersionObj.sourcesASCUrl"> ASC</a>]</span>
-              <span v-if="selectVersionObj.sourcesMirrorUrl!==''">[<a class="link-color" :href="selectVersionObj.sourcesMirrorUrl"> Mirrors</a>]</span>
             </li>
             </ul>
           <p>Main features and change list of each version, please check <router-link to="/Materials/Release Notes">release notes</router-link>.</p>
-          <h2 class="download-title">Get Source Code</h2>
-          <p>Go to our <a class="link-color" :href="iotdbGithubUrl">Github</a>, have fun with IoTDB source code!</p>
+
+          <h2 class="download-title">Verifying Hashes and Signatures</h2>
+          <p>
+            Along with our releases, we also provide sha512 hashes in *.sha512 files and
+            cryptographic signatures in *.asc files. The Apache Software Foundation has an extensive
+            tutorial to <a class="link-color" href="http://www.apache.org/info/verification.html">
+            verify
+            hashes and signatures </a> which you can follow by using any of these
+            release-signing <a class="link-color"
+                               href="https://dist.apache.org/repos/dist/dev/incubator/iotdb/KEYS">
+            KEYS </a>.
+          </p>
         </div>
         <my-sidebar/>
       </div>
@@ -36,6 +44,7 @@
 <script>
   import SideBar from '../components/SideBar'
   import Footer from '../components/FooterFixed'
+
   export default {
     name: "Download",
     components: {
@@ -48,14 +57,12 @@
         selectVersionObj: {},
         downloadVersionList: [
           {text: 'IoTDB v0.8.0',
-            binariesUrl: 'https://www.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-bin.zip',
+            binariesUrl: 'https://www.apache.org/dyn/closer.cgi/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-bin.zip',
             binariesSHA512Url: 'https://www.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-bin.zip.sha512',
             binariesASCUrl: 'https://www.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-bin.zip.asc',
-            binariesMirrorUrl: 'https://www.apache.org/dyn/closer.cgi/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-bin.zip',
-            sourcesUrl: 'https://www.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip',
+            sourcesUrl: 'https://www.apache.org/dyn/closer.cgi/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip',
             sourcesSHA512Url: 'https://www.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip.sha512',
-            sourcesASCUrl: 'https://www.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip.asc',
-            sourcesMirrorUrl: 'https://www.apache.org/dyn/closer.cgi/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip'
+            sourcesASCUrl: 'https://www.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip.asc'
           },
           {
             text: 'IoTDB v0.7.0',
