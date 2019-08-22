@@ -30,7 +30,7 @@
             verify
             hashes and signatures </a> which you can follow by using any of these
             release-signing <a class="link-color"
-                               href="https://dist.apache.org/repos/dist/dev/incubator/iotdb/KEYS">
+                               href="https://dist.apache.org/repos/dist/release/incubator/iotdb/KEYS">
             KEYS </a>.
           </p>
         </div>
