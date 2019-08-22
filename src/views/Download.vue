@@ -21,23 +21,18 @@
             </li>
             </ul>
           <p>Main features and change list of each version, please check <router-link to="/Materials/Release Notes">release notes</router-link>.</p>
-        </div>
 
-      </div>
-
-      <div class="row">
-        <div class="col-sm-8 download-section">
           <h2 class="download-title">Verifying Hashes and Signatures</h2>
           <p>
-          Along with our releases, we also provide sha512 hashes in *.sha512 files and
-          cryptographic signatures in *.asc files. The Apache Software Foundation has an extensive
-          tutorial to <a class="link-color" href="http://www.apache.org/info/verification.html">
-          verify
-          hashes and signatures </a> which you can follow by using any of these
-          release-signing <a class="link-color"
-                             href="https://dist.apache.org/repos/dist/dev/incubator/iotdb/KEYS">
-          KEYS </a>.
-        </p>
+            Along with our releases, we also provide sha512 hashes in *.sha512 files and
+            cryptographic signatures in *.asc files. The Apache Software Foundation has an extensive
+            tutorial to <a class="link-color" href="http://www.apache.org/info/verification.html">
+            verify
+            hashes and signatures </a> which you can follow by using any of these
+            release-signing <a class="link-color"
+                               href="https://dist.apache.org/repos/dist/dev/incubator/iotdb/KEYS">
+            KEYS </a>.
+          </p>
         </div>
         <my-sidebar/>
       </div>
