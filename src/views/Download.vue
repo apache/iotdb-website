@@ -22,6 +22,7 @@
             </ul>
           <p>Main features and change list of each version, please check <router-link to="/Materials/Release Notes">release notes</router-link>.</p>
 
+          <span v-if="selectVersionObj.isUnofficialVersion!=='true'">
           <h2 class="download-title">Verifying Hashes and Signatures</h2>
           <p>
             Along with our releases, we also provide sha512 hashes in *.sha512 files and
@@ -33,6 +34,15 @@
                                href="https://www.apache.org/dist/incubator/iotdb/KEYS">
             KEYS </a>.
           </p>
+          </span>
+          <span v-if="selectVersionObj.isUnofficialVersion=='true'">
+            <h2 class="download-title">Notice</h2>
+            The version is a legacy version and was released before IoTDB was donated to ASF.
+            <br/>
+            As it is not an Apache-verified released version, we suggest users who use the version
+            upgrade the latest Apache released version ASAP.
+          </span>
+
         </div>
         <my-sidebar/>
       </div>
@@ -71,7 +81,8 @@
             binariesASCUrl: '',
             sourcesUrl: '',
             sourcesSHA512Url: '',
-            sourcesASCUrl: ''
+            sourcesASCUrl: '',
+            isUnofficialVersion: 'true'
           },
         ]
       }
