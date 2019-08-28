@@ -18,6 +18,12 @@
       "doc-prefix": DOC_URL_PREFIX,
       'text': "V0.8.0",
       'content': '0-Content.md'
+    },
+    "latest": {
+      "branch": "master",
+      "doc-prefix": DOC_URL_PREFIX,
+      'text': "Latest",
+      'content': '0-Content.md'
     }
   };
 

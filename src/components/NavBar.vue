@@ -57,8 +57,15 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item">
-              <router-link to="/Development" class="nav-link"><span>Development</span></router-link>
+            <li class="dropdown">
+              <router-link to="/Development/Contributing" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false"><span>Development<b class="caret"></b></span>
+              </router-link>
+              <ul class="dropdown-menu">
+                <li v-for="item in Development">
+                  <router-link :to=item.url class="nav-link"><span>{{item.content}}</span></router-link>
+                </li>
+              </ul>
             </li>
             <li class="nav-item">
               <router-link to="/Example" class="nav-link"><span>Example</span></router-link>
@@ -120,6 +127,12 @@
           {"url": "/Tools/Hadoop", "content": "Hadoop Connector"},
           {"url": "/Tools/Spark", "content": "Spark Connector"}
         ],
+        "Development": [
+          {"url": "/Development/Contributing", "content": "Questions and Contributing"},
+          {"url": "/Development/IDE", "content": "Developing in IDE"},
+          {"url": "/Development/Tsfile", "content": "Changelist of Tsfile"},
+          {"url": "/Development/RPC", "content": "Changelist of RPC"}
+        ]
       }
     },
   }
