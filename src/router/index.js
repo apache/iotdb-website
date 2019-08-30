@@ -34,7 +34,7 @@ export default new Router({
     },
     {
       path: '/Documents/:version/:chapter?/:section?',
-      name: 'Documents',
+      name: 'UserGuideDocuments',
       component: Documents
     },
     {
@@ -44,7 +44,7 @@ export default new Router({
     },
     {
       path: '/Materials/:doc',
-      name: 'Materials',
+      name: 'SingleMaterial',
       component: SingleMaterials
     },
     {
@@ -63,7 +63,7 @@ export default new Router({
       component: Community
     },
     {
-      path: '/Development',
+      path: '/Development/:content',
       name: 'Development',
       component: Development
     },

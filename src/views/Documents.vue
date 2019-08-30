@@ -132,7 +132,10 @@
         return this.$route.params.section;
       },
       updateDocument(){
-        this.text = this.getVersionString();
+        if (this.text !== this.getVersionString()) {
+          this.text = this.getVersionString();
+          location.reload();
+        }
       },
       switchLanguage()  {
         this.eng = this.eng !== true;

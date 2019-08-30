@@ -22,7 +22,7 @@
   import SideBar from '../components/SideBar'
   import markdown from 'vue-markdown'
   import axios from 'axios'
-  import Golbal from '../components/Global'
+  import Global from '../components/Global'
   import LoadingBar from '../components/Loading'
 
   export default {
@@ -53,10 +53,24 @@
         return this.$route.params.content
       },
       fetchData() {
-        let url = Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
-          Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
-          "/docs/Development.md";
-        let pointer = this;
+        const dict = {
+          "Contributing": Global.SUPPORT_VERSION[Global.LATEST_STR]['doc-prefix'] +
+          Global.SUPPORT_VERSION[Global.LATEST_STR]['branch'] + "/docs/Development-Contributing.md",
+          "IDE": Global.SUPPORT_VERSION[Global.LATEST_STR]['doc-prefix'] +
+          Global.SUPPORT_VERSION[Global.LATEST_STR]['branch'] + "/docs/Development-IDE.md",
+          "Tsfile": Global.SUPPORT_VERSION[Global.LATEST_STR]['doc-prefix'] +
+          Global.SUPPORT_VERSION[Global.LATEST_STR]['branch'] + "/tsfile/format-changelist.md",
+          "RPC": Global.SUPPORT_VERSION[Global.LATEST_STR]['doc-prefix'] +
+          Global.SUPPORT_VERSION[Global.LATEST_STR]['branch'] + "/service-rpc/rpc-changelist.md",
+        };
+        const content = this.content();
+        let url = null;
+        if (content in dict) {
+          url = dict[content];
+        } else {
+          this.$router.push('/404');
+        }
+        const pointer = this;
         this.seen = true;
         axios.get(url).then(function (response) {
           pointer.md = response.data;
@@ -64,7 +78,7 @@
         })
       },
       parse(html){
-        return Golbal.isReadyForPrerender(html)
+        return Global.isReadyForPrerender(html)
       }
     }
   }
