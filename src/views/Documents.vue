@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="main container-fluid" >
+    <div class="main container-fluid">
       <div class="row" style="margin: 0 0;height:90%">
         <!--sidebar part-->
         <div class="col-xs-3 sidebar">
@@ -19,11 +19,14 @@
           </div>
           <div id="text-catalogue" class="content center-block" style="overflow: auto">
             <div v-for="item in result">
-              <h5 style="font-size: 16px" data-toggle="collapse" v-if="typeof(item[0]) != 'undefined'" :data-target="item[0].replace(/ /g, '').replace(/:/g, '')" :class="item[0].slice(1)">
+              <h5 style="font-size: 16px" data-toggle="collapse" v-if="typeof(item[0]) != 'undefined'"
+                  :data-target="item[0].replace(/ /g, '').replace(/:/g, '')" :class="item[0].slice(1)">
                 {{item[0]}}
               </h5>
-              <ul class="list-group collapse in" v-if="typeof(item[0]) != 'undefined'" :id="item[0].slice(1).replace(/ /g, '').replace(/:/g, '')">
-                <li v-for="chapter in item" :class="item[0].slice(1)" v-if="chapter.startsWith('##')" @click="changeSectionNavContent($event)">
+              <ul class="list-group collapse in" v-if="typeof(item[0]) != 'undefined'"
+                  :id="item[0].slice(1).replace(/ /g, '').replace(/:/g, '')">
+                <li v-for="chapter in item" :class="item[0].slice(1)" v-if="chapter.startsWith('##')"
+                    @click="changeSectionNavContent($event)">
                   {{chapter.slice(2)}}
                 </li>
               </ul>
@@ -37,9 +40,11 @@
             <li><a style='color:#fcac45;'>{{chapter}}</a></li>
           </ul>
           <div class="text-field" id="text-content">
-            <language-button :eng="eng" @click.native="switchLanguage()" />
-            <vue-markdown class="markdown-area" :source="document" :toc="true" :toc-anchor-link="true" toc-anchor-link-symbol=""></vue-markdown>
-            <p class="find-mistake">This documentation is open source. Find mistakes? Want to contribute? <span class="go-to-development" @click="goToDevelopment()">Go for it.</span></p>
+            <language-button :eng="eng" @click.native="switchLanguage()"/>
+            <vue-markdown class="markdown-area" :source="document" :toc="true" :toc-anchor-link="true"
+                          toc-anchor-link-symbol=""></vue-markdown>
+            <p class="find-mistake">This documentation is open source. Find mistakes? Want to contribute? <span
+              class="go-to-development" @click="goToDevelopment()">Go for it.</span></p>
           </div>
           <div class="doc-footer">
             <span>Copyright © 2019 The Apache Software Foundation. Apache and the Apache feather logo are trademarks of The Apache Software Foundation.</span>
@@ -87,9 +92,22 @@
       '$route.params.section': 'updateDocument',
     },
     methods: {
+      init() {
+        for (let key in Global.SUPPORT_VERSION) {
+          this.versions.push({
+            text: Global.SUPPORT_VERSION[key]['text'],
+            url: '/Documents/' + key + '/chap1/sec1'
+          })
+        }
+        let version = this.getVersion();
+        if (version in Global.SUPPORT_VERSION) {
+          this.version = version;
+        }
+        this.text = this.getVersionString();
+      },
       getVersionString() {
         let version = this.$route.params.version;
-        if (version in Global.SUPPORT_VERSION){
+        if (version in Global.SUPPORT_VERSION) {
           return Global.SUPPORT_VERSION[version]['text']
         }
         return "";
@@ -114,13 +132,13 @@
       getSection() {
         return this.$route.params.section;
       },
-      updateDocument(){
+      updateDocument() {
         if (this.text !== this.getVersionString()) {
           this.text = this.getVersionString();
           location.reload();
         }
       },
-      switchLanguage()  {
+      switchLanguage() {
         this.eng = this.eng !== true;
         this.fetchData();
       },
@@ -131,7 +149,7 @@
         if (version in Global.SUPPORT_VERSION) {
           let chapter = Number(this.getChapter().substr(4)) - 1;
           let section = Number(this.getSection().substr(3));
-          let url = Global.SUPPORT_VERSION[version]['doc-prefix']+ Global.SUPPORT_VERSION[version]['branch'] +
+          let url = Global.SUPPORT_VERSION[version]['doc-prefix'] + Global.SUPPORT_VERSION[version]['branch'] +
             Global.DOC_ENG_PREFIX + "/UserGuide/" + Global.SUPPORT_VERSION[version]['content'];
           axios.get(url).then(() => {
             this.chapter = this.result[chapter][0].substr(2);
@@ -175,7 +193,7 @@
         }
       },
       goToDevelopment() {
-        this.$router.push('/Development');
+        this.$router.push('/Development/Contributing');
       }
     }
   }
@@ -183,7 +201,7 @@
 </script>
 
 <style scoped>
-  #bread-chapter{
+  #bread-chapter {
     margin-left: 2%;
     margin-right: 17%;
     max-width: 900px;
@@ -272,9 +290,10 @@
     max-width: 80%;
 
   }
-  .list-group > li:hover{
+
+  .list-group > li:hover {
     background: grey;
-    border: 5px  grey;
+    border: 5px grey;
     border-radius: 5px;
   }
 
@@ -287,7 +306,7 @@
   }
 
   button {
-    height:40px;
+    height: 40px;
     background: #fcac45;
   }
 
@@ -309,29 +328,32 @@
     width: 50px;
   }
 
-  .doc-footer{
+  .doc-footer {
     position: fixed;
     width: 76%;
     bottom: 0px;
     right: 0px;
     padding-top: 10px;
     padding-bottom: 10px;
-    text-align:center;
-    color:#fff;
-    background:#222222;
+    text-align: center;
+    color: #fff;
+    background: #222222;
   }
 
   @media (min-width: 768px) {
     .fixed-middle {
       top: 170px;
     }
-    #text-content{
+
+    #text-content {
       top: 210px;
     }
-    .sidebar{
+
+    .sidebar {
       top: 150px;
     }
-    .content.center-block{
+
+    .content.center-block {
       top: 222px;
     }
   }
@@ -340,13 +362,16 @@
     .fixed-middle {
       top: 120px;
     }
-    #text-content{
+
+    #text-content {
       top: 160px;
     }
-    .sidebar{
+
+    .sidebar {
       top: 100px;
     }
-    .content.center-block{
+
+    .content.center-block {
       top: 180px;
     }
   }
@@ -355,13 +380,16 @@
     .fixed-middle {
       top: 70px;
     }
-    #text-content{
+
+    #text-content {
       top: 110px;
     }
-    .sidebar{
+
+    .sidebar {
       top: 50px;
     }
-    .content.center-block{
+
+    .content.center-block {
       top: 122px;
     }
   }
