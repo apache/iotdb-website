@@ -130,7 +130,7 @@
         "Development": [
           {"url": "/Development/Contributing", "content": "Questions and Contributing"},
           {"url": "/Development/IDE", "content": "Developing in IDE"},
-          {"url": "/Development/Tsfile", "content": "Changelist of Tsfile"},
+          {"url": "/Development/Tsfile", "content": "Changelist of TsFile"},
           {"url": "/Development/RPC", "content": "Changelist of RPC"}
         ]
       }

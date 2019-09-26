@@ -11,7 +11,7 @@
   const DOC_ENG_PREFIX = "/docs/Documentation";
   const DOC_CHN_PREFIX = "/docs/Documentation-CHN";
   const DEFAULT_VERSION = "0.8.0";
-  const LATEST_STR = "latest";
+  const PROGRESS_STR = "progress";
   const SUPPORT_VERSION = {
     "0.8.0": {
       "branch": "rel/0.8",
@@ -19,10 +19,10 @@
       'text': "V0.8.0",
       'content': '0-Content.md'
     },
-    "latest": {
+    "progress": {
       "branch": "master",
       "doc-prefix": DOC_URL_PREFIX,
-      'text': "Latest",
+      'text': "In progress",
       'content': '0-Content.md'
     }
   };
@@ -43,7 +43,7 @@
     downloadSparkConnector,
     DEFAULT_VERSION,
     SUPPORT_VERSION,
-    LATEST_STR,
+    PROGRESS_STR,
     DOC_ENG_PREFIX,
     DOC_CHN_PREFIX,
     isReadyForPrerender

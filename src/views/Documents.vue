@@ -87,23 +87,6 @@
       '$route.params.section': 'updateDocument',
     },
     methods: {
-      init(){
-        for(let key in Global.SUPPORT_VERSION){
-          this.versions.push({
-            text: Global.SUPPORT_VERSION[key]['text'],
-            url: '/Documents/'+ key + '/chap1/sec1'
-          })
-        }
-        let version = this.getVersion();
-        if(version in Global.SUPPORT_VERSION){
-          if(version === Global.LATEST_STR){
-            this.version = Global.DEFAULT_VERSION;
-          } else {
-            this.version = version;
-          }
-        }
-        this.text = this.getVersionString();
-      },
       getVersionString() {
         let version = this.$route.params.version;
         if (version in Global.SUPPORT_VERSION){
