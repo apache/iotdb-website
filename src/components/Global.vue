@@ -14,7 +14,7 @@
   const PROGRESS_STR = "progress";
   const SUPPORT_VERSION = {
     "0.8.0": {
-      "branch": "rel/0.8",
+      "branch": "release/0.8.0",
       "doc-prefix": DOC_URL_PREFIX,
       'text': "V0.8.0",
       'content': '0-Content.md'
