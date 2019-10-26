@@ -18,6 +18,7 @@
                                                                     :href="selectVersionObj.binariesASCUrl">ASC</a>]</span>
             </li>
             <li style="margin: 5px" v-if="selectVersionObj.sourcesUrl!==''">
+              Download IoTDB Sources:<a class="link-color" :href="selectVersionObj.sourcesUrl"> {{selectVersionObj.text}} Sources</a>
               <span v-if="selectVersionObj.sourcesSHA512Url!==''">[<a class="link-color"
                                                                       :href="selectVersionObj.sourcesSHA512Url">SHA512</a>]</span>
               <span v-if="selectVersionObj.sourcesASCUrl!==''">[<a class="link-color"
