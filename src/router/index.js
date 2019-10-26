@@ -6,12 +6,9 @@ import Documents from '@/views/Documents'
 import Tools from '@/views/Tools'
 import Community from '@/views/Community'
 import Development from '@/views/Development'
-import Example from '@/views/Example'
 import NotFound from "../views/NotFound"
 import SingleTool from "../views/SingleTool"
 import LatestDoc from "../views/LatestDoc"
-import Materials from "../views/Materials"
-import SingleMaterials from "../views/SingleMaterial"
 
 Vue.use(Router);
 
@@ -38,16 +35,6 @@ export default new Router({
       component: Documents
     },
     {
-      path: '/Materials',
-      name: 'Materials',
-      component: Materials
-    },
-    {
-      path: '/Materials/:doc',
-      name: 'SingleMaterial',
-      component: SingleMaterials
-    },
-    {
       path: '/Tools',
       name: 'Tools',
       component: Tools
@@ -66,11 +53,6 @@ export default new Router({
       path: '/Development/:content',
       name: 'Development',
       component: Development
-    },
-    {
-      path: '/Example',
-      name: 'Example',
-      component: Example
     },
     {
       path: "/404",

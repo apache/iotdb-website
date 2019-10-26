@@ -147,7 +147,11 @@
         const docLanguageUrl = this.eng ? Global.DOC_ENG_PREFIX : Global.DOC_CHN_PREFIX;
         let version = this.getVersion();
         if (version in Global.SUPPORT_VERSION) {
-          let chapter = Number(this.getChapter().substr(4)) - 1;
+          let chapter = Number(this.getChapter().substr(4));
+          // this is for special case of branch v0.8.0
+          if (version === "0.8.0") {
+            chapter -= 1
+          }
           let section = Number(this.getSection().substr(3));
           let url = Global.SUPPORT_VERSION[version]['doc-prefix'] + Global.SUPPORT_VERSION[version]['branch'] +
             Global.DOC_ENG_PREFIX + "/UserGuide/" + Global.SUPPORT_VERSION[version]['content'];

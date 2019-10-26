@@ -27,25 +27,8 @@
             <li class="nav-item">
               <router-link to="/Download" class="nav-link"><span>Download</span></router-link>
             </li>
-            <li class="dropdown">
-              <router-link to="/Documents/Quick%20Start" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                           aria-haspopup="true" aria-expanded="false"><span>Documents<b class="caret"></b></span>
-              </router-link>
-              <ul class="dropdown-menu">
-                <li v-for="item in Documents">
-                  <router-link :to=item.url class="nav-link"><span>{{item.content}}</span></router-link>
-                </li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <router-link to="/Tools" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                           aria-haspopup="true" aria-expanded="false"><span>Tools<b class="caret"></b></span>
-              </router-link>
-              <ul class="dropdown-menu">
-                <li v-for="item in Tools">
-                  <router-link :to=item.url class="nav-link"><span>{{item.content}}</span></router-link>
-                </li>
-              </ul>
+            <li class="nav-item">
+              <router-link to="/Documents/0.8.0/chap1/sec1" class="nav-link"><span>Documents</span></router-link>
             </li>
             <li class="dropdown">
               <router-link to="/Community/Project%20Committers" class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -66,9 +49,6 @@
                   <router-link :to=item.url class="nav-link"><span>{{item.content}}</span></router-link>
                 </li>
               </ul>
-            </li>
-            <li class="nav-item">
-              <router-link to="/Example" class="nav-link"><span>Example</span></router-link>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -110,22 +90,10 @@
     name: "NavBar",
     data() {
       return {
-        "Documents": [
-          {"url": "/Documents/Quick Start", "content": "Quick Start"},
-          {"url": "/Documents/0.8.0/chap1/sec1", "content": "User Guide"},
-          {"url": "/Materials", "content": "Other Materials"},
-          {"url": "/Documents/Frequently asked questions", "content": "Frequently asked questions"}
-        ],
         "Community": [
           {"url": "/Community/Powered By", "content": "Powered By"},
           {"url": "/Community/Project Committers", "content": "Project Committers"},
           {"url": "/Community/History & Vision", "content": "History & Vision"}
-        ],
-        "Tools": [
-          {"url": "/Tools/Cli", "content": "IoTDB-Cli"},
-          {"url": "/Tools/Grafana", "content": "Grafana Connector"},
-          {"url": "/Tools/Hadoop", "content": "Hadoop Connector"},
-          {"url": "/Tools/Spark", "content": "Spark Connector"}
         ],
         "Development": [
           {"url": "/Development/Contributing", "content": "Questions and Contributing"},
