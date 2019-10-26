@@ -5,16 +5,12 @@
         <!--sidebar part-->
         <div class="col-xs-3 sidebar">
           <div class="version text-center">
-            <div class="dropdown center-block" style="width: 80%;">
-              <button id="version-current" class="btn dropdown-toggle" data-toggle="dropdown" style="width: 100%">
-                IoTDB {{text}}
-                <b class="caret right-block"></b>
-              </button>
-              <ul class="dropdown-menu">
-                <li v-for="entry in versions">
-                  <router-link :to="entry.url">{{entry.text}}</router-link>
-                </li>
-              </ul>
+            <div class="center-block" style="width: 80%;">
+              <select class="version-select" v-model="selectVersion">
+                <option v-for="entry in versionList" :value="entry.text">
+                  IoTDB {{entry.text}} Documents
+                </option>
+              </select>
             </div>
           </div>
           <div id="text-catalogue" class="content center-block" style="overflow: auto">
@@ -66,7 +62,8 @@
     name: "Documents",
     data() {
       return {
-        versions: [],
+        versionList: [],
+        selectVersion: {},
         document: "",
         result: [],
         version: "",
@@ -90,18 +87,28 @@
       '$route.params.version': 'updateDocument',
       '$route.params.chapter': 'updateDocument',
       '$route.params.section': 'updateDocument',
+      selectVersion: function (newVersion) {
+        let version = "progress";
+        if (newVersion.startsWith("V")) {
+          version = newVersion.substr(1);
+        }
+        let url = "/Documents/" + version + "/chap1/sec1";
+        this.$router.push(url);
+      }
     },
     methods: {
       init() {
         for (let key in Global.SUPPORT_VERSION) {
-          this.versions.push({
+          this.versionList.push({
             text: Global.SUPPORT_VERSION[key]['text'],
             url: '/Documents/' + key + '/chap1/sec1'
           })
         }
         let version = this.getVersion();
-        if (version in Global.SUPPORT_VERSION) {
-          this.version = version;
+        if (version === "progress") {
+          this.selectVersion = "In progress";
+        } else {
+          this.selectVersion = "V" + version;
         }
         this.text = this.getVersionString();
       },
@@ -265,16 +272,20 @@
     background: #222222;
     padding: 0 0;
     line-height: 8px;
-
   }
 
-  .dropdown {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-
-  .dropdown > ul {
+  .version-select {
+    border: none;
+    outline: none;
+    border-radius: 5px;
     width: 100%;
+    height: 40px;
+    margin: 30px 0;
+    background: #fcac45;
+  }
+
+  select::-ms-expand {
+    display: none;
   }
 
   .list-group > li {
