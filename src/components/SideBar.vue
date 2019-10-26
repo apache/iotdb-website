@@ -9,8 +9,9 @@
       <article lang="en">
         <ol class="list-unstyled">
           <li>
-            Apache IoTDB (Incubating) V0.8.0 is released. Users are encouraged to read the overview of major changes in <router-link to="/Materials/Release%20Notes">release notes</router-link>,
-            download the version in <router-link to="/Download">download page</router-link> and view documents in <router-link to="/Documents/Quick%20Start">documentation page</router-link>.
+            Apache IoTDB (Incubating) V0.8.1 is released. Users are encouraged to read the overview of major changes in
+            <a class="link-color" href="https://raw.githubusercontent.com/apache/incubator-iotdb/release/0.8.1/RELEASE_NOTES.md">release notes</a>,
+            download the version in <router-link to="/Download">download page</router-link> and view documents in <router-link to="/Documents/0.8.1/chap1/sec1">documentation page</router-link>.
           </li>
         </ol>
       </article>
