@@ -1,7 +1,12 @@
 <template>
   <footer class="footer">
     <div class="container">
-      <span>Copyright © 2019 The Apache Software Foundation. Apache and the Apache feather logo are trademarks of The Apache Software Foundation.</span>
+      <p style="color: #AAA">
+        Disclaimer: Apache IoTDB (incubating) (Database for Internet of Things) is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.
+      </p>
+      <p style="text-align: center">
+        Copyright © 2019 The Apache Software Foundation. Apache and the Apache feather logo are trademarks of The Apache Software Foundation
+      </p>
     </div>
   </footer>
 </template>
@@ -20,31 +25,32 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align:center;
-    color:#fff;
-    background:#222222;
+    color: #fff;
+    background: #222222;
+    padding: 10px;
   }
-  @media (min-width: 992px){
+
+  @media (min-width: 992px) {
     body {
-      margin-bottom: 40px; /* Margin bottom by footer height */
-    }
-  }
-  @media (min-width: 499px){
-    body {
-      margin-bottom: 60px; /* Margin bottom by footer height */
-    }
-  }
-  @media (min-width: 355px){
-    body {
-      margin-bottom: 80px; /* Margin bottom by footer height */
+      margin-bottom: 140px; /* Margin bottom by footer height */
     }
   }
 
-  @media (min-width: 200px){
+  @media (min-width: 499px) {
     body {
-      margin-bottom: 120px; /* Margin bottom by footer height */
+      margin-bottom: 160px; /* Margin bottom by footer height */
+    }
+  }
+
+  @media (min-width: 355px) {
+    body {
+      margin-bottom: 180px; /* Margin bottom by footer height */
+    }
+  }
+
+  @media (min-width: 200px) {
+    body {
+      margin-bottom: 220px; /* Margin bottom by footer height */
     }
   }
 </style>
