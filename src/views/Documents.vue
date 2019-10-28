@@ -229,6 +229,7 @@
     margin-left: 2%;
     margin-right: 15%;
     max-width: 1000px;
+    font-size: 16px;
   }
 
   .fixed-middle {
@@ -323,10 +324,6 @@
   button {
     height: 40px;
     background: #fcac45;
-  }
-
-  .dropdown-menu {
-    text-align: center;
   }
 
   .content.center-block {
