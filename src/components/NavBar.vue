@@ -28,7 +28,7 @@
               <router-link to="/Download" class="nav-link"><span>Download</span></router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/Documents/0.8.0/chap1/sec1" class="nav-link"><span>Documents</span></router-link>
+              <router-link to="/Documents/0.8.1/chap1/sec1" class="nav-link"><span>Documents</span></router-link>
             </li>
             <li class="dropdown">
               <router-link to="/Community/Project%20Committers" class="dropdown-toggle" data-toggle="dropdown" role="button"
