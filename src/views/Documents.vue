@@ -8,7 +8,7 @@
             <div class="center-block" style="width: 80%;">
               <select class="version-select" v-model="selectVersion">
                 <option v-for="entry in versionList" :value="entry.text">
-                  IoTDB {{entry.text}} Documents
+                  {{entry.text}}
                 </option>
               </select>
             </div>
