@@ -13,6 +13,12 @@
   const DEFAULT_VERSION = "0.8.1";
   const PROGRESS_STR = "progress";
   const SUPPORT_VERSION = {
+    "0.9.0": {
+          "branch": "release/0.9.0",
+          "doc-prefix": DOC_URL_PREFIX,
+          'text': "V0.9.0",
+          'content': '0-Content.md'
+    },
     "0.8.1": {
       "branch": "release/0.8.1",
       "doc-prefix": DOC_URL_PREFIX,
