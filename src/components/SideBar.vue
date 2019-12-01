@@ -12,7 +12,7 @@
             Apache IoTDB (Incubating) V0.9.0 is released. Users are encouraged to read the overview of major changes in
             <a class="link-color" href="https://raw.githubusercontent.com/apache/incubator-iotdb/release/0.9.0/RELEASE_NOTES.md">release notes</a>,
             download the version in <router-link to="/Download">download page</router-link> and view documents in <router-link to="/Documents/0.9.0/chap1/sec1">documentation page</router-link>.
-            If you online upgrade from 0.8.*, it is recommended to test on small data first.
+            It is recommended to back up your data before online upgrading from 0.8.*.
           </li>
         </ol>
       </article>
