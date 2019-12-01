@@ -1,6 +1,7 @@
 <template>
   <div class="header">
-    <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgb(34,34,34); min-height:50px" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgb(34,34,34); min-height:50px"
+         role="navigation">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -28,10 +29,11 @@
               <router-link to="/Download" class="nav-link"><span>Download</span></router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/Documents/0.8.1/chap1/sec1" class="nav-link"><span>Documents</span></router-link>
+              <router-link :to="defaultDocLink" class="nav-link"><span>Documents</span></router-link>
             </li>
             <li class="dropdown">
-              <router-link to="/Community/Project%20Committers" class="dropdown-toggle" data-toggle="dropdown" role="button"
+              <router-link to="/Community/Project%20Committers" class="dropdown-toggle" data-toggle="dropdown"
+                           role="button"
                            aria-haspopup="true" aria-expanded="false"><span>Community<b class="caret"></b></span>
               </router-link>
               <ul class="dropdown-menu">
@@ -64,21 +66,23 @@
 </template>
 
 <script>
+  import Global from '../components/Global'
+
   jQuery(document).ready(function () {
     jQuery(".nav-item").click(function () {
       jQuery('.navbar-nav').find('li.active').removeClass('active');
       jQuery('.dropdown').removeClass('active');
-      $(this).addClass( 'active' );
+      $(this).addClass('active');
     });
     jQuery(".dropdown").click(function () {
       jQuery('.navbar-nav').find('li.active').removeClass('active');
       jQuery('.dropdown').removeClass('active');
-      $(this).addClass( 'active' );
+      $(this).addClass('active');
     });
     jQuery(".dropdown-menu > li").click(function () {
       jQuery('.navbar-nav').find('li.active').removeClass('active');
-      jQuery('.dropdown').removeClass( 'active' );
-      $(this).parent("ul").parent("li").addClass( 'active' );
+      jQuery('.dropdown').removeClass('active');
+      $(this).parent("ul").parent("li").addClass('active');
     });
     jQuery(".logo-class").click(function () {
       jQuery('.navbar-nav').find('li.active').removeClass('active');
@@ -100,7 +104,8 @@
           {"url": "/Development/IDE", "content": "Developing in IDE"},
           {"url": "/Development/Tsfile", "content": "Changelist of TsFile"},
           {"url": "/Development/RPC", "content": "Changelist of RPC"}
-        ]
+        ],
+        defaultDocLink: "/Documents/" + Global.DEFAULT_VERSION + "/chap1/sec1"
       }
     },
   }
@@ -121,11 +126,11 @@
     color: orange;
   }
 
-  #bs-example-navbar-collapse-1 .navbar-nav >.active>a {
-    background-color: rgb(100,100,100);
+  #bs-example-navbar-collapse-1 .navbar-nav > .active > a {
+    background-color: rgb(100, 100, 100);
   }
 
-  .logo-class{
+  .logo-class {
     max-width: 100px;
     padding-top: 5px;
     margin-right: 15px;
@@ -135,7 +140,8 @@
     .header {
       margin-bottom: 90px;
     }
-    .logo-class{
+
+    .logo-class {
       margin-left: 10px;
     }
   }
@@ -144,10 +150,12 @@
     .header {
       margin-bottom: 190px;
     }
-    #home-page{
+
+    #home-page {
       margin-left: -15px;
     }
-    .logo-class{
+
+    .logo-class {
       margin-left: -2px;
     }
   }
@@ -159,7 +167,7 @@
   }
 
   @media (min-width: 1170px) {
-    .logo-class{
+    .logo-class {
       margin-left: -110px;
     }
   }
@@ -168,13 +176,14 @@
     .header {
       margin-bottom: 90px;
     }
-    .logo-class{
+
+    .logo-class {
       margin-left: 0px;
     }
   }
 
   @media (min-width: 1360px) {
-    .logo-class{
+    .logo-class {
       margin-left: -110px;
     }
   }
