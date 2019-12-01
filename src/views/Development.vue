@@ -104,4 +104,8 @@
     margin-bottom: 0;
   }
 
+  .markdown-body {
+    font-size: 16px;
+  }
+
 </style>
