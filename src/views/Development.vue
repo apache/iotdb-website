@@ -56,6 +56,8 @@
         const dict = {
           "Contributing": Global.SUPPORT_VERSION[Global.PROGRESS_STR]['doc-prefix'] +
           Global.SUPPORT_VERSION[Global.PROGRESS_STR]['branch'] + "/docs/Development-Contributing.md",
+          "Contributing-Document": Global.SUPPORT_VERSION[Global.PROGRESS_STR]['doc-prefix'] +
+          Global.SUPPORT_VERSION[Global.PROGRESS_STR]['branch'] + "/docs/Development-Document.md",
           "IDE": Global.SUPPORT_VERSION[Global.PROGRESS_STR]['doc-prefix'] +
           Global.SUPPORT_VERSION[Global.PROGRESS_STR]['branch'] + "/docs/Development-IDE.md",
           "Tsfile": Global.SUPPORT_VERSION[Global.PROGRESS_STR]['doc-prefix'] +

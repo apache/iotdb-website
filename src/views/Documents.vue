@@ -204,7 +204,7 @@
         }
       },
       goToDevelopment() {
-        this.$router.push('/Development/Contributing');
+        this.$router.push('/Development/Contributing-Document');
       }
     }
   }
