@@ -1,10 +1,10 @@
 <script>
   import axios from 'axios'
 
-  const downloadIotdbCli='https://github.com/apache/incubator-iotdb';
-  const downloadGrafanaConnector='https://github.com/apache/incubator-iotdb';
-  const downloadHadoopConnector='https://github.com/apache/incubator-iotdb';
-  const downloadSparkConnector='https://github.com/apache/incubator-iotdb';
+  const downloadIotdbCli = 'https://github.com/apache/incubator-iotdb';
+  const downloadGrafanaConnector = 'https://github.com/apache/incubator-iotdb';
+  const downloadHadoopConnector = 'https://github.com/apache/incubator-iotdb';
+  const downloadSparkConnector = 'https://github.com/apache/incubator-iotdb';
 
   const cheerio = require('cheerio');
   const DOC_URL_PREFIX = "https://raw.githubusercontent.com/apache/incubator-iotdb/";
@@ -14,21 +14,15 @@
   const PROGRESS_STR = "progress";
   const SUPPORT_VERSION = {
     "0.9.0": {
-          "branch": "release/0.9.0",
-          "doc-prefix": DOC_URL_PREFIX,
-          'text': "V0.9.0",
-          'content': '0-Content.md'
-    },
-    "0.8.1": {
-      "branch": "release/0.8.1",
+      "branch": "rel/0.9",
       "doc-prefix": DOC_URL_PREFIX,
-      'text': "V0.8.1",
+      'text': "V0.9.0",
       'content': '0-Content.md'
     },
-    "0.8.0": {
-      "branch": "release/0.8.0",
+    "0.8.x": {
+      "branch": "rel/0.8",
       "doc-prefix": DOC_URL_PREFIX,
-      'text': "V0.8.0",
+      'text': "V0.8.x",
       'content': '0-Content.md'
     },
     "progress": {
@@ -39,16 +33,15 @@
     }
   };
 
-  function isReadyForPrerender(html){
+  function isReadyForPrerender(html) {
     const $ = cheerio.load(html);
-    $('ul a').each( function(i, elem) {
-      $(this).attr('href', window.location.href+$(this).attr('href'));
+    $('ul a').each(function (i, elem) {
+      $(this).attr('href', window.location.href + $(this).attr('href'));
     });
     return $('body').html();
-  };
+  }
 
-  export default
-  {
+  export default {
     downloadIotdbCli,
     downloadGrafanaConnector,
     downloadHadoopConnector,

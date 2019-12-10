@@ -155,8 +155,8 @@
         let version = this.getVersion();
         if (version in Global.SUPPORT_VERSION) {
           let chapter = Number(this.getChapter().substr(4));
-          // this is for special case of branch v0.8.0
-          if (version === "0.8.0" || version === "0.8.1") {
+          // this is for special case of branch v0.8.x
+          if (version === "0.8.x") {
             chapter -= 1
           }
           let section = Number(this.getSection().substr(3));
