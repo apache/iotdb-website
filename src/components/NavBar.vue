@@ -32,11 +32,15 @@
               <router-link :to="defaultDocLink" class="nav-link"><span>Documents</span></router-link>
             </li>
             <li class="dropdown">
-              <router-link to="/Community/Project%20Committers" class="dropdown-toggle" data-toggle="dropdown"
+              <router-link to="/Contributor" class="dropdown-toggle" data-toggle="dropdown"
                            role="button"
                            aria-haspopup="true" aria-expanded="false"><span>Community<b class="caret"></b></span>
               </router-link>
               <ul class="dropdown-menu">
+                <li>
+                  <router-link to="/Contributor" class="dropdown-toggle"><span>Project Committers</span>
+                  </router-link>
+                </li>
                 <li v-for="item in Community">
                   <router-link :to=item.url class="nav-link"><span>{{item.content}}</span></router-link>
                 </li>
@@ -96,7 +100,6 @@
       return {
         "Community": [
           {"url": "/Community/Powered By", "content": "Powered By"},
-          {"url": "/Community/Project Committers", "content": "Project Committers"},
           {"url": "/Community/History & Vision", "content": "History & Vision"}
         ],
         "Development": [
