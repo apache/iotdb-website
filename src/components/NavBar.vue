@@ -38,7 +38,7 @@
               </router-link>
               <ul class="dropdown-menu">
                 <li>
-                  <router-link to="/Contributor" class="dropdown-toggle"><span>Project Committers</span>
+                  <router-link to="/Contributor" class="dropdown-toggle"><span>People</span>
                   </router-link>
                 </li>
                 <li v-for="item in Community">

@@ -51,6 +51,7 @@
     display: inline-block;
     font-size: 14px;
     height: 120px;
+    width: 180px;
   }
 
   .con-detailed-info p {
