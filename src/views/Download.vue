@@ -26,18 +26,10 @@
             </li>
           </ul>
 
-          <div class="unofficial-notice" v-if="selectVersionObj.isUnofficialVersion">
-            <p><b>Notice:</b> The version is a legacy version and was released before IoTDB was donated to ASF.
-              <br/>
-              As it is not an Apache-verified released version, we suggest users who use the version
-              upgrade the latest Apache released version ASAP.</p>
-          </div>
-
           <p>Main features and change list of each version, please check
             <a class="link-color" :href="selectVersionObj.releaseNoteUrl">release notes</a>.
           </p>
 
-          <span v-if="!selectVersionObj.isUnofficialVersion">
           <h2 class="download-title">Verifying Hashes and Signatures</h2>
           <p>
             Along with our releases, we also provide sha512 hashes in *.sha512 files and
@@ -49,7 +41,6 @@
                                href="https://www.apache.org/dist/incubator/iotdb/KEYS">
             KEYS </a>.
           </p>
-          </span>
         </div>
         <my-sidebar/>
       </div>
@@ -112,18 +103,7 @@
             sourcesSHA512Url: 'https://www.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip.sha512',
             sourcesASCUrl: 'https://www.apache.org/dist/incubator/iotdb/0.8.0-incubating/apache-iotdb-0.8.0-incubating-source-release.zip.asc',
             releaseNoteUrl: 'https://raw.githubusercontent.com/apache/incubator-iotdb/release/0.8.0/RELEASE_NOTES.md'
-          },
-          {
-            text: 'IoTDB v0.7.0 pre-Apache',
-            binariesUrl: 'https://github.com/thulab/iotdb/releases/tag/v0.7.0',
-            binariesSHA512Url: '',
-            binariesASCUrl: '',
-            sourcesUrl: '',
-            sourcesSHA512Url: '',
-            sourcesASCUrl: '',
-            isUnofficialVersion: true,
-            releaseNoteUrl: 'https://raw.githubusercontent.com/apache/incubator-iotdb/0.7.0-doc/docs/Documentation/OtherMaterial-ReleaseNotesV0.7.0.md'
-          },
+          }
         ]
       }
     },
@@ -163,12 +143,6 @@
 
   select::-ms-expand {
     display: none;
-  }
-
-  .unofficial-notice {
-    color: #fcac45;
-    border-radius: 5px;
-    padding: 0 15px;
   }
 
   p, a {
