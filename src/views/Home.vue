@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-9 col-sm-9">
           <div>
-            <p class="home-tittle">Apache IoTDB (incubating) (Database for Internet of Things)</p>
+            <p class="home-title">Apache IoTDB (incubating) (Database for Internet of Things)</p>
             <article lang="en">
               <p>Apache IoTDB (incubating) (Database for Internet of Things) is an integrated data
                 management engine designed for timeseries data. It provides users with services for
@@ -22,7 +22,7 @@
             </article>
           </div>
           <div>
-            <p class="home-tittle">Scenarios</p>
+            <p class="home-title">Scenarios</p>
             <div id="myCarousel" class="carousel slide" data-ride="carousel" style="background: rgb(31,31,31)">
               <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -79,7 +79,7 @@
             </div>
           </div>
           <div>
-            <p class="home-tittle" style="padding-top: 15px">Main Features</p>
+            <p class="home-title" style="padding-top: 15px">Main Features</p>
             <div class="row feature">
               <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 feature-item" v-for="item in featureBlock1" @mouseover="hover($event)"
                    @mouseleave="unhover($event)">
@@ -213,7 +213,7 @@
     margin-top: 10px;
   }
 
-  .home-tittle {
+  .home-title {
     color: #ffa500;
     font-size: x-large;
     font-weight: 600;
