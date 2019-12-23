@@ -89,7 +89,7 @@
                   </div>
                   <div class="col-xs-10 col-sm-10 feature-title"><p>{{item.featureTitle}}</p></div>
                 </div>
-                  <p class="feature-content" style="text-align: justify">{{item.featureContent}}</p>
+                  <p class="feature-content">{{item.featureContent}}</p>
                 <hr/>
               </div>
             </div>
