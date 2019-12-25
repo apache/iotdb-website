@@ -6,7 +6,7 @@
       <p class="con-name">{{name}}</p>
       <div class="con-detailed-info">
         <p>{{role}}</p>
-        <p>{{org}}</p>
+        <p v-if="org !== undefined">{{org}}</p>
       </div>
       <div class="con-apache-info" v-if="id !== undefined">
         <p class="con-id">Apache ID: {{id}}</p>
