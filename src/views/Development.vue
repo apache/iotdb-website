@@ -64,6 +64,8 @@
           Global.SUPPORT_VERSION[Global.PROGRESS_STR]['branch'] + "/tsfile/format-changelist.md",
           "RPC": Global.SUPPORT_VERSION[Global.PROGRESS_STR]['doc-prefix'] +
           Global.SUPPORT_VERSION[Global.PROGRESS_STR]['branch'] + "/service-rpc/rpc-changelist.md",
+          "Development-Chinese": Global.SUPPORT_VERSION[Global.PROGRESS_STR]['doc-prefix'] +
+          Global.SUPPORT_VERSION[Global.PROGRESS_STR]['branch'] + "/docs/Development-Chinese.md",
         };
         const content = this.content();
         let url = null;
