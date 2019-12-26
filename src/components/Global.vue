@@ -10,13 +10,13 @@
   const DOC_URL_PREFIX = "https://raw.githubusercontent.com/apache/incubator-iotdb/";
   const DOC_ENG_PREFIX = "/docs/Documentation";
   const DOC_CHN_PREFIX = "/docs/Documentation-CHN";
-  const DEFAULT_VERSION = "0.9.0";
+  const DEFAULT_VERSION = "0.9.x";
   const PROGRESS_STR = "progress";
   const SUPPORT_VERSION = {
-    "0.9.0": {
+    "0.9.x": {
       "branch": "rel/0.9",
       "doc-prefix": DOC_URL_PREFIX,
-      'text': "V0.9.0",
+      'text': "V0.9.x",
       'content': '0-Content.md'
     },
     "0.8.x": {
