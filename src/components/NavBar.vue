@@ -103,6 +103,7 @@
           {"url": "/Development/Contributing", "content": "Questions and Contributing"},
           {"url": "/Development/IDE", "content": "Developing in IDE"},
           {"url": "/Development/Development-Chinese", "content": "Guide for Chinese"},
+          {"url": "/Development/Development-VoteRelease", "content": "How to vote"},
           {"url": "/Development/Tsfile", "content": "Changelist of TsFile"},
           {"url": "/Development/RPC", "content": "Changelist of RPC"}
         ],
