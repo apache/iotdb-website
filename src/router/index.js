@@ -9,6 +9,7 @@ import Development from '@/views/Development'
 import NotFound from "../views/NotFound"
 import SingleTool from "../views/SingleTool"
 import LatestDoc from "../views/LatestDoc"
+import Contributor from "@/views/Contributor"
 
 Vue.use(Router);
 
@@ -43,6 +44,11 @@ export default new Router({
       path: '/Tools/:content',
       name: 'SingleTool',
       component: SingleTool
+    },
+    {
+      path: '/Contributor',
+      name: 'Contributor',
+      component: Contributor
     },
     {
       path: '/Community/:content',
