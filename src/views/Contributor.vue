@@ -47,6 +47,11 @@
           id: 'hxd',
           date: '2017-01-01'
         }, {
+          name: 'Chen Wang',
+          role: 'PPMC, Committer',
+          id: 'wangchen',
+          date: '2017-01-01'
+        }, {
           name: 'Jun Yuan',
           role: 'PPMC, Committer',
           id: 'yuanjun',
@@ -131,14 +136,25 @@
           avatar: 'https://avatars1.githubusercontent.com/u/19167280?s=400&u=b7fa4acd5b6161283946c2ecb5e4837b6f137a1b&v=4',
           name: 'Zesong Sun',
           role: 'Committer',
+          id: 'sunzesong',
+          date: '2019-12-31'
         }, {
           avatar: 'kfx.jpeg',
           name: 'Kaifeng Xue',
           role: 'Committer',
+          id: 'xuekaifeng',
+          date: '2019-12-31'
         }, {
           avatar: 'yt.jpg',
           name: 'Yuan Tian',
           role: 'Committer',
+          id: 'jackietien',
+          date: '2019-12-31'
+        }, {
+          name: 'Boris Zhu',
+          role: 'Committer',
+          id: 'geniuspig',
+          date: '2019-12-31'
         }]
       }
     },
