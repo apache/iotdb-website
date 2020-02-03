@@ -55,19 +55,19 @@
       fetchData() {
         const dict = {
           "Contributing": Global.SUPPORT_VERSION[Global.PROGRESS_STR]['doc-prefix'] +
-          Global.SUPPORT_VERSION[Global.PROGRESS_STR]['branch'] + "/docs/Development-Contributing.md",
+          Global.SUPPORT_VERSION[Global.PROGRESS_STR]['branch'] + "/docs/Development/Development-Contributing.md",
           "Contributing-Document": Global.SUPPORT_VERSION[Global.PROGRESS_STR]['doc-prefix'] +
-          Global.SUPPORT_VERSION[Global.PROGRESS_STR]['branch'] + "/docs/Development-Document.md",
+          Global.SUPPORT_VERSION[Global.PROGRESS_STR]['branch'] + "/docs/Development/Development-Document.md",
           "IDE": Global.SUPPORT_VERSION[Global.PROGRESS_STR]['doc-prefix'] +
-          Global.SUPPORT_VERSION[Global.PROGRESS_STR]['branch'] + "/docs/Development-IDE.md",
+          Global.SUPPORT_VERSION[Global.PROGRESS_STR]['branch'] + "/docs/Development/Development-IDE.md",
           "Tsfile": Global.SUPPORT_VERSION[Global.PROGRESS_STR]['doc-prefix'] +
           Global.SUPPORT_VERSION[Global.PROGRESS_STR]['branch'] + "/tsfile/format-changelist.md",
           "RPC": Global.SUPPORT_VERSION[Global.PROGRESS_STR]['doc-prefix'] +
           Global.SUPPORT_VERSION[Global.PROGRESS_STR]['branch'] + "/service-rpc/rpc-changelist.md",
           "Development-Chinese": Global.SUPPORT_VERSION[Global.PROGRESS_STR]['doc-prefix'] +
-          Global.SUPPORT_VERSION[Global.PROGRESS_STR]['branch'] + "/docs/Development-Chinese.md",
+          Global.SUPPORT_VERSION[Global.PROGRESS_STR]['branch'] + "/docs/Development/Development-Chinese.md",
           "Development-VoteRelease": Global.SUPPORT_VERSION[Global.PROGRESS_STR]['doc-prefix'] +
-          Global.SUPPORT_VERSION[Global.PROGRESS_STR]['branch'] + "/docs/Development-VoteRelease.md",
+          Global.SUPPORT_VERSION[Global.PROGRESS_STR]['branch'] + "/docs/Development/Development-VoteRelease.md",
         };
         const content = this.content();
         let url = null;

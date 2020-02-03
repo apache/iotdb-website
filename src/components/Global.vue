@@ -33,6 +33,10 @@
     }
   };
 
+  const SYSTEM_DESIGN_SUPPORT_VERSION = {
+    "progress": {}
+  };
+
   function isReadyForPrerender(html) {
     const $ = cheerio.load(html);
     $('ul a').each(function (i, elem) {
@@ -48,6 +52,7 @@
     downloadSparkConnector,
     DEFAULT_VERSION,
     SUPPORT_VERSION,
+    SYSTEM_DESIGN_SUPPORT_VERSION,
     PROGRESS_STR,
     DOC_ENG_PREFIX,
     DOC_CHN_PREFIX,

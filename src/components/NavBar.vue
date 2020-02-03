@@ -31,6 +31,9 @@
             <li class="nav-item">
               <router-link :to="defaultDocLink" class="nav-link"><span>Documents</span></router-link>
             </li>
+            <li class="nav-item">
+              <router-link :to="defaultDesignLink" class="nav-link"><span>System Design</span></router-link>
+            </li>
             <li class="dropdown">
               <router-link to="/Contributor" class="dropdown-toggle" data-toggle="dropdown"
                            role="button"
@@ -110,7 +113,8 @@
           {"url": "/Development/Tsfile", "content": "Changelist of TsFile"},
           {"url": "/Development/RPC", "content": "Changelist of RPC"}
         ],
-        defaultDocLink: "/Documents/" + Global.DEFAULT_VERSION + "/chap1/sec1"
+        defaultDocLink: "/Documents/" + Global.DEFAULT_VERSION + "/chap1/sec1",
+        defaultDesignLink: "/SystemDesign/" + Global.PROGRESS_STR + "/chap0/sec1"
       }
     },
   }
