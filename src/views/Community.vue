@@ -25,7 +25,7 @@
   import SideBar from '../components/SideBar'
   import markdown from 'vue-markdown'
   import axios from 'axios'
-  import Golbal from '../components/Global'
+  import Global from '../components/Global'
   import LoadingBar from '../components/Loading'
 
   export default {
@@ -56,15 +56,12 @@
       },
       fetchData() {
         const dict = {
-          "Powered By": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
-          Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
-            "/docs/Community-Powered%20By.md",
-          "Project Committers": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
-          Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
-            "/docs/Community-Project%20Committers.md",
-          "History & Vision": Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['doc-prefix'] +
-          Golbal.SUPPORT_VERSION[Golbal.DEFAULT_VERSION]['branch'] +
-            "/docs/Community-History%26Vision.md",
+          "Powered By": Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['doc-prefix'] +
+          Global.SUPPORT_VERSION[Global.PROGRESS_STR]['branch'] +
+            "/docs/Community/Community-Powered%20By.md",
+          "History & Vision": Global.SUPPORT_VERSION[Global.DEFAULT_VERSION]['doc-prefix'] +
+          Global.SUPPORT_VERSION[Global.PROGRESS_STR]['branch'] +
+            "/docs/Community/Community-History%26Vision.md",
         };
         const content = this.content();
         let url = null;
@@ -82,7 +79,7 @@
           })
       },
       parse(html){
-        return Golbal.isReadyForPrerender(html)
+        return Global.isReadyForPrerender(html)
       }
     }
   }

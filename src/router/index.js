@@ -3,12 +3,12 @@ import Router from 'vue-router'
 import Home from '@/views/Home'
 import Download from '@/views/Download'
 import Documents from '@/views/Documents'
+import SystemDesign from '@/views/SystemDesign'
 import Tools from '@/views/Tools'
 import Community from '@/views/Community'
 import Development from '@/views/Development'
 import NotFound from "../views/NotFound"
 import SingleTool from "../views/SingleTool"
-import LatestDoc from "../views/LatestDoc"
 import Contributor from "@/views/Contributor"
 
 Vue.use(Router);
@@ -26,14 +26,14 @@ export default new Router({
       component: Download
     },
     {
-      path: '/Documents/:doc',
-      name: 'Documents',
-      component: LatestDoc
-    },
-    {
       path: '/Documents/:version/:chapter?/:section?',
       name: 'UserGuideDocuments',
       component: Documents
+    },
+    {
+      path: '/SystemDesign/:version/:chapter?/:section?',
+      name: 'SystemDesignDocuments',
+      component: SystemDesign
     },
     {
       path: '/Tools',
