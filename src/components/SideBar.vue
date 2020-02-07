@@ -31,7 +31,7 @@
     <router-link to="/Download" class="nav-link btn btn-lg btn-block btn-warning button" style="color: white">
       <span>Download</span>
     </router-link>
-    <router-link to="/Documents/Quick%20Start" class="nav-link btn btn-white btn-lg btn-block button">
+    <router-link to="/Documents/progress/chap0/sec1" class="nav-link btn btn-white btn-lg btn-block button">
       <span>Quick Start</span></router-link>
   </div><!-- /.blog-sidebar -->
 </template>
