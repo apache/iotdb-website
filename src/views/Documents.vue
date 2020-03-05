@@ -304,7 +304,7 @@
     margin-bottom: 5px;
     padding: 5px;
     max-width: 80%;
-
+    line-height: 15px;
   }
 
   .list-group > li:hover {
