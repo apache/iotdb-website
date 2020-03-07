@@ -59,6 +59,16 @@
                 </li>
               </ul>
             </li>
+            <li class="dropdown">
+              <router-link to="/Community/Powered By" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false"><span>ASF<b class="caret"></b></span>
+              </router-link>
+              <ul class="dropdown-menu">
+                <li v-for="item in ASF">
+                  <a :href=item.url :class="nav-link"><span>{{item.content}}</span></a>
+                </li>
+              </ul>
+            </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="nav-item">
@@ -112,6 +122,14 @@
           {"url": "/Development/Development-VoteRelease", "content": "How to vote"},
           {"url": "/Development/Tsfile", "content": "Changelist of TsFile"},
           {"url": "/Development/RPC", "content": "Changelist of RPC"}
+        ],
+        "ASF": [
+          {"url":"https://www.apache.org/foundation/","content":"Foundation"},
+          {"url":"https://www.apache.org/licenses/","content":"License"},
+          {"url":"https://www.apache.org/security/","content":"Security"},
+          {"url":"https://www.apache.org/foundation/sponsorship.html","content":"Sponsorship"},
+          {"url":"https://www.apache.org/foundation/thanks.html","content":"Thanks"},
+          {"url":"https://www.apache.org/events/current-event","content":"Current Events"},
         ],
         defaultDocLink: "/Documents/" + Global.DEFAULT_VERSION + "/chap1/sec1",
         defaultDesignLink: "/SystemDesign/" + Global.PROGRESS_STR + "/chap0/sec1"
