@@ -124,12 +124,12 @@
           {"url": "/Development/RPC", "content": "Changelist of RPC"}
         ],
         "ASF": [
-          {"url":"https://www.apache.org/foundation/","content":"Foundation"},
-          {"url":"https://www.apache.org/licenses/","content":"License"},
-          {"url":"https://www.apache.org/security/","content":"Security"},
-          {"url":"https://www.apache.org/foundation/sponsorship.html","content":"Sponsorship"},
-          {"url":"https://www.apache.org/foundation/thanks.html","content":"Thanks"},
-          {"url":"https://www.apache.org/events/current-event","content":"Current Events"},
+          {"url":"www.apache.org/foundation/","content":"Foundation"},
+          {"url":"www.apache.org/licenses/","content":"License"},
+          {"url":"www.apache.org/security/","content":"Security"},
+          {"url":"www.apache.org/foundation/sponsorship.html","content":"Sponsorship"},
+          {"url":"www.apache.org/foundation/thanks.html","content":"Thanks"},
+          {"url":"www.apache.org/events/current-event","content":"Current Events"},
         ],
         defaultDocLink: "/Documents/" + Global.DEFAULT_VERSION + "/chap1/sec1",
         defaultDesignLink: "/SystemDesign/" + Global.PROGRESS_STR + "/chap0/sec1"
