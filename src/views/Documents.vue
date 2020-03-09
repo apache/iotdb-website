@@ -314,7 +314,7 @@
     margin-bottom: 5px;
     padding: 5px;
     max-width: 80%;
-
+	line-height: 15px;
   }
 
   .list-group > li:hover {
@@ -352,7 +352,7 @@
 
   .doc-footer {
     position: fixed;
-    width: 76%;
+    width: 75%;
     bottom: 0px;
     right: 0px;
     padding-top: 10px;
