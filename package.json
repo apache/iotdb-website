@@ -13,15 +13,17 @@
     "deploy": "node build/deploy.js"
   },
   "dependencies": {
+    "ajv": "^6.9.1",
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.2",
+    "element-ui": "^2.13.0",
     "popper.js": "^1.14.6",
     "text-loader": "0.0.1",
     "unit": "^1.0.4",
     "vue": "^2.5.2",
+    "vue-github-button": "latest",
     "vue-markdown": "^2.2.4",
-    "vue-router": "^3.0.1",
-    "vue-github-button": "latest"
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
