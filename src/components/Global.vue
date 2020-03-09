@@ -1,12 +1,14 @@
 <script>
   import axios from 'axios'
 
+  // const downloadIotdbCli = 'https://github.com/apache/incubator-iotdb';
   const downloadIotdbCli = 'https://github.com/apache/incubator-iotdb';
   const downloadGrafanaConnector = 'https://github.com/apache/incubator-iotdb';
   const downloadHadoopConnector = 'https://github.com/apache/incubator-iotdb';
   const downloadSparkConnector = 'https://github.com/apache/incubator-iotdb';
 
   const cheerio = require('cheerio');
+  // const DOC_URL_PREFIX = "https://rhh.666love.cn/incubator-iotdb/";
   const DOC_URL_PREFIX = "https://raw.githubusercontent.com/apache/incubator-iotdb/";
   const DOC_ENG_PREFIX = "/docs/Documentation";
   const DOC_CHN_PREFIX = "/docs/Documentation-CHN";

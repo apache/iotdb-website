@@ -43,10 +43,7 @@
               class="go-to-development" @click="goToDevelopment()">Go for it.</span></p>
           </div>
           <div class="doc-footer">
-            <p style="color: #AAA">
-              Disclaimer: Apache IoTDB (incubating) (Database for Internet of Things) is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.
-            </p>
-            <span style="text-align: center">Copyright © 2020 The Apache Software Foundation. Apache and the Apache feather logo are trademarks of The Apache Software Foundation.</span>
+            <span>Copyright © 2019 The Apache Software Foundation. Apache and the Apache feather logo are trademarks of The Apache Software Foundation.</span>
           </div>
         </div>
       </div>
@@ -307,7 +304,7 @@
     margin-bottom: 5px;
     padding: 5px;
     max-width: 80%;
-    line-height: 15px;
+
   }
 
   .list-group > li:hover {
@@ -345,10 +342,12 @@
 
   .doc-footer {
     position: fixed;
-    width: 75%;
+    width: 76%;
     bottom: 0px;
-    right: 0;
-    padding: 10px 5px;
+    right: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
     color: #fff;
     background: #222222;
   }

@@ -4,10 +4,13 @@ import Home from '@/views/Home'
 import Download from '@/views/Download'
 import Documents from '@/views/Documents'
 import SystemDesign from '@/views/SystemDesign'
+import Tools from '@/views/Tools'
 import Community from '@/views/Community'
 import Development from '@/views/Development'
-import NotFound from "@/views/NotFound"
+import NotFound from "../views/NotFound"
+import SingleTool from "../views/SingleTool"
 import Contributor from "@/views/Contributor"
+import cn from '@/views/cn'
 
 Vue.use(Router);
 
@@ -17,6 +20,11 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/cn',
+      name: 'cn',
+      component: cn
     },
     {
       path: '/Download',
@@ -32,6 +40,16 @@ export default new Router({
       path: '/SystemDesign/:version/:chapter?/:section?',
       name: 'SystemDesignDocuments',
       component: SystemDesign
+    },
+    {
+      path: '/Tools',
+      name: 'Tools',
+      component: Tools
+    },
+    {
+      path: '/Tools/:content',
+      name: 'SingleTool',
+      component: SingleTool
     },
     {
       path: '/Contributor',

@@ -37,16 +37,18 @@
           </ul>
           <div class="text-field" id="text-content">
             <language-button :eng="eng" @click.native="switchLanguage()"/>
-            <vue-markdown class="markdown-area" :source="document" :toc="true" :toc-anchor-link="true"
+            <vue-markdown v-show="!ok" class="markdown-area" :source="document" :toc="true" :toc-anchor-link="true"
                           toc-anchor-link-symbol=""></vue-markdown>
-            <p class="find-mistake">This documentation is open source. Find mistakes? Want to contribute? <span
+
+            <p class="find-mistake" v-show="!ok">This documentation is open source. Find mistakes? Want to contribute? <span
               class="go-to-development" @click="goToDevelopment()">Go for it.</span></p>
+          
+            <iframe :src="solidhtml" v-show="ok" style="margin:0;padding:0;align:middle;width: 800px;height:600px;border:none; overflow-x:hidden; overflow-y:hidden;"></iframe>
+ 
           </div>
+          
           <div class="doc-footer">
-            <p style="color: #AAA">
-              Disclaimer: Apache IoTDB (incubating) (Database for Internet of Things) is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.
-            </p>
-            <span style="text-align: center">Copyright © 2020 The Apache Software Foundation. Apache and the Apache feather logo are trademarks of The Apache Software Foundation.</span>
+            <span>Copyright © 2019 The Apache Software Foundation. Apache and the Apache feather logo are trademarks of The Apache Software Foundation.</span>
           </div>
         </div>
       </div>
@@ -73,7 +75,9 @@
         chapter: "",
         section: "",
         text: "",
-        eng: true
+        eng: true,
+        ok:false,
+        solidhtml:"incubator-iotdb/rel/0.9/docs/Documentation/UserGuide/1-Overview/1-What is IoTDB.html"
       }
     },
     components: {
@@ -162,23 +166,61 @@
           if (version === "0.8.x") {
             chapter -= 1
           }
+          if (version === "0.8.x" || version === "0.9.x") {
+            this.ok = true;
+          }else{
+            this.ok = false;
+          }
           let section = Number(this.getSection().substr(3));
+          // var lang = navigator.language||navigator.userLanguage;//常规浏览器语言和IE浏览器
+          // lang = lang.substr(0, 2);//截取lang前2位字符
+          
           let url = Global.SUPPORT_VERSION[version]['doc-prefix'] + Global.SUPPORT_VERSION[version]['branch'] +
             Global.DOC_ENG_PREFIX + "/UserGuide/" + Global.SUPPORT_VERSION[version]['content'];
-          axios.get(url).then(() => {
-            this.chapter = this.result[chapter][0].substr(2);
-            this.section = this.result[chapter][section].trim().substr(3);
-            url = Global.SUPPORT_VERSION[version]['doc-prefix'] + Global.SUPPORT_VERSION[version]['branch'] +
-              docLanguageUrl + "/UserGuide/" + this.chapter.substr(8).replace(': ', '-') + "/" + this.section + ".md";
-            axios.get(url)
-              .then((response) => {
-                this.document = response.data;
-                document.getElementById("text-content").scrollTop = 0;
-              })
-              .catch(function (error) {
-                console.log(error);
-              });
-          });
+          console.log(url);
+//           if(lang == 'zh'){
+//               console.log("zh");
+//               url = url.replace("https://raw.githubusercontent.com/apache/incubator-iotdb/","https://rhh.666love.cn/incubator-iotdb/");
+//               console.log(url);
+//             }
+          this.chapter = this.result[chapter][0].substr(2);
+          this.section = this.result[chapter][section].trim().substr(3);
+          url = 'incubator-iotdb/' + Global.SUPPORT_VERSION[version]['branch'] +
+          docLanguageUrl + "/UserGuide/" + this.chapter.substr(8).replace(': ', '-') + "/" + this.section + ".md";
+          this.solidhtml = url.replace('.md','.html');
+          axios.get(url).then((response) => {　　　　　　
+　　　　　   　this.document = response.data;
+              document.getElementById("text-content").scrollTop = 0;
+　　　　    });
+
+//           axios.get(url).then(() => {
+//             this.chapter = this.result[chapter][0].substr(2);
+//             this.section = this.result[chapter][section].trim().substr(3);
+//             url = Global.SUPPORT_VERSION[version]['doc-prefix'] + Global.SUPPORT_VERSION[version]['branch'] +
+//               docLanguageUrl + "/UserGuide/" + this.chapter.substr(8).replace(': ', '-') + "/" + this.section + ".md";
+// //             if(lang == 'zh'){
+// // //               console.log("zh");
+// //               url = url.replace("https://raw.githubusercontent.com/apache/incubator-iotdb/","https://rhh.666love.cn/incubator-iotdb/");
+// //               console.log(url);
+// //             }
+//             // let solid = 'incubator-iotdb/' + Global.SUPPORT_VERSION[version]['branch'] +
+//             //   docLanguageUrl + "/UserGuide/" + this.chapter.substr(8).replace(': ', '-') + "/" + this.section + ".md";
+//             // console.log("相对地址"+solid);
+//             axios.get(url)
+//               .then((response) => {
+//                 this.document = response.data;
+//                 // this.document = "<p>好</p>"
+//                 console.log(url);
+//                 // console.log(response.data);
+//                 this.solidhtml = url.replace('.md','.html');
+//                 // this.html = "../incubator-iotdb/rel/0.8/docs/Documentation-CHN/UserGuide/1-Overview/1-What%20is%20IoTDB.html";
+//                 console.log(url.replace('.md','.html'));
+//                 document.getElementById("text-content").scrollTop = 0;
+//               })
+//               .catch(function (error) {
+//                 console.log(error);
+//               });
+//           });
         } else {
           this.$router.push('/404');
         }
@@ -215,6 +257,7 @@
 </script>
 
 <style scoped>
+
   #bread-chapter {
     margin-left: 2%;
     margin-right: 17%;
@@ -307,7 +350,7 @@
     margin-bottom: 5px;
     padding: 5px;
     max-width: 80%;
-    line-height: 15px;
+
   }
 
   .list-group > li:hover {
@@ -345,10 +388,12 @@
 
   .doc-footer {
     position: fixed;
-    width: 75%;
+    width: 76%;
     bottom: 0px;
-    right: 0;
-    padding: 10px 5px;
+    right: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
     color: #fff;
     background: #222222;
   }
@@ -406,6 +451,7 @@
       top: 122px;
     }
   }
+
 
 
 </style>
