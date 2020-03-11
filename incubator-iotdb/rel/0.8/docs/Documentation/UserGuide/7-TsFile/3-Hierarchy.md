@@ -1,34 +1,15 @@
-<!--
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-    KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
-
--->
 # Chapter 7: TsFile
 ## TsFile Hierarchy
   Here is a brief introduction of the structure of a TsFile file.
-  
+
 ## Variable Storage
  * **Big Endian**
-        
+     ​     
+
      * For Example, the `int` `0x8` will be stored as `00 00 00 08`, not `08 00 00 00`
-  
+
  * **String with Variable Length**
- 
+
     * The format is `int size` plus `String literal`. Size can be zero.
     
     * Size equals the number of bytes this string will take, and it may not equal to the length of the string. 
@@ -57,8 +38,7 @@
  * **Compressing Type Hardcode**
     * 0: UNCOMPRESSED
     * 1: SNAPPY
-    
-    
+
 ## TsFile Overview
 Here is a graph about the TsFile structure.
 

@@ -1,29 +1,7 @@
-<!--
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-    KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
-
--->
-
 # Chapter 3: Operation Manual
 
 ## Data Maintenance
 
-<!-- > 
 ### Data Update
 
 Users can use [UPDATE statements](/#/Documents/0.8.2/chap5/sec1) to update data over a period of time in a specified timeseries. When updating data, users can select a timeseries to be updated (version 0.8.2 does not support multiple timeseries updates) and specify a time point or period to be updated (version 0.8.0 must have time filtering conditions).
@@ -50,8 +28,6 @@ When the updated path does not exist, IoTDB will give the corresponding error pr
 IoTDB> update root.ln.wf02 set wt02.sta = false where time < now()
 Msg: do not select any existing series
 ```
--->
-
 ### Data Deletion
 
 Users can delete data that meet the deletion condition in the specified timeseries by using the [DELETE statement](/#/Documents/0.8.2/chap5/sec1). When deleting data, users can select one or more timeseries paths, prefix paths, or paths with star  to delete data before a certain time (version 0.8.2 does not support the deletion of data within a closed time interval).
