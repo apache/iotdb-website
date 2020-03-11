@@ -1,24 +1,3 @@
-<!--
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-    
-        http://www.apache.org/licenses/LICENSE-2.0
-    
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-    KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
-
--->
-
 # 第4章: 客户端
 
 # 编程 - Session
@@ -57,8 +36,8 @@
 
 * 初始化Session
   ​	Session(String host, int port)
-  	Session(String host, String port, String username, String password)
-  	Session(String host, int port, String username, String password)
+  ​	Session(String host, String port, String username, String password)
+  ​	Session(String host, int port, String username, String password)
 
 * 开启Session
   ​	Session.open()
@@ -75,7 +54,7 @@
 * 删除单个或多个存储组
 
   ​	TSStatus deleteStorageGroup(String storageGroup)
-  	TSStatus deleteStorageGroups(List<String> storageGroups)
+  ​	TSStatus deleteStorageGroups(List<String> storageGroups)
 
 * 创建单个时间序列
 
@@ -84,12 +63,12 @@
 * 删除一个或多个时间序列
 
   ​	TSStatus deleteTimeseries(String path)
-  	TSStatus deleteTimeseries(List<String> paths)
+  ​	TSStatus deleteTimeseries(List<String> paths)
 
 * 删除某一特定时间前的时间序列
 
   ​	TSStatus deleteData(String path, long time)
-  	TSStatus deleteData(List<String> paths, long time)
+  ​	TSStatus deleteData(List<String> paths, long time)
 
 * 插入时序数据
 
