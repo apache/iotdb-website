@@ -30,7 +30,7 @@
           </div>
         </div>
         <!--content part-->
-        <div class="col-xs-9 fixed-middle">
+        <div class="col-xs-12 fixed-middle">
           <ul class="breadcrumb direct" id="bread-chapter">
             <li><a style='color:#fcac45;'>{{text}}</a></li>
             <li><a style='color:#fcac45;'>{{chapter}}</a></li>
@@ -43,7 +43,8 @@
             <p class="find-mistake" v-show="!ok">This documentation is open source. Find mistakes? Want to contribute? <span
               class="go-to-development" @click="goToDevelopment()">Go for it.</span></p>
           
-            <iframe :src="solidhtml" v-show="ok" style="margin:0;padding:0;align:middle;width: 800px;height:600px;border:none; overflow-x:hidden; overflow-y:hidden;"></iframe>
+            <iframe :src="solidhtml" v-show="ok" style="align:middle;border:none; overflow-x:hidden; overflow-y:hidden;width:100%;height:100%;" onload=' this.style.height=Math.max(this.contentWindow.document.body.scrollHeight,this.contentWindow.document.documentElement.scrollHeight,200)+"px"; 
+            this.style.width  = document.body.clientWidth * 0.7 + "px"; '></iframe>
  
           </div>
           
@@ -69,7 +70,7 @@
       return {
         versionList: [],
         selectVersion: {},
-        document: "",
+        document: "# Chapter 1: Overview\n## What is IoTDB\nIoTDB(Internet of Things Database) is an integrated data management engine designed for timeseries data, which can provide users specific services for data collection, storage and analysis. Due to its light weight structure, high performance and usable features together with its intense integration with Hadoop and Spark ecology, IoTDB meets the requirements of massive dataset storage, high-speed data input and complex data analysis in the IoT industrial field.",
         result: [],
         version: "",
         chapter: "",
@@ -171,6 +172,7 @@
           }else{
             this.ok = false;
           }
+          
           let section = Number(this.getSection().substr(3));
           
           let url = Global.SUPPORT_VERSION[version]['doc-prefix'] + Global.SUPPORT_VERSION[version]['branch'] +
@@ -226,7 +228,8 @@
     margin-left: 2%;
     margin-right: 17%;
     max-width: 900px;
-    left: 25%;
+    /* left: 25%; */
+    left: 0;
   }
 
   .text-field {
@@ -237,7 +240,7 @@
     left: 25%;
     bottom: 50px;
     margin-left: 2%;
-    margin-right: 15%;
+    margin-right: 2%;
     max-width: 1000px;
     font-size: 16px;
   }
@@ -314,7 +317,7 @@
     margin-bottom: 5px;
     padding: 5px;
     max-width: 80%;
-	line-height: 15px;
+    line-height: 15px;
   }
 
   .list-group > li:hover {

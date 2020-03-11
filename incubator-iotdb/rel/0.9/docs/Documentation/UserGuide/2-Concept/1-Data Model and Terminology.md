@@ -1,24 +1,3 @@
-<!--
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-    KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
-
--->
-
 # Chapter 2: Concept
 ## Data Model and Terminology
 To make this manual more practical, we will use a specific scenario example to illustrate how to operate IoTDB databases at all stages of use. See [this page](https://github.com/apache/incubator-iotdb/blob/master/docs/Documentation/OtherMaterial-Sample%20Data.txt) for a look. For convenience, we also provide you with a sample data file in real scenario to import into the IoTDB system for trial and operation.
@@ -191,27 +170,27 @@ Relative time refers to the time relative to the server time ```now()``` and ```
   Duration = (Digit+ ('Y'|'MO'|'W'|'D'|'H'|'M'|'S'|'MS'|'US'|'NS'))+
   RelativeTime = (now() | DATETIME) ((+|-) Duration)+
         
-  ```
-  
+ ```
+
   <center>**The syntax of the duration unit**
-  
-  |Symbol|Meaning|Presentation|Examples|
-  |:---:|:---:|:---:|:---:|
-  |y|year|1y=365 days|1y|
-  |mo|month|1mo=30 days|1mo|
-  |w|week|1w=7 days|1w|
-  |d|day|1d=1 day|1d|
-  |||||
-  |h|hour|1h=3600 seconds|1h|
-  |m|minute|1m=60 seconds|1m|
-  |s|second|1s=1 second|1s|
-  |||||
-  |ms|millisecond|1ms=1000_000 nanoseconds|1ms|
-  |us|microsecond|1us=1000 nanoseconds|1us|
-  |ns|nanosecond|1ns=1 nanosecond|1ns|  
-  
+
+|Symbol|Meaning|Presentation|Examples|
+|:---:|:---:|:---:|:---:|
+|y|year|1y=365 days|1y|
+|mo|month|1mo=30 days|1mo|
+|w|week|1w=7 days|1w|
+|d|day|1d=1 day|1d|
+|||||
+|h|hour|1h=3600 seconds|1h|
+|m|minute|1m=60 seconds|1m|
+|s|second|1s=1 second|1s|
+|||||
+|ms|millisecond|1ms=1000_000 nanoseconds|1ms|
+|us|microsecond|1us=1000 nanoseconds|1us|
+|ns|nanosecond|1ns=1 nanosecond|1ns|
+
   </center>
-  
+
   eg：
   ```
   now() - 1d2h //1 day and 2 hours earlier than the current server time
