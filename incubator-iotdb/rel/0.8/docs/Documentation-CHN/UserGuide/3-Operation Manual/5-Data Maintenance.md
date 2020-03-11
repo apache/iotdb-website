@@ -1,29 +1,6 @@
-<!--
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-    KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
-
--->
-
 # 第3章 IoTDB操作指南
 
 ## 数据维护
-
-<!-- > 
 
 ### 数据更新
 
@@ -50,8 +27,6 @@ error: The BOOLEAN data type should be true/TRUE or false/FALSE
 IoTDB> update root.ln.wf02 set wt02.sta = false where time < now()
 Msg: do not select any existing series
 ```
--->
-
 ### 数据删除
 
 用户使用[DELETE语句](/#/Documents/0.8.2/chap5/sec1)可以删除指定的时间序列中符合时间删除条件的数据。在删除数据时，用户可以选择需要删除的一个或多个时间序列、时间序列的前缀、时间序列带*路径对某时间之前的数据进行删除（0.8.2版本暂不支持删除某一闭时间区间范围内的数据）。
