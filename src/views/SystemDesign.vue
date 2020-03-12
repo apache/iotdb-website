@@ -30,7 +30,7 @@
           </div>
         </div>
         <!--content part-->
-        <div class="col-xs-12 fixed-middle">
+        <div class="col-xs-9 fixed-middle">
           <ul class="breadcrumb direct" id="bread-chapter">
             <li><a style='color:#fcac45;'>{{text}}</a></li>
             <li><a style='color:#fcac45;'>{{chapter}}</a></li>
