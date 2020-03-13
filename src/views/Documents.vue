@@ -43,7 +43,7 @@
             <p class="find-mistake" v-show="!ok">This documentation is open source. Find mistakes? Want to contribute? <span
               class="go-to-development" @click="goToDevelopment()">Go for it.</span></p>
           
-            <iframe :src="solidhtml" v-show="ok" style="align:middle;border:none; overflow-x:hidden; overflow-y:hidden;width:100%;height:100%;" onload=' this.style.height=Math.max(this.contentWindow.document.body.scrollHeight,this.contentWindow.document.documentElement.scrollHeight,200)+"px"; 
+            <iframe :src="solidhtml" v-show="ok" style="align:middle;border:none; overflow-x:hidden; overflow-y:hidden;width:100%;height:100%;" onload=' this.style.height=document.documentElement.clientHeight - 200 + "px"; 
             this.style.width  = document.body.clientWidth * 0.7 + "px"; '></iframe>
  
           </div>
@@ -167,7 +167,7 @@
           if (version === "0.8.x") {
             chapter -= 1
           }
-          if (version === "0.8.x" || version === "0.9.x") {
+          if (version !="progress") {
             this.ok = true;
           }else{
             this.ok = false;
