@@ -32,3 +32,8 @@ npm run unit
 # run all tests
 npm test
 ```
+
+## Deploy Manually
+
+Copy all files in dist/ folder to asf-site branch.
+
