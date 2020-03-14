@@ -30,13 +30,13 @@
           </div>
         </div>
         <!--content part-->
-        <div class="col-xs-9 fixed-middle">
+        <div class="col-xs-12 fixed-middle">
           <ul class="breadcrumb direct" id="bread-chapter">
             <li><a style='color:#fcac45;'>{{text}}</a></li>
             <li><a style='color:#fcac45;'>{{chapter}}</a></li>
           </ul>
           <div class="text-field" id="text-content">
-            <!--<language-button :eng="eng" @click.native="switchLanguage()"/>-->
+            <language-button :eng="eng" @click.native="switchLanguage()"/>
             <vue-markdown class="markdown-area" :source="document" :toc="true" :toc-anchor-link="true"
                           toc-anchor-link-symbol=""></vue-markdown>
             <p class="find-mistake">This documentation is open source. Find mistakes? Want to contribute? <span
@@ -151,7 +151,7 @@
       },
       // use version and section to render markdown
       fetchData() {
-        const docLanguageUrl = Global.DOC_CHN_PREFIX;
+        const docLanguageUrl = this.eng ? Global.DOC_ENG_PREFIX : Global.DOC_CHN_PREFIX;
         let version = this.getVersion();
         if (version in Global.SUPPORT_VERSION) {
           let chapter = Number(this.getChapter().substr(4));
@@ -165,8 +165,9 @@
           axios.get(url).then(() => {
             this.chapter = this.result[chapter][0].substr(2);
             this.section = this.result[chapter][section].trim().substr(3);
-            url = Global.SUPPORT_VERSION[version]['doc-prefix'] + Global.SUPPORT_VERSION[version]['branch'] +
+            url = 'incubator-iotdb/' + Global.SUPPORT_VERSION[version]['branch'] +
               docLanguageUrl + "/SystemDesign/" + this.chapter.substr(8).replace(': ', '-') + "/" + this.section + ".md";
+            
             axios.get(url)
               .then((response) => {
                 this.document = response.data;
