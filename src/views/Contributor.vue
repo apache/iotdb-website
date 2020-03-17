@@ -160,7 +160,13 @@
           name: 'Jincheng Sun',
           role: 'Committer',
           id: 'jincheng',
-          date: '2020-1-30'
+          date: '2020-01-30'
+        }, {
+          avatar: 'user.jpg',
+          name: 'Dawei Liu',
+          role: 'Committer',
+          id: 'liudw',
+          date: '2020-03-07'
         }]
       }
     },
