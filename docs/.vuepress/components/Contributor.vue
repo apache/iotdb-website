@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1 style="text-align: center;">Project Committers</h1>
     <div v-for="(item,i) in conList" class="box">
       <img :src="item.avatar">
       <div class="right">
@@ -193,6 +194,7 @@
       height:200px;
       display: inline-block;
       vertical-align: top;
+      text-align: center;
    }
 
    img{
