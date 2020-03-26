@@ -1,6 +1,10 @@
 var config = {
     head: [
-        ['link', { rel: 'icon', href: '/favicon.ico' }]
+		['link', { rel: 'icon', href: '/favicon.ico' }],
+		["meta", {name: "Description", content: "Apache IoTDB: Time Series Database for IoT"}],
+        ["meta", {name: "Keywords", content: "TSDB, time series, time series database, IoTDB, IoT database, IoT data management"}],
+        ["meta", {name: "baidu-site-verification", content: "wfKETzB3OT"}],
+        ["meta", {name: "google-site-verification", content: "mZWAoRY0yj_HAr-s47zHCGHzx5Ju-RVm5wDbPnwQYFo"}],
       ],
 
     // 静态网站部署的目录
@@ -10,7 +14,7 @@ var config = {
     title: 'IoTDB Website',
   
     // <meta name="description" content="...">
-    description: ' ', 
+    description: 'Apache IoTDB', 
   
     markdown: {
       
@@ -372,6 +376,10 @@ var config = {
 				],
 				'/document/master/SystemDesign/': [
 					{
+						title: 'System design',
+						collapsable: false,
+					},
+					{
 						title: '0-Architecture',
 						children: [
 							'0-Architecture/1-Architecture',
@@ -456,8 +464,6 @@ var config = {
 			},
 			// 当前 locale 的 algolia docsearch 选项
 			algolia: {
-				apiKey: '8446a1de23bdccd680bf89b7d3d11d32',
-				indexName: 'en',
 			},
 			nav: [
 				 {
@@ -492,7 +498,7 @@ var config = {
 					  { text: '如何投票', link: '/zh/development/Development-VoteRelease'},
 					  { text: 'TsFile的更改列表', link: '/zh/development/format-changelist'},
 					  { text: 'RPC变更清单', link: '/zh/development/rpc-changelist'},
-					  { text: '引导', link: '/zh/development/Development-Chinese'},
+					  { text: '开发指南', link: '/zh/development/Development-Chinese'},
 					]
 				  },
 				  {
@@ -517,7 +523,7 @@ var config = {
 			sidebar: {
 				'/zh/document/V0.8.x/UserGuide/': [
 					{
-						title: '用户指引(V0.8.x)',
+						title: '用户手册(V0.8.x)',
 						collapsable: false,
 					},
 					{
@@ -600,7 +606,7 @@ var config = {
 				],
 				'/zh/document/V0.9.x/UserGuide/': [
 					{
-						title: '用户指引(V0.9.x)',
+						title: '用户手册(V0.9.x)',
 						collapsable: false,
 					},
 					{
@@ -693,7 +699,7 @@ var config = {
 				],
 				'/zh/document/master/UserGuide/': [
 					{
-						title: '用户指引(In progress)',
+						title: '用户手册(In progress)',
 						collapsable: false,
 					},
 					{
@@ -785,6 +791,10 @@ var config = {
 					},
 				],
 				'/zh/document/master/SystemDesign/': [
+					{
+						title: '系统设计',
+						collapsable: false,
+					},
 					{
 						title: '0-应用概览',
 						children: [
