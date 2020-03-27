@@ -1,31 +1,52 @@
-# TsFile Hierarchy
+<!--
 
-  Here is a brief introduction of the structure of a TsFile file.
+```
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
 
-# Variable Storage
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+```
+
+-->
+
+# TsFile层次结构
+
+这是TsFile文件结构的简要介绍。
+
+# 可变存储
  * **Big Endian**
      ​     
-     * For Example, the `int` `0x8` will be stored as `00 00 00 08`, not `08 00 00 00`
+     * 例如，`int` `0x8`将被存储为`00 00 00 08`，而不是`08 00 00 00`。
 
- * **String with Variable Length**
+ * **可变长度的字符串**
+    * 格式为 `int size` 加`String literal`. 大小可以为零。
 
-    * The format is `int size` plus `String literal`. Size can be zero.
-    
-    * Size equals the number of bytes this string will take, and it may not equal to the length of the string. 
-    
-    * For example "sensor_1" will be stored as `00 00 00 08` plus the encoding(ASCII) of "sensor_1".
-    
-    * Note that for the "Magic String"(file signature) "TsFilev0.8.0", the size(12) and encoding(ASCII)
-    is fixed so there is no need to put the size before this string literal.
-  
- * **Data Type Hardcode**
+    * 大小等于此字符串将占用的字节数，并且可能不等于该字符串的长度。
+
+    * 例如，“ sensor_1”将被存储为`00 00 00 08`加上“ sensor_1”的编码（ASCII）。
+
+    * 请注意，对于“魔术字符串”（文件签名）“ TsFilev0.8.0”，大小（12）和编码（ASCII）是固定的，因此无需在该字符串文字前放置大小。
+
+ * **数据类型硬编码**
     * 0: BOOLEAN
     * 1: INT32 (`int`)
     * 2: INT64 (`long`)
     * 3: FLOAT
     * 4: DOUBLE
     * 5: TEXT (`String`)
- * **Encoding Type Hardcode**
+ * **编码类型硬编码**
     * 0: PLAIN
     * 1: PLAIN_DICTIONARY
     * 2: RLE
@@ -34,36 +55,35 @@
     * 5: BITMAP
     * 6: GORILLA
     * 7: REGULAR 
- * **Compressing Type Hardcode**
+ * **压缩类型硬编码**
     * 0: UNCOMPRESSED
     * 1: SNAPPY
 
-# TsFile Overview
-Here is a graph about the TsFile structure.
+# TsFile概述
+这是有关TsFile结构的图。
 
 ![TsFile Breakdown](https://user-images.githubusercontent.com/40447846/61616997-6fad1300-ac9c-11e9-9c17-46785ebfbc88.png)
 
-# Magic String
-There is a 12 bytes magic string:
+# 魔术字符串
+有一个12个字节的魔术字符串：
 
 `TsFilev0.8.0`
 
-It is in both the beginning and end of a TsFile file as signature.
+它在TsFile文件的开头和结尾都作为签名。
 
-# Data
+# 数据
 
-The content of a TsFile file can be divided as two parts: data and metadata. There is a byte `0x02` as the marker between
-data and metadata.
+TsFile文件的内容可以分为两部分：数据和元数据。 数据和元数据之间有一个字节“ 0x02”作为标记。
 
-The data section is an array of `ChunkGroup`, each ChuckGroup represents a *device*.
+数据部分是`ChunkGroup`的数组，每个ChuckGroup代表一个* device *。
 
 ### ChuckGroup
 
-The `ChunkGroup` has an array of `Chunk`, a following byte `0x00` as the marker, and a `ChunkFooter`.
+`ChunkGroup`具有一个`Chunk`数组，一个后继字节`0x00`作为标记以及一个`ChunkFooter`。
 
 #### Chunk
 
-A `Chunk` represents a *sensor*. There is a byte `0x01` as the marker, following a `ChunkHeader` and an array of `Page`.
+`Chunk`代表*传感器*。 在`ChunkHeader`和`Page`数组之后，有一个字节`0x01`作为标记。
 
 ##### ChunkHeader
 <center>
@@ -82,9 +102,9 @@ A `Chunk` represents a *sensor*. There is a byte `0x01` as the marker, following
 
 ##### Page
 
-A `Page` represents some data in a `Chunk`. It contains a `PageHeader` and the actual data (The encoded time-value pair).
+`Page`代表`Chunk`中的一些数据。 它包含一个`PageHeader`和实际数据（编码的时间值对）。
 
-PageHeader Structure
+PageHeader结构
 
 <center>
         <table style="text-align:center">
@@ -115,10 +135,10 @@ PageHeader Structure
 </center>
 
 
-# Metadata
+# 元数据
 
 ## TsDeviceMetaData
-The first part of metadata is `TsDeviceMetaData` 
+元数据的第一部分是`TsDeviceMetaData`
 
 <center>
         <table style="text-align:center">
@@ -130,7 +150,7 @@ The first part of metadata is `TsDeviceMetaData`
 </center>
 
 
-Then there is an array of `ChunkGroupMetaData` after `TsDeviceMetaData`
+然后在`TsDeviceMetaData`之后有一个`ChunkGroupMetaData`数组。
 ## ChunkGroupMetaData
 
 <center>
@@ -145,7 +165,7 @@ Then there is an array of `ChunkGroupMetaData` after `TsDeviceMetaData`
 </center>
 
 
-Then there is an array of `ChunkMetadata` for each `ChunkGroupMetadata`
+然后，每个`ChunkGroupMetadata`都有一个`ChunkMetadata`数组。
 
 #### ChunkMetaData
 
@@ -166,16 +186,15 @@ Then there is an array of `ChunkMetadata` for each `ChunkGroupMetadata`
 
 ##### TsDigest
 
-There are five statistics: `min, last, sum, first, max`
+有五个统计信息： `min, last, sum, first, max`
 
-The storage format is a name-value pair. The name is a string (remember the length is before the literal).
+存储格式是名称/值对。 名称是一个字符串（记住长度在文字之前）。
 
-But for the value, there is also a size integer before the data even if it is not string. For example, if the `min` is 3, then it will be
-stored as 3 "min" 4 3 in the TsFile.
+但是对于该值，即使不是字符串，在数据前也有一个大小整数。 例如，如果`min`为3，则它将被存储为3“ min” 4 3在TsFile中。
 
 ### File Metadata
 
-After the array of `ChunkGroupMetadata`, here is the last part of the metadata.
+在`ChunkGroupMetadata`数组之后，这是元数据的最后一部分。
 
 <center>
         <table style="text-align:center">
@@ -218,12 +237,11 @@ After the array of `ChunkGroupMetadata`, here is the last part of the metadata.
 </center>
 
 
-If size of props is greater than 0, there is an array of <String, String> pair as properties of this measurement.
+如果道具的大小大于0，则存在一个<String，String>对数组，作为此度量的属性。
+​    例如“ max_point_number”“ 2”。
 
-Such as "max_point_number""2".
+# 完成
 
-# Done
+在`FileMetaData`之后，将有另一个魔术字符串，您已经完成了发现TsFile的旅程！
 
-After the `FileMetaData`, there will be another Magic String and you have finished the journey of discovering TsFile!
-
-You can also use /tsfile/example/TsFileSequenceRead to read and validate a TsFile.
+您也可以使用/ tsfile / example / TsFileSequenceRead来读取和验证TsFile。
