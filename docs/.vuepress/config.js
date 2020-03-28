@@ -54,14 +54,14 @@ var config = {
 				 {
 					text: 'Document',
 					items: [
-						{ text: 'In progress', link: '/document/master/UserGuide/0-Get Started/1-QuickStart' },
-						{ text: 'V0.9.x', link: '/document/V0.9.x/UserGuide/0-Get Started/1-QuickStart' },
-					    { text: 'V0.8.x', link: '/document/V0.8.x/UserGuide/0-Get Started/1-QuickStart'},
+						{ text: 'In progress', link: '/UserGuide/master/0-Get Started/1-QuickStart' },
+						{ text: 'V0.9.x', link: '/UserGuide/V0.9.x/0-Get Started/1-QuickStart' },
+					    { text: 'V0.8.x', link: '/UserGuide/V0.8.x/0-Get Started/1-QuickStart'},
 					]
 				  },
 				  {
 					text: 'System design',
-					link: '/document/master/SystemDesign/0-Architecture/1-Architecture'
+					link: '/SystemDesign/0-Architecture/1-Architecture'
 				  },
 				  {
 					text: 'Download',
@@ -83,6 +83,7 @@ var config = {
 					  { text: 'How to vote', link: '/development/Development-VoteRelease'},
 					  { text: 'Changelist of TsFile', link: '/development/format-changelist'},
 					  { text: 'Changelist of RPC', link: '/development/rpc-changelist'},
+					  { text: 'ContributeGuide', link: '/development/ContributeGuide'},
 					]
 				  },
 				  {
@@ -105,7 +106,7 @@ var config = {
 				  },
 			],
 			sidebar: {
-				'/document/V0.8.x/UserGuide/': [
+				'/UserGuide/V0.8.x/': [
 					{
 						title:'User Guide(V0.8.x)',
 						collapsable: false,
@@ -188,7 +189,7 @@ var config = {
 						]
 					},
 				],
-				'/document/V0.9.x/UserGuide/': [
+				'/UserGuide/V0.9.x/': [
 					{
 						title:'User Guide(V0.9.x)',
 						collapsable: false,
@@ -281,7 +282,7 @@ var config = {
 						]
 					},
 				],
-				'/document/master/UserGuide/': [
+				'/UserGuide/master/': [
 					{
 						title:'User Guide(In progress)',
 						collapsable: false,
@@ -374,7 +375,7 @@ var config = {
 						]
 					},
 				],
-				'/document/master/SystemDesign/': [
+				'/SystemDesign/': [
 					{
 						title: 'System design',
 						collapsable: false,
@@ -469,14 +470,14 @@ var config = {
 				 {
 					text: '文档',
 					items: [
-					  { text: 'In progress', link: '/zh/document/master/UserGuide/0-Get Started/1-QuickStart' },
-					  { text: 'V0.9.x', link: '/zh/document/V0.9.x/UserGuide/0-Get Started/1-QuickStart' },
-					  { text: 'V0.8.x', link: '/zh/document/V0.8.x/UserGuide/0-Get Started/1-QuickStart'},
+					  { text: 'In progress', link: '/zh/UserGuide/master/0-Get Started/1-QuickStart' },
+					  { text: 'V0.9.x', link: '/zh/UserGuide/V0.9.x/0-Get Started/1-QuickStart' },
+					  { text: 'V0.8.x', link: '/zh/UserGuide/V0.8.x/0-Get Started/1-QuickStart'},
 					]
 				  },
 				  	{
 					text: '系统设计',
-					link: '/zh/document/master/SystemDesign/0-Architecture/1-Architecture'
+					link: '/zh/SystemDesign/0-Architecture/1-Architecture'
 				  },
 				  {
 					text: '下载',
@@ -498,7 +499,7 @@ var config = {
 					  { text: '如何投票', link: '/zh/development/Development-VoteRelease'},
 					  { text: 'TsFile的更改列表', link: '/zh/development/format-changelist'},
 					  { text: 'RPC变更清单', link: '/zh/development/rpc-changelist'},
-					  { text: '开发指南', link: '/zh/development/Development-Chinese'},
+					  { text: '开发指南', link: '/zh/development/ContributeGuide'},
 					]
 				  },
 				  {
@@ -521,7 +522,7 @@ var config = {
 				  },
 			],
 			sidebar: {
-				'/zh/document/V0.8.x/UserGuide/': [
+				'/zh/UserGuide/V0.8.x/': [
 					{
 						title: '用户手册(V0.8.x)',
 						collapsable: false,
@@ -604,7 +605,7 @@ var config = {
 						]
 					},				   
 				],
-				'/zh/document/V0.9.x/UserGuide/': [
+				'/zh/UserGuide/V0.9.x/': [
 					{
 						title: '用户手册(V0.9.x)',
 						collapsable: false,
@@ -697,7 +698,7 @@ var config = {
 						]
 					},
 				],
-				'/zh/document/master/UserGuide/': [
+				'/zh/UserGuide/master/': [
 					{
 						title: '用户手册(In progress)',
 						collapsable: false,
@@ -790,7 +791,7 @@ var config = {
 						]
 					},
 				],
-				'/zh/document/master/SystemDesign/': [
+				'/zh/SystemDesign/': [
 					{
 						title: '系统设计',
 						collapsable: false,
