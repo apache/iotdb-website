@@ -28,3 +28,20 @@ npm run build
 
 Copy all files in dist/ folder to asf-site branch.
 
+## Directory Structure
+
+```
+.
+├─ docs
+│  ├─ README.md	       //Home
+│  └─ .vuepress
+│  │  └─ components    //Global vue template
+│  │  └─ dist          //Build directory
+│  │  └─ public        //Store static files
+│  │  └─ config.js	   //Configuration
+│  └─ document         //document 
+│  └─ download         //download
+│  └─ ...              
+└─ package.json
+```
+

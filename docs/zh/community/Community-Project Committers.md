@@ -1,5 +1,3 @@
-# Project Committers
-
 <Contributor/>
 
 <FooterFixed/>

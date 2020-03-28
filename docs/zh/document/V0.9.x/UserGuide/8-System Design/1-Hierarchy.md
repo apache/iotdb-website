@@ -1,3 +1,0 @@
-# Hierarchy
-
-Coming Soon.

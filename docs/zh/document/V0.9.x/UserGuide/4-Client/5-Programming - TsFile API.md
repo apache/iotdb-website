@@ -1,3 +1,0 @@
-# TsFile API 
-
-Comming Soon...

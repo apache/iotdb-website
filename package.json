@@ -1,5 +1,5 @@
 {
-  "name": "Sail",
+  "name": "IoTDB",
   "version": "1.0.0",
   "description": "Blogs built with vuepress",
   "main": "index.js",
@@ -18,7 +18,7 @@
     "mkdown",
     "blog"
   ],
-  "author": "Sail",
+  "author": "IoTDB",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com"

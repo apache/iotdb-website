@@ -1,6 +1,10 @@
 var config = {
     head: [
-        ['link', { rel: 'icon', href: '/favicon.ico' }]
+		['link', { rel: 'icon', href: '/favicon.ico' }],
+		["meta", {name: "Description", content: "Apache IoTDB: Time Series Database for IoT"}],
+        ["meta", {name: "Keywords", content: "TSDB, time series, time series database, IoTDB, IoT database, IoT data management"}],
+        ["meta", {name: "baidu-site-verification", content: "wfKETzB3OT"}],
+        ["meta", {name: "google-site-verification", content: "mZWAoRY0yj_HAr-s47zHCGHzx5Ju-RVm5wDbPnwQYFo"}],
       ],
 
     // 静态网站部署的目录
@@ -10,7 +14,7 @@ var config = {
     title: 'IoTDB Website',
   
     // <meta name="description" content="...">
-    description: ' ', 
+    description: 'Apache IoTDB', 
   
     markdown: {
       
@@ -50,14 +54,14 @@ var config = {
 				 {
 					text: 'Document',
 					items: [
-						{ text: 'In progress', link: '/document/master/UserGuide/0-Get Started/1-QuickStart' },
-						{ text: 'V0.9.x', link: '/document/V0.9.x/UserGuide/0-Get Started/1-QuickStart' },
-					    { text: 'V0.8.x', link: '/document/V0.8.x/UserGuide/0-Get Started/1-QuickStart'},
+						{ text: 'In progress', link: '/UserGuide/master/0-Get Started/1-QuickStart' },
+						{ text: 'V0.9.x', link: '/UserGuide/V0.9.x/0-Get Started/1-QuickStart' },
+					    { text: 'V0.8.x', link: '/UserGuide/V0.8.x/0-Get Started/1-QuickStart'},
 					]
 				  },
 				  {
 					text: 'System design',
-					link: '/document/master/SystemDesign/0-Architecture/1-Architecture'
+					link: '/SystemDesign/0-Architecture/1-Architecture'
 				  },
 				  {
 					text: 'Download',
@@ -79,6 +83,7 @@ var config = {
 					  { text: 'How to vote', link: '/development/Development-VoteRelease'},
 					  { text: 'Changelist of TsFile', link: '/development/format-changelist'},
 					  { text: 'Changelist of RPC', link: '/development/rpc-changelist'},
+					  { text: 'ContributeGuide', link: '/development/ContributeGuide'},
 					]
 				  },
 				  {
@@ -101,7 +106,7 @@ var config = {
 				  },
 			],
 			sidebar: {
-				'/document/V0.8.x/UserGuide/': [
+				'/UserGuide/V0.8.x/': [
 					{
 						title:'User Guide(V0.8.x)',
 						collapsable: false,
@@ -184,7 +189,7 @@ var config = {
 						]
 					},
 				],
-				'/document/V0.9.x/UserGuide/': [
+				'/UserGuide/V0.9.x/': [
 					{
 						title:'User Guide(V0.9.x)',
 						collapsable: false,
@@ -277,7 +282,7 @@ var config = {
 						]
 					},
 				],
-				'/document/master/UserGuide/': [
+				'/UserGuide/master/': [
 					{
 						title:'User Guide(In progress)',
 						collapsable: false,
@@ -370,7 +375,11 @@ var config = {
 						]
 					},
 				],
-				'/document/master/SystemDesign/': [
+				'/SystemDesign/': [
+					{
+						title: 'System design',
+						collapsable: false,
+					},
 					{
 						title: '0-Architecture',
 						children: [
@@ -456,21 +465,19 @@ var config = {
 			},
 			// 当前 locale 的 algolia docsearch 选项
 			algolia: {
-				apiKey: '8446a1de23bdccd680bf89b7d3d11d32',
-				indexName: 'en',
 			},
 			nav: [
 				 {
 					text: '文档',
 					items: [
-					  { text: 'In progress', link: '/zh/document/master/UserGuide/0-Get Started/1-QuickStart' },
-					  { text: 'V0.9.x', link: '/zh/document/V0.9.x/UserGuide/0-Get Started/1-QuickStart' },
-					  { text: 'V0.8.x', link: '/zh/document/V0.8.x/UserGuide/0-Get Started/1-QuickStart'},
+					  { text: 'In progress', link: '/zh/UserGuide/master/0-Get Started/1-QuickStart' },
+					  { text: 'V0.9.x', link: '/zh/UserGuide/V0.9.x/0-Get Started/1-QuickStart' },
+					  { text: 'V0.8.x', link: '/zh/UserGuide/V0.8.x/0-Get Started/1-QuickStart'},
 					]
 				  },
 				  	{
 					text: '系统设计',
-					link: '/zh/document/master/SystemDesign/0-Architecture/1-Architecture'
+					link: '/zh/SystemDesign/0-Architecture/1-Architecture'
 				  },
 				  {
 					text: '下载',
@@ -492,7 +499,7 @@ var config = {
 					  { text: '如何投票', link: '/zh/development/Development-VoteRelease'},
 					  { text: 'TsFile的更改列表', link: '/zh/development/format-changelist'},
 					  { text: 'RPC变更清单', link: '/zh/development/rpc-changelist'},
-					  { text: '引导', link: '/zh/development/Development-Chinese'},
+					  { text: '开发指南', link: '/zh/development/ContributeGuide'},
 					]
 				  },
 				  {
@@ -515,9 +522,9 @@ var config = {
 				  },
 			],
 			sidebar: {
-				'/zh/document/V0.8.x/UserGuide/': [
+				'/zh/UserGuide/V0.8.x/': [
 					{
-						title: '用户指引(V0.8.x)',
+						title: '用户手册(V0.8.x)',
 						collapsable: false,
 					},
 					{
@@ -598,9 +605,9 @@ var config = {
 						]
 					},				   
 				],
-				'/zh/document/V0.9.x/UserGuide/': [
+				'/zh/UserGuide/V0.9.x/': [
 					{
-						title: '用户指引(V0.9.x)',
+						title: '用户手册(V0.9.x)',
 						collapsable: false,
 					},
 					{
@@ -691,9 +698,9 @@ var config = {
 						]
 					},
 				],
-				'/zh/document/master/UserGuide/': [
+				'/zh/UserGuide/master/': [
 					{
-						title: '用户指引(In progress)',
+						title: '用户手册(In progress)',
 						collapsable: false,
 					},
 					{
@@ -784,7 +791,11 @@ var config = {
 						]
 					},
 				],
-				'/zh/document/master/SystemDesign/': [
+				'/zh/SystemDesign/': [
+					{
+						title: '系统设计',
+						collapsable: false,
+					},
 					{
 						title: '0-应用概览',
 						children: [

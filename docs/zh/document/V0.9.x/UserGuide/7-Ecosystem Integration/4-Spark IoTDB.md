@@ -1,3 +1,0 @@
-# Spark IoTDB
-
-Coming Soon.
