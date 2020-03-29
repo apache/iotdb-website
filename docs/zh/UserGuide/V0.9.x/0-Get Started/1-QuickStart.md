@@ -1,23 +1,21 @@
 <!--
 
-```
-Licensed to the Apache Software Foundation (ASF) under one
-or more contributor license agreements.  See the NOTICE file
-distributed with this work for additional information
-regarding copyright ownership.  The ASF licenses this file
-to you under the Apache License, Version 2.0 (the
-"License"); you may not use this file except in compliance
-with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing,
-software distributed under the License is distributed on an
-"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, either express or implied.  See the License for the
-specific language governing permissions and limitations
-under the License.
-```
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+    
+        http://www.apache.org/licenses/LICENSE-2.0
+    
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
 
 -->
 
@@ -61,7 +59,7 @@ IoTDB支持多种安装途径。用户可以使用三种方式对IoTDB进行安�
 
 ### IoTDB下载
 
-您可以从这里下载程序：[下载](/download/)
+您可以从这里下载程序：[下载](/Download/)
 
 ### 配置文件
 
@@ -167,7 +165,7 @@ IoTDB> CREATE TIMESERIES root.ln.wf01.wt01.status WITH DATATYPE=BOOLEAN, ENCODIN
 IoTDB> CREATE TIMESERIES root.ln.wf01.wt01.temperature WITH DATATYPE=FLOAT, ENCODING=RLE
 ```
 
-为了查看指定的时间序列，我们可以使用SHOW TIMESERIES Path语句，其中Path表示时间序列对应的路径，默认值为空，表示查看系统中所有的时间序列。下面是两个例子：
+为了查看指定的时间序列，我们可以使用SHOW TIMESERIES \<Path\>语句，其中\<Path\>表示时间序列对应的路径，默认值为空，表示查看系统中所有的时间序列。下面是两个例子：
 
 使用SHOW TIMESERIES语句查看系统中存在的所有时间序列，SQL语句如下：
 

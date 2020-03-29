@@ -19,23 +19,23 @@
 
 -->
 
-# How to vote for a release (如何给发布版本投票)
+# How to vote for a release
 
 For non-Chinese users, please read https://cwiki.apache.org/confluence/display/IOTDB/Validating+a+staged+Release
 
-## 下载投票的 版本/rc 下的所有内容
+## Download everything under voting version / rc
 
 https://dist.apache.org/repos/dist/dev/incubator/iotdb/
 
-## 导入发布经理的公钥
+## Import the public key of the release manager
 
 https://dist.apache.org/repos/dist/dev/incubator/iotdb/KEYS
 
-最下边有 Release Manager (RM) 的公钥
+At the bottom is the public key of the Release Manager (RM)
 
-安装 gpg2
+Install gpg2
 
-### 第一种方法
+### the first method
 
 ```
 公钥的开头是这种
@@ -47,7 +47,7 @@ pub   rsa4096 2019-10-15 [SC]
 pub   rsa4096/28662AC6 2019-12-23 [SC]
 ```
 
-下载公钥
+Download the public key
 
 ```
 gpg2 --receive-keys 10F3B3F8A1201B79AA43F2E00FC7F131CAA00430 (或 28662AC6)
@@ -56,9 +56,9 @@ gpg2 --receive-keys 10F3B3F8A1201B79AA43F2E00FC7F131CAA00430 (或 28662AC6)
 gpg2 --keyserver p80.pool.sks-keyservers.net --recv-keys 10F3B3F8A1201B79AA43F2E00FC7F131CAA00430 (或 28662AC6)
 ```
 
-### 第二种方法
+### The second method
 
-把下边这段复制到一个文本文件中，起个名叫 ```key.asc```
+Copy the following paragraph into a text file and name it `key.asc`
 
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -67,67 +67,67 @@ Version: GnuPG v2
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 
-导入 RM 的公钥到自己电脑
+Import RM's public key to your computer
 
 ```
 gpg2 --import key.asc
 ```
 
-## 验证源码发布版
+## Verify the source distribution
 
-* （孵化阶段）验证是否名字中有 ```incubating```
+* (Incubation stage) Verify if `incubating`
 
-* 验证是否有 DISCLAIMER、NOTICE、LICENSE，以及内容是否正确。
+* Verify that there are DISCLAIMER, NOTICE, LICENSE, and the content is correct.
 
-* 验证 README、RELEASE_NOTES
+* Verify README, RELEASE_NOTES
 
-* 验证 header
+* Validation header
 
 ```
 mvn -B apache-rat:check
 ```
 
-* 验证签名和哈希值
+* Verify signatures and hashes
 
 ```
 gpg2 --verify apache-iotdb-0.9.0-incubating-source-release.zip.asc apache-iotdb-0.9.0-incubating-source-release.zip
 
-出现 Good Singnature 
+appear Good Singnature 
 
 shasum -a512 apache-iotdb-0.9.0-incubating-source-release.zip
 
-和对应的 .sha512 对比，一样就可以。
+Compared with the corresponding .sha512, the same is fine.
 ```
 
-* 验证编译
+* Verify compilation
 
 ```
 mvnw.sh install
 
-应该最后全 SUCCESS
+Should end up all SUCCESS
 ```
 
-## 验证二进制发布版
+## Verifying the binary release
 
-* （孵化阶段）验证是否名字中有 ```incubating```
+* (Incubation stage) Verify if `incubating`
 
-* 验证是否有 DISCLAIMER、NOTICE、LICENSE，以及内容是否正确。
+* Verify that there are DISCLAIMER, NOTICE, LICENSE, and the content is correct.
 
-* 验证 README、RELEASE_NOTES
+* Verify README, RELEASE_NOTES
 
-* 验证签名和哈希值
+* Verify signatures and hashes
 
 ```
 gpg2 --verify apache-iotdb-0.9.0-incubating-bin.zip.asc apache-iotdb-0.9.0-incubating-bin.zip
 
-出现 Good Singnature 
+appear Good Singnature 
 
 shasum -a512 apache-iotdb-0.9.0-incubating-bin.zip
 
-和对应的 .sha512 对比，一样就可以。
+Compared with the corresponding .sha512, the same is fine.
 ```
 
-* 验证是否能启动以及示例语句是否正确执行
+* Verify that it starts and the sample statements execute correctly
 
 ```
 ./sbin/start-server.sh
@@ -141,7 +141,7 @@ insert into root.turbine.d1(timestamp,s0) values(2,2);
 insert into root.turbine.d1(timestamp,s0) values(3,3);
 select * from root;
 
-打印如下内容：
+Prints the following:
 +-----------------------------------+------------------+
 |                               Time|root.turbine.d1.s0|
 +-----------------------------------+------------------+
@@ -152,9 +152,9 @@ select * from root;
 
 ```
 
-## 示例邮件
+## Sample mail
 
-验证通过之后可以发邮件了
+Email can be sent after verification
 
 ```
 Hi,
@@ -188,9 +188,9 @@ xxx
 ```
 
 
-## 小工具
+## small tools
 
-* 打印出包含某些字符的行（只看最上边的输出就可以，下边的文件不需要看）
+* Print out lines containing certain characters (just look at the top output, you don't need to look at the bottom file)
 
 ```
 find . -type f -exec grep -i "copyright" {} \; -print | sort -u
