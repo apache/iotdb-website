@@ -62,7 +62,7 @@ Here in the Quick Start, we give a brief introduction to install IoTDB. For furt
 ## Download
 
 You can download the binary file from:
-[Here](/download/)
+[Here](/Download/)
 
 ## Configurations
 

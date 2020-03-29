@@ -40,11 +40,11 @@ To use IoTDB, you need to have:
 >### Installation from  binary files
 
 You can download the binary file from:
-[Here](/download/)
+[Here](/Download/)
 
 ## Installation from source code
 
-You can get the released source code from https://iotdb.apache.org/download/, or from the git repository https://github.com/apache/incubator-iotdb/tree/master
+You can get the released source code from https://iotdb.apache.org/Download/, or from the git repository https://github.com/apache/incubator-iotdb/tree/master
 You can download the source code from:
 
 ```
