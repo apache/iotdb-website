@@ -1,27 +1,38 @@
 <!--
 
-```
-Licensed to the Apache Software Foundation (ASF) under one
-or more contributor license agreements.  See the NOTICE file
-distributed with this work for additional information
-regarding copyright ownership.  The ASF licenses this file
-to you under the Apache License, Version 2.0 (the
-"License"); you may not use this file except in compliance
-with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing,
-software distributed under the License is distributed on an
-"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, either express or implied.  See the License for the
-specific language governing permissions and limitations
-under the License.
-```
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+    
+        http://www.apache.org/licenses/LICENSE-2.0
+    
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
 
 -->
 
+
 # Frequently Asked Questions
+
+## Outline
+
+- Frequently Asked Questions
+  - How can I identify my version of IoTDB?
+  - Where can I find IoTDB logs?
+  - Where can I find IoTDB data files?
+  - How do I know how many time series are stored in IoTDB?
+  - Can I use Hadoop and Spark to read TsFile in IoTDB?
+  - How does IoTDB handle duplicate points?
+  - How can I tell what type of the specific timeseries?
+  - How can I change IoTDB's CLI time display format?
 
 ## How can I identify my version of IoTDB?
 
@@ -36,33 +47,19 @@ There are several ways to identify the version of IoTDB that you are using:
   | |   .--.|_/ | | \_|  | | `. \ | |_) |  
   | | / .'`\ \  | |      | |  | | |  __'.  
  _| |_| \__. | _| |_    _| |_.' /_| |__) | 
-|_____|'.__.' |_____|  |______.'|_______/  version x.x.x
+|_____|'.__.' |_____|  |______.'|_______/  version 0.8.2
 ```
 
 * Check pom.xml file:
 
 ```
-<version>x.x.x</version>
+<version>0.8.2</version>
 ```
 
 * Use JDBC API:
 
 ```
 String iotdbVersion = tsfileDatabaseMetadata.getDatabaseProductVersion();
-```
-
-* Use Command Line Interface:
-
-```
-IoTDB> show version
-show version
-+---------------+
-|version        |
-+---------------+
-|x.x.x          |
-+---------------+
-Total line number = 1
-It costs 0.241s
 ```
 
 ## Where can I find IoTDB logs?
@@ -96,16 +93,10 @@ By default settings, the data files (including tsfile, metadata, and WAL files) 
 Use IoTDB's Command Line Interface:
 
 ```
-IoTDB> show timeseries root
+IoTDB> show timeseries root.*
 ```
 
 In the result, there will be a statement shows `Total timeseries number`, this number is the timeseries number in IoTDB.
-
-In the current version, IoTDB supports querying the number of time series. Use IoTDB's Command Line Interface:
-
-```
-IoTDB> count timeseries root
-```
 
 If you are using Linux, you can use the following shell command:
 
@@ -120,7 +111,7 @@ Yes. IoTDB has intense integration with Open Source Ecosystem. IoTDB supports [H
 
 ## How does IoTDB handle duplicate points?
 
-A data point is uniquely identified by a full time series path (e.g. ```root.vehicle.d0.s0```) and timestamp. If you submit a new point with the same path and timestamp as an existing point, IoTDB will update the value of this point instead of inserting a new point. 
+A data point is uniquely identified by a full time series path (e.g. ```root.vehicle.d0.s0```) and timestamp. If you submit a new point with the same path and timestamp as an existing point, 
 
 ## How can I tell what type of the specific timeseries?
 
@@ -144,9 +135,9 @@ Otherwise, you can also use wildcard in timeseries path:
 IoTDB> show timeseries root.fit.d1.*
 ```
 
-## How can I change IoTDB's Client time display format?
+## How can I change IoTDB's CLI time display format?
 
-The default IoTDB's Client time display format is human readable (e.g. ```1970-01-01T08:00:00.001```), if you want to display time in timestamp type or other readable format, add parameter ```-disableIS08601``` in start command:
+The default IoTDB's CLI time display format is human readable (e.g. ```1970-01-01T08:00:00.001```), if you want to display time in timestamp type or other readable format, add parameter ```-disableIS08601``` in start command:
 
 ```
 > $IOTDB_CLI_HOME/sbin/start-client.sh -h 127.0.0.1 -p 6667 -u root -pw root -disableIS08601

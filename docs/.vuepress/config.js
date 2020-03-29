@@ -65,25 +65,25 @@ var config = {
 				  },
 				  {
 					text: 'Download',
-					link: '/download/'
+					link: '/Download/'
 				  },
 				  {
 					text: 'Community',
 					items: [
-					  { text: 'People', link: '/community/Community-Project Committers'},
-					  { text: 'Powered By', link: '/community/Community-Powered By'},
-					  { text: 'History&Vision', link: '/community/Community-History&Vision'},
+					  { text: 'People', link: '/Community/Community-Project Committers'},
+					  { text: 'Powered By', link: '/Community/Community-Powered By'},
+					  { text: 'History&Vision', link: '/Community/Community-History&Vision'},
 					]
 				  },
 				  {
 					text: 'Development',
 					items: [
-					  { text: 'Questions and Contributing', link: '/development/Development-Contributing'},
-					  { text: 'Developing in IDE', link: '/development/Development-IDE'},
-					  { text: 'How to vote', link: '/development/Development-VoteRelease'},
-					  { text: 'Changelist of TsFile', link: '/development/format-changelist'},
-					  { text: 'Changelist of RPC', link: '/development/rpc-changelist'},
-					  { text: 'ContributeGuide', link: '/development/ContributeGuide'},
+					  { text: 'Questions and Contributing', link: '/Development/Development-Contributing'},
+					  { text: 'Developing in IDE', link: '/Development/Development-IDE'},
+					  { text: 'How to vote', link: '/Development/Development-VoteRelease'},
+					  { text: 'Changelist of TsFile', link: '/Development/format-changelist'},
+					  { text: 'Changelist of RPC', link: '/Development/rpc-changelist'},
+					  { text: 'ContributeGuide', link: '/Development/ContributeGuide'},
 					]
 				  },
 				  {
@@ -481,25 +481,25 @@ var config = {
 				  },
 				  {
 					text: '下载',
-					link: '/zh/download/'
+					link: '/zh/Download/'
 				  },
 				  {
 					text: '社区',
 					items: [
-					  { text: '开发人员', link: '/zh/community/Community-Project Committers'},
-					  { text: '技术支持', link: '/zh/community/Community-Powered By'},
-					  { text: '历史与视角', link: '/zh/community/Community-History&Vision'},
+					  { text: '开发人员', link: '/zh/Community/Community-Project Committers'},
+					  { text: '技术支持', link: '/zh/Community/Community-Powered By'},
+					  { text: '历史与视角', link: '/zh/Community/Community-History&Vision'},
 					]
 				  },
 				  {
 					text: '发展',
 					items: [
-					  { text: '问题与贡献', link: '/zh/development/Development-Contributing'},
-					  { text: '在IDE中开发', link: '/zh/development/Development-IDE'},
-					  { text: '如何投票', link: '/zh/development/Development-VoteRelease'},
-					  { text: 'TsFile的更改列表', link: '/zh/development/format-changelist'},
-					  { text: 'RPC变更清单', link: '/zh/development/rpc-changelist'},
-					  { text: '开发指南', link: '/zh/development/ContributeGuide'},
+					  { text: '问题与贡献', link: '/zh/Development/Development-Contributing'},
+					  { text: '在IDE中开发', link: '/zh/Development/Development-IDE'},
+					  { text: '如何投票', link: '/zh/Development/Development-VoteRelease'},
+					  { text: 'TsFile的更改列表', link: '/zh/Development/format-changelist'},
+					  { text: 'RPC变更清单', link: '/zh/Development/rpc-changelist'},
+					  { text: '开发指南', link: '/zh/Development/ContributeGuide'},
 					]
 				  },
 				  {
