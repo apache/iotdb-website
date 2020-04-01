@@ -16,13 +16,16 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/Community/Community-Project Committers.html</loc>
     </url>
     <url>
-        <loc>https://www.apache.org/iotdb-parent/iotdb-website/Development/Development-Contributing.html</loc>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/Development/ContributeGuide.html</loc>
     </url>
     <url>
-        <loc>https://www.apache.org/iotdb-parent/iotdb-website/Development/Development-Document.html</loc>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/Development/VoteRelease.html</loc>
     </url>
     <url>
-        <loc>https://www.apache.org/iotdb-parent/iotdb-website/Development/Development-IDE.html</loc>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/Development/format-changelist.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/Development/rpc-changelist.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/Download/index.html</loc>
@@ -457,10 +460,25 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/index.html</loc>
     </url>
     <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/Community/Community-History&amp;Vision.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/Community/Community-Powered By.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/Community/Community-Project Committers.html</loc>
+    </url>
+    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/Development/ContributeGuide.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/Development/VoteRelease.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/Development/format-changelist.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/Development/rpc-changelist.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/Download/index.html</loc>
