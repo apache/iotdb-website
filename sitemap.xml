@@ -97,6 +97,9 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/SystemDesign/5-DataQuery/7-AlignByDeviceQuery.html</loc>
     </url>
     <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/SystemDesign/5-DataQuery/8-ModificationHandle.html</loc>
+    </url>
+    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/SystemDesign/6-Tools/1-Sync.html</loc>
     </url>
     <url>
@@ -896,6 +899,9 @@
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/5-DataQuery/7-AlignByDeviceQuery.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/5-DataQuery/8-ModificationHandle.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/6-Tools/1-Sync.html</loc>
