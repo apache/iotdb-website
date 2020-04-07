@@ -334,6 +334,9 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/V0.9.x/8-System Design/4-Shared Nothing Cluster.html</loc>
     </url>
     <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/UserGuideReadme.html</loc>
+    </url>
+    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/0-Get Started/1-QuickStart.html</loc>
     </url>
     <url>
@@ -1138,7 +1141,7 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/UserGuide/V0.9.x/8-System Design/4-Shared Nothing Cluster.html</loc>
     </url>
     <url>
-        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/UserGuide/master/index.html</loc>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/UserGuide/master/UserGuideReadme.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/UserGuide/master/0-Get Started/1-QuickStart.html</loc>
