@@ -460,6 +460,354 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/8-Architecture/3-Shared Nothing Cluster.html</loc>
     </url>
     <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/0-Get Started/1-QuickStart.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/0-Get Started/2-Frequently asked questions.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/0-Get Started/3-Publication.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/1-Overview/1-What is IoTDB.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/1-Overview/2-Architecture.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/1-Overview/3-Scenario.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/1-Overview/4-Features.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/2-Concept Key Concepts and Terminology/1-Key Concepts and Terminology.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/2-Concept Key Concepts and Terminology/2-Data Type.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/2-Concept Key Concepts and Terminology/3-Encoding.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/2-Concept Key Concepts and Terminology/4-Compression.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/3-Operation Manual/1-Sample Data.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/3-Operation Manual/2-Data Model Selection.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/3-Operation Manual/3-Data Import.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/3-Operation Manual/4-Data Query.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/3-Operation Manual/5-Data Maintenance.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/3-Operation Manual/6-Priviledge Management.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/4-Deployment and Management/1-Deployment.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/4-Deployment and Management/2-Configuration.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/4-Deployment and Management/3-System Monitor.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/4-Deployment and Management/4-Performance Monitor.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/4-Deployment and Management/5-System log.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/4-Deployment and Management/6-Data Management.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/4-Deployment and Management/7-Build and use IoTDB by Dockerfile.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/5-IoTDB SQL Documentation/1-IoTDB Query Statement.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/5-IoTDB SQL Documentation/2-Reference.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/6-JDBC API/1-JDBC API.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/7-TsFile/1-Installation.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/7-TsFile/2-Usage.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/7-TsFile/3-Hierarchy.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/8-System Tools/1-Sync.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.8.x/8-System Tools/2-Memory Estimation Tool.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/0-Get Started/1-QuickStart.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/0-Get Started/2-Frequently asked questions.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/0-Get Started/3-Publication.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/1-Overview/1-What is IoTDB.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/1-Overview/2-Architecture.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/1-Overview/3-Scenario.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/1-Overview/4-Features.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/2-Concept/1-Data Model and Terminology.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/2-Concept/2-Data Type.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/2-Concept/3-Encoding.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/2-Concept/4-Compression.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/3-Server/1-Download.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/3-Server/2-Single Node Setup.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/3-Server/3-Cluster Setup.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/3-Server/4-Config Manual.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/3-Server/5-Docker Image.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/4-Client/1-Command Line Interface.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/4-Client/2-Programming - JDBC.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/4-Client/3-Programming - Session.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/4-Client/4-Programming - Other Languages.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/4-Client/5-Programming - TsFile API.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/5-Operation Manual/1-DDL Data Definition Language.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/5-Operation Manual/2-DML Data Manipulation Language.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/5-Operation Manual/3-Account Management Statements.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/5-Operation Manual/4-SQL Reference.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/6-System Tools/1-Sync Tool.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/6-System Tools/2-Memory Estimation Tool.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/6-System Tools/3-JMX Tool.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/6-System Tools/4-Watermark Tool.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/6-System Tools/5-Log Visualizer.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/6-System Tools/6-Query History Visualization Tool.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/6-System Tools/7-Monitor and Log Tools.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/6-System Tools/8-Load External Tsfile.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/7-Ecosystem Integration/1-Grafana.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/7-Ecosystem Integration/2-MapReduce TsFile.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/7-Ecosystem Integration/3-Spark TsFile.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/7-Ecosystem Integration/4-Spark IoTDB.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/7-Ecosystem Integration/5-Hive TsFile.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/8-System Design/1-Hierarchy.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/8-System Design/2-Files.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/8-System Design/3-Writing Data on HDFS.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/V0.9.x/8-System Design/4-Shared Nothing Cluster.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/0-Get Started/1-QuickStart.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/0-Get Started/2-Frequently asked questions.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/0-Get Started/3-Publication.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/1-Overview/1-What is IoTDB.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/1-Overview/2-Architecture.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/1-Overview/3-Scenario.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/1-Overview/4-Features.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/2-Concept/1-Data Model and Terminology.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/2-Concept/2-Data Type.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/2-Concept/3-Encoding.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/2-Concept/4-Compression.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/3-Server/1-Download.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/3-Server/2-Single Node Setup.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/3-Server/3-Cluster Setup.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/3-Server/4-Config Manual.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/3-Server/5-Docker Image.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/4-Client/1-Command Line Interface.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/4-Client/2-Programming - Native API.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/4-Client/3-Programming - JDBC.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/4-Client/4-Programming - Other Languages.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/4-Client/5-Programming - TsFile API.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/4-Client/6-Status Codes.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/5-Operation Manual/1-DDL Data Definition Language.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/5-Operation Manual/2-DML Data Manipulation Language.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/5-Operation Manual/3-Account Management Statements.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/5-Operation Manual/4-SQL Reference.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/6-System Tools/1-Sync Tool.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/6-System Tools/2-Memory Estimation Tool.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/6-System Tools/3-JMX Tool.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/6-System Tools/4-Watermark Tool.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/6-System Tools/5-Log Visualizer.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/6-System Tools/6-Query History Visualization Tool.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/6-System Tools/7-Monitor and Log Tools.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/6-System Tools/8-Load External Tsfile.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/7-Ecosystem Integration/1-Grafana.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/7-Ecosystem Integration/2-MapReduce TsFile.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/7-Ecosystem Integration/3-Spark TsFile.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/7-Ecosystem Integration/4-Spark IoTDB.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/7-Ecosystem Integration/5-Hive TsFile.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/8-Architecture/1-Files.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/8-Architecture/2-Writing Data on HDFS.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/8-Architecture/3-Shared Nothing Cluster.html</loc>
+    </url>
+    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/index.html</loc>
     </url>
     <url>
@@ -917,5 +1265,8 @@
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/UserGuide/master/8-Architecture/3-Shared Nothing Cluster.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/UserGuide/master/master/index.html</loc>
     </url>
 </urlset>
