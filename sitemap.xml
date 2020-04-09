@@ -400,7 +400,10 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/4-Client/5-Programming - TsFile API.html</loc>
     </url>
     <url>
-        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/4-Client/6-Status Codes.html</loc>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/4-Client/6-Programming - MQTT.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/4-Client/7-Status Codes.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/5-Operation Manual/1-DDL Data Definition Language.html</loc>
@@ -812,6 +815,9 @@
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/8-Architecture/3-Shared Nothing Cluster.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/master/UserGuideReadme.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/index.html</loc>
