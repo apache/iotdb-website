@@ -7,6 +7,9 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/index.html</loc>
     </url>
     <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/Community/ASF.html</loc>
+    </url>
+    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/Community/Community-History&amp;Vision.html</loc>
     </url>
     <url>
@@ -14,6 +17,9 @@
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/Community/Community-Project Committers.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/Community/Wiki.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/Development/ContributeGuide.html</loc>
@@ -754,7 +760,10 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/4-Client/5-Programming - TsFile API.html</loc>
     </url>
     <url>
-        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/4-Client/6-Status Codes.html</loc>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/4-Client/6-Programming - MQTT.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/4-Client/7-Status Codes.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/master/master/5-Operation Manual/1-DDL Data Definition Language.html</loc>
@@ -823,6 +832,9 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/index.html</loc>
     </url>
     <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/Community/ASF.html</loc>
+    </url>
+    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/Community/Community-History&amp;Vision.html</loc>
     </url>
     <url>
@@ -830,6 +842,9 @@
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/Community/Community-Project Committers.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/Community/Wiki.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/Development/ContributeGuide.html</loc>
