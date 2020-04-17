@@ -10,7 +10,13 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/Community/Community-Project Committers.html</loc>
     </url>
     <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/Development/Committer.html</loc>
+    </url>
+    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/Development/ContributeGuide.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/Development/HowToCommit.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/Development/VoteRelease.html</loc>
@@ -374,6 +380,9 @@
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/8-Architecture/3-Shared Nothing Cluster.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/Master/UserGuideReadme.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/V0.8.x/0-Get Started/1-QuickStart.html</loc>
@@ -829,7 +838,13 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/Community/Community-Project Committers.html</loc>
     </url>
     <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/Development/Committer.html</loc>
+    </url>
+    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/Development/ContributeGuide.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/Development/HowToCommit.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/Development/VoteRelease.html</loc>
