@@ -64,6 +64,9 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/SystemDesign/2-QueryEngine/3-PlanExecutor.html</loc>
     </url>
     <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/SystemDesign/2-QueryEngine/4-ResultSetConstruction.html</loc>
+    </url>
+    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/SystemDesign/3-SchemaManager/1-SchemaManager.html</loc>
     </url>
     <url>
@@ -91,10 +94,16 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/SystemDesign/5-DataQuery/10-GroupByFillQuery.html</loc>
     </url>
     <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/SystemDesign/5-DataQuery/2-QueryFundamentals.html</loc>
+    </url>
+    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/SystemDesign/5-DataQuery/2-SeriesReader.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/SystemDesign/5-DataQuery/3-ModificationHandle.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/SystemDesign/5-DataQuery/3-SeriesReader.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/SystemDesign/5-DataQuery/4-RawDataQuery.html</loc>
@@ -898,6 +907,9 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/2-QueryEngine/3-PlanExecutor.html</loc>
     </url>
     <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/2-QueryEngine/4-ResultSetConstruction.html</loc>
+    </url>
+    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/3-SchemaManager/1-SchemaManager.html</loc>
     </url>
     <url>
@@ -925,10 +937,16 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/5-DataQuery/10-GroupByFillQuery.html</loc>
     </url>
     <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/5-DataQuery/2-QueryFundamentals.html</loc>
+    </url>
+    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/5-DataQuery/2-SeriesReader.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/5-DataQuery/3-ModificationHandle.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/5-DataQuery/3-SeriesReader.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/5-DataQuery/4-RawDataQuery.html</loc>
