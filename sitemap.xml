@@ -97,12 +97,6 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/SystemDesign/5-DataQuery/2-QueryFundamentals.html</loc>
     </url>
     <url>
-        <loc>https://www.apache.org/iotdb-parent/iotdb-website/SystemDesign/5-DataQuery/2-SeriesReader.html</loc>
-    </url>
-    <url>
-        <loc>https://www.apache.org/iotdb-parent/iotdb-website/SystemDesign/5-DataQuery/3-ModificationHandle.html</loc>
-    </url>
-    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/SystemDesign/5-DataQuery/3-SeriesReader.html</loc>
     </url>
     <url>
@@ -398,9 +392,6 @@
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/8-Architecture/3-Shared Nothing Cluster.html</loc>
-    </url>
-    <url>
-        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/Master/UserGuideReadme.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/V0.8.x/0-Get Started/1-QuickStart.html</loc>
@@ -938,12 +929,6 @@
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/5-DataQuery/2-QueryFundamentals.html</loc>
-    </url>
-    <url>
-        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/5-DataQuery/2-SeriesReader.html</loc>
-    </url>
-    <url>
-        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/5-DataQuery/3-ModificationHandle.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/5-DataQuery/3-SeriesReader.html</loc>
