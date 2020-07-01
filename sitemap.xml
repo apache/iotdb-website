@@ -172,6 +172,9 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Client/Status Codes.html</loc>
     </url>
     <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Comparison/TSDB-Comparison.html</loc>
+    </url>
+    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Concept/Compression.html</loc>
     </url>
     <url>
@@ -341,6 +344,9 @@
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/System Tools/Watermark Tool.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/V0.10.x/UserGuideReadme.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Operation Manual/Administration.html</loc>
