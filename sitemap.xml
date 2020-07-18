@@ -244,6 +244,9 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/Client/Status Codes.html</loc>
     </url>
     <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/Comparison/TSDB-Comparison.html</loc>
+    </url>
+    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/Concept/Compression.html</loc>
     </url>
     <url>
@@ -394,13 +397,13 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/System Tools/Load External Tsfile.html</loc>
     </url>
     <url>
-        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/System Tools/Log Visualizer.html</loc>
-    </url>
-    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/System Tools/Memory Estimation Tool.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/System Tools/Monitor and Log Tools.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/System Tools/Performance Tracing Tool.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/System Tools/Query History Visualization Tool.html</loc>
@@ -1366,13 +1369,13 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/UserGuide/Master/System Tools/Load External Tsfile.html</loc>
     </url>
     <url>
-        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/UserGuide/Master/System Tools/Log Visualizer.html</loc>
-    </url>
-    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/UserGuide/Master/System Tools/Memory Estimation Tool.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/UserGuide/Master/System Tools/Monitor and Log Tools.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/UserGuide/Master/System Tools/Performance Tracing Tool.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/UserGuide/Master/System Tools/Query History Visualization Tool.html</loc>
