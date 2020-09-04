@@ -157,6 +157,9 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Client/Command Line Interface.html</loc>
     </url>
     <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Client/Native API Update(0.9-0.10).html</loc>
+    </url>
+    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Client/Programming - JDBC.html</loc>
     </url>
     <url>
@@ -1274,6 +1277,9 @@
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/UserGuide/Master/Client/Command Line Interface.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/UserGuide/Master/Client/Native API Update(0.9-0.10).html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/UserGuide/Master/Client/Programming - JDBC.html</loc>
