@@ -157,9 +157,6 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Client/Command Line Interface.html</loc>
     </url>
     <url>
-        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Client/Native API Update(0.9-0.10).html</loc>
-    </url>
-    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Client/Programming - JDBC.html</loc>
     </url>
     <url>
@@ -230,6 +227,9 @@
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/Client/Command Line Interface.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/Client/Native API Update(0.9-0.10).html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/Client/Programming - JDBC.html</loc>
@@ -1201,6 +1201,9 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/DataQuery/LastQuery.html</loc>
     </url>
     <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/DataQuery/OrderByTimeQuery.html</loc>
+    </url>
+    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/DataQuery/QueryFundamentals.html</loc>
     </url>
     <url>
@@ -1246,6 +1249,9 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/StorageEngine/StorageEngine.html</loc>
     </url>
     <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/StorageEngine/TsFileManagement.html</loc>
+    </url>
+    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/StorageEngine/WAL.html</loc>
     </url>
     <url>
@@ -1277,9 +1283,6 @@
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/UserGuide/Master/Client/Command Line Interface.html</loc>
-    </url>
-    <url>
-        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/UserGuide/Master/Client/Native API Update(0.9-0.10).html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/UserGuide/Master/Client/Programming - JDBC.html</loc>
