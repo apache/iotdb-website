@@ -229,9 +229,6 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/Client/Command Line Interface.html</loc>
     </url>
     <url>
-        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/Client/Native API Update(0.9-0.10).html</loc>
-    </url>
-    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/Client/Programming - JDBC.html</loc>
     </url>
     <url>
@@ -287,9 +284,6 @@
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/Get Started/QuickStart.html</loc>
-    </url>
-    <url>
-        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/Master/UserGuideReadme.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/Operation Manual/Administration.html</loc>
@@ -353,9 +347,6 @@
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/System Tools/Watermark Tool.html</loc>
-    </url>
-    <url>
-        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/V0.10.x/UserGuideReadme.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Operation Manual/Administration.html</loc>
