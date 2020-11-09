@@ -286,6 +286,9 @@
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/Get Started/QuickStart.html</loc>
     </url>
     <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/Master/UserGuideReadme.html</loc>
+    </url>
+    <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/Operation Manual/Administration.html</loc>
     </url>
     <url>
@@ -332,9 +335,6 @@
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/System Tools/Load External Tsfile.html</loc>
-    </url>
-    <url>
-        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/System Tools/Memory Estimation Tool.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/Master/System Tools/Monitor and Log Tools.html</loc>
@@ -401,9 +401,6 @@
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/System Tools/Load External Tsfile.html</loc>
-    </url>
-    <url>
-        <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/System Tools/Memory Estimation Tool.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/UserGuide/Master/System Tools/Monitor and Log Tools.html</loc>
@@ -521,6 +518,9 @@
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/SchemaManager/SchemaManager.html</loc>
+    </url>
+    <url>
+        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/StorageEngine/Compaction.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/SystemDesign/StorageEngine/DataManipulation.html</loc>
@@ -683,9 +683,6 @@
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/UserGuide/Master/System Tools/Load External Tsfile.html</loc>
-    </url>
-    <url>
-        <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/UserGuide/Master/System Tools/Memory Estimation Tool.html</loc>
     </url>
     <url>
         <loc>https://www.apache.org/iotdb-parent/iotdb-website/zh/UserGuide/Master/System Tools/Monitor and Log Tools.html</loc>
