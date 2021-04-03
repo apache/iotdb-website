@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> </title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content=" ">
+    <meta name="Description" content="Apache IoTDB: Time Series Database for IoT">
+    <meta name="Keywords" content="TSDB, time series, time series database, IoTDB, IoT database, IoT data management,时序数据库, 时间序列管理, IoTDB, 物联网数据库, 实时数据库, 物联网数据管理, 物联网数据">
+    <meta name="baidu-site-verification" content="wfKETzB3OT">
+    <meta name="google-site-verification" content="mZWAoRY0yj_HAr-s47zHCGHzx5Ju-RVm5wDbPnwQYFo">
+    
+    <link rel="preload" href="/assets/css/0.styles.ccadf850.css" as="style"><link rel="preload" href="/assets/js/app.21d02352.js" as="script"><link rel="preload" href="/assets/js/3.e95317f3.js" as="script"><link rel="preload" href="/assets/js/62.63ffdccd.js" as="script"><link rel="prefetch" href="/assets/js/10.77e7d27b.js"><link rel="prefetch" href="/assets/js/100.87891f9f.js"><link rel="prefetch" href="/assets/js/101.5104776d.js"><link rel="prefetch" href="/assets/js/102.3c5cb02b.js"><link rel="prefetch" href="/assets/js/103.aace9c40.js"><link rel="prefetch" href="/assets/js/104.1e77d4e7.js"><link rel="prefetch" href="/assets/js/105.2e285c14.js"><link rel="prefetch" href="/assets/js/106.ed5f48e7.js"><link rel="prefetch" href="/assets/js/107.2f9d2645.js"><link rel="prefetch" href="/assets/js/108.b66c9a8f.js"><link rel="prefetch" href="/assets/js/109.57f04174.js"><link rel="prefetch" href="/assets/js/11.5ddb40d6.js"><link rel="prefetch" href="/assets/js/110.29e2499d.js"><link rel="prefetch" href="/assets/js/111.b721374e.js"><link rel="prefetch" href="/assets/js/112.44732d74.js"><link rel="prefetch" href="/assets/js/113.18a4c509.js"><link rel="prefetch" href="/assets/js/114.0d8f2607.js"><link rel="prefetch" href="/assets/js/115.fbfba1eb.js"><link rel="prefetch" href="/assets/js/116.afbd129c.js"><link rel="prefetch" href="/assets/js/117.bb744034.js"><link rel="prefetch" href="/assets/js/118.d8348dde.js"><link rel="prefetch" href="/assets/js/119.36fd80be.js"><link rel="prefetch" href="/assets/js/12.30292c04.js"><link rel="prefetch" href="/assets/js/120.bfa7845b.js"><link rel="prefetch" href="/assets/js/121.bc24c094.js"><link rel="prefetch" href="/assets/js/122.2d3db495.js"><link rel="prefetch" href="/assets/js/123.f2b3826c.js"><link rel="prefetch" href="/assets/js/124.824251ee.js"><link rel="prefetch" href="/assets/js/125.5d156960.js"><link rel="prefetch" href="/assets/js/126.caaf5e01.js"><link rel="prefetch" href="/assets/js/127.caf2f898.js"><link rel="prefetch" href="/assets/js/128.eb548471.js"><link rel="prefetch" href="/assets/js/129.9c9730d2.js"><link rel="prefetch" href="/assets/js/13.43c63c4e.js"><link rel="prefetch" href="/assets/js/130.73a00406.js"><link rel="prefetch" href="/assets/js/131.96da42f5.js"><link rel="prefetch" href="/assets/js/132.ca202174.js"><link rel="prefetch" href="/assets/js/133.0901833f.js"><link rel="prefetch" href="/assets/js/134.02483414.js"><link rel="prefetch" href="/assets/js/135.b893c04a.js"><link rel="prefetch" href="/assets/js/136.92b787f8.js"><link rel="prefetch" href="/assets/js/137.d476db4f.js"><link rel="prefetch" href="/assets/js/138.808bb4c5.js"><link rel="prefetch" href="/assets/js/139.614896c0.js"><link rel="prefetch" href="/assets/js/14.27754845.js"><link rel="prefetch" href="/assets/js/140.06fd42b3.js"><link rel="prefetch" href="/assets/js/141.f4cd2178.js"><link rel="prefetch" href="/assets/js/142.d468eedc.js"><link rel="prefetch" href="/assets/js/143.c382b0b8.js"><link rel="prefetch" href="/assets/js/144.610c4081.js"><link rel="prefetch" href="/assets/js/145.1c62a4d0.js"><link rel="prefetch" href="/assets/js/146.8efde8d7.js"><link rel="prefetch" href="/assets/js/147.7e649059.js"><link rel="prefetch" href="/assets/js/148.a56545f4.js"><link rel="prefetch" href="/assets/js/149.40c4a556.js"><link rel="prefetch" href="/assets/js/15.843fe861.js"><link rel="prefetch" href="/assets/js/150.0782606d.js"><link rel="prefetch" href="/assets/js/151.edac3c0d.js"><link rel="prefetch" href="/assets/js/152.2dba0b31.js"><link rel="prefetch" href="/assets/js/153.5f4e036b.js"><link rel="prefetch" href="/assets/js/154.1586319b.js"><link rel="prefetch" href="/assets/js/155.6b547c30.js"><link rel="prefetch" href="/assets/js/156.5389615c.js"><link rel="prefetch" href="/assets/js/157.fe6fbc9c.js"><link rel="prefetch" href="/assets/js/158.b6155892.js"><link rel="prefetch" href="/assets/js/159.969149d7.js"><link rel="prefetch" href="/assets/js/16.a295f63e.js"><link rel="prefetch" href="/assets/js/160.6a1268f8.js"><link rel="prefetch" href="/assets/js/161.6ac36ecc.js"><link rel="prefetch" href="/assets/js/162.8e8f0b7a.js"><link rel="prefetch" href="/assets/js/163.9cf89341.js"><link rel="prefetch" href="/assets/js/164.26eb1252.js"><link rel="prefetch" href="/assets/js/165.a50ca901.js"><link rel="prefetch" href="/assets/js/166.7e46ca06.js"><link rel="prefetch" href="/assets/js/167.f3bc9b1a.js"><link rel="prefetch" href="/assets/js/168.e3979906.js"><link rel="prefetch" href="/assets/js/169.8557aa7c.js"><link rel="prefetch" href="/assets/js/17.0dc295c9.js"><link rel="prefetch" href="/assets/js/170.6c329603.js"><link rel="prefetch" href="/assets/js/171.f8914769.js"><link rel="prefetch" href="/assets/js/172.198937cc.js"><link rel="prefetch" href="/assets/js/173.07bcc110.js"><link rel="prefetch" href="/assets/js/174.bb8dd7b0.js"><link rel="prefetch" href="/assets/js/175.1f574749.js"><link rel="prefetch" href="/assets/js/176.7eb83ad0.js"><link rel="prefetch" href="/assets/js/177.4e40876a.js"><link rel="prefetch" href="/assets/js/178.e270ed08.js"><link rel="prefetch" href="/assets/js/179.23bfccdb.js"><link rel="prefetch" href="/assets/js/18.122d5826.js"><link rel="prefetch" href="/assets/js/180.d6609806.js"><link rel="prefetch" href="/assets/js/181.7b6deef5.js"><link rel="prefetch" href="/assets/js/182.ff84b849.js"><link rel="prefetch" href="/assets/js/183.fc45ef1f.js"><link rel="prefetch" href="/assets/js/184.0126b316.js"><link rel="prefetch" href="/assets/js/185.fb02ec20.js"><link rel="prefetch" href="/assets/js/186.5dd1869c.js"><link rel="prefetch" href="/assets/js/187.fbcc01f7.js"><link rel="prefetch" href="/assets/js/188.9ab5cc89.js"><link rel="prefetch" href="/assets/js/189.cb825031.js"><link rel="prefetch" href="/assets/js/19.9187dec1.js"><link rel="prefetch" href="/assets/js/190.c3ae726f.js"><link rel="prefetch" href="/assets/js/191.96889caa.js"><link rel="prefetch" href="/assets/js/192.61f4df5d.js"><link rel="prefetch" href="/assets/js/193.cddd3be4.js"><link rel="prefetch" href="/assets/js/194.b45804b4.js"><link rel="prefetch" href="/assets/js/195.21aca146.js"><link rel="prefetch" href="/assets/js/196.e981220e.js"><link rel="prefetch" href="/assets/js/197.d79fb1cc.js"><link rel="prefetch" href="/assets/js/198.848fbc6a.js"><link rel="prefetch" href="/assets/js/199.2d3f9918.js"><link rel="prefetch" href="/assets/js/20.cf088c3b.js"><link rel="prefetch" href="/assets/js/200.ae99c7c2.js"><link rel="prefetch" href="/assets/js/201.48f48797.js"><link rel="prefetch" href="/assets/js/202.d7f7dd0b.js"><link rel="prefetch" href="/assets/js/203.0480dc05.js"><link rel="prefetch" href="/assets/js/204.f75323db.js"><link rel="prefetch" href="/assets/js/205.43f0a3f2.js"><link rel="prefetch" href="/assets/js/206.c3aaf3f9.js"><link rel="prefetch" href="/assets/js/207.d9b0d17c.js"><link rel="prefetch" href="/assets/js/208.226a1dfd.js"><link rel="prefetch" href="/assets/js/209.cdc82615.js"><link rel="prefetch" href="/assets/js/21.7c4456b0.js"><link rel="prefetch" href="/assets/js/210.fe9edc74.js"><link rel="prefetch" href="/assets/js/211.15611bfc.js"><link rel="prefetch" href="/assets/js/212.104e35e7.js"><link rel="prefetch" href="/assets/js/213.aea5843e.js"><link rel="prefetch" href="/assets/js/214.30eaa159.js"><link rel="prefetch" href="/assets/js/215.b3ec2479.js"><link rel="prefetch" href="/assets/js/216.6aa72a6d.js"><link rel="prefetch" href="/assets/js/217.bd6d9c4a.js"><link rel="prefetch" href="/assets/js/218.128ec60b.js"><link rel="prefetch" href="/assets/js/219.94ecebd1.js"><link rel="prefetch" href="/assets/js/22.d30695a0.js"><link rel="prefetch" href="/assets/js/220.34bc6e7e.js"><link rel="prefetch" href="/assets/js/221.2f844304.js"><link rel="prefetch" href="/assets/js/222.0b147862.js"><link rel="prefetch" href="/assets/js/223.b09c67b8.js"><link rel="prefetch" href="/assets/js/224.2fc39d1f.js"><link rel="prefetch" href="/assets/js/225.2a3ab718.js"><link rel="prefetch" href="/assets/js/226.28cfbd45.js"><link rel="prefetch" href="/assets/js/227.f3887c10.js"><link rel="prefetch" href="/assets/js/228.6de2676f.js"><link rel="prefetch" href="/assets/js/229.055f04e2.js"><link rel="prefetch" href="/assets/js/23.91ba0b88.js"><link rel="prefetch" href="/assets/js/230.ca135a6f.js"><link rel="prefetch" href="/assets/js/231.b0216fac.js"><link rel="prefetch" href="/assets/js/232.cc478a93.js"><link rel="prefetch" href="/assets/js/233.0f3d666a.js"><link rel="prefetch" href="/assets/js/234.fb6110df.js"><link rel="prefetch" href="/assets/js/235.3805944b.js"><link rel="prefetch" href="/assets/js/236.b977dbf2.js"><link rel="prefetch" href="/assets/js/237.7630406d.js"><link rel="prefetch" href="/assets/js/238.8a8d6da3.js"><link rel="prefetch" href="/assets/js/239.d740656e.js"><link rel="prefetch" href="/assets/js/24.73f75877.js"><link rel="prefetch" href="/assets/js/240.9b363f24.js"><link rel="prefetch" href="/assets/js/241.a7a523e1.js"><link rel="prefetch" href="/assets/js/242.86e3c344.js"><link rel="prefetch" href="/assets/js/243.b561d8d3.js"><link rel="prefetch" href="/assets/js/244.c1ec5e70.js"><link rel="prefetch" href="/assets/js/245.4892a13d.js"><link rel="prefetch" href="/assets/js/246.477a1b73.js"><link rel="prefetch" href="/assets/js/247.ad14c7c9.js"><link rel="prefetch" href="/assets/js/248.ce48ddaa.js"><link rel="prefetch" href="/assets/js/249.c345fabe.js"><link rel="prefetch" href="/assets/js/25.f8281c6e.js"><link rel="prefetch" href="/assets/js/250.0f497cdc.js"><link rel="prefetch" href="/assets/js/251.a696207c.js"><link rel="prefetch" href="/assets/js/252.f9a1a66f.js"><link rel="prefetch" href="/assets/js/253.71e8bf10.js"><link rel="prefetch" href="/assets/js/254.e0afabf5.js"><link rel="prefetch" href="/assets/js/255.6183e445.js"><link rel="prefetch" href="/assets/js/256.f3956514.js"><link rel="prefetch" href="/assets/js/257.ea907563.js"><link rel="prefetch" href="/assets/js/258.83224265.js"><link rel="prefetch" href="/assets/js/259.a02febe0.js"><link rel="prefetch" href="/assets/js/26.0057d37b.js"><link rel="prefetch" href="/assets/js/260.52803e45.js"><link rel="prefetch" href="/assets/js/261.cdbb6f97.js"><link rel="prefetch" href="/assets/js/262.18c2565a.js"><link rel="prefetch" href="/assets/js/263.8af36533.js"><link rel="prefetch" href="/assets/js/264.43ee5f1a.js"><link rel="prefetch" href="/assets/js/265.63097d62.js"><link rel="prefetch" href="/assets/js/266.ca225af9.js"><link rel="prefetch" href="/assets/js/267.beea5d0a.js"><link rel="prefetch" href="/assets/js/268.f1583bf9.js"><link rel="prefetch" href="/assets/js/269.33629f13.js"><link rel="prefetch" href="/assets/js/27.81294b57.js"><link rel="prefetch" href="/assets/js/270.e5fa0340.js"><link rel="prefetch" href="/assets/js/271.7418d8b3.js"><link rel="prefetch" href="/assets/js/272.c03fdadb.js"><link rel="prefetch" href="/assets/js/273.c90f2a89.js"><link rel="prefetch" href="/assets/js/274.025000d2.js"><link rel="prefetch" href="/assets/js/275.785fd825.js"><link rel="prefetch" href="/assets/js/276.cdb78c5d.js"><link rel="prefetch" href="/assets/js/277.8033bd17.js"><link rel="prefetch" href="/assets/js/278.8b7117be.js"><link rel="prefetch" href="/assets/js/279.b4687dca.js"><link rel="prefetch" href="/assets/js/28.de5fbffd.js"><link rel="prefetch" href="/assets/js/280.613a5eba.js"><link rel="prefetch" href="/assets/js/281.c4407599.js"><link rel="prefetch" href="/assets/js/282.1eb0458c.js"><link rel="prefetch" href="/assets/js/283.c3249204.js"><link rel="prefetch" href="/assets/js/284.ac2bf191.js"><link rel="prefetch" href="/assets/js/285.bca6aa40.js"><link rel="prefetch" href="/assets/js/286.6cbe9274.js"><link rel="prefetch" href="/assets/js/287.088fa473.js"><link rel="prefetch" href="/assets/js/288.a1f73477.js"><link rel="prefetch" href="/assets/js/289.659caaed.js"><link rel="prefetch" href="/assets/js/29.a31435b1.js"><link rel="prefetch" href="/assets/js/290.f024ff5f.js"><link rel="prefetch" href="/assets/js/291.6e1a6c9b.js"><link rel="prefetch" href="/assets/js/292.fe3528f4.js"><link rel="prefetch" href="/assets/js/293.cd2df0cc.js"><link rel="prefetch" href="/assets/js/294.db318cdf.js"><link rel="prefetch" href="/assets/js/295.7adfdd6a.js"><link rel="prefetch" href="/assets/js/296.49c44c7f.js"><link rel="prefetch" href="/assets/js/297.9c1e3937.js"><link rel="prefetch" href="/assets/js/298.0790ad48.js"><link rel="prefetch" href="/assets/js/299.3c3e00ac.js"><link rel="prefetch" href="/assets/js/30.60649b66.js"><link rel="prefetch" href="/assets/js/300.8147e316.js"><link rel="prefetch" href="/assets/js/301.de3ae610.js"><link rel="prefetch" href="/assets/js/302.fbea453a.js"><link rel="prefetch" href="/assets/js/303.10880519.js"><link rel="prefetch" href="/assets/js/304.0d8f585e.js"><link rel="prefetch" href="/assets/js/305.e427181a.js"><link rel="prefetch" href="/assets/js/306.d063658b.js"><link rel="prefetch" href="/assets/js/307.19b6834f.js"><link rel="prefetch" href="/assets/js/308.85fb07ff.js"><link rel="prefetch" href="/assets/js/309.912d7531.js"><link rel="prefetch" href="/assets/js/31.2a16211c.js"><link rel="prefetch" href="/assets/js/310.e410f107.js"><link rel="prefetch" href="/assets/js/311.da17b546.js"><link rel="prefetch" href="/assets/js/312.adc2b837.js"><link rel="prefetch" href="/assets/js/313.53bcd5b2.js"><link rel="prefetch" href="/assets/js/314.3d3ff758.js"><link rel="prefetch" href="/assets/js/315.0779decb.js"><link rel="prefetch" href="/assets/js/316.38ae1ed9.js"><link rel="prefetch" href="/assets/js/317.ad1d3fe2.js"><link rel="prefetch" href="/assets/js/318.b60eadcb.js"><link rel="prefetch" href="/assets/js/319.ab0aa778.js"><link rel="prefetch" href="/assets/js/32.e5e702b0.js"><link rel="prefetch" href="/assets/js/320.b6c22047.js"><link rel="prefetch" href="/assets/js/321.a485aa5b.js"><link rel="prefetch" href="/assets/js/322.ef0b542c.js"><link rel="prefetch" href="/assets/js/323.40853e08.js"><link rel="prefetch" href="/assets/js/324.aea10739.js"><link rel="prefetch" href="/assets/js/325.9ce35f73.js"><link rel="prefetch" href="/assets/js/326.cca3c3ee.js"><link rel="prefetch" href="/assets/js/327.9d79b328.js"><link rel="prefetch" href="/assets/js/328.afd6ea9d.js"><link rel="prefetch" href="/assets/js/329.45141e74.js"><link rel="prefetch" href="/assets/js/33.d0eafbb9.js"><link rel="prefetch" href="/assets/js/330.e8a2606a.js"><link rel="prefetch" href="/assets/js/331.e3a75870.js"><link rel="prefetch" href="/assets/js/332.c4045abf.js"><link rel="prefetch" href="/assets/js/333.e4ad8c98.js"><link rel="prefetch" href="/assets/js/334.6da4c229.js"><link rel="prefetch" href="/assets/js/335.4db18330.js"><link rel="prefetch" href="/assets/js/336.7ac0ecca.js"><link rel="prefetch" href="/assets/js/337.11a411e7.js"><link rel="prefetch" href="/assets/js/338.bb9c8640.js"><link rel="prefetch" href="/assets/js/339.2369a49a.js"><link rel="prefetch" href="/assets/js/34.7b065e16.js"><link rel="prefetch" href="/assets/js/340.be883018.js"><link rel="prefetch" href="/assets/js/341.bc026338.js"><link rel="prefetch" href="/assets/js/342.732539b8.js"><link rel="prefetch" href="/assets/js/343.fff848f5.js"><link rel="prefetch" href="/assets/js/344.b4cce8ea.js"><link rel="prefetch" href="/assets/js/345.055a5042.js"><link rel="prefetch" href="/assets/js/346.ca7f71ab.js"><link rel="prefetch" href="/assets/js/347.ce80b7e2.js"><link rel="prefetch" href="/assets/js/348.0ce5d381.js"><link rel="prefetch" href="/assets/js/349.f867f667.js"><link rel="prefetch" href="/assets/js/35.79f48bad.js"><link rel="prefetch" href="/assets/js/350.cc3b1706.js"><link rel="prefetch" href="/assets/js/351.a55f7172.js"><link rel="prefetch" href="/assets/js/352.b708c23f.js"><link rel="prefetch" href="/assets/js/353.95a1e080.js"><link rel="prefetch" href="/assets/js/354.26df845b.js"><link rel="prefetch" href="/assets/js/355.33533ae0.js"><link rel="prefetch" href="/assets/js/356.2fb234a0.js"><link rel="prefetch" href="/assets/js/357.f592f8e4.js"><link rel="prefetch" href="/assets/js/358.afcd5009.js"><link rel="prefetch" href="/assets/js/359.71793f37.js"><link rel="prefetch" href="/assets/js/36.4e36f97e.js"><link rel="prefetch" href="/assets/js/360.66161922.js"><link rel="prefetch" href="/assets/js/361.895531e7.js"><link rel="prefetch" href="/assets/js/362.d2fde593.js"><link rel="prefetch" href="/assets/js/363.6cbb584a.js"><link rel="prefetch" href="/assets/js/364.3e2f27cd.js"><link rel="prefetch" href="/assets/js/365.34fa7a41.js"><link rel="prefetch" href="/assets/js/366.a08cbf6b.js"><link rel="prefetch" href="/assets/js/367.5cd893b0.js"><link rel="prefetch" href="/assets/js/368.b057af4d.js"><link rel="prefetch" href="/assets/js/369.5138a61d.js"><link rel="prefetch" href="/assets/js/37.13b65e5d.js"><link rel="prefetch" href="/assets/js/370.90c7f52f.js"><link rel="prefetch" href="/assets/js/371.54c85262.js"><link rel="prefetch" href="/assets/js/372.3a3ce24b.js"><link rel="prefetch" href="/assets/js/373.483fd9d3.js"><link rel="prefetch" href="/assets/js/374.6e77b7d2.js"><link rel="prefetch" href="/assets/js/375.f88c3c53.js"><link rel="prefetch" href="/assets/js/376.05f88117.js"><link rel="prefetch" href="/assets/js/377.fcf2fadd.js"><link rel="prefetch" href="/assets/js/378.18f444fd.js"><link rel="prefetch" href="/assets/js/379.879738d8.js"><link rel="prefetch" href="/assets/js/38.8d2f9b02.js"><link rel="prefetch" href="/assets/js/380.b9d51870.js"><link rel="prefetch" href="/assets/js/381.13c45e12.js"><link rel="prefetch" href="/assets/js/382.b9d10d79.js"><link rel="prefetch" href="/assets/js/383.22938fc1.js"><link rel="prefetch" href="/assets/js/384.aa932ca6.js"><link rel="prefetch" href="/assets/js/385.e7aa33d8.js"><link rel="prefetch" href="/assets/js/386.19357def.js"><link rel="prefetch" href="/assets/js/387.47b657a2.js"><link rel="prefetch" href="/assets/js/388.a441537c.js"><link rel="prefetch" href="/assets/js/389.2a2ce9a1.js"><link rel="prefetch" href="/assets/js/39.b5f4c79a.js"><link rel="prefetch" href="/assets/js/390.ad4235a0.js"><link rel="prefetch" href="/assets/js/391.da4afab5.js"><link rel="prefetch" href="/assets/js/392.c7097ee6.js"><link rel="prefetch" href="/assets/js/393.cf98216d.js"><link rel="prefetch" href="/assets/js/394.18ba9cfe.js"><link rel="prefetch" href="/assets/js/395.e7b7a376.js"><link rel="prefetch" href="/assets/js/396.2f56d43b.js"><link rel="prefetch" href="/assets/js/397.14a239f0.js"><link rel="prefetch" href="/assets/js/398.08531a65.js"><link rel="prefetch" href="/assets/js/399.dea55ac6.js"><link rel="prefetch" href="/assets/js/4.a195f7b6.js"><link rel="prefetch" href="/assets/js/40.657de3cf.js"><link rel="prefetch" href="/assets/js/400.77c6b9ba.js"><link rel="prefetch" href="/assets/js/401.9fa46dba.js"><link rel="prefetch" href="/assets/js/402.b9b6b243.js"><link rel="prefetch" href="/assets/js/403.d18ffde3.js"><link rel="prefetch" href="/assets/js/404.ee871365.js"><link rel="prefetch" href="/assets/js/405.f0a294d4.js"><link rel="prefetch" href="/assets/js/406.beeac051.js"><link rel="prefetch" href="/assets/js/407.9db8bc05.js"><link rel="prefetch" href="/assets/js/408.7d1a3551.js"><link rel="prefetch" href="/assets/js/409.908ee17a.js"><link rel="prefetch" href="/assets/js/41.f483212d.js"><link rel="prefetch" href="/assets/js/410.19de2693.js"><link rel="prefetch" href="/assets/js/411.126a0e61.js"><link rel="prefetch" href="/assets/js/412.0714380f.js"><link rel="prefetch" href="/assets/js/413.548508ac.js"><link rel="prefetch" href="/assets/js/414.1f5da68b.js"><link rel="prefetch" href="/assets/js/415.a8a38d22.js"><link rel="prefetch" href="/assets/js/416.ed747810.js"><link rel="prefetch" href="/assets/js/417.69aff868.js"><link rel="prefetch" href="/assets/js/418.d08b9633.js"><link rel="prefetch" href="/assets/js/419.7a29a575.js"><link rel="prefetch" href="/assets/js/42.634cb345.js"><link rel="prefetch" href="/assets/js/420.3d37a920.js"><link rel="prefetch" href="/assets/js/421.fb9774ae.js"><link rel="prefetch" href="/assets/js/422.82338d23.js"><link rel="prefetch" href="/assets/js/423.78ae5544.js"><link rel="prefetch" href="/assets/js/424.58ec76aa.js"><link rel="prefetch" href="/assets/js/425.e8032568.js"><link rel="prefetch" href="/assets/js/426.2cb70129.js"><link rel="prefetch" href="/assets/js/427.66eb3fe5.js"><link rel="prefetch" href="/assets/js/428.f85abcf3.js"><link rel="prefetch" href="/assets/js/429.cfd12490.js"><link rel="prefetch" href="/assets/js/43.27b35514.js"><link rel="prefetch" href="/assets/js/430.ae9e52d7.js"><link rel="prefetch" href="/assets/js/431.5b6ab928.js"><link rel="prefetch" href="/assets/js/432.8f6c6e43.js"><link rel="prefetch" href="/assets/js/433.128fd68b.js"><link rel="prefetch" href="/assets/js/434.cb6df7fd.js"><link rel="prefetch" href="/assets/js/435.a512abd8.js"><link rel="prefetch" href="/assets/js/436.2a426362.js"><link rel="prefetch" href="/assets/js/437.48f3e7f0.js"><link rel="prefetch" href="/assets/js/438.60eead82.js"><link rel="prefetch" href="/assets/js/439.755047ee.js"><link rel="prefetch" href="/assets/js/44.95939806.js"><link rel="prefetch" href="/assets/js/440.06b2aee0.js"><link rel="prefetch" href="/assets/js/441.6cbb519b.js"><link rel="prefetch" href="/assets/js/442.9d8c820e.js"><link rel="prefetch" href="/assets/js/443.43a0f42c.js"><link rel="prefetch" href="/assets/js/444.d48cb123.js"><link rel="prefetch" href="/assets/js/445.5b5deffe.js"><link rel="prefetch" href="/assets/js/446.89603481.js"><link rel="prefetch" href="/assets/js/447.e57098da.js"><link rel="prefetch" href="/assets/js/448.e0a893f1.js"><link rel="prefetch" href="/assets/js/449.1f3f0541.js"><link rel="prefetch" href="/assets/js/45.20484792.js"><link rel="prefetch" href="/assets/js/450.d2ff1755.js"><link rel="prefetch" href="/assets/js/451.ae55be40.js"><link rel="prefetch" href="/assets/js/452.9cbb7afe.js"><link rel="prefetch" href="/assets/js/453.b0ce01f6.js"><link rel="prefetch" href="/assets/js/454.1fae703c.js"><link rel="prefetch" href="/assets/js/455.90cef316.js"><link rel="prefetch" href="/assets/js/456.8b466fe0.js"><link rel="prefetch" href="/assets/js/457.be959948.js"><link rel="prefetch" href="/assets/js/458.f0622f1e.js"><link rel="prefetch" href="/assets/js/459.370e44e7.js"><link rel="prefetch" href="/assets/js/46.508f7d41.js"><link rel="prefetch" href="/assets/js/460.1abdd421.js"><link rel="prefetch" href="/assets/js/461.3b85e094.js"><link rel="prefetch" href="/assets/js/462.328088b4.js"><link rel="prefetch" href="/assets/js/463.822487eb.js"><link rel="prefetch" href="/assets/js/464.3158e22a.js"><link rel="prefetch" href="/assets/js/465.7422742d.js"><link rel="prefetch" href="/assets/js/466.de924969.js"><link rel="prefetch" href="/assets/js/467.816d88a6.js"><link rel="prefetch" href="/assets/js/468.e44ca4ad.js"><link rel="prefetch" href="/assets/js/469.fdad5e4c.js"><link rel="prefetch" href="/assets/js/47.a8742825.js"><link rel="prefetch" href="/assets/js/470.887ffc59.js"><link rel="prefetch" href="/assets/js/471.10680547.js"><link rel="prefetch" href="/assets/js/472.2063a068.js"><link rel="prefetch" href="/assets/js/473.aa6bd5ba.js"><link rel="prefetch" href="/assets/js/474.f1ac334b.js"><link rel="prefetch" href="/assets/js/475.a05f6055.js"><link rel="prefetch" href="/assets/js/476.d3d7903f.js"><link rel="prefetch" href="/assets/js/477.8ebfc8cd.js"><link rel="prefetch" href="/assets/js/478.2fc6c06d.js"><link rel="prefetch" href="/assets/js/479.978b51aa.js"><link rel="prefetch" href="/assets/js/48.ad2c2a29.js"><link rel="prefetch" href="/assets/js/480.065bc2f4.js"><link rel="prefetch" href="/assets/js/481.8e611064.js"><link rel="prefetch" href="/assets/js/482.deef708e.js"><link rel="prefetch" href="/assets/js/483.5a48543e.js"><link rel="prefetch" href="/assets/js/484.a7cb9e3e.js"><link rel="prefetch" href="/assets/js/485.9cc29e81.js"><link rel="prefetch" href="/assets/js/486.6fb72e6b.js"><link rel="prefetch" href="/assets/js/487.a9110a31.js"><link rel="prefetch" href="/assets/js/488.60844ada.js"><link rel="prefetch" href="/assets/js/489.322a0427.js"><link rel="prefetch" href="/assets/js/49.a22d6593.js"><link rel="prefetch" href="/assets/js/490.f80db158.js"><link rel="prefetch" href="/assets/js/491.9fe59950.js"><link rel="prefetch" href="/assets/js/492.f29c2ae4.js"><link rel="prefetch" href="/assets/js/493.5bc91ef5.js"><link rel="prefetch" href="/assets/js/494.59430cc4.js"><link rel="prefetch" href="/assets/js/495.8f890f74.js"><link rel="prefetch" href="/assets/js/496.0d962a47.js"><link rel="prefetch" href="/assets/js/497.d01e6f25.js"><link rel="prefetch" href="/assets/js/498.91583855.js"><link rel="prefetch" href="/assets/js/499.ba675554.js"><link rel="prefetch" href="/assets/js/5.2a4451ec.js"><link rel="prefetch" href="/assets/js/50.7d8944cd.js"><link rel="prefetch" href="/assets/js/500.4fef98e6.js"><link rel="prefetch" href="/assets/js/501.70c8ab6c.js"><link rel="prefetch" href="/assets/js/502.f82295f3.js"><link rel="prefetch" href="/assets/js/503.e27cca34.js"><link rel="prefetch" href="/assets/js/504.202eb2e4.js"><link rel="prefetch" href="/assets/js/505.8ebc01bb.js"><link rel="prefetch" href="/assets/js/506.ace09e0a.js"><link rel="prefetch" href="/assets/js/507.e5c93efe.js"><link rel="prefetch" href="/assets/js/508.92e82e3e.js"><link rel="prefetch" href="/assets/js/509.11a80f14.js"><link rel="prefetch" href="/assets/js/51.fd01b1a1.js"><link rel="prefetch" href="/assets/js/510.f2e7313a.js"><link rel="prefetch" href="/assets/js/511.f84a9bd0.js"><link rel="prefetch" href="/assets/js/512.2fe2939b.js"><link rel="prefetch" href="/assets/js/513.1c763768.js"><link rel="prefetch" href="/assets/js/514.7c8fa664.js"><link rel="prefetch" href="/assets/js/515.a3a47a93.js"><link rel="prefetch" href="/assets/js/516.75bc63f0.js"><link rel="prefetch" href="/assets/js/517.34d50a8b.js"><link rel="prefetch" href="/assets/js/518.0fe7502e.js"><link rel="prefetch" href="/assets/js/519.b32e4ba8.js"><link rel="prefetch" href="/assets/js/52.10d8a15b.js"><link rel="prefetch" href="/assets/js/520.7013007d.js"><link rel="prefetch" href="/assets/js/521.2403bf3c.js"><link rel="prefetch" href="/assets/js/522.0b70667a.js"><link rel="prefetch" href="/assets/js/523.c5baafd0.js"><link rel="prefetch" href="/assets/js/524.a0faf49c.js"><link rel="prefetch" href="/assets/js/525.5e8c24b2.js"><link rel="prefetch" href="/assets/js/526.a604fd2c.js"><link rel="prefetch" href="/assets/js/527.8214b51d.js"><link rel="prefetch" href="/assets/js/528.afaf3a7c.js"><link rel="prefetch" href="/assets/js/53.79f66cea.js"><link rel="prefetch" href="/assets/js/54.2bd5a2fe.js"><link rel="prefetch" href="/assets/js/55.5aa8e649.js"><link rel="prefetch" href="/assets/js/56.25897ad0.js"><link rel="prefetch" href="/assets/js/57.ae3f6a3f.js"><link rel="prefetch" href="/assets/js/58.8c3d22eb.js"><link rel="prefetch" href="/assets/js/59.cec8b8e4.js"><link rel="prefetch" href="/assets/js/6.3450075a.js"><link rel="prefetch" href="/assets/js/60.01d90e4c.js"><link rel="prefetch" href="/assets/js/61.71a6cb2d.js"><link rel="prefetch" href="/assets/js/63.ff75527d.js"><link rel="prefetch" href="/assets/js/64.08bc4bf2.js"><link rel="prefetch" href="/assets/js/65.be54d640.js"><link rel="prefetch" href="/assets/js/66.053fd06b.js"><link rel="prefetch" href="/assets/js/67.7ba41b5d.js"><link rel="prefetch" href="/assets/js/68.7253fa6b.js"><link rel="prefetch" href="/assets/js/69.dad30f05.js"><link rel="prefetch" href="/assets/js/7.c5c54fb4.js"><link rel="prefetch" href="/assets/js/70.08f6e0d0.js"><link rel="prefetch" href="/assets/js/71.d3ea7201.js"><link rel="prefetch" href="/assets/js/72.cbfce132.js"><link rel="prefetch" href="/assets/js/73.42d4e18f.js"><link rel="prefetch" href="/assets/js/74.898caca2.js"><link rel="prefetch" href="/assets/js/75.2bed9d1e.js"><link rel="prefetch" href="/assets/js/76.7422e470.js"><link rel="prefetch" href="/assets/js/77.04537ded.js"><link rel="prefetch" href="/assets/js/78.e4c0418c.js"><link rel="prefetch" href="/assets/js/79.dd698bc1.js"><link rel="prefetch" href="/assets/js/8.7759a741.js"><link rel="prefetch" href="/assets/js/80.961ed137.js"><link rel="prefetch" href="/assets/js/81.f5c2a58b.js"><link rel="prefetch" href="/assets/js/82.be40d68a.js"><link rel="prefetch" href="/assets/js/83.a3e67c50.js"><link rel="prefetch" href="/assets/js/84.0de87dff.js"><link rel="prefetch" href="/assets/js/85.7cba7e9e.js"><link rel="prefetch" href="/assets/js/86.9ff0d700.js"><link rel="prefetch" href="/assets/js/87.163cb5fa.js"><link rel="prefetch" href="/assets/js/88.c676627c.js"><link rel="prefetch" href="/assets/js/89.cd1d14b6.js"><link rel="prefetch" href="/assets/js/9.e94d434b.js"><link rel="prefetch" href="/assets/js/90.a09e7153.js"><link rel="prefetch" href="/assets/js/91.4ee34857.js"><link rel="prefetch" href="/assets/js/92.a9773475.js"><link rel="prefetch" href="/assets/js/93.b77ade1d.js"><link rel="prefetch" href="/assets/js/94.cf7c8f34.js"><link rel="prefetch" href="/assets/js/95.c6ca097f.js"><link rel="prefetch" href="/assets/js/96.fdb9779d.js"><link rel="prefetch" href="/assets/js/97.c1eed05f.js"><link rel="prefetch" href="/assets/js/98.f6e8f03e.js"><link rel="prefetch" href="/assets/js/99.cf9234fd.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.eff714eb.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ccadf850.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt=" " class="logo"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Document</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/UserGuide/Master/QuickStart/QuickStart.html" class="nav-link">In progress</a></li><li class="dropdown-item"><!----> <a href="/UserGuide/V0.11.x/Get Started/QuickStart.html" class="nav-link">V0.11.x</a></li><li class="dropdown-item"><!----> <a href="/UserGuide/V0.10.x/Get Started/QuickStart.html" class="nav-link">V0.10.x</a></li><li class="dropdown-item"><!----> <a href="/UserGuide/V0.9.x/0-Get Started/1-QuickStart.html" class="nav-link">V0.9.x</a></li><li class="dropdown-item"><!----> <a href="/UserGuide/V0.8.x/0-Get Started/1-QuickStart.html" class="nav-link">V0.8.x</a></li></ul></div></div><div class="nav-item"><a href="/SystemDesign/Architecture/Architecture.html" class="nav-link">System design</a></div><div class="nav-item"><a href="/Download/" class="nav-link">Download</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Community</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://cwiki.apache.org/confluence/display/iotdb" class="nav-link external">
+  Wiki
+  <!----></a></li><li class="dropdown-item"><!----> <a href="/Community/Community-Project Committers.html" class="nav-link">People</a></li><li class="dropdown-item"><!----> <a href="/Community/Community-Powered By.html" class="nav-link">Powered By</a></li><li class="dropdown-item"><!----> <a href="/Community/Materials.html" class="nav-link">Resources</a></li><li class="dropdown-item"><!----> <a href="/Community/Feedback.html" class="nav-link">Feedback</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Development</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Development/VoteRelease.html" class="nav-link">How to vote</a></li><li class="dropdown-item"><!----> <a href="/Development/HowToCommit.html" class="nav-link">How to Commit</a></li><li class="dropdown-item"><!----> <a href="/Development/Committer.html" class="nav-link">Become a Committer</a></li><li class="dropdown-item"><!----> <a href="/Development/ContributeGuide.html" class="nav-link">ContributeGuide</a></li><li class="dropdown-item"><!----> <a href="/Development/format-changelist.html" class="nav-link">Changelist of TsFile</a></li><li class="dropdown-item"><!----> <a href="/Development/rpc-changelist.html" class="nav-link">Changelist of RPC</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Blog</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Blog/Index.html" class="nav-link">Overview</a></li><li class="dropdown-item"><!----> <a href="/Blog/Release0_93.html" class="nav-link">Some Notes on Release 0.9.3 and upcoming 0.10.0</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">ASF</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://www.apache.org/" class="nav-link external">
+  Foundation
+  <!----></a></li><li class="dropdown-item"><!----> <a href="http://www.apache.org/licenses/" class="nav-link external">
+  License
+  <!----></a></li><li class="dropdown-item"><!----> <a href="http://www.apache.org/security/" class="nav-link external">
+  Security
+  <!----></a></li><li class="dropdown-item"><!----> <a href="http://www.apache.org/foundation/sponsorship.html" class="nav-link external">
+  Sponsorship
+  <!----></a></li><li class="dropdown-item"><!----> <a href="http://www.apache.org/foundation/thanks.html" class="nav-link external">
+  Thanks
+  <!----></a></li><li class="dropdown-item"><!----> <a href="http://www.apache.org/events/current-event" class="nav-link external">
+  Current Events
+  <!----></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/UserGuide/Master/Appendix/SQL-Reference.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">English</a></li><li class="dropdown-item"><!----> <a href="/zh/UserGuide/Master/Appendix/SQL-Reference.html" class="nav-link">简体中文</a></li></ul></div></div> <a href="https://github.com/apache/iotdb.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    gitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Document</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/UserGuide/Master/QuickStart/QuickStart.html" class="nav-link">In progress</a></li><li class="dropdown-item"><!----> <a href="/UserGuide/V0.11.x/Get Started/QuickStart.html" class="nav-link">V0.11.x</a></li><li class="dropdown-item"><!----> <a href="/UserGuide/V0.10.x/Get Started/QuickStart.html" class="nav-link">V0.10.x</a></li><li class="dropdown-item"><!----> <a href="/UserGuide/V0.9.x/0-Get Started/1-QuickStart.html" class="nav-link">V0.9.x</a></li><li class="dropdown-item"><!----> <a href="/UserGuide/V0.8.x/0-Get Started/1-QuickStart.html" class="nav-link">V0.8.x</a></li></ul></div></div><div class="nav-item"><a href="/SystemDesign/Architecture/Architecture.html" class="nav-link">System design</a></div><div class="nav-item"><a href="/Download/" class="nav-link">Download</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Community</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://cwiki.apache.org/confluence/display/iotdb" class="nav-link external">
+  Wiki
+  <!----></a></li><li class="dropdown-item"><!----> <a href="/Community/Community-Project Committers.html" class="nav-link">People</a></li><li class="dropdown-item"><!----> <a href="/Community/Community-Powered By.html" class="nav-link">Powered By</a></li><li class="dropdown-item"><!----> <a href="/Community/Materials.html" class="nav-link">Resources</a></li><li class="dropdown-item"><!----> <a href="/Community/Feedback.html" class="nav-link">Feedback</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Development</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Development/VoteRelease.html" class="nav-link">How to vote</a></li><li class="dropdown-item"><!----> <a href="/Development/HowToCommit.html" class="nav-link">How to Commit</a></li><li class="dropdown-item"><!----> <a href="/Development/Committer.html" class="nav-link">Become a Committer</a></li><li class="dropdown-item"><!----> <a href="/Development/ContributeGuide.html" class="nav-link">ContributeGuide</a></li><li class="dropdown-item"><!----> <a href="/Development/format-changelist.html" class="nav-link">Changelist of TsFile</a></li><li class="dropdown-item"><!----> <a href="/Development/rpc-changelist.html" class="nav-link">Changelist of RPC</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Blog</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Blog/Index.html" class="nav-link">Overview</a></li><li class="dropdown-item"><!----> <a href="/Blog/Release0_93.html" class="nav-link">Some Notes on Release 0.9.3 and upcoming 0.10.0</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">ASF</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://www.apache.org/" class="nav-link external">
+  Foundation
+  <!----></a></li><li class="dropdown-item"><!----> <a href="http://www.apache.org/licenses/" class="nav-link external">
+  License
+  <!----></a></li><li class="dropdown-item"><!----> <a href="http://www.apache.org/security/" class="nav-link external">
+  Security
+  <!----></a></li><li class="dropdown-item"><!----> <a href="http://www.apache.org/foundation/sponsorship.html" class="nav-link external">
+  Sponsorship
+  <!----></a></li><li class="dropdown-item"><!----> <a href="http://www.apache.org/foundation/thanks.html" class="nav-link external">
+  Thanks
+  <!----></a></li><li class="dropdown-item"><!----> <a href="http://www.apache.org/events/current-event" class="nav-link external">
+  Current Events
+  <!----></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/UserGuide/Master/Appendix/SQL-Reference.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">English</a></li><li class="dropdown-item"><!----> <a href="/zh/UserGuide/Master/Appendix/SQL-Reference.html" class="nav-link">简体中文</a></li></ul></div></div> <a href="https://github.com/apache/iotdb.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    gitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>IoTDB User Guide (In progress)</span> <!----></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>IoTDB Introduction</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Quick Start</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Data Concept</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CLI</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Administration Management</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>IoTDB-SQL Language</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>API</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>UDF</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Communication Service Protocol</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>System Tools</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Collaboration of Edge and Cloud</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Ecosystem Integration</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Cluster Setup</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>FAQ</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Appendix</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/UserGuide/Master/Appendix/Config-Manual.html" class="sidebar-link">Config Manual</a></li><li><a href="/UserGuide/Master/Appendix/SQL-Reference.html" aria-current="page" class="active sidebar-link">SQL Reference</a></li><li><a href="/UserGuide/Master/Appendix/Status-Codes.html" class="sidebar-link">Status Codes</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Comparison with TSDBs</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="content content__default"><h1 id="appendix-2-sql-reference"><a href="#appendix-2-sql-reference" class="header-anchor">#</a> Appendix 2: SQL Reference</h1> <p>In this part, we will introduce you IoTDB's Query Language. IoTDB offers you a SQL-like query language for interacting with IoTDB, the query language can be devided into 4 major parts:</p> <ul><li>Schema Statement: statements about schema management are all listed in this section.</li> <li>Data Management Statement: statements about data management (such as: data insertion, data query, etc.) are all listed in this section.</li> <li>Database Management Statement: statements about database management and authentication are all listed in this section.</li> <li>Functions: functions that IoTDB offers are all listed in this section.</li></ul> <p>All of these statements are write in IoTDB's own syntax, for details about the syntax composition, please check the <code>Reference</code> section.</p> <h2 id="show-version"><a href="#show-version" class="header-anchor">#</a> Show Version</h2> <div class="language-sql line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">show</span> version
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>+---------------+
+|        version|
++---------------+
+|0.12.0-SNAPSHOT|
++---------------+
+Total line number = 1
+It costs 0.417s
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="schema-statement"><a href="#schema-statement" class="header-anchor">#</a> Schema Statement</h2> <ul><li>Set Storage Group</li></ul> <div class="language-SQL line-numbers-mode"><pre class="language-sql"><code><span class="token keyword">SET</span> STORAGE <span class="token keyword">GROUP</span> <span class="token keyword">TO</span> <span class="token operator">&lt;</span>FullPath<span class="token operator">&gt;</span>
+Eg: IoTDB <span class="token operator">&gt;</span> <span class="token keyword">SET</span> STORAGE <span class="token keyword">GROUP</span> <span class="token keyword">TO</span> root<span class="token punctuation">.</span>ln<span class="token punctuation">.</span>wf01<span class="token punctuation">.</span>wt01
+Note: FullPath can <span class="token operator">not</span> include <span class="token punctuation">`</span><span class="token operator">*</span><span class="token punctuation">`</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>Delete Storage Group</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>DELETE STORAGE GROUP &lt;FullPath&gt; [COMMA &lt;FullPath&gt;]*
+Eg: IoTDB &gt; DELETE STORAGE GROUP root.ln.wf01.wt01
+Eg: IoTDB &gt; DELETE STORAGE GROUP root.ln.wf01.wt01, root.ln.wf01.wt02
+Eg: IoTDB &gt; DELETE STORAGE GROUP root.ln.wf01.*
+Eg: IoTDB &gt; DELETE STORAGE GROUP root.*
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ul><li>Create Timeseries Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>CREATE TIMESERIES &lt;FullPath&gt; WITH &lt;AttributeClauses&gt;
+alias
+    : LR_BRACKET ID RR_BRACKET
+    ;
+attributeClauses
+    : DATATYPE OPERATOR_EQ dataType COMMA ENCODING OPERATOR_EQ encoding
+    (COMMA (COMPRESSOR | COMPRESSION) OPERATOR_EQ compressor=propertyValue)?
+    (COMMA property)*
+    tagClause
+    attributeClause
+    ;
+attributeClause
+    : (ATTRIBUTES LR_BRACKET property (COMMA property)* RR_BRACKET)?
+    ;
+tagClause
+    : (TAGS LR_BRACKET property (COMMA property)* RR_BRACKET)?
+    ;
+DataTypeValue: BOOLEAN | DOUBLE | FLOAT | INT32 | INT64 | TEXT
+EncodingValue: GORILLA | PLAIN | RLE | TS_2DIFF | REGULAR
+CompressorValue: UNCOMPRESSED | SNAPPY
+propertyValue: SDT | COMPDEV | COMPMINTIME | COMPMAXTIME
+Eg: CREATE TIMESERIES root.ln.wf01.wt01.status WITH DATATYPE=BOOLEAN, ENCODING=PLAIN
+Eg: CREATE TIMESERIES root.ln.wf01.wt01.temperature WITH DATATYPE=FLOAT, ENCODING=RLE
+Eg: CREATE TIMESERIES root.ln.wf01.wt01.temperature WITH DATATYPE=FLOAT, ENCODING=RLE, COMPRESSOR=SNAPPY, MAX_POINT_NUMBER=3
+Eg: create timeseries root.turbine.d0.s0(temperature) with datatype=FLOAT, encoding=RLE, compression=SNAPPY tags(unit=f, description='turbine this is a test1') attributes(H_Alarm=100, M_Alarm=50)
+Eg: CREATE TIMESERIES root.ln.wf01.wt01.temperature WITH DATATYPE=FLOAT, ENCODING=RLE, LOSS=SDT, COMPDEV=0.01
+Eg: CREATE TIMESERIES root.ln.wf01.wt01.temperature WITH DATATYPE=FLOAT, ENCODING=RLE, LOSS=SDT, COMPDEV=0.01, COMPMINTIME=3
+Eg: CREATE TIMESERIES root.ln.wf01.wt01.temperature WITH DATATYPE=FLOAT, ENCODING=RLE, LOSS=SDT, COMPDEV=0.01, COMPMINTIME=2, COMPMAXTIME=15
+Note: Datatype and encoding type must be corresponding. Please check Chapter 3 Encoding Section for details.
+Note: When propertyValue is SDT, it is required to set compression deviation COMPDEV, which is the maximum absolute difference between values.
+Note: For SDT, values withtin COMPDEV will be discarded.
+Note: For SDT, it is optional to set compression minimum COMPMINTIME, which is the minimum time difference between stored values for purpose of noise reduction.
+Note: For SDT, it is optional to set compression maximum COMPMAXTIME, which is the maximum time difference between stored values regardless of COMPDEV.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br></div></div><ul><li>Delete Timeseries Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>DELETE TIMESERIES &lt;PrefixPath&gt; [COMMA &lt;PrefixPath&gt;]*
+Eg: IoTDB &gt; DELETE TIMESERIES root.ln.wf01.wt01.status
+Eg: IoTDB &gt; DELETE TIMESERIES root.ln.wf01.wt01.status, root.ln.wf01.wt01.temperature
+Eg: IoTDB &gt; DELETE TIMESERIES root.ln.wf01.wt01.*
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>Alter Timeseries Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>ALTER TIMESERIES fullPath alterClause
+alterClause
+    : RENAME beforeName=ID TO currentName=ID
+    | SET property (COMMA property)*
+    | DROP ID (COMMA ID)*
+    | ADD TAGS property (COMMA property)*
+    | ADD ATTRIBUTES property (COMMA property)*
+    | UPSERT tagClause attributeClause
+    ;
+attributeClause
+    : (ATTRIBUTES LR_BRACKET property (COMMA property)* RR_BRACKET)?
+    ;
+tagClause
+    : (TAGS LR_BRACKET property (COMMA property)* RR_BRACKET)?
+    ;
+Eg: ALTER timeseries root.turbine.d1.s1 RENAME tag1 TO newTag1
+Eg: ALTER timeseries root.turbine.d1.s1 SET tag1=newV1, attr1=newV1
+Eg: ALTER timeseries root.turbine.d1.s1 DROP tag1, tag2
+Eg: ALTER timeseries root.turbine.d1.s1 ADD TAGS tag3=v3, tag4=v4
+Eg: ALTER timeseries root.turbine.d1.s1 ADD ATTRIBUTES attr3=v3, attr4=v4
+EG: ALTER timeseries root.turbine.d1.s1 UPSERT TAGS(tag2=newV2, tag3=v3) ATTRIBUTES(attr3=v3, attr4=v4)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><ul><li>Show All Timeseries Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>SHOW TIMESERIES
+Eg: IoTDB &gt; SHOW TIMESERIES
+Note: This statement can only be used in IoTDB Client. If you need to show all timeseries in JDBC, please use `DataBaseMetadata` interface.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>Show Specific Timeseries Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>SHOW TIMESERIES &lt;Path&gt;
+Eg: IoTDB &gt; SHOW TIMESERIES root
+Eg: IoTDB &gt; SHOW TIMESERIES root.ln
+Eg: IoTDB &gt; SHOW TIMESERIES root.ln.*.*.status
+Eg: IoTDB &gt; SHOW TIMESERIES root.ln.wf01.wt01.status
+Note: The path can be prefix path, star path or timeseries path
+Note: This statement can be used in IoTDB Client and JDBC.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><ul><li>Show Specific Timeseries Statement with where clause</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>SHOW TIMESERIES prefixPath? showWhereClause?
+showWhereClause
+    : WHERE (property | containsExpression)
+    ;
+containsExpression
+    : name=ID OPERATOR_CONTAINS value=propertyValue
+    ;
+
+Eg: show timeseries root.ln where unit='c'
+Eg: show timeseries root.ln where description contains 'test1'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><ul><li>Show Specific Timeseries Statement with where clause start from offset and limit the total number of result</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>SHOW TIMESERIES prefixPath? showWhereClause? limitClause?
+
+showWhereClause
+    : WHERE (property | containsExpression)
+    ;
+containsExpression
+    : name=ID OPERATOR_CONTAINS value=propertyValue
+    ;
+limitClause
+    : LIMIT INT offsetClause?
+    | offsetClause? LIMIT INT
+    ;
+    
+Eg: show timeseries root.ln where unit='c'
+Eg: show timeseries root.ln where description contains 'test1'
+Eg: show timeseries root.ln where unit='c' limit 10 offset 10
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><ul><li>Show Storage Group Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>SHOW STORAGE GROUP
+Eg: IoTDB &gt; SHOW STORAGE GROUP
+Note: This statement can be used in IoTDB Client and JDBC.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>Show Specific Storage Group Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>SHOW STORAGE GROUP &lt;PrefixPath&gt;
+Eg: IoTDB &gt; SHOW STORAGE GROUP root.*
+Eg: IoTDB &gt; SHOW STORAGE GROUP root.ln
+Note: The path can be prefix path or star path.
+Note: This statement can be used in IoTDB Client and JDBC.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ul><li>Show Merge Status Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>SHOW MERGE
+Eg: IoTDB &gt; SHOW MERGE
+Note: This statement can be used in IoTDB Client and JDBC.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>Count Timeseries Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>COUNT TIMESERIES &lt;Path&gt;
+Eg: IoTDB &gt; COUNT TIMESERIES root
+Eg: IoTDB &gt; COUNT TIMESERIES root.ln
+Eg: IoTDB &gt; COUNT TIMESERIES root.ln.*.*.status
+Eg: IoTDB &gt; COUNT TIMESERIES root.ln.wf01.wt01.status
+Note: The path can be prefix path, star path or timeseries path.
+Note: This statement can be used in IoTDB Client and JDBC.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>COUNT TIMESERIES &lt;Path&gt; GROUP BY LEVEL=&lt;INTEGER&gt;
+Eg: IoTDB &gt; COUNT TIMESERIES root GROUP BY LEVEL=1
+Eg: IoTDB &gt; COUNT TIMESERIES root.ln GROUP BY LEVEL=2
+Eg: IoTDB &gt; COUNT TIMESERIES root.ln.wf01 GROUP BY LEVEL=3
+Note: The path can be prefix path or timeseries path.
+Note: This statement can be used in IoTDB Client and JDBC.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ul><li>Count Nodes Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>COUNT NODES &lt;Path&gt; LEVEL=&lt;INTEGER&gt;
+Eg: IoTDB &gt; COUNT NODES root LEVEL=2
+Eg: IoTDB &gt; COUNT NODES root.ln LEVEL=2
+Eg: IoTDB &gt; COUNT NODES root.ln.* LEVEL=3
+Eg: IoTDB &gt; COUNT NODES root.ln.wf01 LEVEL=3
+Note: The path can be prefix path or timeseries path.
+Note: This statement can be used in IoTDB Client and JDBC.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><ul><li>Show All Devices Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>SHOW DEVICES (WITH STORAGE GROUP)? limitClause? 
+Eg: IoTDB &gt; SHOW DEVICES
+Eg: IoTDB &gt; SHOW DEVICES WITH STORAGE GROUP
+Note: This statement can be used in IoTDB Client and JDBC.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>Show Specific Devices Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>SHOW DEVICES &lt;PrefixPath&gt; (WITH STORAGE GROUP)? limitClause?
+Eg: IoTDB &gt; SHOW DEVICES root
+Eg: IoTDB &gt; SHOW DEVICES root.ln
+Eg: IoTDB &gt; SHOW DEVICES root.*.wf01
+Eg: IoTDB &gt; SHOW DEVICES root.ln WITH STORAGE GROUP
+Eg: IoTDB &gt; SHOW DEVICES root.*.wf01 WITH STORAGE GROUP
+Note: The path can be prefix path or star path.
+Note: This statement can be used in IoTDB Client and JDBC.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><ul><li>Show Child Paths of Root Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>SHOW CHILD PATHS
+Eg: IoTDB &gt; SHOW CHILD PATHS
+Note: This statement can be used in IoTDB Client and JDBC.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>Show Child Paths Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>SHOW CHILD PATHS &lt;Path&gt;
+Eg: IoTDB &gt; SHOW CHILD PATHS root
+Eg: IoTDB &gt; SHOW CHILD PATHS root.ln
+Eg: IoTDB &gt; SHOW CHILD PATHS root.*.wf01
+Eg: IoTDB &gt; SHOW CHILD PATHS root.ln.wf*
+Note: The path can be prefix path or star path, the nodes can be in a &quot;prefix + star&quot; format. 
+Note: This statement can be used in IoTDB Client and JDBC.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><ul><li>Create snapshot for schema</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>CREATE SNAPSHOT FOR SCHEMA
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="data-management-statement"><a href="#data-management-statement" class="header-anchor">#</a> Data Management Statement</h2> <ul><li>Insert Record Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>INSERT INTO &lt;PrefixPath&gt; LPAREN TIMESTAMP COMMA &lt;Sensor&gt; [COMMA &lt;Sensor&gt;]* RPAREN VALUES LPAREN &lt;TimeValue&gt;, &lt;PointValue&gt; [COMMA &lt;PointValue&gt;]* RPAREN
+Sensor : Identifier
+Eg: IoTDB &gt; INSERT INTO root.ln.wf01.wt01(timestamp,status) values(1509465600000,true)
+Eg: IoTDB &gt; INSERT INTO root.ln.wf01.wt01(timestamp,status) VALUES(NOW(), false)
+Eg: IoTDB &gt; INSERT INTO root.ln.wf01.wt01(timestamp,temperature) VALUES(2017-11-01T00:17:00.000+08:00,24.22028)
+Eg: IoTDB &gt; INSERT INTO root.ln.wf01.wt01(timestamp, status, temperature) VALUES (1509466680000, false, 20.060787);
+Note: the statement needs to satisfy this constraint: &lt;PrefixPath&gt; + &lt;Path&gt; = &lt;Timeseries&gt;
+Note: The order of Sensor and PointValue need one-to-one correspondence
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><ul><li>Delete Record Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>DELETE FROM &lt;PrefixPath&gt; [COMMA &lt;PrefixPath&gt;]* [WHERE &lt;WhereClause&gt;]?
+WhereClause : &lt;Condition&gt; [(AND) &lt;Condition&gt;]*
+Condition  : &lt;TimeExpr&gt; [(AND) &lt;TimeExpr&gt;]*
+TimeExpr : TIME PrecedenceEqualOperator (&lt;TimeValue&gt; | &lt;RelativeTime&gt;)
+Eg: DELETE FROM root.ln.wf01.wt01.temperature WHERE time &gt; 2016-01-05T00:15:00+08:00 and time &lt; 2017-11-1T00:05:00+08:00
+Eg: DELETE FROM root.ln.wf01.wt01.status, root.ln.wf01.wt01.temperature WHERE time &lt; NOW()
+Eg: DELETE FROM root.ln.wf01.wt01.* WHERE time &gt;= 1509466140000
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><ul><li>Select Record Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT &lt;SelectClause&gt; FROM &lt;FromClause&gt; [WHERE &lt;WhereClause&gt;]?
+SelectClause : &lt;SelectPath&gt; (COMMA &lt;SelectPath&gt;)*
+SelectPath : &lt;FUNCTION&gt; LPAREN &lt;Path&gt; RPAREN | &lt;Path&gt;
+FUNCTION : ‘COUNT’ , ‘MIN_TIME’, ‘MAX_TIME’, ‘MIN_VALUE’, ‘MAX_VALUE’
+FromClause : &lt;PrefixPath&gt; (COMMA &lt;PrefixPath&gt;)?
+WhereClause : &lt;Condition&gt; [(AND | OR) &lt;Condition&gt;]*
+Condition  : &lt;Expression&gt; [(AND | OR) &lt;Expression&gt;]*
+Expression : [NOT | !]? &lt;TimeExpr&gt; | [NOT | !]? &lt;SensorExpr&gt;
+TimeExpr : TIME PrecedenceEqualOperator (&lt;TimeValue&gt; | &lt;RelativeTime&gt;)
+RelativeTimeDurationUnit = Integer ('Y'|'MO'|'W'|'D'|'H'|'M'|'S'|'MS'|'US'|'NS')
+RelativeTime : (now() | &lt;TimeValue&gt;) [(+|-) RelativeTimeDurationUnit]+
+SensorExpr : (&lt;Timeseries&gt; | &lt;Path&gt;) PrecedenceEqualOperator &lt;PointValue&gt;
+Eg: IoTDB &gt; SELECT status, temperature FROM root.ln.wf01.wt01 WHERE temperature &lt; 24 and time &gt; 2017-11-1 0:13:00
+Eg. IoTDB &gt; SELECT * FROM root
+Eg. IoTDB &gt; SELECT * FROM root where time &gt; now() - 5m
+Eg. IoTDB &gt; SELECT * FROM root.ln.*.wf*
+Eg. IoTDB &gt; SELECT COUNT(temperature) FROM root.ln.wf01.wt01 WHERE root.ln.wf01.wt01.temperature &lt; 25
+Eg. IoTDB &gt; SELECT MIN_TIME(temperature) FROM root.ln.wf01.wt01 WHERE root.ln.wf01.wt01.temperature &lt; 25
+Eg. IoTDB &gt; SELECT MAX_TIME(temperature) FROM root.ln.wf01.wt01 WHERE root.ln.wf01.wt01.temperature &gt; 24
+Eg. IoTDB &gt; SELECT MIN_VALUE(temperature) FROM root.ln.wf01.wt01 WHERE root.ln.wf01.wt01.temperature &gt; 23
+Eg. IoTDB &gt; SELECT MAX_VALUE(temperature) FROM root.ln.wf01.wt01 WHERE root.ln.wf01.wt01.temperature &lt; 25
+Eg. IoTDB &gt; SELECT COUNT(temperature) FROM root.ln.wf01.wt01 WHERE root.ln.wf01.wt01.temperature &lt; 25 GROUP BY LEVEL=1
+Note: the statement needs to satisfy this constraint: &lt;Path&gt;(SelectClause) + &lt;PrefixPath&gt;(FromClause) = &lt;Timeseries&gt;
+Note: If the &lt;SensorExpr&gt;(WhereClause) is started with &lt;Path&gt; and not with ROOT, the statement needs to satisfy this constraint: &lt;PrefixPath&gt;(FromClause) + &lt;Path&gt;(SensorExpr) = &lt;Timeseries&gt;
+Note: In Version 0.7.0, if &lt;WhereClause&gt; includes `OR`, time filter can not be used.
+Note: There must be a space on both sides of the plus and minus operator appearing in the time expression 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><ul><li>Group By Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT &lt;SelectClause&gt; FROM &lt;FromClause&gt; WHERE  &lt;WhereClause&gt; GROUP BY &lt;GroupByTimeClause&gt;
+SelectClause : &lt;Function&gt; [COMMA &lt; Function &gt;]*
+Function : &lt;AggregationFunction&gt; LPAREN &lt;Path&gt; RPAREN
+FromClause : &lt;PrefixPath&gt;
+WhereClause : &lt;Condition&gt; [(AND | OR) &lt;Condition&gt;]*
+Condition  : &lt;Expression&gt; [(AND | OR) &lt;Expression&gt;]*
+Expression : [NOT | !]? &lt;TimeExpr&gt; | [NOT | !]? &lt;SensorExpr&gt;
+TimeExpr : TIME PrecedenceEqualOperator (&lt;TimeValue&gt; | &lt;RelativeTime&gt;)
+RelativeTimeDurationUnit = Integer ('Y'|'MO'|'W'|'D'|'H'|'M'|'S'|'MS'|'US'|'NS')
+RelativeTime : (now() | &lt;TimeValue&gt;) [(+|-) RelativeTimeDurationUnit]+
+SensorExpr : (&lt;Timeseries&gt; | &lt;Path&gt;) PrecedenceEqualOperator &lt;PointValue&gt;
+GroupByTimeClause : LPAREN &lt;TimeInterval&gt; COMMA &lt;TimeUnit&gt; (COMMA &lt;TimeUnit&gt;)? RPAREN
+TimeInterval: LSBRACKET &lt;TimeValue&gt; COMMA &lt;TimeValue&gt; RRBRACKET | LRBRACKET &lt;TimeValue&gt; COMMA &lt;TimeValue&gt; RSBRACKET
+TimeUnit : Integer &lt;DurationUnit&gt;
+DurationUnit : &quot;ms&quot; | &quot;s&quot; | &quot;m&quot; | &quot;h&quot; | &quot;d&quot; | &quot;w&quot; | &quot;mo&quot;
+Eg: SELECT COUNT(status), COUNT(temperature) FROM root.ln.wf01.wt01 where temperature &lt; 24 GROUP BY([1509465720000, 1509466380000), 5m)
+Eg: SELECT COUNT(status), COUNT(temperature) FROM root.ln.wf01.wt01 where temperature &lt; 24 GROUP BY((1509465720000, 1509466380000], 5m)
+Eg. SELECT COUNT (status), MAX_VALUE(temperature) FROM root.ln.wf01.wt01 WHERE time &lt; 1509466500000 GROUP BY([1509465720000, 1509466380000), 5m, 10m)
+Eg. SELECT MIN_TIME(status), MIN_VALUE(temperature) FROM root.ln.wf01.wt01 WHERE temperature &lt; 25 GROUP BY ([1509466140000, 1509466380000), 3m, 5ms)
+Eg. SELECT MIN_TIME(status), MIN_VALUE(temperature) FROM root.ln.wf01.wt01 WHERE temperature &lt; 25 GROUP BY ((1509466140000, 1509466380000], 3m, 5ms)
+Eg. SELECT MIN_TIME(status), MIN_VALUE(temperature) FROM root.ln.wf01.wt01 WHERE temperature &lt; 25 GROUP BY ((1509466140000, 1509466380000], 1mo)
+Eg. SELECT MIN_TIME(status), MIN_VALUE(temperature) FROM root.ln.wf01.wt01 WHERE temperature &lt; 25 GROUP BY ((1509466140000, 1509466380000], 1mo, 1mo)
+Eg. SELECT MIN_TIME(status), MIN_VALUE(temperature) FROM root.ln.wf01.wt01 WHERE temperature &lt; 25 GROUP BY ((1509466140000, 1509466380000], 1mo, 2mo)
+Note: the statement needs to satisfy this constraint: &lt;Path&gt;(SelectClause) + &lt;PrefixPath&gt;(FromClause) = &lt;Timeseries&gt;
+Note: If the &lt;SensorExpr&gt;(WhereClause) is started with &lt;Path&gt; and not with ROOT, the statement needs to satisfy this constraint: &lt;PrefixPath&gt;(FromClause) + &lt;Path&gt;(SensorExpr) = &lt;Timeseries&gt;
+Note: &lt;TimeValue&gt;(TimeInterval) needs to be greater than 0
+Note: First &lt;TimeValue&gt;(TimeInterval) in needs to be smaller than second &lt;TimeValue&gt;(TimeInterval)
+Note: &lt;TimeUnit&gt; needs to be greater than 0
+Note: Third &lt;TimeUnit&gt; if set shouldn't be smaller than second &lt;TimeUnit&gt;
+Note: If the second &lt;DurationUnit&gt; is &quot;mo&quot;, the third &lt;DurationUnit&gt; need to be in month
+Note: If the third &lt;DurationUnit&gt; is &quot;mo&quot;, the second &lt;DurationUnit&gt; can be in any unit
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><ul><li>Fill Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT &lt;SelectClause&gt; FROM &lt;FromClause&gt; WHERE &lt;WhereClause&gt; FILL &lt;FillClause&gt;
+SelectClause : &lt;Path&gt; [COMMA &lt;Path&gt;]*
+FromClause : &lt; PrefixPath &gt; [COMMA &lt; PrefixPath &gt;]*
+WhereClause : &lt;WhereExpression&gt;
+WhereExpression : TIME EQUAL &lt;TimeValue&gt;
+FillClause : LPAREN &lt;TypeClause&gt; [COMMA &lt;TypeClause&gt;]* RPAREN
+TypeClause : &lt;Int32Clause&gt; | &lt;Int64Clause&gt; | &lt;FloatClause&gt; | &lt;DoubleClause&gt; | &lt;BoolClause&gt; | &lt;TextClause&gt;
+Int32Clause: INT32 LBRACKET (&lt;LinearClause&gt; | &lt;PreviousClause&gt;)  RBRACKET
+Int64Clause: INT64 LBRACKET (&lt;LinearClause&gt; | &lt;PreviousClause&gt;)  RBRACKET
+FloatClause: FLOAT LBRACKET (&lt;LinearClause&gt; | &lt;PreviousClause&gt;)  RBRACKET
+DoubleClause: DOUBLE LBRACKET (&lt;LinearClause&gt; | &lt;PreviousClause&gt;)  RBRACKET
+BoolClause: BOOLEAN LBRACKET (&lt;LinearClause&gt; | &lt;PreviousClause&gt;)  RBRACKET
+TextClause: TEXT LBRACKET (&lt;LinearClause&gt; | &lt;PreviousClause&gt;)  RBRACKET
+PreviousClause : PREVIOUS [COMMA &lt;ValidPreviousTime&gt;]?
+LinearClause : LINEAR [COMMA &lt;ValidPreviousTime&gt; COMMA &lt;ValidBehindTime&gt;]?
+ValidPreviousTime, ValidBehindTime: &lt;TimeUnit&gt;
+TimeUnit : Integer &lt;DurationUnit&gt;
+DurationUnit : &quot;ms&quot; | &quot;s&quot; | &quot;m&quot; | &quot;h&quot; | &quot;d&quot; | &quot;w&quot;
+Eg: SELECT temperature FROM root.ln.wf01.wt01 WHERE time = 2017-11-01T16:37:50.000 FILL(float[previous, 1m])
+Eg: SELECT temperature,status FROM root.ln.wf01.wt01 WHERE time = 2017-11-01T16:37:50.000 FILL (float[linear, 1m, 1m], boolean[previous, 1m])
+Eg: SELECT temperature,status,hardware FROM root.ln.wf01.wt01 WHERE time = 2017-11-01T16:37:50.000 FILL (float[linear, 1m, 1m], boolean[previous, 1m], text[previous])
+Eg: SELECT temperature,status,hardware FROM root.ln.wf01.wt01 WHERE time = 2017-11-01T16:37:50.000 FILL (float[linear], boolean[previous, 1m], text[previous])
+Note: the statement needs to satisfy this constraint: &lt;PrefixPath&gt;(FromClause) + &lt;Path&gt;(SelectClause) = &lt;Timeseries&gt;
+Note: Integer in &lt;TimeUnit&gt; needs to be greater than 0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><ul><li>Group By Fill Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT &lt;SelectClause&gt; FROM &lt;FromClause&gt; WHERE  &lt;WhereClause&gt; GROUP BY &lt;GroupByClause&gt; (FILL &lt;GROUPBYFillClause&gt;)?
+GroupByClause : LPAREN &lt;TimeInterval&gt; COMMA &lt;TimeUnit&gt; RPAREN
+GROUPBYFillClause : LPAREN &lt;TypeClause&gt; RPAREN
+TypeClause : &lt;AllClause&gt; | &lt;Int32Clause&gt; | &lt;Int64Clause&gt; | &lt;FloatClause&gt; | &lt;DoubleClause&gt; | &lt;BoolClause&gt; | &lt;TextClause&gt; 
+AllClause: ALL LBRACKET (&lt;PreviousUntilLastClause&gt; | &lt;PreviousClause&gt;)  RBRACKET
+Int32Clause: INT32 LBRACKET (&lt;PreviousUntilLastClause&gt; | &lt;PreviousClause&gt;)  RBRACKET
+Int64Clause: INT64 LBRACKET (&lt;PreviousUntilLastClause&gt; | &lt;PreviousClause&gt;)  RBRACKET
+FloatClause: FLOAT LBRACKET (&lt;PreviousUntilLastClause&gt; | &lt;PreviousClause&gt;)  RBRACKET
+DoubleClause: DOUBLE LBRACKET (&lt;PreviousUntilLastClause&gt; | &lt;PreviousClause&gt;)  RBRACKET
+BoolClause: BOOLEAN LBRACKET (&lt;PreviousUntilLastClause&gt; | &lt;PreviousClause&gt;)  RBRACKET
+TextClause: TEXT LBRACKET (&lt;PreviousUntilLastClause&gt; | &lt;PreviousClause&gt;)  RBRACKET
+PreviousClause : PREVIOUS
+PreviousUntilLastClause : PREVIOUSUNTILLAST
+Eg: SELECT last_value(temperature) FROM root.ln.wf01.wt01 GROUP BY([20, 100), 5m) FILL (float[PREVIOUS])
+Eg: SELECT last_value(temperature) FROM root.ln.wf01.wt01 GROUP BY((15, 100], 5m) FILL (float[PREVIOUS])
+Eg: SELECT last_value(power) FROM root.ln.wf01.wt01 GROUP BY([20, 100), 5m) FILL (int32[PREVIOUSUNTILLAST])
+Eg: SELECT last_value(power) FROM root.ln.wf01.wt01 GROUP BY([20, 100), 5m) FILL (int32[PREVIOUSUNTILLAST, 5m])
+Eg: SELECT last_value(temperature), last_value(power) FROM root.ln.wf01.wt01 GROUP BY([20, 100), 5m) FILL (ALL[PREVIOUS])
+Eg: SELECT last_value(temperature), last_value(power) FROM root.ln.wf01.wt01 GROUP BY([20, 100), 5m) FILL (ALL[PREVIOUS, 5m])
+Note: In group by fill, sliding step is not supported in group by clause
+Note: Now, only last_value aggregation function is supported in group by fill.
+Note: Linear fill is not supported in group by fill.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><ul><li>Order by time Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT &lt;SelectClause&gt; FROM &lt;FromClause&gt; WHERE  &lt;WhereClause&gt; GROUP BY &lt;GroupByClause&gt; (FILL &lt;GROUPBYFillClause&gt;)? orderByTimeClause?
+orderByTimeClause: order by time (asc | desc)?
+
+Eg: SELECT last_value(temperature) FROM root.ln.wf01.wt01 GROUP BY([20, 100), 5m) FILL (float[PREVIOUS]) order by time desc
+Eg: SELECT * from root order by time desc
+Eg: SELECT * from root order by time desc align by device 
+Eg: SELECT * from root order by time desc disable align
+Eg: SELECT last * from root order by time desc
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><ul><li>Limit Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT &lt;SelectClause&gt; FROM &lt;FromClause&gt; [WHERE &lt;WhereClause&gt;] [&lt;LIMITClause&gt;] [&lt;SLIMITClause&gt;]
+SelectClause : [&lt;Path&gt; | Function]+
+Function : &lt;AggregationFunction&gt; LPAREN &lt;Path&gt; RPAREN
+FromClause : &lt;Path&gt;
+WhereClause : &lt;Condition&gt; [(AND | OR) &lt;Condition&gt;]*
+Condition : &lt;Expression&gt; [(AND | OR) &lt;Expression&gt;]*
+Expression: [NOT|!]?&lt;TimeExpr&gt; | [NOT|!]?&lt;SensorExpr&gt;
+TimeExpr : TIME PrecedenceEqualOperator (&lt;TimeValue&gt; | &lt;RelativeTime&gt;)
+RelativeTimeDurationUnit = Integer ('Y'|'MO'|'W'|'D'|'H'|'M'|'S'|'MS'|'US'|'NS')
+RelativeTime : (now() | &lt;TimeValue&gt;) [(+|-) RelativeTimeDurationUnit]+
+SensorExpr : (&lt;Timeseries&gt;|&lt;Path&gt;) PrecedenceEqualOperator &lt;PointValue&gt;
+LIMITClause : LIMIT &lt;N&gt; [OFFSETClause]?
+N : Integer
+OFFSETClause : OFFSET &lt;OFFSETValue&gt;
+OFFSETValue : Integer
+SLIMITClause : SLIMIT &lt;SN&gt; [SOFFSETClause]?
+SN : Integer
+SOFFSETClause : SOFFSET &lt;SOFFSETValue&gt;
+SOFFSETValue : Integer
+Eg: IoTDB &gt; SELECT status, temperature FROM root.ln.wf01.wt01 WHERE temperature &lt; 24 and time &gt; 2017-11-1 0:13:00 LIMIT 3 OFFSET 2
+Eg. IoTDB &gt; SELECT COUNT (status), MAX_VALUE(temperature) FROM root.ln.wf01.wt01 WHERE time &lt; 1509466500000 GROUP BY([1509465720000, 1509466380000], 5m) LIMIT 3
+Note: N, OFFSETValue, SN and SOFFSETValue must be greater than 0.
+Note: The order of &lt;LIMITClause&gt; and &lt;SLIMITClause&gt; does not affect the grammatical correctness.
+Note: &lt;FillClause&gt; can not use &lt;LIMITClause&gt; but not &lt;SLIMITClause&gt;.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><ul><li>Align By Device Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>AlignbyDeviceClause : ALIGN BY DEVICE
+
+Rules:  
+1. Both uppercase and lowercase are ok.  
+Correct example: select * from root.sg1 align by device  
+Correct example: select * from root.sg1 ALIGN BY DEVICE  
+
+2. AlignbyDeviceClause can only be used at the end of a query statement.  
+Correct example: select * from root.sg1 where time &gt; 10 align by device  
+Wrong example: select * from root.sg1 align by device where time &gt; 10  
+
+3. The paths of the SELECT clause can only be single level. In other words, the paths of the SELECT clause can only be measurements or STAR, without DOT.
+Correct example: select s0,s1 from root.sg1.* align by device  
+Correct example: select s0,s1 from root.sg1.d0, root.sg1.d1 align by device  
+Correct example: select * from root.sg1.* align by device  
+Correct example: select * from root align by device  
+Correct example: select s0,s1,* from root.*.* align by device  
+Wrong example: select d0.s1, d0.s2, d1.s0 from root.sg1 align by device  
+Wrong example: select *.s0, *.s1 from root.* align by device  
+Wrong example: select *.*.* from root align by device
+
+4. The data types of the same measurement column should be the same across devices. 
+Note that when it comes to aggregated paths, the data type of the measurement column will reflect 
+the aggregation function rather than the original timeseries.
+
+Correct example: select s0 from root.sg1.d0,root.sg1.d1 align by device   
+root.sg1.d0.s0 and root.sg1.d1.s0 are both INT32.  
+
+Correct example: select count(s0) from root.sg1.d0,root.sg1.d1 align by device   
+count(root.sg1.d0.s0) and count(root.sg1.d1.s0) are both INT64.  
+
+Wrong example: select s0 from root.sg1.d0, root.sg2.d3 align by device  
+root.sg1.d0.s0 is INT32 while root.sg2.d3.s0 is FLOAT. 
+
+5. The display principle of the result table is that all the columns (no matther whther a column has has existing data) will be shown, with nonexistent cells being null. Besides, the select clause support const column (e.g., 'a', '123' etc..).  
+For example, &quot;select s0,s1,s2,'abc',s1,s2 from root.sg.d0, root.sg.d1, root.sg.d2 align by device&quot;. Suppose that the actual existing timeseries are as follows:  
+- root.sg.d0.s0
+- root.sg.d0.s1
+- root.sg.d1.s0
+
+Then you could expect a table like:  
+
+| Time | Device   | s0 | s1 |  s2  | 'abc' | s1 |  s2  |
+| ---  | ---      | ---| ---| null | 'abc' | ---| null |
+|  1   |root.sg.d0| 20 | 2.5| null | 'abc' | 2.5| null |
+|  2   |root.sg.d0| 23 | 3.1| null | 'abc' | 3.1| null |
+| ...  | ...      | ...| ...| null | 'abc' | ...| null |
+|  1   |root.sg.d1| 12 |null| null | 'abc' |null| null |
+|  2   |root.sg.d1| 19 |null| null | 'abc' |null| null |
+| ...  | ...      | ...| ...| null | 'abc' | ...| null |
+
+Note that the cells of measurement 's0' and device 'root.sg.d1' are all null.    
+
+6. The duplicated devices in the prefix paths are neglected.  
+For example, &quot;select s0,s1 from root.sg.d0,root.sg.d0,root.sg.d1 align by device&quot; is equal to &quot;select s0,s1 from root.sg.d0,root.sg.d1 align by device&quot;.  
+For example. &quot;select s0,s1 from root.sg.*,root.sg.d0 align by device&quot; is equal to &quot;select s0,s1 from root.sg.* align by device&quot;.  
+
+7. The duplicated measurements in the suffix paths are not neglected.  
+For example, &quot;select s0,s0,s1 from root.sg.* align by device&quot; is not equal to &quot;select s0,s1 from root.sg.* align by device&quot;.
+
+8. Both time predicates and value predicates are allowed in Where Clause. The paths of the value predicates can be the leaf node or full path started with ROOT. And wildcard is not allowed here. For example:
+- select * from root.sg.* where time = 1 align by device
+- select * from root.sg.* where s0 &lt; 100 align by device
+- select * from root.sg.* where time &lt; 20 AND s0 &gt; 50 align by device
+- select * from root.sg.d0 where root.sg.d0.s0 = 15 align by device
+
+9. More correct examples:
+   - select * from root.vehicle align by device
+   - select s0,s0,s1 from root.vehicle.* align by device
+   - select s0,s1 from root.vehicle.* limit 10 offset 1 align by device
+   - select * from root.vehicle slimit 10 soffset 2 align by device
+   - select * from root.vehicle where time &gt; 10 align by device
+   - select * from root.vehicle.* where time &lt; 10 AND s0 &gt; 25 align by device
+   - select * from root.vehicle where root.vehicle.d0.s0&gt;0 align by device
+   - select count(*) from root.vehicle align by device
+   - select sum(*) from root.vehicle GROUP BY (20ms,0,[2,50]) align by device
+   - select * from root.vehicle where time = 3 Fill(int32[previous, 5ms]) align by device
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br></div></div><ul><li>Disable Align Statement</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>Disable Align Clause: DISABLE ALIGN
+
+Rules:  
+1. Both uppercase and lowercase are ok.  
+Correct example: select * from root.sg1 disable align  
+Correct example: select * from root.sg1 DISABLE ALIGN  
+
+2. Disable Align Clause can only be used at the end of a query statement.  
+Correct example: select * from root.sg1 where time &gt; 10 disable align 
+Wrong example: select * from root.sg1 disable align where time &gt; 10 
+
+3. Disable Align Clause cannot be used with Aggregation, Fill Statements, Group By or Group By Device Statements, but can with Limit Statements.
+Correct example: select * from root.sg1 limit 3 offset 2 disable align
+Correct example: select * from root.sg1 slimit 3 soffset 2 disable align
+Wrong example: select count(s0),count(s1) from root.sg1.d1 disable align
+Wrong example: select * from root.vehicle where root.vehicle.d0.s0&gt;0 disable align
+Wrong example: select * from root.vehicle align by device disable align
+
+4. The display principle of the result table is that only when the column (or row) has existing data will the column (or row) be shown, with nonexistent cells being empty.
+
+You could expect a table like:
+| Time | root.sg.d0.s1 | Time | root.sg.d0.s2 | Time | root.sg.d1.s1 |
+| ---  | ---           | ---  | ---           | ---  | ---           |
+|  1   | 100           | 20   | 300           | 400  | 600           |
+|  2   | 300           | 40   | 800           | 700  | 900           |
+|  4   | 500           |      |               | 800  | 1000          |
+|      |               |      |               | 900  | 8000          |
+
+5. More correct examples: 
+   - select * from root.vehicle disable align
+   - select s0,s0,s1 from root.vehicle.* disable align
+   - select s0,s1 from root.vehicle.* limit 10 offset 1 disable align
+   - select * from root.vehicle slimit 10 soffset 2 disable align
+   - select * from root.vehicle where time &gt; 10 disable align
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br></div></div><ul><li>Select Last Record Statement</li></ul> <p>The LAST function returns the last time-value pair of the given timeseries. Currently filters are not supported in LAST queries.</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT LAST &lt;SelectClause&gt; FROM &lt;FromClause&gt;
+Select Clause : &lt;Path&gt; [COMMA &lt;Path&gt;]*
+FromClause : &lt; PrefixPath &gt; [COMMA &lt; PrefixPath &gt;]*
+WhereClause : &lt;TimeExpr&gt; [(AND | OR) &lt;TimeExpr&gt;]*
+TimeExpr : TIME PrecedenceEqualOperator (&lt;TimeValue&gt; | &lt;RelativeTime&gt;)
+
+Eg. SELECT LAST s1 FROM root.sg.d1
+Eg. SELECT LAST s1, s2 FROM root.sg.d1
+Eg. SELECT LAST s1 FROM root.sg.d1, root.sg.d2
+Eg. SELECT LAST s1 FROM root.sg.d1 where time &gt; 100
+Eg. SELECT LAST s1, s2 FROM root.sg.d1 where time &gt;= 500
+
+Rules:
+1. the statement needs to satisfy this constraint: &lt;PrefixPath&gt; + &lt;Path&gt; = &lt;Timeseries&gt;
+
+2. SELECT LAST only supports time filter that contains '&gt;' or '&gt;=' currently.
+
+3. The result set of last query will always be displayed in a fixed three column table format.
+For example, &quot;select last s1, s2 from root.sg.d1, root.sg.d2&quot;, the query result would be:
+
+| Time | Path         | Value |
+| ---  | ------------ | ----- |
+|  5   | root.sg.d1.s1| 100   |
+|  2   | root.sg.d1.s2| 400   |
+|  4   | root.sg.d2.s1| 250   |
+|  9   | root.sg.d2.s2| 600   |
+
+4. It is not supported to use &quot;diable align&quot; in LAST query. 
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br></div></div><ul><li>As Statement</li></ul> <p>As statement assigns an alias to time seires queried in SELECT statement</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>You can use as statement in all queries, but some rules are restricted about wildcard.
+
+1. Raw data query
+select s1 as speed, s2 as temperature from root.sg.d1
+
+The result set will be like：
+| Time | speed | temperature |
+|  ... |  ...  |     ....    |
+
+2. Aggregation query
+select count(s1) as s1_num, max_value(s2) as s2_max from root.sg.d1
+
+3. Down-frequence query
+select count(s1) as s1_num from root.sg.d1 group by ([100,500), 80ms)
+
+4. Align by device query
+select s1 as speed, s2 as temperature from root.sg.d1 align by device
+
+select count(s1) as s1_num, count(s2), count(s3) as s3_num from root.sg.d2 align by device
+
+5. Last Record query
+select last s1 as speed, s2 from root.sg.d1
+
+Rules：
+1. In addition to Align by device query，each AS statement has to corresponding to one time series exactly.
+
+E.g. select s1 as temperature from root.sg.*
+
+At this time if `root.sg.*` includes more than one device，then an exception will be thrown。
+
+2. In align by device query，the prefix path that each AS statement corresponding to can includes multiple device, but the suffix path can only be single sensor.
+
+E.g. select s1 as temperature from root.sg.*
+
+In this situation, it will be show correctly even if multiple devices are selected.
+
+E.g. select * as temperature from root.sg.d1
+
+In this situation, it will throws an exception if * corresponds to multiple sensors.
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div><h2 id="database-management-statement"><a href="#database-management-statement" class="header-anchor">#</a> Database Management Statement</h2> <ul><li>Create User</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>CREATE USER &lt;userName&gt; &lt;password&gt;;  
+userName:=identifier  
+password:=string
+Eg: IoTDB &gt; CREATE USER thulab 'pwd';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>Delete User</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>DROP USER &lt;userName&gt;;  
+userName:=identifier
+Eg: IoTDB &gt; DROP USER xiaoming;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>Create Role</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>CREATE ROLE &lt;roleName&gt;;  
+roleName:=identifie
+Eg: IoTDB &gt; CREATE ROLE admin;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>Delete Role</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>DROP ROLE &lt;roleName&gt;;  
+roleName:=identifier
+Eg: IoTDB &gt; DROP ROLE admin;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>Grant User Privileges</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>GRANT USER &lt;userName&gt; PRIVILEGES &lt;privileges&gt; ON &lt;nodeName&gt;;  
+userName:=identifier  
+nodeName:=identifier (DOT identifier)*  
+privileges:= string (COMMA string)*
+Eg: IoTDB &gt; GRANT USER tempuser PRIVILEGES 'DELETE_TIMESERIES' on root.ln;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ul><li>Grant Role Privileges</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>GRANT ROLE &lt;roleName&gt; PRIVILEGES &lt;privileges&gt; ON &lt;nodeName&gt;;  
+privileges:= string (COMMA string)*  
+roleName:=identifier  
+nodeName:=identifier (DOT identifier)*
+Eg: IoTDB &gt; GRANT ROLE temprole PRIVILEGES 'DELETE_TIMESERIES' ON root.ln;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ul><li>Grant User Role</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>GRANT &lt;roleName&gt; TO &lt;userName&gt;;  
+roleName:=identifier  
+userName:=identifier
+Eg: IoTDB &gt; GRANT temprole TO tempuser;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>Revoke User Privileges</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>REVOKE USER &lt;userName&gt; PRIVILEGES &lt;privileges&gt; ON &lt;nodeName&gt;;   
+privileges:= string (COMMA string)*  
+userName:=identifier  
+nodeName:=identifier (DOT identifier)*
+Eg: IoTDB &gt; REVOKE USER tempuser PRIVILEGES 'DELETE_TIMESERIES' on root.ln;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ul><li>Revoke Role Privileges</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>REVOKE ROLE &lt;roleName&gt; PRIVILEGES &lt;privileges&gt; ON &lt;nodeName&gt;;  
+privileges:= string (COMMA string)*  
+roleName:= identifier  
+nodeName:=identifier (DOT identifier)*
+Eg: IoTDB &gt; REVOKE ROLE temprole PRIVILEGES 'DELETE_TIMESERIES' ON root.ln;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ul><li>Revoke Role From User</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>REVOKE &lt;roleName&gt; FROM &lt;userName&gt;;
+roleName:=identifier
+userName:=identifier
+Eg: IoTDB &gt; REVOKE temprole FROM tempuser;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>List Users</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>LIST USER
+Eg: IoTDB &gt; LIST USER
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ul><li>List Roles</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>LIST ROLE
+Eg: IoTDB &gt; LIST ROLE
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ul><li>List Privileges</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>LIST PRIVILEGES USER  &lt;username&gt; ON &lt;path&gt;;    
+username:=identifier    
+path=‘root’ (DOT identifier)*
+Eg: IoTDB &gt; LIST PRIVILEGES USER sgcc_wirte_user ON root.sgcc;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>List Privileges of Roles(On Specific Path)</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>LIST PRIVILEGES ROLE &lt;roleName&gt; ON &lt;path&gt;;    
+roleName:=identifier  
+path=‘root’ (DOT identifier)*
+Eg: IoTDB &gt; LIST PRIVILEGES ROLE wirte_role ON root.sgcc;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>List Privileges of Users</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>LIST USER PRIVILEGES &lt;username&gt; ;   
+username:=identifier  
+Eg: IoTDB &gt; LIST USER PRIVILEGES tempuser;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>List Privileges of Roles</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>LIST ROLE PRIVILEGES &lt;roleName&gt;
+roleName:=identifier
+Eg: IoTDB &gt; LIST ROLE PRIVILEGES actor;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>List Roles of Users</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>LIST ALL ROLE OF USER &lt;username&gt; ;  
+username:=identifier
+Eg: IoTDB &gt; LIST ALL ROLE OF USER tempuser;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>List Users of Role</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>LIST ALL USER OF ROLE &lt;roleName&gt;;
+roleName:=identifier
+Eg: IoTDB &gt; LIST ALL USER OF ROLE roleuser;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>Alter Password</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>ALTER USER &lt;username&gt; SET PASSWORD &lt;password&gt;;
+roleName:=identifier
+password:=identifier
+Eg: IoTDB &gt; ALTER USER tempuser SET PASSWORD 'newpwd';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="functions"><a href="#functions" class="header-anchor">#</a> Functions</h2> <ul><li>COUNT</li></ul> <p>The COUNT function returns the value number of timeseries(one or more) non-null values selected by the SELECT statement. The result is a signed 64-bit integer. If there are no matching rows, COUNT () returns 0.</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT COUNT(Path) (COMMA COUNT(Path))* FROM &lt;FromClause&gt; [WHERE &lt;WhereClause&gt;]?
+Eg. SELECT COUNT(status), COUNT(temperature) FROM root.ln.wf01.wt01 WHERE root.ln.wf01.wt01.temperature &lt; 24
+Note: the statement needs to satisfy this constraint: &lt;PrefixPath&gt; + &lt;Path&gt; = &lt;Timeseries&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>FIRST_VALUE(Rename from <code>FIRST</code> at <code>V0.10.0</code>)</li></ul> <p>The FIRST_VALUE function returns the first point value of the choosen timeseries(one or more).</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT FIRST_VALUE (Path) (COMMA FIRST_VALUE (Path))* FROM &lt;FromClause&gt; [WHERE &lt;WhereClause&gt;]?
+Eg. SELECT FIRST_VALUE (status), FIRST_VALUE (temperature) FROM root.ln.wf01.wt01 WHERE root.ln.wf01.wt01.temperature &lt; 24
+Note: the statement needs to satisfy this constraint: &lt;PrefixPath&gt; + &lt;Path&gt; = &lt;Timeseries&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>LAST_VALUE</li></ul> <p>The LAST_VALUE function returns the last point value of the choosen timeseries(one or more).</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT LAST_VALUE (Path) (COMMA LAST_VALUE (Path))* FROM &lt;FromClause&gt; [WHERE &lt;WhereClause&gt;]?
+Eg. SELECT LAST_VALUE (status), LAST_VALUE (temperature) FROM root.ln.wf01.wt01 WHERE root.ln.wf01.wt01.temperature &lt; 24
+Note: the statement needs to satisfy this constraint: &lt;PrefixPath&gt; + &lt;Path&gt; = &lt;Timeseries&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>MAX_TIME</li></ul> <p>The MAX_TIME function returns the maximum timestamp of the choosen timeseries(one or more). The result is a signed 64-bit integer, greater than 0.</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT MAX_TIME (Path) (COMMA MAX_TIME (Path))* FROM &lt;FromClause&gt; [WHERE &lt;WhereClause&gt;]?
+Eg. SELECT MAX_TIME(status), MAX_TIME(temperature) FROM root.ln.wf01.wt01 WHERE root.ln.wf01.wt01.temperature &lt; 24
+Note: the statement needs to satisfy this constraint: &lt;PrefixPath&gt; + &lt;Path&gt; = &lt;Timeseries&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>MAX_VALUE</li></ul> <p>The MAX_VALUE function returns the maximum value(lexicographically ordered) of the choosen timeseries (one or more).</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT MAX_VALUE (Path) (COMMA MAX_VALUE (Path))* FROM &lt;FromClause&gt; [WHERE &lt;WhereClause&gt;]?
+Eg. SELECT MAX_VALUE(status), MAX_VALUE(temperature) FROM root.ln.wf01.wt01 WHERE root.ln.wf01.wt01.temperature &lt; 24
+Note: the statement needs to satisfy this constraint: &lt;PrefixPath&gt; + &lt;Path&gt; = &lt;Timeseries&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>AVG(Rename from <code>MEAN</code> at <code>V0.9.0</code>)</li></ul> <p>The AVG function returns the arithmetic mean value of the choosen timeseries over a specified period of time. The timeseries must be int32, int64, float, double type, and the other types are not to be calculated. The result is a double type number.</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT AVG (Path) (COMMA AVG (Path))* FROM &lt;FromClause&gt; [WHERE &lt;WhereClause&gt;]?
+Eg. SELECT AVG (temperature) FROM root.ln.wf01.wt01 WHERE root.ln.wf01.wt01.temperature &lt; 24
+Note: the statement needs to satisfy this constraint: &lt;PrefixPath&gt; + &lt;Path&gt; = &lt;Timeseries&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>MIN_TIME</li></ul> <p>The MIN_TIME function returns the minimum timestamp of the choosen timeseries(one or more). The result is a signed 64-bit integer, greater than 0.</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT MIN_TIME (Path) (COMMA MIN_TIME (Path))*FROM &lt;FromClause&gt; [WHERE &lt;WhereClause&gt;]?
+Eg. SELECT MIN_TIME(status), MIN_TIME(temperature) FROM root.ln.wf01.wt01 WHERE root.ln.wf01.wt01.temperature &lt; 24
+Note: the statement needs to satisfy this constraint: &lt;PrefixPath&gt; + &lt;Path&gt; = &lt;Timeseries&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>MIN_VALUE</li></ul> <p>The MIN_VALUE function returns the minimum value(lexicographically ordered) of the choosen timeseries (one or more).</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT MIN_VALUE (Path) (COMMA MIN_VALUE (Path))* FROM &lt;FromClause&gt; [WHERE &lt;WhereClause&gt;]?
+Eg. SELECT MIN_VALUE(status),MIN_VALUE(temperature) FROM root.ln.wf01.wt01 WHERE root.ln.wf01.wt01.temperature &lt; 24
+Note: the statement needs to satisfy this constraint: &lt;PrefixPath&gt; + &lt;Path&gt; = &lt;Timeseries&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>NOW</li></ul> <p>The NOW function returns the current timestamp. This function can be used in the data operation statement to represent time. The result is a signed 64-bit integer, greater than 0.</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>NOW()
+Eg. INSERT INTO root.ln.wf01.wt01(timestamp,status) VALUES(NOW(), false)
+Eg. DELETE FROM root.ln.wf01.wt01.status, root.ln.wf01.wt01.temperature WHERE time &lt; NOW()
+Eg. SELECT * FROM root WHERE time &lt; NOW()
+Eg. SELECT COUNT(temperature) FROM root.ln.wf01.wt01 WHERE time &lt; NOW()
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ul><li>SUM</li></ul> <p>The SUM function returns the sum of the choosen timeseries (one or more) over a specified period of time. The timeseries must be int32, int64, float, double type, and the other types are not to be calculated. The result is a double type number.</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>SELECT SUM(Path) (COMMA SUM(Path))* FROM &lt;FromClause&gt; [WHERE &lt;WhereClause&gt;]?
+Eg. SELECT SUM(temperature) FROM root.ln.wf01.wt01 WHERE root.ln.wf01.wt01.temperature &lt; 24
+Note: the statement needs to satisfy this constraint: &lt;PrefixPath&gt; + &lt;Path&gt; = &lt;Timeseries&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="ttl"><a href="#ttl" class="header-anchor">#</a> TTL</h2> <p>IoTDB supports storage-level TTL settings, which means it is able to delete old data
+automatically and periodically. The benefit of using TTL is that hopefully you can control the
+total disk space usage and prevent the machine from running out of disks. Moreover, the query
+performance may downgrade as the total number of files goes up and the memory usage also increase
+as there are more files. Timely removing such files helps to keep at a high query performance
+level and reduce memory usage. The TTL operations in IoTDB are supported by the following three
+statements:</p> <ul><li>Set TTL</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>SET TTL TO StorageGroupName TTLTime
+Eg. SET TTL TO root.group1 3600000
+This example means that for data in root.group1, only that of the latest 1 hour will remain, the
+older one is removed or made invisible. 
+Note: TTLTime should be millisecond timestamp. When TTL is set, insertions that fall
+out of TTL will be rejected.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ul><li>Unset TTL</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>UNSET TTL TO StorageGroupName
+Eg. UNSET TTL TO root.group1
+This example means that data of all time will be accepted in this group. 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ul><li>Show TTL</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>SHOW ALL TTL
+SHOW TTL ON StorageGroupNames
+Eg.1 SHOW ALL TTL
+This example will show TTLs of all storage groups.
+Eg.2 SHOW TTL ON root.group1,root.group2,root.group3
+This example will show TTLs of the specified 3 groups.
+Notice: storage groups without TTL will show a &quot;null&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>Notice: When you set TTL to some storage groups, data out of the TTL will be made invisible
+immediately, but because the data files may contain both out-dated and living data or the data files may
+be being used by queries, the physical removal of data is stale. If you increase or unset TTL
+just after setting it previously, some previously invisible data may be seen again, but the
+physically removed one is lost forever. In other words, different from delete statement, the
+atomicity of data deletion is not guaranteed for efficiency concerns. So we recommend that you do
+not change the TTL once it is set or at least do not reset it frequently, unless you are determined
+to suffer the unpredictability.</p> <ul><li>Delete Partition (experimental)</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>DELETE PARTITION StorageGroupName INT(COMMA INT)*
+Eg DELETE PARTITION root.sg1 0,1,2
+This example will delete the first 3 time partitions of storage group root.sg1.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>The partitionId can be found in data folders or converted using <code>timestamp / partitionInterval</code>.</p> <h2 id="performance-tracing"><a href="#performance-tracing" class="header-anchor">#</a> Performance Tracing</h2> <p>IoTDB supports tracking the execution of query statements by using <code>TRACING</code> statements. The number of tsfile files and chunks accessed by the query etc are output through the log file. The default output location is in <code>./data/tracing</code>. The performance tracing function is turned off by default. Users can use the TRACING ON/OFF command to turn this function on/off.</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>TRACING ON    // Open performance tracing
+TRACING OFF   // Close performance tracing
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="kill-query"><a href="#kill-query" class="header-anchor">#</a> Kill query</h2> <ul><li>Show the list of queries in progress</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>SHOW QUERY PROCESSLIST
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>Kill query</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>KILL QUERY INT?
+E.g. KILL QUERY
+E.g. KILL QUERY 2
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="identifiers"><a href="#identifiers" class="header-anchor">#</a> Identifiers</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>QUOTE := '\'';
+DOT := '.';
+COLON : ':' ;
+COMMA := ',' ;
+SEMICOLON := ';' ;
+LPAREN := '(' ;
+RPAREN := ')' ;
+LBRACKET := '[';
+RBRACKET := ']';
+EQUAL := '=' | '==';
+NOTEQUAL := '&lt;&gt;' | '!=';
+LESSTHANOREQUALTO := '&lt;=';
+LESSTHAN := '&lt;';
+GREATERTHANOREQUALTO := '&gt;=';
+GREATERTHAN := '&gt;';
+DIVIDE := '/';
+PLUS := '+';
+MINUS := '-';
+STAR := '*';
+Letter := 'a'..'z' | 'A'..'Z';
+HexDigit := 'a'..'f' | 'A'..'F';
+Digit := '0'..'9';
+Boolean := TRUE | FALSE | 0 | 1 (case insensitive)
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>StringLiteral := ( '\'' ( ~('\'') )* '\'' | '\&quot;' ( ~('\&quot;') )* '\&quot;');
+eg. 'abc'
+eg. 'abc'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>Integer := ('-' | '+')? Digit+;
+eg. 123
+eg. -222
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>Float := ('-' | '+')? Digit+ DOT Digit+ (('e' | 'E') ('-' | '+')? Digit+)?;
+eg. 3.1415
+eg. 1.2E10
+eg. -1.33
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>Identifier := (Letter | '_') (Letter | Digit | '_' | MINUS)*;
+eg. a123
+eg. _abc123
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="literals"><a href="#literals" class="header-anchor">#</a> Literals</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>PointValue : Integer | Float | StringLiteral | Boolean
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>TimeValue : Integer | DateTime | ISO8601 | NOW()
+Note: Integer means timestamp type.
+
+DateTime : 
+eg. 2016-11-16T16:22:33+08:00
+eg. 2016-11-16 16:22:33+08:00
+eg. 2016-11-16T16:22:33.000+08:00
+eg. 2016-11-16 16:22:33.000+08:00
+Note: DateTime Type can support several types, see Chapter 3 Datetime section for details.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>PrecedenceEqualOperator : EQUAL | NOTEQUAL | LESSTHANOREQUALTO | LESSTHAN | GREATERTHANOREQUALTO | GREATERTHAN
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>Timeseries : ROOT [DOT &lt;LayerName&gt;]* DOT &lt;SensorName&gt;
+LayerName : Identifier
+SensorName : Identifier
+eg. root.ln.wf01.wt01.status
+eg. root.sgcc.wf03.wt01.temperature
+Note: Timeseries must be start with `root`(case insensitive) and end with sensor name.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>PrefixPath : ROOT (DOT &lt;LayerName&gt;)*
+LayerName : Identifier | STAR
+eg. root.sgcc
+eg. root.*
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>Path: (ROOT | &lt;LayerName&gt;) (DOT &lt;LayerName&gt;)* 
+LayerName: Identifier | STAR
+eg. root.ln.wf01.wt01.status
+eg. root.*.wf01.wt01.status
+eg. root.ln.wf01.wt01.*
+eg. *.wt01.*
+eg. *
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/UserGuide/Master/Appendix/Config-Manual.html" class="prev">
+          Config Manual
+        </a></span> <span class="next"><a href="/UserGuide/Master/Appendix/Status-Codes.html">
+          Status Codes
+        </a>
+        →
+      </span></p></div> <p style="text-align: center;">Copyright © 2021 The Apache Software Foundation.<br>
+     Apache and the Apache feather logo are trademarks of The Apache Software Foundation</p> <p style="text-align: center; margin-top: 10px; color: #444">
+    Contact us: Join QQ Group 659990460 | Add friend <i>tietouqiao</i> and be invited to Wechat Group<br>
+    see <a href="https://github.com/apache/iotdb/issues/1995">Join the community</a> for more</p></main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.21d02352.js" defer></script><script src="/assets/js/3.e95317f3.js" defer></script><script src="/assets/js/62.63ffdccd.js" defer></script>
+  </body>
+</html>
