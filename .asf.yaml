@@ -18,9 +18,8 @@
 #
 
 staging:
-  profile: beta
+  profile: ~
   whoami:  asf-staging
-
 
 publish:
   whoami:  asf-site
