@@ -1,1 +1,0 @@
-import{_ as e,E as t,F as _}from"./framework-a6959d27.js";const c={};function r(n,o){return t(),_("div")}const a=e(c,[["render",r],["__file","404.html.vue"]]);export{a as default};
