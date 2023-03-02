@@ -1,0 +1,1 @@
+const o="/img/UserGuide/System-Tools/Sync-Tool/pipe2.png";export{o as _};

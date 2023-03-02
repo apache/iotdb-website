@@ -1,0 +1,1 @@
+const t="/img/github/106254214-6cacbe80-6253-11eb-8532-d6a1829f8f66.png";export{t as _};

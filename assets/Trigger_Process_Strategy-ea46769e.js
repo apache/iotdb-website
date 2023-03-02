@@ -1,0 +1,1 @@
+const r="/img/UserGuide/Process-Data/Triggers/Trigger_Process_Flow.jpg",s="/img/UserGuide/Process-Data/Triggers/Trigger_Process_Strategy.jpg";export{r as _,s as a};

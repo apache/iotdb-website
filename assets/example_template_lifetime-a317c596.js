@@ -1,0 +1,1 @@
+const e="/img/UserGuide/Data-Concept/Measurement-Template/example_template_lifetime.png";export{e as _};

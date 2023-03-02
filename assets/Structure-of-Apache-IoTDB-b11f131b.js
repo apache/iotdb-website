@@ -1,0 +1,1 @@
+const t="/img/UserGuide/IoTDB-Introduction/Architecture/Structure-of-Apache-IoTDB.png";export{t as _};
