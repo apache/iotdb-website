@@ -1,1 +1,0 @@
-const s="/img/UserGuide/Process-Data/UDF-User-Defined-Function/timeWindow.png",e="/img/UserGuide/Process-Data/UDF-User-Defined-Function/countWindow.png",i="/img/UserGuide/Process-Data/UDF-User-Defined-Function/sessionWindow.png",n="/img/UserGuide/Process-Data/UDF-User-Defined-Function/stateWindow.png";export{s as _,e as a,i as b,n as c};

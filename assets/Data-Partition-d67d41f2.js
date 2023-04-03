@@ -1,1 +1,0 @@
-const t="/img/UserGuide/Cluster/Architecture.png",r="/img/UserGuide/Cluster/Data-Partition.png";export{t as _,r as a};

@@ -1,1 +1,0 @@
-const t="/img/UserGuide/Data-Concept/Time-Partition/time_partition_example.png";export{t as _};

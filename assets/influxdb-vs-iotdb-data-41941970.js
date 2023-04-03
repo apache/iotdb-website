@@ -1,1 +1,0 @@
-const s="/img/UserGuide/API/IoTDB-InfluxDB/architecture-design.png",i="/img/UserGuide/API/IoTDB-InfluxDB/class-diagram.png",n="/img/UserGuide/API/IoTDB-InfluxDB/influxdb-data.png",o="/img/UserGuide/API/IoTDB-InfluxDB/iotdb-data.png",t="/img/UserGuide/API/IoTDB-InfluxDB/influxdb-vs-iotdb-data.png";export{s as _,i as a,n as b,o as c,t as d};

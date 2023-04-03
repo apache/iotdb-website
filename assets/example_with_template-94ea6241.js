@@ -1,1 +1,0 @@
-const e="/img/UserGuide/Data-Concept/Measurement-Template/example_without_template.png?raw=true",t="/img/UserGuide/Data-Concept/Measurement-Template/example_with_template.png?raw=true";export{e as _,t as a};
