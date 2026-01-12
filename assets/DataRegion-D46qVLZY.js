@@ -1,0 +1,1 @@
+const t="/img/%E5%88%86%E5%8C%BA%E6%A7%BD%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E5%8C%BA.png?raw=true",r="/img/SeriesPartitionSlot.png?raw=true",a="/img/SchemaRegion.png?raw=true",i="/img/DataRegion.png?raw=true";export{t as _,r as a,a as b,i as c};
