@@ -1,0 +1,1 @@
+const n="/img/data-model-new-1-en.png",a="/img/Data-model-en02.png",o="/img/Data-model-en03.png",t="/img/data-model-new-2-en.png",m="/img/Data-model-en05.png",s="/img/data-model-new-3-en.png";export{n as _,a,o as b,t as c,m as d,s as e};

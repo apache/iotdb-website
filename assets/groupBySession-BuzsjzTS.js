@@ -1,0 +1,1 @@
+const s="/img/UserGuide/Process-Data/GroupBy/groupByVariation.jpeg",o="/img/UserGuide/Process-Data/GroupBy/groupBySession.jpeg";export{s as _,o as a};

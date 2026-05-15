@@ -1,0 +1,1 @@
+const o="/img/data-model-new-1.png",s="/img/data-modeling04.png",m="/img/Modeling-scheme05.png",n="/img/data-model-new-2.png",t="/img/data-modeling07.png",a="/img/data-model-new-3.png";export{o as _,s as a,m as b,n as c,t as d,a as e};
