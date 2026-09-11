@@ -1,0 +1,1 @@
+var e=`/img/ODBC_ADD_EN.jpg`,t=`/img/ODBC_CREATE_EN.jpg`,n=`/img/ODBC_CONFIG_EN.jpg`;export{t as n,e as r,n as t};

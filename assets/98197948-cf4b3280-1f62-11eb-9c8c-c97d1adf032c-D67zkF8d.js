@@ -1,0 +1,1 @@
+var e=`/img/github/98197920-be9abc80-1f62-11eb-9efb-027f0590031c.png`,t=`/img/github/98197948-cf4b3280-1f62-11eb-9c8c-c97d1adf032c.png`;export{e as n,t};

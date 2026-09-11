@@ -1,0 +1,1 @@
+var e=`/img/bm2.png`;export{e as t};

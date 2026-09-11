@@ -1,0 +1,1 @@
+var e=`/img/timeseries-large-model-chronos2.png`,t=`/img/LargeModel-toto.png`;export{e as n,t};

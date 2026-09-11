@@ -1,0 +1,1 @@
+var e=`/img/partition_table_cn.png?raw=true`,t=`/img/partition_allocation_cn.png?raw=true`,n=`/img/placement_cn.png?raw=true`,r=`/img/selection_cn.png?raw=true`;export{e as i,n,t as r,r as t};

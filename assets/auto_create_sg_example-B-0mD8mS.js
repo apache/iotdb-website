@@ -1,0 +1,1 @@
+var e=`/img/UserGuide/Data-Concept/Auto-Create-MetaData/auto_create_sg_example.png?raw=true`;export{e as t};

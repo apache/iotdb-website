@@ -1,0 +1,1 @@
+var e=`/img/github/99787878-47b51480-2b5b-11eb-8ed3-84088c5c30f7.png`;export{e as t};

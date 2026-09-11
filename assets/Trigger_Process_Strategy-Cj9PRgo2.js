@@ -1,0 +1,1 @@
+var e=`/img/UserGuide/Process-Data/Triggers/Trigger_Process_Flow.jpg?raw=true`,t=`/img/UserGuide/Process-Data/Triggers/Trigger_Process_Strategy.jpg?raw=true`;export{e as n,t};
