@@ -1,0 +1,1 @@
+var e=`/img/sample-dataset-en-01.png`;export{e as t};

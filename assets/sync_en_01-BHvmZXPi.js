@@ -1,0 +1,1 @@
+var e=`/img/sync_en_01.png`;export{e as t};

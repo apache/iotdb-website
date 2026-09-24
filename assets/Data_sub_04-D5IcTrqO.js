@@ -1,0 +1,1 @@
+var e=`/img/Data-sub05.png`,t=`/img/Data_sub_04.png`;export{e as n,t};

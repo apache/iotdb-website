@@ -1,0 +1,1 @@
+var e=`/img/Telegraf_1.png`,t=`/img/Telegraf_2.png`;export{e as n,t};

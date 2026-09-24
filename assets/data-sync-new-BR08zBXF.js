@@ -1,0 +1,1 @@
+var e=`/img/data-sync-new.png`;export{e as t};
