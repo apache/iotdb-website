@@ -1,0 +1,1 @@
+var e=`/img/20230920-192746.jpg`,t=`/img/dbeaver01.png`;export{e as n,t};

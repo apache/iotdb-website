@@ -1,0 +1,1 @@
+var e=`/img/dataSync01.png`;export{e as t};

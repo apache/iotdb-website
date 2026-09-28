@@ -1,0 +1,1 @@
+var e=`/img/Data-import2.png`;export{e as t};

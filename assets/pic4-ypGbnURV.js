@@ -1,0 +1,1 @@
+var e=`/img/UserGuide/Process-Data/Continuous-Query/pic1.png?raw=true`,t=`/img/UserGuide/Process-Data/Continuous-Query/pic2.png?raw=true`,n=`/img/UserGuide/Process-Data/Continuous-Query/pic3.png?raw=true`,r=`/img/UserGuide/Process-Data/Continuous-Query/pic4.png?raw=true`;export{e as i,n,t as r,r as t};

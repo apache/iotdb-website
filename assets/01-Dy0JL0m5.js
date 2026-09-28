@@ -1,0 +1,1 @@
+var e=`/img/UserGuide/Ecosystem-Integration/DBeaver/01.png?raw=true`;export{e as t};

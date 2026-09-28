@@ -1,0 +1,1 @@
+var e=`/img/AInode1.png`;export{e as t};

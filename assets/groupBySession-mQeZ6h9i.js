@@ -1,0 +1,1 @@
+var e=`/img/UserGuide/Process-Data/GroupBy/groupByVariation.jpeg`,t=`/img/UserGuide/Process-Data/GroupBy/groupBySession.jpeg`;export{e as n,t};
