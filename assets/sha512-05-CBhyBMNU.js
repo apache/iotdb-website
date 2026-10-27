@@ -1,0 +1,1 @@
+var e=`/img/sha512-05.png`;export{e as t};

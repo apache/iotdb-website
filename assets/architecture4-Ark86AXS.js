@@ -1,0 +1,1 @@
+var e=`/img/architecture1.png`,t=`/img/architecture2.jpg`,n=`/img/architecture3.jpg`,r=`/img/architecture4.jpg`;export{e as i,n,t as r,r as t};

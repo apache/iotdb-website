@@ -1,0 +1,1 @@
+var e=`/img/Telegraf.png`;export{e as t};

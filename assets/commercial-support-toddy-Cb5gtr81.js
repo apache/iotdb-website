@@ -1,0 +1,1 @@
+var e=`/img/commercial-support-pragmatic.png`,t=`/img/commercial-support-toddy.png`;export{e as n,t};

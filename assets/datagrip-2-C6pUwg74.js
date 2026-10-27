@@ -1,0 +1,1 @@
+var e=`/img/datagrip-2.png`;export{e as t};

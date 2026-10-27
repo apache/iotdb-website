@@ -1,0 +1,1 @@
+var e=`/img/data-modeling-new-1-en.png`,t=`/img/data-modeling-new-2-en.png`,n=`/img/data-modeling-new-4-en.png`,r=`/img/data-modeling-new-5-en.png`,i=`/img/data-modeling-new-6-en.png`,a=`/img/data-modeling-new-7-en.png`;export{t as a,n as i,i as n,e as o,r,a as t};

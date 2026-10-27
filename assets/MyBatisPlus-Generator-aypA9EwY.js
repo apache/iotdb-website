@@ -1,0 +1,1 @@
+var e=`/img/MyBatisPlus-Generator.png`;export{e as t};

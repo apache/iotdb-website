@@ -1,0 +1,1 @@
+var e=`/img/UserGuide/Data-Concept/Time-Partition/time_partition_example.png?raw=true`;export{e as t};

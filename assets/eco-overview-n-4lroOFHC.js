@@ -1,0 +1,1 @@
+var e=`/img/eco-overview-n.png`;export{e as t};
