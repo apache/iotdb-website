@@ -1,0 +1,1 @@
+var e=`/img/ThingsBoard-Table-01.png`,t=`/img/ThingsBoard-Table-02.png`;export{e as n,t};

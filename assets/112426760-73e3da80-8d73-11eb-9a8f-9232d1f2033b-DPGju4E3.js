@@ -1,0 +1,1 @@
+var e=`/img/UserGuide/System-Tools/Metrics/dashboard.png`,t=`/img/github/149951720-707f1ee8-32ee-4fde-9252-048caebd232e.png`,n=`/img/github/60937461-14296f80-a303-11e9-9602-a7bed624bfb3.png`,r=`/img/github/112426760-73e3da80-8d73-11eb-9a8f-9232d1f2033b.png`;export{e as i,n,t as r,r as t};

@@ -1,0 +1,1 @@
+var e=`/img/templateEN.jpg`;export{e as t};

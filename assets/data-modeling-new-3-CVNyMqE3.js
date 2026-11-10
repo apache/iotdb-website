@@ -1,0 +1,1 @@
+var e=`/img/data-modeling-new-3.png`;export{e as t};

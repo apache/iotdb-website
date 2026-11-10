@@ -1,0 +1,1 @@
+var e=`/img/benchmark-%20English2.png`;export{e as t};

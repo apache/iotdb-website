@@ -1,0 +1,1 @@
+var e=`/img/%E5%88%86%E5%8C%BA%E6%A7%BD%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E5%8C%BA.png?raw=true`,t=`/img/SeriesPartitionSlot.png?raw=true`,n=`/img/SchemaRegion.png?raw=true`,r=`/img/DataRegion.png?raw=true`;export{e as i,n,t as r,r as t};
