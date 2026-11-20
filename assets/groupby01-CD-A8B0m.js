@@ -1,0 +1,1 @@
+var e=`/img/groupby01.png`;export{e as t};

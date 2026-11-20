@@ -1,0 +1,1 @@
+var e=`/img/UserGuide/System-Tools/Metrics/iotdb_prometheus_grafana.png`;export{e as t};
