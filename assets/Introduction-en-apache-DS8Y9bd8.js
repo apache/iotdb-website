@@ -1,0 +1,1 @@
+var e=`/img/Introduction-en-apache.png`;export{e as t};

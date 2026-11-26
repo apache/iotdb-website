@@ -1,0 +1,1 @@
+var e=`/img/commercial-support-timecho.png`;export{e as t};

@@ -1,0 +1,1 @@
+var e=`/img/UserGuide/Process-Data/UDF-User-Defined-Function/timeWindow.png`,t=`/img/UserGuide/Process-Data/UDF-User-Defined-Function/countWindow.png`,n=`/img/UserGuide/Process-Data/UDF-User-Defined-Function/sessionWindow.png`,r=`/img/UserGuide/Process-Data/UDF-User-Defined-Function/stateWindow.png`;export{e as i,n,t as r,r as t};

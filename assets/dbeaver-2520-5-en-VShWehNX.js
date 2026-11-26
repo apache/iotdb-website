@@ -1,0 +1,1 @@
+var e=`/img/dbeaver-2520-1-en.png`,t=`/img/dbeaver-2520-2-en.png`,n=`/img/dbeaver-2520-3-en.png`,r=`/img/dbeaver-2520-4-en.png`,i=`/img/dbeaver-2520-5-en.png`;export{e as a,t as i,r as n,n as r,i as t};

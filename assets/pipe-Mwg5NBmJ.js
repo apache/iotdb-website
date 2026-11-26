@@ -1,0 +1,1 @@
+var e=`/img/pipe.png`;export{e as t};
